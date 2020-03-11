@@ -35,6 +35,11 @@ class LoginPage:
     def set_password(self, password):
         self.driver.find_element_by_xpath(self.password_textbox).send_keys(password)
 
+    def clear_page(self):
+        self.driver.find_element_by_xpath(self.email_textbox).clear()
+        self.driver.find_element_by_xpath(self.password_textbox).clear()
+
+
     def click_remember_me(self):
         self.driver.find_element_by_xpath(self.remember_checkbox).click()
 
@@ -67,6 +72,7 @@ class LoginPage:
 
     def login_to_spotify(self, email, password):
         sp = StatusPage(self.driver)
+        self.clear_page()
         self.set_email(email)
         self.set_password(password)
         self.click_login()
