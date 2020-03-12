@@ -3,8 +3,8 @@ import time
 import allure
 import pytest
 from allure_commons.types import AttachmentType
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver, common
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.keys import Keys
 from Pages.login import LoginPage
 from helper import MY_PATH
@@ -18,7 +18,7 @@ sys.path.append(MY_PATH)
 @allure.severity(allure.severity_level.BLOCKER)
 class Test:
 
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
     @pytest.yield_fixture
     def setup(self):

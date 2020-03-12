@@ -39,7 +39,6 @@ class LoginPage:
         self.driver.find_element_by_xpath(self.email_textbox).clear()
         self.driver.find_element_by_xpath(self.password_textbox).clear()
 
-
     def click_remember_me(self):
         self.driver.find_element_by_xpath(self.remember_checkbox).click()
 
@@ -59,7 +58,8 @@ class LoginPage:
         self.driver.find_element_by_xpath(self.privacy_policy_link).click()
 
     def check_login_failure(self):
-        if self.driver.find_element_by_xpath(self.incorrect_username_password).text == 'Incorrect username or password.':
+        if self.driver.find_element_by_xpath(
+                self.incorrect_username_password).text == 'Incorrect username or password.':
             assert True
         else:
             assert False
@@ -72,13 +72,16 @@ class LoginPage:
 
     def login_to_spotify(self, email, password):
         sp = StatusPage(self.driver)
-        self.clear_page()
-        self.set_email(email)
-        self.set_password(password)
-        self.click_login()
-        time.sleep(2)
-        if sp.check_status_page():
-            sp.click_web_player_link()
-            return True
-        else:
-            return False
+        try:
+            self.clear_page()
+            self.set_email(email)
+            self.set_password(password)
+            self.click_login()
+            time.sleep(2)
+            if sp.check_status_page():
+                sp.click_web_player_link()
+                return True
+            else:
+                return False
+        except:
+            exit('Testing failed in login with credentials : ' + email + " & " + password )
