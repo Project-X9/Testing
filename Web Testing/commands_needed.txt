@@ -1,0 +1,13 @@
+1)
+python3 -m pytest --alluredir="./Reports" ./Tests/login_tests.py -m Do
+
+2)
+allure serve "./Reports"
+
+3)
+pip3 freeze > requirements.txt
+
+4)
+pip3 install -r requirements.txt
+
+5)
