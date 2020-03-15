@@ -7,8 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from helperClasses import helper, by, Gender
 import time
 
-# test_projectX@hotmail.com
-# TestingTeamMKE
+# Testing email: test_projectX@hotmail.com
+# Testing pass: TestingTeamMKE
 
 class LoggedOutHome:
 

@@ -10,13 +10,13 @@ import time
 
 
 @allure.parent_suite("End to End testing")
-@allure.suite("Login Tests")
-@allure.feature("Log in Tests")
+@allure.suite("Signup Tests")
+@allure.feature("Signup Tests")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLogin:
 
-    # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
-
+    # driver = helper().firefox_driver_init()
+    # TODO: change Chrome executable path to your needs
     driver = helper().chrome_driver_init()
 
     @pytest.yield_fixture
@@ -37,7 +37,7 @@ class TestLogin:
 
 # Test #1 -> Different Confirmation email
     @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Failing Login")
+    @allure.story("Failing Signup")
     @allure.sub_suite("Sign up with different confirmation email")
     @allure.title("Sign up with different confirmation email")
     @allure.description("Signing up with different confirmation email from the original email field")

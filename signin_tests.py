@@ -4,7 +4,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from allure_commons.types import AttachmentType
 import allure
 import pytest
-import objects_classes
+from objects_classes import LoggedOutHome, LoginPage, SignupPage, helper
 import time
 
 from helperClasses import helper, ConstantsClass
@@ -18,7 +18,7 @@ class TestLogin:
 
     # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
-    driver = objects_classes.helper().chrome_driver_init()
+    driver = helper().chrome_driver_init()
 
     @pytest.yield_fixture
     def setup(self):
@@ -45,10 +45,10 @@ class TestLogin:
     @pytest.mark.Do
     @pytest.mark.Login
     def test_case_1(self, setup):
-        logged_out_page = objects_classes.LoggedOutHome(self.driver)
+        logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
         time.sleep(5)
-        lp = objects_classes.LoginPage(self.driver)
+        lp = LoginPage(self.driver)
         lp.check_login_page()
         if lp.login_to_spotify("test_projectX@hotmail.com", ConstantsClass().get_pass("test_projectX@hotmail.com")):
             helper().report_allure(self.driver, "SUCCESS: Login succeeded with correct credentials")
@@ -66,10 +66,10 @@ class TestLogin:
     @pytest.mark.Do
     @pytest.mark.Login
     def test_case_2(self, setup):
-        logged_out_page = objects_classes.LoggedOutHome(self.driver)
+        logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
         time.sleep(5)
-        lp = objects_classes.LoginPage(self.driver)
+        lp = LoginPage(self.driver)
         lp.check_login_page()
         if lp.login_to_spotify("kamelmohsenkamel@gmail.com", "wrong_password"):
             helper().report_allure(self.driver, "ERROR: Login succeeded with incorrect credentials")
@@ -87,10 +87,10 @@ class TestLogin:
     @pytest.mark.Do
     @pytest.mark.Login
     def test_case_3(self, setup_final):
-        logged_out_page = objects_classes.LoggedOutHome(self.driver)
+        logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
         time.sleep(3)
-        lp = objects_classes.LoginPage(self.driver)
+        lp = LoginPage(self.driver)
         lp.check_login_page()
         if lp.login_to_spotify("kamelmohsenkamel", "Kimo2010"):
             helper().report_allure(self.driver, "ERROR: Login succeeded with incorrect credentials")
@@ -109,10 +109,10 @@ class TestLogin:
     @pytest.mark.Do
     @pytest.mark.Login
     def test_case_4(self, setup_final):
-        logged_out_page = objects_classes.LoggedOutHome(self.driver)
+        logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
         time.sleep(3)
-        lp = objects_classes.LoginPage(self.driver)
+        lp = LoginPage(self.driver)
         lp.check_login_page()
         if lp.login_to_spotify("", "Kimo2010"):
             helper().report_allure(self.driver, "ERROR: Login succeeded with empty email")
@@ -130,10 +130,10 @@ class TestLogin:
     @pytest.mark.Do
     @pytest.mark.Login
     def test_case_5(self, setup_final):
-        logged_out_page = objects_classes.LoggedOutHome(self.driver)
+        logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
         time.sleep(3)
-        lp = objects_classes.LoginPage(self.driver)
+        lp = LoginPage(self.driver)
         lp.check_login_page()
         if lp.login_to_spotify("mohdos_1999@hotmail.com", ""):
             helper().report_allure(self.driver, "ERROR: Login succeeded with empty password")
@@ -151,10 +151,10 @@ class TestLogin:
     @pytest.mark.Do
     @pytest.mark.Login
     def test_case_6(self, setup_final):
-        logged_out_page = objects_classes.LoggedOutHome(self.driver)
+        logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
         time.sleep(3)
-        lp = objects_classes.LoginPage(self.driver)
+        lp = LoginPage(self.driver)
         lp.check_login_page()
         if lp.login_to_spotify("", ""):
             helper().report_allure(self.driver, "ERROR: Login succeeded with empty email and password")
