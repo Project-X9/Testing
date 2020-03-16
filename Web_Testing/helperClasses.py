@@ -10,6 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 class helper:
 
+
     def __init__(self):
         self.month_dict = {"January" : 1, "February" : 2, "March" : 3
                             , "April" : 4, "May" : 5, "June" : 6
@@ -19,6 +20,7 @@ class helper:
         pass
 
     def chrome_driver_init(self):
+
         # options = webdriver.ChromeOptions()
         # options.add_argument('--headless')
         # driver = webdriver.Chrome(ChromeDriverManager().install(), options=options,  service_args=['--verbose', '--log-path=/tmp/logs/chromedriver.log'])
