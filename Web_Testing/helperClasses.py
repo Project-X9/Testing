@@ -1,16 +1,14 @@
 import enum
-
 import allure
 from allure_commons.types import AttachmentType
 from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait, Select
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import Select
 from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 
 
-class helper():
+class helper:
 
     def __init__(self):
         self.month_dict = {"January" : 1, "February" : 2, "March" : 3
@@ -21,8 +19,9 @@ class helper():
         pass
 
     def chrome_driver_init(self):
-        driver = webdriver.Chrome(
-            executable_path=r'C:\Users\Mohammad\Desktop\University\Software_Engineering\Project\webdrivers\chromedriver.exe')
+        options = webdriver.ChromeOptions()
+        options.add_argument('--headless')
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options,  service_args=['--verbose', '--log-path=/tmp/logs/chromedriver.log'])
         # tb refers to Toolbar, tb_.. refers to Toolbar elements
         return driver
 

@@ -4,10 +4,11 @@ from webdriver_manager.firefox import GeckoDriverManager
 from allure_commons.types import AttachmentType
 import allure
 import pytest
-from objects_classes import LoggedOutHome, LoginPage, SignupPage, helper
+from Web_Testing.Pages.login import LoginPage
+from Web_Testing.Pages.signup import SignupPage
+from Web_Testing.Pages.logged_out_home import LoggedOutHome
 import time
-
-from helperClasses import helper, ConstantsClass
+from Web_Testing.helperClasses import helper, ConstantsClass
 
 
 @allure.parent_suite("End to End testing")
@@ -15,8 +16,6 @@ from helperClasses import helper, ConstantsClass
 @allure.feature("Log in Tests")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLogin:
-
-    # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
     driver = helper().chrome_driver_init()
 
@@ -47,9 +46,9 @@ class TestLogin:
     def test_case_1(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
-        time.sleep(5)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        time.sleep(3)
         if lp.login_to_spotify("test_projectX@hotmail.com", ConstantsClass().get_pass("test_projectX@hotmail.com")):
             helper().report_allure(self.driver, "SUCCESS: Login succeeded with correct credentials")
             assert True
@@ -68,9 +67,9 @@ class TestLogin:
     def test_case_2(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
-        time.sleep(5)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        time.sleep(3)
         if lp.login_to_spotify("kamelmohsenkamel@gmail.com", "wrong_password"):
             helper().report_allure(self.driver, "ERROR: Login succeeded with incorrect credentials")
             assert False
@@ -86,19 +85,18 @@ class TestLogin:
     @allure.description("Signing in with the following credentials email : kamelmohsenkamel & password: Kimo2010")
     @pytest.mark.Do
     @pytest.mark.Login
-    def test_case_3(self, setup_final):
+    def test_case_3(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
-        time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        time.sleep(3)
         if lp.login_to_spotify("kamelmohsenkamel", "Kimo2010"):
             helper().report_allure(self.driver, "ERROR: Login succeeded with incorrect credentials")
             assert False
         else:
             helper().report_allure(self.driver, "SUCCESS: Login failed with incorrect credentials")
             assert True
-
 
 # Test #4 ->Empty Email
     @allure.severity(allure.severity_level.BLOCKER)
@@ -108,12 +106,12 @@ class TestLogin:
     @allure.description("Signing in with empty email")
     @pytest.mark.Do
     @pytest.mark.Login
-    def test_case_4(self, setup_final):
+    def test_case_4(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
-        time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        time.sleep(3)
         if lp.login_to_spotify("", "Kimo2010"):
             helper().report_allure(self.driver, "ERROR: Login succeeded with empty email")
             assert False
@@ -121,7 +119,7 @@ class TestLogin:
             helper().report_allure(self.driver, "SUCCESS: Login failed with empty email")
             assert True
 
-    # Test #5 ->Empty Email
+# Test #5 ->Empty password
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Failing login")
     @allure.sub_suite("Login with empty password")
@@ -129,12 +127,12 @@ class TestLogin:
     @allure.description("Signing in with empty password")
     @pytest.mark.Do
     @pytest.mark.Login
-    def test_case_5(self, setup_final):
+    def test_case_5(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
-        time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        time.sleep(3)
         if lp.login_to_spotify("mohdos_1999@hotmail.com", ""):
             helper().report_allure(self.driver, "ERROR: Login succeeded with empty password")
             assert False
@@ -142,7 +140,7 @@ class TestLogin:
             helper().report_allure(self.driver, "SUCCESS: Login failed with empty password")
             assert True
 
-    # Test #6 ->Empty Email and Password
+# Test #6 ->Empty Email and Password
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Failing login")
     @allure.sub_suite("Login with empty email and password")
@@ -153,9 +151,9 @@ class TestLogin:
     def test_case_6(self, setup_final):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_login_btn.click()
-        time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        time.sleep(3)
         if lp.login_to_spotify("", ""):
             helper().report_allure(self.driver, "ERROR: Login succeeded with empty email and password")
             assert False

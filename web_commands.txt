@@ -11,3 +11,4 @@ pip3 freeze > requirements.txt
 pip3 install -r requirements.txt
 
 5)
+python3 -m pytest --alluredir="./Reports" C:\Users\Kamel\Desktop\Testing\Web_Testing\Tests\ -m Do

@@ -4,8 +4,11 @@ from webdriver_manager.firefox import GeckoDriverManager
 from allure_commons.types import AttachmentType
 import allure
 import pytest
-from objects_classes import helper, LoginPage, SignupPage, LoggedOutHome
-from helperClasses import Profile, DOB, Gender, ConstantsClass
+from Web_Testing.Pages.logged_out_home import LoggedOutHome
+from Web_Testing.Pages.login import LoginPage
+from Web_Testing.Pages.signup import SignupPage
+from Web_Testing.helperClasses import helper, ConstantsClass
+from Web_Testing.helperClasses import Profile, DOB, Gender, ConstantsClass
 import time
 
 
@@ -15,8 +18,6 @@ import time
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLogin:
 
-    # driver = helper().firefox_driver_init()
-    # TODO: change Chrome executable path to your needs
     driver = helper().chrome_driver_init()
 
     @pytest.yield_fixture
@@ -46,8 +47,8 @@ class TestLogin:
     def test_case_1(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(5)
         sp = SignupPage(self.driver)
+        time.sleep(3)
         if not sp.check_signup_page():
             helper().report_allure(self.driver, "TIMEOUT: Sign up page not loading")
             assert False
@@ -74,12 +75,11 @@ class TestLogin:
     def test_case_2(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(5)
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         profile = Profile("", "test_pass", "Mohammad Osama", DOB(31, 1, 1990), Gender.MALE,
                           "another_email@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             helper().report_allure(self.driver, "ERROR: Sign up proceeded with empty email")
             assert False
@@ -89,22 +89,21 @@ class TestLogin:
 
 # Test #3 -> Already Registered Email
     @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Failing signup")
+    @allure.story("Failing Signup")
     @allure.sub_suite("Signup with already registered email")
     @allure.title("Signup with already registered email")
     @allure.description("Signing up with the following credentials email: test_projectX@hotmail.com")
     @pytest.mark.Do
     @pytest.mark.Signup
-    def test_case_3(self, setup_final):
+    def test_case_3(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(3)
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         constants = ConstantsClass()
         emails = constants.get_registered_emails()
         profile = Profile(emails[0], "test_pass", "Testing Team", DOB(31, 1, 1995), Gender.MALE)
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             helper().report_allure(self.driver, "ERROR: Sign up proceeded with registered email")
             assert False
@@ -124,7 +123,7 @@ class TestLogin:
     # def test_case_4(self, setup_final):
     #     logged_out_page = LoggedOutHome(self.driver)
     #     logged_out_page.tb_signup_btn.click()
-    #     time.sleep(3)
+    #
     #     sp = SignupPage(self.driver)
     #     sp.check_signup_page()
     #     constants = ConstantsClass()
@@ -148,12 +147,11 @@ class TestLogin:
     def test_case_5(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(5)
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "", "Mohammad Osama", DOB(31, 1, 1990), Gender.MALE,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             helper().report_allure(self.driver, "ERROR: Sign up proceeded with empty password")
             assert False
@@ -172,12 +170,11 @@ class TestLogin:
     def test_case_6(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(5)
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(31, 1, 1990), Gender.UNSELECTED,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             helper().report_allure(self.driver, "ERROR: Sign up proceeded with unselected gender")
             assert False
@@ -196,12 +193,11 @@ class TestLogin:
     def test_case_7(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(5)
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(-1, 1, 1990), Gender.MALE,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             helper().report_allure(self.driver, "ERROR: Sign up proceeded with unselected day")
             assert False
@@ -220,12 +216,11 @@ class TestLogin:
     def test_case_8(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(5)
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(1, -1, 1990), Gender.MALE,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             helper().report_allure(self.driver, "ERROR: Sign up proceeded with unselected month")
             assert False
@@ -241,14 +236,13 @@ class TestLogin:
     @allure.description("Signing up with unselected year")
     @pytest.mark.Do
     @pytest.mark.Signup
-    def test_case_9(self, setup):
+    def test_case_9(self, setup_final):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.tb_signup_btn.click()
-        time.sleep(5)
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(1, 1, -1990), Gender.MALE)
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             helper().report_allure(self.driver, "ERROR: Sign up proceeded with unselected year")
             assert False
