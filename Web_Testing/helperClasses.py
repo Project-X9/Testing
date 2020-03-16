@@ -19,9 +19,11 @@ class helper:
         pass
 
     def chrome_driver_init(self):
-        options = webdriver.ChromeOptions()
-        options.add_argument('--headless')
-        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options,  service_args=['--verbose', '--log-path=/tmp/logs/chromedriver.log'])
+        # options = webdriver.ChromeOptions()
+        # options.add_argument('--headless')
+        # driver = webdriver.Chrome(ChromeDriverManager().install(), options=options,  service_args=['--verbose', '--log-path=/tmp/logs/chromedriver.log'])
+        driver = webdriver.Chrome(ChromeDriverManager().install())
+
         # tb refers to Toolbar, tb_.. refers to Toolbar elements
         return driver
 

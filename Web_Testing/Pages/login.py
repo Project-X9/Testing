@@ -43,6 +43,8 @@ class LoginPage:
         self.pass_txt.send_keys(password)
 
     def clear_credentials(self):
+        self.email_txt = self.helper.find_element_by_id(self.driver, "login-username")
+        self.pass_txt = self.helper.find_element_by_id(self.driver, "login-password")
         self.email_txt.clear()
         self.pass_txt.clear()
 
