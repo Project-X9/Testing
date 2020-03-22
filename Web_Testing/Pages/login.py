@@ -56,6 +56,7 @@ class LoginPage:
         self.remember_me_check.click()
 
     def click_login(self):
+        self.login_btn = self.helper.find_element_by_id(self.driver, "login-button")
         self.login_btn.click()
 
     def click_forget_password(self):
