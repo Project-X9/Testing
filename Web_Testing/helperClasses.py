@@ -162,6 +162,11 @@ class DOB():
     def get_month_name(self):
         pass
 
+    def is_equal(self,dob):
+        if int(dob[1])==self.day and int(dob[0])==self.month and int(dob[2])==self.year:
+            return True
+        return False
+
 
 class Profile():
     # TODO: add any required fields here
@@ -200,6 +205,12 @@ class ConstantsClass:
 
     def get_pass(self, email):
         return self.test_accounts_dict[email]
+
+    def get_dob(self, email):
+        return self.test_accounts_to_profiles.get(email).dob
+
+    def get_name(self, email):
+        return self.test_accounts_to_profiles.get(email).name
 
     def get_profile(self, email):
         return self.test_accounts_to_profiles.get(email)
