@@ -14,7 +14,7 @@ from Web_Testing.helperClasses import helper, ConstantsClass
 @allure.suite("Premium page test")
 @allure.feature("Premium page test")
 @allure.severity(allure.severity_level.CRITICAL)
-class TestLogin:
+class TestPremium:
     driver = helper().chrome_driver_init()
 
     @pytest.yield_fixture
