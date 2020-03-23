@@ -18,25 +18,60 @@ class PremiumPage:
         self.helper = helper()
 
     def click_spotify_logo(self):
-        helper().find_element_by_xpath(self.driver, self.spotify_logo).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.spotify_logo).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
 
     def click_logout_button(self):
-        helper().find_element_by_xpath(self.driver, self.logout_button).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.logout_button).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
+
 
     def click_account_link(self):
-        helper().find_element_by_xpath(self.driver, self.account_link).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.account_link).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
 
     def click_profile_link(self):
-        helper().find_element_by_xpath(self.driver, self.profile_link).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.profile_link).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
 
     def click_download_link(self):
-        helper().find_element_by_xpath(self.driver, self.download_link).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.download_link).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
 
     def click_help_link(self):
-        helper().find_element_by_xpath(self.driver, self.help_link).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.help_link).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
 
     def click_home_link(self):
-        helper().find_element_by_xpath(self.driver, self.home_link).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.home_link).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
 
     def click_get_premium_button(self):
-        helper().find_element_by_xpath(self.driver, self.get_premium_button).click()
+        if helper().element_exists_by_xpath(self.driver, self.spotify_logo):
+            helper().find_element_by_xpath(self.driver, self.get_premium_button).click()
+        else:
+            helper().report_allure(self.driver, "Not Found")
+            assert False
+
+

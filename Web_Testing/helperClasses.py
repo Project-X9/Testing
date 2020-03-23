@@ -9,6 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 class helper:
@@ -20,10 +21,10 @@ class helper:
             , "October": 10, "November": 11, "December": 12
                            }
         pass
+    driver = None
 
     def chrome_driver_init(self):
-        driver = webdriver.Chrome(
-            executable_path=r'C:\Users\Mohammad\Desktop\University\Software_Engineering\Project\webdrivers\chromedriver.exe')
+        driver = webdriver.Chrome(ChromeDriverManager().install())
         # tb refers to Toolbar, tb_.. refers to Toolbar elements
         return driver
 
