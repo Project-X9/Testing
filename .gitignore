@@ -127,3 +127,7 @@ dmypy.json
 
 # extra
 debug.log
+
+Reports/*.json
+Reports/*.png
+Reports/*.txt
