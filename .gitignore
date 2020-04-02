@@ -127,11 +127,7 @@ dmypy.json
 
 # extra
 debug.log
-<<<<<<< HEAD
-/Web Testing/
-=======
 
 Reports/*.json
 Reports/*.png
 Reports/*.txt
->>>>>>> 2df0ea83e620095d672a6aa31914af003d5d3ab3
