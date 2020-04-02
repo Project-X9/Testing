@@ -1,8 +1,9 @@
 from Web_Testing.helperClasses import Gender
 import time
-from Mobile_Testing.helperClasses import MobileHelper
+from Mobile_Testing.helperClasses import MobileHelper, Profile, DOB
 from Mobile_Testing.Pages.LoggedOutHome import LoggedOutHome
 from Mobile_Testing.Pages.LoginPage import LoginPage
+import datetime
 
 class SignupPage(MobileHelper):
 
@@ -25,8 +26,8 @@ class SignupPage(MobileHelper):
     def fill_password(self, password):
         self.password_txt.send_keys(password)
 
-    def fill_age(self, age):
-        self.age_txt.send_keys(age)
+    def fill_age(self, dob: DOB):
+        self.age_txt.send_keys(datetime.datetime.now().year - dob.year)
 
     def choose_male(self):
         self.male_gender_checkbox.click()
@@ -43,7 +44,7 @@ class SignupPage(MobileHelper):
         else:
             return True
 
-    def signup_to_spotify(self, profile):
+    def signup_to_spotify(self, profile: Profile):
         self.fill_name(profile.name)
         self.fill_email(profile.email)
         self.fill_password(profile.password)

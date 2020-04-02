@@ -333,5 +333,5 @@ class by(enum.Enum):
 
 class Gender(enum.Enum):
     MALE = "Male"
-    FEMALE = "Female"
     UNSELECTED = "Un selected"
+    FEMALE = "Female"

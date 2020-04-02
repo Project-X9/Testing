@@ -1,8 +1,7 @@
 import allure
 import pytest
-from Web_Testing.helperClasses import Profile, DOB, Gender, ConstantsClass
 from Mobile_Testing.Pages.SignupPage import SignupPage
-from Mobile_Testing.helperClasses import MobileHelper
+from Mobile_Testing.helperClasses import MobileHelper, Profile, ConstantsClass, DOB, Gender
 from Mobile_Testing.Pages.LoggedOutHome import LoggedOutHome
 import time
 
@@ -24,7 +23,7 @@ class TestLogin:
     def setup(self):
         self.driver = MobileHelper().driver_init()
         yield
-        self.driver.delete_all_cookies()
+        self.driver.quit()
 
     @pytest.yield_fixture
     def setup_final(self):
