@@ -11,6 +11,9 @@ class MobileHelper:
         driver.implicitly_wait(10)
         return driver
 
+    def set_driver(self, driver):
+        self.driver = driver
+
     @staticmethod
     def element_exists_by_id(driver, _id):
         try:

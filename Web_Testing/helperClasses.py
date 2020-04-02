@@ -7,7 +7,9 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait, Select
+from selenium.webdriver.common.by import By
 from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 class Browser(enum.Enum):
@@ -45,8 +47,6 @@ class WebHelper:
     def chrome_driver_init(self):
         self.driver = webdriver.Chrome(
             executable_path=r'C:\Users\Mohammad\Desktop\University\Software_Engineering\Project\webdrivers\chromedriver.exe')
-        # tb refers to Toolbar, tb_.. refers to Toolbar elements
-        return self.driver
 
     def firefox_driver_init(self):
         self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
@@ -229,7 +229,7 @@ class WebHelper:
                       attachment_type=AttachmentType.PNG)
 
 
-class DOB():
+class DOB:
     def __init__(self, day, month, year):
         self.day = day
         self.month = month
@@ -241,7 +241,13 @@ class DOB():
     def get_month_name(self):
         pass
 
-class Profile():
+    def is_equal(self, dob):
+        if int(dob[1])==self.day and int(dob[0])==self.month and int(dob[2])==self.year:
+            return True
+        return False
+
+
+class Profile:
     # TODO: add any required fields here
     # dob = Date of Birth
     # c_email = Confirmed Email, if not provided -> set with the original email (Used for signup mismatched emails test)
@@ -255,10 +261,12 @@ class Profile():
         self.dob = dob
         self.gender = gender
 
+
 class ConstantsClass:
 
     def __init__(self):
         self.delay_time = 5
+
         self.test_accounts_dict = { "test_projectX@hotmail.com" : "TestingTeamMKE" }
         self.test_accounts_to_profiles = { "test_projectX@hotmail.com" :
                                                Profile("test_projectX@hotmail.com"
@@ -302,6 +310,12 @@ class ConstantsClass:
 
     def get_pass(self, email):
         return self.test_accounts_dict[email]
+
+    def get_dob(self, email):
+        return self.test_accounts_to_profiles.get(email).dob
+
+    def get_name(self, email):
+        return self.test_accounts_to_profiles.get(email).name
 
     def get_profile(self, email):
         return self.test_accounts_to_profiles.get(email)

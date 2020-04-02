@@ -1,0 +1,2 @@
+Failed to signup
+INTERNAL ERROR: Warnings did not appear

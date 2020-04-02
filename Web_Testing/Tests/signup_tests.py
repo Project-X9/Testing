@@ -16,7 +16,6 @@ import time
 @allure.severity(allure.severity_level.BLOCKER)
 class TestSignup:
 
-    # driver = helper().firefox_driver_init()
     # TODO: change Chrome executable path to your needs
     driver = WebHelper().firefox_driver_init()
     correct_emails = ["test51@test.com"]
@@ -81,7 +80,7 @@ class TestSignup:
         sp.check_signup_page()
         profile = Profile("", "test_pass", "Mohammad Osama", DOB(31, 1, 1990), Gender.MALE,
                           "another_email@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with empty email", self.driver)
             assert False
@@ -147,7 +146,7 @@ class TestSignup:
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "", "Mohammad Osama", DOB(31, 1, 1990), Gender.MALE,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with empty password", self.driver)
             assert False
@@ -169,7 +168,7 @@ class TestSignup:
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(31, 1, 1990), Gender.UNSELECTED,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected gender", self.driver)
             assert False
@@ -191,7 +190,7 @@ class TestSignup:
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(-1, 1, 1990), Gender.MALE,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected day", self.driver)
             assert False
@@ -213,7 +212,7 @@ class TestSignup:
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(1, -1, 1990), Gender.MALE,
                           "mohdos_1999@hotmail.com")
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected month", self.driver)
             assert False
@@ -234,7 +233,7 @@ class TestSignup:
         sp = SignupPage(self.driver)
         sp.check_signup_page()
         profile = Profile("mohdos_1999@hotmail.com", "test_pass", "Mohammad Osama", DOB(1, 1, -1990), Gender.MALE)
-
+        time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected year", self.driver)
             assert False

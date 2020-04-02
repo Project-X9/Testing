@@ -1,0 +1,2 @@
+Signed up successfully
+SUCCESS: Account overview email is the same as the provided login email
