@@ -84,10 +84,9 @@ class Constants:
         self.kimo = 1
         self.eman = 2
         self.desired_cap = {
-            "deviceName": "emulator-5554",
+            "deviceName": "AndroidEmulater",
             "platformName": "Android",
-            "platformVersion": "9",
-            "app": self.apk_locations[self.mo_os],
+            "app": self.apk_locations[self.kimo],
             "appWaitActivity": ".authentication.AuthenticationPage",
             "appWaitPackage": "com.example.projectx"
         }
