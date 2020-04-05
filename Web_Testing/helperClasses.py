@@ -41,12 +41,18 @@ class WebHelper:
     def get_account_overview_url(self):
         return self.base_url + "account/overview"
 
+    def get_account_edit_url(self):
+        return self.base_url + "account/edit"
+
+    def get_account_changepassword_url(self):
+        return self.base_url + "account/changepassword"
+
     def set_driver(self, driver):
         self.driver = driver
 
     def chrome_driver_init(self):
-        self.driver = webdriver.Chrome(
-            executable_path=r'C:\Users\Mohammad\Desktop\University\Software_Engineering\Project\webdrivers\chromedriver.exe')
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
+        return self.driver
 
     def firefox_driver_init(self):
         self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
@@ -242,7 +248,7 @@ class DOB:
         pass
 
     def is_equal(self, dob):
-        if int(dob[1])==self.day and int(dob[0])==self.month and int(dob[2])==self.year:
+        if int(dob[1]) == self.day and int(dob[0]) == self.month and int(dob[2]) == self.year:
             return True
         return False
 
@@ -309,7 +315,7 @@ class ConstantsClass:
         return emails
 
     def get_pass(self, email):
-        return self.test_accounts_dict[email]
+        return self.test_accounts_to_profiles.get(email).password
 
     def get_dob(self, email):
         return self.test_accounts_to_profiles.get(email).dob
