@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 from Mobile_Testing.Pages.LoggedOutHome import LoggedOutHome
@@ -38,7 +40,7 @@ class TestLogin:
     def test_case_1(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify(self.correct_emails[0], self.correct_passwords[0]):
             MobileHelper().report_allure(self.driver, "SUCCESS: Login succeeded with correct credentials")
@@ -58,7 +60,7 @@ class TestLogin:
     def test_case_2(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify(self.correct_emails[1], self.correct_passwords[1]):
             MobileHelper().report_allure(self.driver, "SUCCESS: Login succeeded with correct credentials")
@@ -78,7 +80,7 @@ class TestLogin:
     def test_case_3(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify(self.correct_emails[2], self.correct_passwords[2]):
             MobileHelper().report_allure(self.driver, "SUCCESS: Login succeeded with correct credentials")
@@ -98,7 +100,7 @@ class TestLogin:
     def test_case_4(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify("kamelmohsenkamel@gmail.com", "wrong_password"):
             MobileHelper().report_allure(self.driver, "ERROR: Login succeeded with incorrect credentials")
@@ -118,7 +120,7 @@ class TestLogin:
     def test_case_5(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify("kamelmohsenkamel", "Kimo2010"):
             MobileHelper().report_allure(self.driver, "ERROR: Login succeeded with incorrect credentials")
@@ -138,7 +140,7 @@ class TestLogin:
     def test_case_6(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify("test_wrong@email.com", "UnknownPassowrd"):
             MobileHelper().report_allure(self.driver, "ERROR: Login succeeded with incorrect credentials")
@@ -158,7 +160,7 @@ class TestLogin:
     def test_case_7(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify("", "Kimo2010"):
             MobileHelper().report_allure(self.driver, "ERROR: Login succeeded with empty email")
@@ -178,7 +180,7 @@ class TestLogin:
     def test_case_8(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify("mohdos_1999@hotmail.com", ""):
             MobileHelper().report_allure(self.driver, "ERROR: Login succeeded with empty password")
@@ -198,7 +200,7 @@ class TestLogin:
     def test_case_9(self, setup_final):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
-        self.driver.implicitly_wait(1)
+        time.sleep(2)
         lp = LoginPage(self.driver)
         if lp.login_to_spotify("", ""):
             MobileHelper().report_allure(self.driver, "ERROR: Login succeeded with empty email and password")

@@ -175,3 +175,29 @@ class ConstantsClass:
                                                        , "test505152"
                                                        , "Testing TeamX", DOB(21, 2, 1950), Gender.MALE, "test51@test.com")
                                            }
+
+    def get_home_link(self):
+        return "http://localhost:3000/home"
+
+    def get_account_overview_link(self):
+        return "http://localhost:3000/accountoverview"
+
+    def get_test_emails(self):
+        emails = list(self.test_accounts_dict.keys())
+        return emails
+
+    def get_pass(self, email):
+        return self.test_accounts_dict[email]
+
+    def get_dob(self, email):
+        return self.test_accounts_to_profiles.get(email).dob
+
+    def get_name(self, email):
+        return self.test_accounts_to_profiles.get(email).name
+
+    def get_profile(self, email):
+        return self.test_accounts_to_profiles.get(email)
+
+    def get_registered_emails(self):
+        return ["mohdos_1999@hotmail.com"]
+
