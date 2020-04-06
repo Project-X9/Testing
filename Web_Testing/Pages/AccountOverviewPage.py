@@ -1,3 +1,5 @@
+from selenium.common.exceptions import NoSuchElementException
+
 from Web_Testing.helperClasses import WebHelper
 
 class AccountOverviewPage(WebHelper):
@@ -23,10 +25,23 @@ class AccountOverviewPage(WebHelper):
             "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[1]/div[2]")
         emails = self.find_elements_by_xpath(
             "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[2]/div[2]")
+        dobs = self.find_elements_by_xpath(
+            "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[2]/div[2]")
+        countries = self.find_elements_by_xpath(
+            "//*[@id='root']/div/div/div/div[2]/div/div/div[2]/div/div[4]/div[2]/h5")
+
         if (usernames is not None) and (len(usernames) > 0):
             self.username = usernames[0].text
+
         if (emails is not None) and (len(emails) > 0):
             self.email = emails[0].text
+
+        if (dobs is not None) and (len(dobs) > 0):
+            self.dob = dobs[0].text
+
+        if (countries is not None) and (len(countries) > 0):
+            self.country = countries[0].text
+
         # self.account_overview_email = ""
         # self.account_overview_username = ""
         # self.account_overview_dob = ""
@@ -78,34 +93,14 @@ class AccountOverviewPage(WebHelper):
     def click_signout_btn(self):
         self.click_button_safe(self.find_element_by_link_text(self.sign_out_btn))
 
-    def initialize_account_overview(self):
-        try:
-            username = self.find_elements_by_xpath(
-                "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[1]/div[2]")
-            email = self.find_elements_by_xpath(
-                "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[2]/div[2]")
-            dob = self.find_elements_by_xpath(
-                "/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[2]/div[2]")
-            country = self.find_elements_by_xpath(
-                "//*[@id='root']/div/div/div/div[2]/div/div/div[2]/div/div[4]/div[2]/h5")
-            if username is not None:
-                self.account_overview_username = username.text
-            if email is not None:
-                self.account_overview_email = email.text
-            if dob is not None:
-                self.account_overview_dob = dob.text.split("/")
-            return True
-        except NoSuchElementException:
-            return False
-
     def get_account_overview_username(self):
-        return self.account_overview_username
+        return self.username
 
     def get_account_overview_email(self):
-        return self.account_overview_email
+        return self.email
 
     def get_account_overview_dob(self):
-        return self.account_overview_dob
+        return self.dob
 
     def is_correct_username(self, username):
         if self.get_account_overview_username() == username:
@@ -125,9 +120,12 @@ class AccountOverviewPage(WebHelper):
         else:
             return False
 
+    def is_page_initialized(self):
+        return self.email is not None
+
     def account_overview_check(self, email, password, dob, username):
         try:
-            if self.initialize_account_overview():
+            if self.is_page_initialized():
                 if self.is_correct_email(email) and self.is_correct_dob(dob) and self.is_correct_username(username):
                     return True
                 else:

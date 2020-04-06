@@ -24,8 +24,7 @@ class TestAccountOverview:
         logged_out_page.click_login()
         time.sleep(3)
         lp = LoginPage(self.driver)
-        lp.set_credentials("test3@test.com",ConstantsClass().get_pass("test3@test.com"))
-        lp.click_login()
+        lp.login_to_spotify("test3@test.com", ConstantsClass().get_pass("test3@test.com"))
 
     @pytest.yield_fixture
     def setup(self):
@@ -42,6 +41,7 @@ class TestAccountOverview:
         self.driver.get(WebHelper().get_home_url())
         self.driver.maximize_window()
         self.login_first()
+        time.sleep(2)
         yield
         self.driver.delete_all_cookies()
         self.driver.refresh()

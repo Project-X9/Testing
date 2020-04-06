@@ -4,18 +4,68 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+from Web_Testing.Pages.AccountOverviewPage import AccountOverviewPage
 from Web_Testing.helperClasses import WebHelper, by, Gender
 import time
 
 
 class LoginPage(WebHelper):
+    """
+        A class used to represent the Login Page
+
+        ...
+
+        Attributes
+        ----------
+        fb_btn : WebDriverElement
+            a Web Driver element representing the Login with Facebook button
+        email_txt : WebDriverElement
+            a Web Driver element representing the Email Text Field
+        pass_txt : WebDriverElement
+            a Web Driver element representing the Password Text Field
+        login_btn : WebDriverElement
+            a Web Driver element representing the Login button
+        forgot_pass_btn : WebDriverElement
+            a Web Driver element representing the Forgot Password button
+        signup_btn : WebDriverElement
+            a Web Driver element representing the Signup button
+        text_danger : WebDriverElement
+            a Web Driver element representing the Text Field warnings
+
+        Methods
+        -------
+        set_email(email)
+            Fills the email text field with the given email
+        set_password(password)
+            Fills the password text field with the given password
+        clear_credentials()
+            Clears the email and password text fields
+        set_credentials(email, password)
+            Set the email and password text fields with the given email and password
+        click_signup()
+            Clicks on the signup button
+        click_login()
+            Clicks on the login button
+        invalid_user_text_appeared()
+            Checks if the "Invalid username/password" text appeared
+        check_login_page()
+            Checks if currently on login page
+        is_in_account_overview()
+            Checks if currently on Account Overview page
+        login_to_spotify(email, password)
+            Login with the given email and password
+        """
 
     def __init__(self, driver):
+        """
+        :param driver : Initializes the class' driver with the provided driver
+        :type driver: WebDriver
+        """
         self.set_driver(driver)
         self.fb_btn = self.find_elements_by_class_name("facebookButton metro")
         self.email_txt = self.find_element_by_id("email")
         self.pass_txt = self.find_element_by_id("password")
-        # self.remember_me_check = self.driver.find_element_by_xpath("//*[@id='app']/body/div[1]/div[2]/div/form/div[3]/div[1]/div/label/span")
         self.login_btn = self.find_element_by_id("signinbutton")
         self.forgot_pass_btn = self.find_element_by_id("forgot-password-link")
         self.signup_btn = self.find_element_by_id("signuplink")
@@ -23,84 +73,60 @@ class LoginPage(WebHelper):
         self.text_danger = self.find_elements_by_class_name("text-danger")
         self.account_overview_email = ""
         self.account_overview_username = ""
-        # self.logo = driver.find_element_by_xpath("//*[@id='app']/body/div[1]/div[1]/div/a")
-
-    def initialize_account_overview(self):
-        # el_exists = helper().element_exists_by_xpath(self.driver, "ProfileSection__valueCell--1fz0K")
-        # if not el_exists:
-        #     return False
-        try:
-            usernames = self.find_elements_by_xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[1]/div[2]")
-            emails = self.find_elements_by_xpath("/html/body/div[1]/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div/div[2]/div[2]")
-            if (usernames is not None) and (len(usernames) > 0):
-                self.account_overview_username = usernames[0].text
-            if (emails is not None) and (len(emails) > 0):
-                self.account_overview_email = emails[0].text
-            return True
-        except NoSuchElementException:
-            return False
-        # self.account_overview_email = self.driver.find_element_by_link_text("/eg-en/account/overview/")
-
-    def get_account_overview_email(self):
-        return self.account_overview_email
-
-    def get_account_overview_username(self):
-        return self.account_overview_username
 
     def set_email(self, email):
+        """
+        Fills the email text field with the given email
+
+        :param email : The email to fill the text field with
+        :type email: str
+
+        """
         self.email_txt.send_keys(email)
 
     def set_password(self, password):
+        """
+        Fills the password text field with the given password
+
+        :param password : The password to fill the text field with
+        :type password: str
+        """
         self.pass_txt.send_keys(password)
 
     def clear_credentials(self):
+        """Clears the email and password text fields"""
         self.email_txt.clear()
         self.pass_txt.clear()
 
     def set_credentials(self, email, password):
+        """
+        Set the email and password text fields with the given email and password
+
+        :param email : The email to fill the text field with
+        :type email: str
+
+        :param password : The password to fill the text field with
+        :type password: str
+
+        """
         self.set_email(email)
         self.set_password(password)
 
-    def click_remember_me(self):
-        pass
-        # self.helper.click_button_safe(self.remember_me_check)
-        # self.remember_me_check.click()
+    def click_signup(self):
+        """Clicks on the signup button"""
+        self.click_button_safe(self.signup_btn)
 
     def click_login(self):
+        """Clicks on the login button"""
         self.click_button_safe(self.login_btn)
-        # self.login_btn.click()
-
-    def click_forget_password(self):
-        self.click_button_safe(self.forgot_pass_btn)
-        # self.forgot_pass_btn.click()
-
-    def click_sign_up(self):
-        self.click_button_safe(self.signup_btn)
-        # self.signup_btn.click()
-
-    def click_terms_conditions(self):
-        pass
-        # self.helper.click_button_safe(self.terms_cond_btn)
-        # self.terms_cond_btn.click()
-
-    def click_privacy_policy(self):
-        pass
-        # self.helper.click_button_safe(self.privacy_policy_btn)
-        # self.privacy_policy_btn.click()
-
-    def check_login_failure(self):
-        if self.driver.title == "Login - Spotify":
-            assert True
-        else:
-            assert False
-
-    def is_correct_email(self, email):
-        if self.get_account_overview_email() == email:
-            return True
-        else:
-            return False
 
     def invalid_user_text_appeared(self):
+        """
+        Checks if the "Invalid username/password" text appeared
+
+        :returns: a boolean if the invalid user text has appeared
+        :rtype: bool
+        """
         self.incorrect_user_text = self.find_element_by_id("invalid")
         if self.incorrect_user_text is None:
             return False
@@ -108,15 +134,21 @@ class LoginPage(WebHelper):
             return True
 
     def check_login_page(self):
+        """
+        Checks if currently in login page
+
+        :returns: a boolean if currently in login page
+        :rtype: bool
+        """
         return self.url_has('signin')
-        # url = str(self.driver.current_url)
-        # result = url.find('signin')
-        # if result == -1:
-        #     return False
-        # else:
-        #     return True
 
     def is_in_account_overview(self):
+        """
+        Checks if currently in Account Overview page
+
+        :returns: a boolean if currently in account overview
+        :rtype: bool
+        """
         try:
             assertion = self.url_has("account/overview", self.driver)
             return assertion
@@ -124,6 +156,20 @@ class LoginPage(WebHelper):
             return False
 
     def login_to_spotify(self, email, password):
+        """
+        Login with the given email and password
+
+        :param email : The email used for login
+        :type email: str
+
+        :param password : The password used for login
+        :type password: str
+
+        :returns: a boolean True if succeeded to login
+        :rtype: bool
+
+        :raises NoSuchElementException : If a Web Driver element cannot be found in the page
+        """
         # timeout for login
         timeout = 4
         try:
@@ -134,7 +180,8 @@ class LoginPage(WebHelper):
             time.sleep(timeout)
             # if logged in successfully
             if self.is_in_account_overview():
-                initialize_success = self.initialize_account_overview() # try to find overview elements such as email, password, etc
+                ap = AccountOverviewPage(self.driver)
+                initialize_success = ap.is_page_initialized()
                 print("Successfully logged in")
 
                 # failed to find account overview elements but logged in successfully
@@ -142,9 +189,9 @@ class LoginPage(WebHelper):
                     print("Could not find Account overview elements")
                     return True
                 # Account overview email is not the same as the provided login email but logged in successfully
-                if self.get_account_overview_email() != email:
+                if ap.email != email:
                     print("INTERNAL ERROR: Account overview email is not matching the login email: Login email = "
-                          + email + ", Overview email = " + self.get_account_overview_email())
+                          + email + ", Overview email = " + ap.email)
 
                 else:
                     print("SUCCESS: Account overview email is the same as the provided login email")
@@ -154,9 +201,7 @@ class LoginPage(WebHelper):
             # if timeout without any page loaded
             else:
                 # if incorrect credentials did not appear, then there is a problem
-                print("line 14")
                 if self.invalid_user_text_appeared():
-                    print("line 15")
                     print("Incorrect credentials.")
                 else:
                     print(
@@ -166,5 +211,5 @@ class LoginPage(WebHelper):
 
         # any other error that cause test to fail
         except:
-            print("line 18")
             exit('Testing failed in login with credentials : ' + email + " & " + password)
+
