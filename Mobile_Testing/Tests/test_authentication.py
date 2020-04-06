@@ -1,7 +1,7 @@
 from appium import webdriver
-from Mobile_Testing.helperClasses import MobileHelper
-from Mobile_Testing.Pages.LoggedOutHome import LoggedOutHome
-from Mobile_Testing.Pages.SignupPage import SignupPage
+from Mobile_Testing.helper import Helper
+from Mobile_Testing.Pages.authentication import AuthenticationPage
+from Mobile_Testing.Pages.signup import SignupPage
 from allure_commons.types import AttachmentType
 import allure
 import pytest
@@ -16,7 +16,7 @@ class TestAuthentication:
 
     @pytest.yield_fixture
     def setup(self):
-        self.driver = MobileHelper.driver_init()
+        self.driver = Helper.driver_init()
         yield
         self.driver.quit()
 
@@ -29,12 +29,12 @@ class TestAuthentication:
     @pytest.mark.Do
     @pytest.mark.Authentication
     def test_case_1(self, setup):
-        ap = LoggedOutHome(self.driver)
-        ap.click_signup()
-        sp = SignupPage(self.driver)
-        if sp.name_txt is not None:
+        ap = AuthenticationPage(self.driver)
+        ap.click_signup_button()
+
+        if Helper.element_exists_by_id(self.driver, SignupPage.name_text_field_id):
             assert True
         else:
             print(self.driver.current_activity)
-            MobileHelper.report_allure(self.driver, "Sign up Page not entered")
+            Helper.report_allure(self.driver, "Sign up Page not entered")
             assert False
