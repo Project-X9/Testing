@@ -1,7 +1,0 @@
-
-        # self.disclaimer_txt = self.driver.find_element_by_xpath("//*[@id='app']/body/div[1]/div[2]/div/div[7]/div/p")
-        # self.terms_cond_btn = self.driver.find_element_by_xpath("//*[@id='app']/body/div[1]/div[2]/div/div[7]/div/p/a[1]")
-        # self.privacy_policy_btn = self.driver.find_element_by_xpath("//*[@id='app']/body/div[1]/div[2]/div/div[7]/div/p/a[2]")
-        # self.subheading = self.driver.find_element_by_xpath("//span[text()='To continue, log in to Spotify.']")
-        # self.no_account_text = self.driver.find_element_by_xpath("//*[@id='sign-up-section']/div/div/signup/div/div/div[2]/div")
-        # self.incorrect_credentials_txt = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div[2]/div/p")
