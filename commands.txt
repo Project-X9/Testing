@@ -1,6 +1,6 @@
 1)
-python -m pytest --alluredir="./Reports" ./Mobile_Testing/Tests/ -m Do
-python -m pytest --alluredir="./Reports" ./Web_Testing/Tests/ -m Do
+python3 -m pytest --alluredir="./Reports" ./Mobile_Testing/Tests/ -m Do
+python3 -m pytest --alluredir="./Reports" ./Web_Testing/Tests/ -m Do
 
 2)
 allure serve "./Reports" or allure-docx --pdf Reports Test_Results.docx
