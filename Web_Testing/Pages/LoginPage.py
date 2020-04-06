@@ -59,7 +59,9 @@ class LoginPage(WebHelper):
 
     def __init__(self, driver):
         """
-        :param driver : Initializes the class' driver with the provided driver
+        Initializes the page elements
+
+        :param driver : the driver to which the super class' driver is to be set
         :type driver: WebDriver
         """
         self.set_driver(driver)
