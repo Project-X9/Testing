@@ -1,6 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException
 
 from Web_Testing.helperClasses import WebHelper
+from Web_Testing.helperClasses import DOB
 
 class AccountOverviewPage(WebHelper):
     spotify_logo = "//*[@id='root']/div/div/div/div[1]/div/nav/a/img"
@@ -37,7 +38,7 @@ class AccountOverviewPage(WebHelper):
             self.email = emails[0].text
 
         if (dobs is not None) and (len(dobs) > 0):
-            self.dob = dobs[0].text
+            self.dob_txt = dobs[0].text
 
         if (countries is not None) and (len(countries) > 0):
             self.country = countries[0].text
@@ -100,7 +101,8 @@ class AccountOverviewPage(WebHelper):
         return self.email
 
     def get_account_overview_dob(self):
-        return self.dob
+        dob_arr = self.dob_txt.split("/")
+        return DOB(dob_arr[0], dob_arr[1], dob_arr[2])
 
     def is_correct_username(self, username):
         if self.get_account_overview_username() == username:

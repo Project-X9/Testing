@@ -12,11 +12,6 @@ from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-class Browser(enum.Enum):
-    CHROME = 0
-    FIREFOX = 1
-
-
 class WebHelper:
     """
     A class used to provide helper function to ease testing
@@ -637,28 +632,100 @@ class WebHelper:
 
 
 class DOB:
+    """
+    A class used to represent the date of birth
+    ...
+
+    Attributes
+    ----------
+    day : str
+        the birth date day
+    month : str
+        the birth date month
+    year : str
+        the birth date year
+
+    Methods
+    -------
+    is_equal(dob)
+            Checks if the class' date of birth (day, month, year) is equal to the given date of birth
+    """
     def __init__(self, day, month, year):
+        """
+        Initializes the day, month and year
+
+        :param day: birth date day
+        :type day: int
+
+        :param month: birth date month
+        :type month: int
+
+        :param year: birth date year
+        :type year: int
+        """
         self.day = day
         self.month = month
         self.year = year
 
-    def get_month_value(self):
-        pass
-
-    def get_month_name(self):
-        pass
-
     def is_equal(self, dob):
-        if int(dob[1]) == self.day and int(dob[0]) == self.month and int(dob[2]) == self.year:
+        """
+        Checks if the class' date of birth (day, month, year) is equal to the given date of birth
+
+        :param dob: the date of birth to be compared
+        :type dob: DOB
+        :returns: a boolean True if the given birth date is equal to the class' birth date
+        :rtype: bool
+        """
+        if dob.day == self.day and dob.month == self.month and dob.year == self.year:
             return True
         return False
 
 
 class Profile:
-    # TODO: add any required fields here
-    # dob = Date of Birth
-    # c_email = Confirmed Email, if not provided -> set with the original email (Used for signup mismatched emails test)
+    """
+    A class used to represent the user's profile
+    ...
+
+    Attributes
+    ----------
+    email : str
+        the user's email
+    c_email : str
+        the user's confirmation email
+    password : str
+        the user's password
+    name : str
+        the user's name
+    dob : DOB
+        the user's date of birth
+    gender : Gender
+        the user's gender
+
+    """
     def __init__(self, email, password, name, dob, gender, c_email=''):
+        """
+        Initializes the user's profile with the provided parameters
+
+        If the parameter `c_email` is '', it sets the c_email = email
+
+        :param email: the user's email
+        :type email: str
+
+        :param password: the user's password
+        :type password: str
+
+        :param name: the user's name
+        :type name: str
+
+        :param dob: the user's date of birth
+        :type dob: DOB
+
+        :param gender: the user's gender
+        :type gender: Gender
+
+        :param c_email: the user's confirmation email (default is '')
+        :type c_email: str
+        """
         self.email = email
         self.c_email = email
         if c_email != '':
@@ -671,10 +738,35 @@ class Profile:
 
 class ConstantsClass:
 
-    def __init__(self):
-        self.delay_time = 5
+    """
+    A class used to represent any constants needed to be accessed
 
-        self.test_accounts_dict = { "test_projectX@hotmail.com" : "TestingTeamMKE" }
+    Attributes
+    ----------
+    delay_time : int
+        the user's email
+    test_accounts_to_profiles : dict
+        a dictionary mapping an email to a Profile
+
+    Methods
+    -------
+    get_test_emails()
+        gets all the emails used for testing
+    get_pass(email)
+        gets the password for the provided email
+    get_dob(email)
+        gets the date of birth for the provided email
+    get_name(email)
+        gets the name for the provided email
+    get_profile(email)
+        gets the profile for the provided email
+    """
+
+    def __init__(self):
+        """
+        Initializes the constants needed
+        """
+        self.delay_time = 5
         self.test_accounts_to_profiles = { "test_projectX@hotmail.com" :
                                                Profile("test_projectX@hotmail.com"
                                                        , "TestingTeamMKE"
@@ -705,33 +797,69 @@ class ConstantsClass:
                                                        , "Testing TeamX", DOB(21, 2, 1950), Gender.MALE, "test51@test.com")
                                            }
 
-    def get_home_link(self):
-        return "http://localhost:3000/home"
-
-    def get_account_overview_link(self):
-        return "http://localhost:3000/accountoverview"
-
     def get_test_emails(self):
-        emails = list(self.test_accounts_dict.keys())
+        """
+        gets all the emails used for testing
+
+        :returns: a list of emails used for testing
+        :rtype: list
+        """
+        emails = list(self.test_accounts_to_profiles.keys())
         return emails
 
     def get_pass(self, email):
+        """
+        gets the password for the provided email
+
+        :param email: the user's email
+        :type email: str
+
+        :returns: the password for the provided email
+        :rtype: str
+        """
         return self.test_accounts_to_profiles.get(email).password
 
     def get_dob(self, email):
+        """
+        gets the date of birth for the provided email
+
+        :param email: the user's email
+        :type email: str
+
+        :returns: the birth date of the user with the provided email
+        :rtype: DOB
+        """
         return self.test_accounts_to_profiles.get(email).dob
 
     def get_name(self, email):
+        """
+        gets the name for the provided email
+
+        :param email: the user's email
+        :type email: str
+
+        :returns: the name of the user with the provided email
+        :rtype: str
+        """
         return self.test_accounts_to_profiles.get(email).name
 
     def get_profile(self, email):
-        return self.test_accounts_to_profiles.get(email)
+        """
+        gets the profile for the provided email
 
-    def get_registered_emails(self):
-        return ["mohdos_1999@hotmail.com"]
+        :param email: the user's email
+        :type email: str
+
+        :returns: the profile of the user with the provided email
+        :rtype: Profile
+        """
+        return self.test_accounts_to_profiles.get(email)
 
 
 class by(enum.Enum):
+    """
+    A class used for representing the different constants for finding a webdriver element
+    """
     ID = 1
     XPATH = 2
     CLASS_NAME = 3
@@ -739,6 +867,9 @@ class by(enum.Enum):
 
 
 class Gender(enum.Enum):
+    """
+    A class used for representing the gender of the user
+    """
     MALE = "Male"
     UNSELECTED = "Un selected"
     FEMALE = "Female"

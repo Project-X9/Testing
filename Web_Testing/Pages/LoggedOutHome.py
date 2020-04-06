@@ -7,9 +7,46 @@ from selenium.webdriver.support.ui import WebDriverWait
 from Web_Testing.helperClasses import WebHelper, by, Gender
 import time
 
-class LoggedOutHome(WebHelper):
 
+class LoggedOutHome(WebHelper):
+    """
+    A class used to represent the Login Page
+
+    ...
+
+    Attributes
+    ----------
+    tb_download_btn : WebDriverElement
+        a Web Driver element representing the Download button
+    tb_help_btn : WebDriverElement
+        a Web Driver element representing the help button
+    tb_premium_btn : WebDriverElement
+        a Web Driver element representing the premium button
+    getspotify_btn : WebDriverElement
+        a Web Driver element representing the get spotify button
+    fb_btn : WebDriverElement
+        a Web Driver element representing the facebook page link button
+    twitter_btn : WebDriverElement
+        a Web Driver element representing the twitter page link button
+    tb_signup_btn : WebDriverElement
+        a Web Driver element representing the Signup button
+    tb_login_btn : WebDriverElement
+        a Web Driver element representing the Login button
+
+    Methods
+    -------
+    click_signup()
+        Clicks on the signup button
+    click_login()
+        Clicks on the login button
+    """
     def __init__(self, driver):
+        """
+        Initializes the page elements
+
+        :param driver : the driver to which the super class' driver is to be set
+        :type driver: WebDriver
+        """
         # tb refers to Toolbar, tb_.. refers to Toolbar elements
         self.set_driver(driver)
         self.tb_login_btn = self.find_element_by_xpath("/html/body/div[1]/div/div/div/nav/div/div/ul/li[6]/a")
@@ -21,22 +58,16 @@ class LoggedOutHome(WebHelper):
         self.getspotify_btn = self.find_element_by_class_name("getSpotifyBtn")
         self.fb_btn = self.find_element_by_class_name("btn btn-social-icon btn-facebook")
         self.twitter_btn = self.find_element_by_class_name("btn btn-social-icon btn-twitter")
-        self.instagram_btn = self.find_element_by_class_name("btn btn-social-icon btn-instagram")
-        # self.subheading = self.helper.find_element_by_xpath(self.driver, "//h4[text()='Millions of songs. No credit card needed.']")
-        # self.heading = self.helper.find_element_by_xpath(self.driver, "//h1[text()='Music for everyone.']")
-        # self.for_artists_btn = self.helper.find_element_by_xpath(self.driver, "//a[text()='For Artists']")
-
-    def getButtons(self):
-
-        btns_arr = [self.tb_download_btn, self.tb_help_btn,
-                    self.tb_login_btn,
-                    self.tb_signup_btn, self.tb_premium_btn,
-                    self.getspotify_btn]
-        return btns_arr
 
     def click_login(self):
-        try:
-            self.tb_login_btn.click()
-        except:
-            pass
+        """
+        Clicks on the login button
+        """
+        self.click_button_safe(self.tb_login_btn)
+
+    def click_signup(self):
+        """
+        Clicks on the signup button
+        """
+        self.click_button_safe(self.tb_signup_btn)
 

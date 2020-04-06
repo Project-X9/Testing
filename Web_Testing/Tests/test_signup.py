@@ -1,3 +1,12 @@
+
+"""
+Signup Testing
+
+This script tests the signup functions and report the results to allure
+
+This script requires `allure` and `pytest` be installed within the Python environment you are running this script in
+"""
+
 import allure
 import pytest
 from selenium.webdriver import ActionChains

@@ -1,3 +1,13 @@
+
+"""
+Login Testing
+
+This script tests the login functions and report the results to allure
+
+This script requires `allure` and `pytest` be installed within the Python environment you are running this script in
+"""
+
+
 import allure
 import pytest
 from Web_Testing.Pages.LoggedOutHome import LoggedOutHome
@@ -5,14 +15,11 @@ from Web_Testing.Pages.LoginPage import LoginPage
 import time
 from Web_Testing.helperClasses import WebHelper
 
-
 @allure.parent_suite("End to End testing")
 @allure.suite("Login Tests")
 @allure.feature("Log in Tests")
 @allure.severity(allure.severity_level.BLOCKER)
-class TestSignin:
-
-    # driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+class TestLogin:
 
     driver = WebHelper().firefox_driver_init()
     link = "http://localhost:3000/signin"

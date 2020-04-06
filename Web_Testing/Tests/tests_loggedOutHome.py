@@ -1,3 +1,13 @@
+
+"""
+Home Page Testing
+
+This script tests the home page that appears when logged out functions and report the results to allure
+
+This script requires `allure` and `pytest` be installed within the Python environment you are running this script in
+"""
+
+
 import allure
 import pytest
 from Web_Testing.helperClasses import WebHelper
@@ -16,13 +26,13 @@ class TestLoggedOutHome:
     driver = WebHelper().firefox_driver_init()
     @pytest.yield_fixture
     def setup(self):
-        self.driver.get(ConstantsClass().get_home_link())
+        self.driver.get(WebHelper().get_home_url())
         self.driver.maximize_window()
         yield
 
     @pytest.yield_fixture
     def setup_final(self):
-        self.driver.get(ConstantsClass().get_home_link())
+        self.driver.get(WebHelper().get_home_url())
         self.driver.maximize_window()
         yield
         self.driver.close()
