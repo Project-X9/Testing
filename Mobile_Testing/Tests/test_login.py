@@ -21,12 +21,6 @@ class TestLogin:
     def setup(self):
         self.driver = MobileHelper().driver_init()
         yield
-        self.driver.delete_all_cookies()
-
-    @pytest.yield_fixture
-    def setup_final(self):
-        self.driver = MobileHelper().driver_init()
-        yield
         self.driver.quit()
 
     # Test #1 ->Correct credentials
@@ -197,7 +191,7 @@ class TestLogin:
     @allure.description("Signing in with empty email and password")
     @pytest.mark.Do
     @pytest.mark.Login
-    def test_case_9(self, setup_final):
+    def test_case_9(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_login()
         time.sleep(2)

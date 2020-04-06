@@ -25,12 +25,6 @@ class TestLogin:
         yield
         self.driver.quit()
 
-    @pytest.yield_fixture
-    def setup_final(self):
-        self.driver = MobileHelper().driver_init()
-        yield
-        self.driver.quit()
-
 # Test #1 -> Different Confirmation email
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Failing Signup")
@@ -251,7 +245,7 @@ class TestLogin:
     @allure.description("Signing up with empty confirmation email")
     @pytest.mark.Do
     @pytest.mark.Signup
-    def test_case_10(self, setup_final):
+    def test_case_10(self, setup):
         logged_out_page = LoggedOutHome(self.driver)
         logged_out_page.click_signup()
         time.sleep(5)
