@@ -127,6 +127,7 @@ dmypy.json
 
 # extra
 debug.log
+main_file_dummy.py
 
 Reports/*.json
 Reports/*.png
