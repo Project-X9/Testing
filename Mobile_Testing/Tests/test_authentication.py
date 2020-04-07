@@ -24,7 +24,7 @@ class TestAuthentication:
         yield
         self.driver.quit()
 
-        # Test #1 ->Checking that all buttons and links work
+        # Test #1 ->Clicks on the Sign up button and checks that it works
 
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Authentication Tests")
@@ -48,7 +48,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up Page not entered")
             assert False
 
-        # Test #2 ->Checking that all buttons and links work
+        # Test #2 ->Clicking the Login button
 
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Authentication Tests")
@@ -72,7 +72,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Login Page not entered")
             assert False
 
-    # Test #3 ->Checking that all buttons and links work
+    # Test #3 ->Checking the Facebook button is available
 
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Authentication Tests")
