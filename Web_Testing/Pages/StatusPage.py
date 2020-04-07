@@ -4,7 +4,6 @@ class StatusPage:
     web_player_link = ("//*[@id='app']/body/div/div[2]/div/div/div[4]/div/a")
     log_out_button = ("//button[text()='Log Out']")
 
-
     def __init__(self, driver):
         self.driver = driver
 
