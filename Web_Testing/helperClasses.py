@@ -1,4 +1,5 @@
 import enum
+import datetime
 
 import allure
 from allure_commons.types import AttachmentType
@@ -43,6 +44,8 @@ class WebHelper:
         gets the account edit url of the website
     get_account_changepassword_url()
         gets the change password url of the website
+    get_signup_url()
+        gets the sign up url of the website
     set_driver(driver)
         sets the class' driver with the input driver
     chrome_driver_init()
@@ -177,6 +180,15 @@ class WebHelper:
         :rtype: str
         """
         return self.base_url + "account/changepassword"
+
+    def get_signup_url(self):
+        """
+        gets the sign up url of the website
+
+        :returns: the sign up url of the website
+        :rtype: str
+        """
+        return self.base_url + "signup"
 
     def set_driver(self, driver):
         """
@@ -795,6 +807,10 @@ class ConstantsClass:
                                                Profile("test51@test.com"
                                                        , "test505152"
                                                        , "Testing TeamX", DOB(21, 2, 1950), Gender.MALE, "test51@test.com")
+                                           ,"test9@test.com" :
+                                               Profile("test9@test.com"
+                                                       , "test789"
+                                                       , "Testing Team 9", DOB(21, 2, 1980), Gender.MALE, "test9@test.com")
                                            }
 
     def get_test_emails(self):
@@ -830,6 +846,20 @@ class ConstantsClass:
         :rtype: DOB
         """
         return self.test_accounts_to_profiles.get(email).dob
+
+    def calculate_age(self, email):
+        """
+        Calculate age of the provided mail
+
+         :param email: the user's email
+        :type email: str
+
+        :returns: the age of the user with the provided email
+        :rtype: str
+        """
+        current_year = datetime.datetime.now()
+        age = current_year.year.__sub__(self.get_dob(email).year)
+        return str(age)
 
     def get_name(self, email):
         """
