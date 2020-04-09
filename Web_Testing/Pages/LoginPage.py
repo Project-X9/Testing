@@ -183,17 +183,19 @@ class LoginPage(WebHelper):
             # if logged in successfully
             if self.is_in_account_overview():
                 ap = AccountOverviewPage(self.driver)
+                ap.initialize_account_overview_elements()
                 initialize_success = ap.is_page_initialized()
                 print("Successfully logged in")
+                ap_email = ap.get_account_overview_email()
 
                 # failed to find account overview elements but logged in successfully
                 if not initialize_success:
                     print("Could not find Account overview elements")
                     return True
                 # Account overview email is not the same as the provided login email but logged in successfully
-                if ap.email != email:
+                if ap_email != email:
                     print("INTERNAL ERROR: Account overview email is not matching the login email: Login email = "
-                          + email + ", Overview email = " + ap.email)
+                          + email + ", Overview email = " + ap_email)
 
                 else:
                     print("SUCCESS: Account overview email is the same as the provided login email")
@@ -213,5 +215,5 @@ class LoginPage(WebHelper):
 
         # any other error that cause test to fail
         except:
-            exit('Testing failed in login with credentials : ' + email + " & " + password)
+            return False
 

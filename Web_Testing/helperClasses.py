@@ -5,6 +5,7 @@ import allure
 from allure_commons.types import AttachmentType
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait, Select
@@ -86,6 +87,8 @@ class WebHelper:
         selects an option from the provided element using a given index
     select_element_by_text(element, text)
         selects an option from the provided element using a given text
+    hover_to_element(element, driver)
+        Hovers the mouse over an element
     get_month_dict()
         gets the month name to month number dictionary
     get_month_name_from(in_val)
@@ -111,12 +114,18 @@ class WebHelper:
 
     """
 
-    base_url = "http://localhost:3000/"
+    base_url = "http://ec2-3-21-218-250.us-east-2.compute.amazonaws.com/"
     month_dict = {"January": 1, "February": 2, "March": 3
         , "April": 4, "May": 5, "June": 6
         , "July": 7, "August": 8, "September": 9
         , "October": 10, "November": 11, "December": 12
                        }
+
+    def __init__(self):
+        """
+        Initializes the class' driver to None
+        """
+        self.driver = None
 
     def get_login_url(self):
         """
@@ -584,6 +593,22 @@ class WebHelper:
             return
         btn.click()
 
+    def hover_to_element(self, element, driver=None):
+        """
+        Hovers the mouse over an element
+
+        If the argument `driver` is not passed, the driver will be set to the class' driver
+
+        :param element: the web element that the mouse will hover over
+        :type element: WebDriver element
+        :param driver: the web driver (default is None)
+        :type driver: WebDriver
+        """
+        if driver is None:
+            driver = self.driver
+        hover = ActionChains(driver).move_to_element(element)
+        hover.perform()
+
     def fill_safe(self, txt_element, text):
         """
         safely fills the provided text field with the given text without causing a crash
@@ -661,6 +686,8 @@ class DOB:
     -------
     is_equal(dob)
             Checks if the class' date of birth (day, month, year) is equal to the given date of birth
+    get_age()
+            Gets the age from the current birth date
     """
     def __init__(self, day, month, year):
         """
@@ -691,6 +718,14 @@ class DOB:
         if dob.day == self.day and dob.month == self.month and dob.year == self.year:
             return True
         return False
+
+    def get_age(self):
+        """
+        Gets the age from the current birth date
+        :returns: the user's age
+        :rtype: int
+        """
+        return datetime.datetime.now().year - self.year
 
 
 class Profile:

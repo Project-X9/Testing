@@ -43,7 +43,7 @@ class TestLoggedOutHome:
     @allure.title("Testing Sign up Button")
     @allure.description("Testing Sign up button")
     @pytest.mark.Do
-    @pytest.mark.Signup
+    @pytest.mark.LoggedOutHome
     def test_case_1(self, setup):
         # logged_out_home = LoggedOutHome(self.driver)
         # logged_out_home.tb_signup_btn.click()
@@ -63,7 +63,7 @@ class TestLoggedOutHome:
     @allure.title("Testing Login Button")
     @allure.description("Testing Login Button")
     @pytest.mark.Do
-    @pytest.mark.Signup
+    @pytest.mark.LoggedOutHome
     def test_case_2(self, setup):
         self.driver.find_element_by_link_text("Log In").click()
         sp = LoginPage(self.driver)
@@ -80,7 +80,7 @@ class TestLoggedOutHome:
     @allure.title("Testing Premium Button")
     @allure.description("Testing Premium Button")
     @pytest.mark.Do
-    @pytest.mark.Signup
+    @pytest.mark.LoggedOutHome
     def test_case_3(self, setup_final):
         self.driver.find_element_by_link_text("Premium").click()
         self.driver.implicitly_wait(3)

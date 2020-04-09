@@ -1,5 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException
-
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from Web_Testing.helperClasses import WebHelper
 from Web_Testing.helperClasses import DOB
 
@@ -174,7 +176,10 @@ class AccountOverviewPage(WebHelper):
     def click_logout(self):
         """Clicks Logout button in profile list"""
         self.click_profile()
-        self.click_button_safe(self.find_element_by_xpath(self.logout_btn))
+        element = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.logout_btn)))
+        did_scroll = element.location_once_scrolled_into_view
+        element.click()
+        # self.click_button_safe(self.find_element_by_xpath(self.logout_btn))
 
     def click_download_link(self):
         """Clicks Download button"""

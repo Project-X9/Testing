@@ -97,28 +97,28 @@ class TestSignup:
             WebHelper().report_allure("SUCCESS: Sign up stopped with empty email", self.driver)
             assert True
 
-# # Test #3 -> Already Registered Email
-#     @allure.severity(allure.severity_level.BLOCKER)
-#     @allure.story("Failing signup")
-#     @allure.sub_suite("Signup with already registered email")
-#     @allure.title("Signup with already registered email")
-#     @allure.description("Signing up with the following credentials email: test_projectX@hotmail.com")
-#     @pytest.mark.Do
-#     @pytest.mark.Signup
-#     def test_case_3(self, setup):
-#         time.sleep(3)
-#         sp = SignupPage(self.driver)
-#         sp.check_signup_page()
-#         constants = ConstantsClass()
-#         # emails = constants.get_registered_emails()
-#         profile = Profile(self.emails[0], "test_pass", "Testing Team", DOB(31, 1, 1995), Gender.MALE)
-#
-#         if sp.signup_to_spotify(profile):
-#             helper().report_allure(self.driver, "ERROR: Sign up proceeded with registered email")
-#             assert False
-#         else:
-#             helper().report_allure(self.driver, "SUCCESS: Sign up stopped with already registered email")
-#             assert True
+# Test #3 -> Already Registered Email
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Failing signup")
+    @allure.sub_suite("Signup with already registered email")
+    @allure.title("Signup with already registered email")
+    @allure.description("Signing up with the following credentials email: test_projectX@hotmail.com")
+    @pytest.mark.Do
+    @pytest.mark.Signup
+    def test_case_3(self, setup):
+        time.sleep(3)
+        sp = SignupPage(self.driver)
+        sp.check_signup_page()
+        constants = ConstantsClass()
+        # emails = constants.get_registered_emails()
+        profile = Profile("test1@test.com", "test_pass", "Testing Team", DOB(31, 1, 1995), Gender.MALE)
+
+        if sp.signup_to_spotify(profile):
+            WebHelper().report_allure("ERROR: Sign up proceeded with registered email", self.driver)
+            assert False
+        else:
+            WebHelper().report_allure("SUCCESS: Sign up stopped with already registered email", self.driver)
+            assert True
 
     # Test #4 -> Success Sign up
     @allure.severity(allure.severity_level.BLOCKER)

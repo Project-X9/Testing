@@ -10,6 +10,8 @@ This script requires `allure` and `pytest` be installed within the Python enviro
 
 import allure
 import pytest
+
+from Web_Testing.Pages.AccountOverviewPage import AccountOverviewPage
 from Web_Testing.Pages.LoggedOutHome import LoggedOutHome
 from Web_Testing.Pages.LoginPage import LoginPage
 import time
@@ -53,7 +55,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify(self.correct_emails[0], self.correct_passwords[0]):
+            ap.click_logout()
             WebHelper().report_allure("SUCCESS: Login succeeded with correct credentials", self.driver)
             assert True
         else:
@@ -72,7 +76,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify(self.correct_emails[1], self.correct_passwords[1]):
+            ap.click_logout()
             WebHelper().report_allure("SUCCESS: Login succeeded with correct credentials", self.driver)
             assert True
         else:
@@ -91,7 +97,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify(self.correct_emails[2], self.correct_passwords[2]):
+            ap.click_logout()
             WebHelper().report_allure("SUCCESS: Login succeeded with correct credentials", self.driver)
             assert True
         else:
@@ -110,7 +118,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify("kamelmohsenkamel@gmail.com", "wrong_password"):
+            ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with incorrect credentials", self.driver)
             assert False
         else:
@@ -129,7 +139,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify("kamelmohsenkamel", "Kimo2010"):
+            ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with incorrect credentials", self.driver)
             assert False
         else:
@@ -148,7 +160,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify("test_wrong@email.com", "UnknownPassowrd"):
+            ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with incorrect credentials", self.driver)
             assert False
         else:
@@ -167,7 +181,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify("", "Kimo2010"):
+            ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with empty email", self.driver)
             assert False
         else:
@@ -186,7 +202,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify("mohdos_1999@hotmail.com", ""):
+            ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with empty password", self.driver)
             assert False
         else:
@@ -205,7 +223,9 @@ class TestLogin:
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
+        ap = AccountOverviewPage(self.driver)
         if lp.login_to_spotify("", ""):
+            ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with empty email and password", self.driver)
             assert False
         else:

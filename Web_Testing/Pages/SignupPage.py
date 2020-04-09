@@ -304,19 +304,23 @@ class SignupPage(WebHelper):
             lp.click_login()
             time.sleep(3)
             account_overview = AccountOverviewPage(self.driver)
+            account_overview.initialize_account_overview_elements()
+            account_overview_email = account_overview.get_account_overview_email()
             time.sleep(timeout)
+
+            account_overview.click_logout()
 
             print("Signed up successfully")
 
             # if signed up successfully
             if self.is_in_account_overview():
                 # failed to find account overview elements but logged in successfully
-                if account_overview.email is None:
+                if account_overview_email is None:
                     print("Could not find Account overview elements")
                 # Account overview email is not the same as the provided login email but logged in successfully
-                elif account_overview.email != profile.email:
+                elif account_overview_email != profile.email:
                     print("INTERNAL ERROR: Account overview email is not matching the signup/login email: Login email = "
-                          + profile.email + ", Overview email = " + account_overview.email)
+                          + profile.email + ", Overview email = " + account_overview_email)
                 else:
                     print("SUCCESS: Account overview email is the same as the provided login email")
 
