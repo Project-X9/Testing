@@ -27,8 +27,8 @@ class TestSignup:
 
     # TODO: change Chrome executable path to your needs
     driver = WebHelper().firefox_driver_init()
-    correct_emails = ["test51@test.com"]
-    correct_passwords = ["test515253"]
+    correct_emails = ["test53@test.com"]
+    correct_passwords = ["test535455"]
     emails_different_confirmation = ["test4@test.com"]
     link = "http://localhost:3000/signup"
 
@@ -258,7 +258,7 @@ class TestSignup:
     @allure.description("Signing up with empty confirmation email")
     @pytest.mark.Do
     @pytest.mark.Signup
-    def test_case_10(self, setup_final):
+    def test_case_10(self, setup):
         time.sleep(2)
         sp = SignupPage(self.driver)
         profile = Profile("test22@test.com", "test_pass", "Mohammad Osama", DOB(31, 1, 1990), Gender.MALE,
@@ -272,3 +272,27 @@ class TestSignup:
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with empty confirmation email", self.driver)
             assert True
+
+    # Test #11 -> Testing Refresh
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Refresh Page test")
+    @allure.sub_suite("Refresh Page test")
+    @allure.title("Refresh Page test")
+    @allure.description("Testing to refresh page that elements are still available")
+    @pytest.mark.Do
+    @pytest.mark.Login
+    def test_case_11(self, setup_final):
+        time.sleep(2)
+        self.driver.refresh()
+        sp = SignupPage(self.driver)
+
+        if (sp.email_txt is None) or (sp.password_txt is None) or (sp.confirm_email_txt is None) \
+                or (sp.display_name_txt is None) or (sp.dob_day_txt is None) or (sp.dob_month_txt is None)\
+                or (sp.dob_year_txt is None) or (sp.gender_male is None) or (sp.gender_female is None)\
+                or (sp.signup is None):
+            WebHelper().report_allure("ERROR: Elements are not available after refresh", self.driver)
+            assert False
+        else:
+            WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
+            assert True
+

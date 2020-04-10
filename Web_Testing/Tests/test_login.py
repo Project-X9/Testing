@@ -219,7 +219,7 @@ class TestLogin:
     @allure.description("Signing in with empty email and password")
     @pytest.mark.Do
     @pytest.mark.Login
-    def test_case_9(self, setup_final):
+    def test_case_9(self, setup):
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.check_login_page()
@@ -230,6 +230,26 @@ class TestLogin:
             assert False
         else:
             WebHelper().report_allure("SUCCESS: Login failed with empty email and password", self.driver)
+            assert True
+
+    # Test #10 -> Testing Refresh
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Refresh Page test")
+    @allure.sub_suite("Refresh Page test")
+    @allure.title("Refresh Page test")
+    @allure.description("Testing to refresh page that elements are still available")
+    @pytest.mark.Do
+    @pytest.mark.Login
+    def test_case_10(self, setup_final):
+        time.sleep(2)
+        self.driver.refresh()
+        lp = LoginPage(self.driver)
+
+        if (lp.email_txt is None) or (lp.pass_txt is None) or (lp.login_btn is None):
+            WebHelper().report_allure("ERROR: Elements are not available after refresh", self.driver)
+            assert False
+        else:
+            WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
             assert True
 
 

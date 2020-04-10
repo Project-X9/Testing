@@ -12,50 +12,50 @@ import time
 
 class LoginPage(WebHelper):
     """
-        A class used to represent the Login Page
+    A class used to represent the Login Page
 
-        ...
+    ...
 
-        Attributes
-        ----------
-        fb_btn : WebDriverElement
-            a Web Driver element representing the Login with Facebook button
-        email_txt : WebDriverElement
-            a Web Driver element representing the Email Text Field
-        pass_txt : WebDriverElement
-            a Web Driver element representing the Password Text Field
-        login_btn : WebDriverElement
-            a Web Driver element representing the Login button
-        forgot_pass_btn : WebDriverElement
-            a Web Driver element representing the Forgot Password button
-        signup_btn : WebDriverElement
-            a Web Driver element representing the Signup button
-        text_danger : WebDriverElement
-            a Web Driver element representing the Text Field warnings
+    Attributes
+    ----------
+    fb_btn : WebDriverElement
+        a Web Driver element representing the Login with Facebook button
+    email_txt : WebDriverElement
+        a Web Driver element representing the Email Text Field
+    pass_txt : WebDriverElement
+        a Web Driver element representing the Password Text Field
+    login_btn : WebDriverElement
+        a Web Driver element representing the Login button
+    forgot_pass_btn : WebDriverElement
+        a Web Driver element representing the Forgot Password button
+    signup_btn : WebDriverElement
+        a Web Driver element representing the Signup button
+    text_danger : WebDriverElement
+        a Web Driver element representing the Text Field warnings
 
-        Methods
-        -------
-        set_email(email)
-            Fills the email text field with the given email
-        set_password(password)
-            Fills the password text field with the given password
-        clear_credentials()
-            Clears the email and password text fields
-        set_credentials(email, password)
-            Set the email and password text fields with the given email and password
-        click_signup()
-            Clicks on the signup button
-        click_login()
-            Clicks on the login button
-        invalid_user_text_appeared()
-            Checks if the "Invalid username/password" text appeared
-        check_login_page()
-            Checks if currently on login page
-        is_in_account_overview()
-            Checks if currently on Account Overview page
-        login_to_spotify(email, password)
-            Login with the given email and password
-        """
+    Methods
+    -------
+    set_email(email)
+        Fills the email text field with the given email
+    set_password(password)
+        Fills the password text field with the given password
+    clear_credentials()
+        Clears the email and password text fields
+    set_credentials(email, password)
+        Set the email and password text fields with the given email and password
+    click_signup()
+        Clicks on the signup button
+    click_login()
+        Clicks on the login button
+    invalid_user_text_appeared()
+        Checks if the "Invalid username/password" text appeared
+    check_login_page()
+        Checks if currently on login page
+    is_in_account_overview()
+        Checks if currently on Account Overview page
+    login_to_spotify(email, password)
+        Login with the given email and password
+    """
 
     def __init__(self, driver):
         """
@@ -64,6 +64,7 @@ class LoginPage(WebHelper):
         :param driver : the driver to which the super class' driver is to be set
         :type driver: WebDriver
         """
+        super().__init__()
         self.set_driver(driver)
         self.fb_btn = self.find_elements_by_class_name("facebookButton metro")
         self.email_txt = self.find_element_by_id("email")

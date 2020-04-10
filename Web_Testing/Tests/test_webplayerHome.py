@@ -1,7 +1,7 @@
 """
-Web Player Home Testing
+Web Player Home and Menu Testing
 
-This script tests the Web Player home page functions and report the results to allure
+This script tests the Web Player home page and menu functions and report the results to allure
 
 This script requires `allure` and `pytest` be installed within the Python environment you are running this script in
 """
@@ -19,8 +19,8 @@ from Web_Testing.helperClasses import ConstantsClass
 
 
 @allure.parent_suite("End to End testing")
-@allure.suite("Web Player Home")
-@allure.feature("Web Player Home Page")
+@allure.suite("Web Player Home and Menu")
+@allure.feature("Web Player Home Page and Menu")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestWebPlayerHome:
     driver = WebHelper().firefox_driver_init()
@@ -164,77 +164,14 @@ class TestWebPlayerHome:
             self.helper.report_allure("SUCCESS: Elements are still visible after refresh", self.driver)
             assert True
 
-    # Test 7 -> Back button Test 1
-    @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Testing Back/Forward Button")
-    @allure.title("Back/Forward Button")
-    @allure.description("Testing Back/Forward Button")
-    @pytest.mark.Do
-    @pytest.mark.WebPlayerHome
-    def test_case_7(self, setup):
-        time.sleep(2)
-        web_player_home = WebPlayerHome(self.driver)
-        web_player_home.check_card_click('Rock', 0, False)
-        time.sleep(2)
-        web_player_home.click_back_button()
-        time.sleep(2)
-        if not self.helper.url_has("webplayer/home"):
-            self.helper.report_allure("FAILURE: Sequence -> 1. Web Player Home, 2. Clicked a Card"
-                                      + ", 3. Clicked back button but did not return to Web Player Home", self.driver)
-            assert False
-        else:
-            self.helper.report_allure("Back button working for same tab but different page", self.driver)
-            web_player_home.click_forward_button()
-            time.sleep(2)
-            if self.helper.url_has("webplayer/nowplay"):
-                self.helper.report_allure("Forward Button SUCCESS: Forward button working for same tab but different page",
-                                          self.driver)
-                assert True
-            else:
-                self.helper.report_allure("Forward Button FAILURE: Forward button not working for same tab but different page",
-                                          self.driver)
-                assert False
-
-    # Test 8 -> Back/Forward button Test 2
-    @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Testing Back/Forward Button 2")
-    @allure.title("Back/Forward Button 2")
-    @allure.description("Testing Back/Forward Button 2")
-    @pytest.mark.Do
-    @pytest.mark.WebPlayerHome
-    def test_case_8(self, setup):
-        time.sleep(2)
-        web_player_home = WebPlayerHome(self.driver)
-        web_player_home.liked_songs_link.click()
-        time.sleep(2)
-        web_player_home.click_your_library()
-        time.sleep(2)
-        web_player_home.click_back_button()
-        time.sleep(2)
-        if not self.helper.url_has("webplayer/likedplay"):
-            self.helper.report_allure("Back Button FAILURE: Sequence -> 1. Web Player Home, 2. Liked Songs, 3. Your Library"
-                                      + ", 4. Clicked back button but did not return to Liked Songs", self.driver)
-            assert False
-        else:
-            self.helper.report_allure("Back Button SUCCESS: Back button working for different tabs", self.driver)
-            web_player_home.click_forward_button()
-            time.sleep(2)
-            if self.helper.url_has("webplayer/librarypage"):
-                self.helper.report_allure("Forward Button SUCCESS: Forward button working for different tabs", self.driver)
-                assert True
-            else:
-                self.helper.report_allure("Forward Button FAILURE: Forward button not working for different tabs",
-                                          self.driver)
-                assert False
-
-    # Test #9 -> Logout Button
+    # Test #7 -> Logout Button
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing Logout button")
     @allure.title("Logout button")
     @allure.description("Testing Logout button")
     @pytest.mark.Do
     @pytest.mark.WebPlayerHome
-    def test_case_9(self, setup_final):
+    def test_case_7(self, setup):
         time.sleep(3)
         web_player_home = WebPlayerHome(self.driver)
         if web_player_home.check_sign_out():
@@ -243,3 +180,43 @@ class TestWebPlayerHome:
         else:
             self.helper.report_allure("FAILURE: Sign out button is not functional")
             assert False
+
+    # Test #8 -> Test signup Button
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Testing Sign up button")
+    @allure.title("Testing Sign up button")
+    @allure.description("Testing Sign up button")
+    @pytest.mark.Do
+    @pytest.mark.WebPlayerHome
+    def test_case_8(self, setup):
+        time.sleep(3)
+        web_player_home = WebPlayerHome(self.driver)
+        web_player_home.click_signup()
+        time.sleep(3)
+        if self.helper.url_has("signup"):
+            self.helper.report_allure("SUCCESS: Sign up button is functional")
+            assert True
+        else:
+            self.helper.report_allure("FAILURE: Sign up button is not functional")
+            assert False
+
+    # Test #9 -> Test login Button
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Testing Login button")
+    @allure.title("Testing Login button")
+    @allure.description("Testing Login button")
+    @pytest.mark.Do
+    @pytest.mark.WebPlayerHome
+    def test_case_9(self, setup_final):
+        time.sleep(3)
+        web_player_home = WebPlayerHome(self.driver)
+        web_player_home.click_login()
+        time.sleep(3)
+        if self.helper.url_has("signin"):
+            self.helper.report_allure("SUCCESS: Login button is functional")
+            assert True
+        else:
+            self.helper.report_allure("FAILURE: Login button is not functional")
+            assert False
+
+

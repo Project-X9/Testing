@@ -21,8 +21,8 @@ from Web_Testing.helperClasses import ConstantsClass
 
 
 @allure.parent_suite("End to End testing")
-@allure.suite("Web Player Home")
-@allure.feature("Web Player Home Page")
+@allure.suite("Your Library Page")
+@allure.feature("Your Library Page")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestWebPlayerHome:
     driver = WebHelper().firefox_driver_init()
