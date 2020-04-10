@@ -3,7 +3,7 @@ from Mobile_Testing.helper import Helper
 
 class HomePage:
 
-    logout_button_id = "com.example.projectx:id/logOut_bt"
+    logout_button_id = "com.example.projectx:id/logOut"
     playlist_button_id = "com.example.projectx:id/openPlaylist"
     play_music_button_id = "com.example.projectx:id/playMusic"
 

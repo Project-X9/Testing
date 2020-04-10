@@ -3,6 +3,8 @@ from Mobile_Testing.helper import Helper
 from Mobile_Testing.Pages.authentication import AuthenticationPage
 from Mobile_Testing.Pages.signup import SignupPage
 from Mobile_Testing.Pages.home import HomePage
+from faker import Faker
+import time
 from allure_commons.types import AttachmentType
 import allure
 import pytest
@@ -14,6 +16,12 @@ import pytest
 @allure.severity(allure.severity_level.BLOCKER)
 class TestAuthentication:
     driver = None
+    my_factory = Faker()
+    my_factory.random.seed(int(round(time.time() * 1000)))
+    name = my_factory.name()
+    email = my_factory.email()
+    password = my_factory.password()
+
 
     @pytest.yield_fixture
     def setup(self):
@@ -29,7 +37,8 @@ class TestAuthentication:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up correctly")
     @allure.title("Sign up correctly")
-    @allure.description("Signing up with correct format with Kamel, kamelmohsenkamel@gmail.com, Kimo2010, 21, M")
+    @allure.description("Signing up with correct format with " + name + ","
+                        + email + "," + password+",22,M")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test1
@@ -40,7 +49,7 @@ class TestAuthentication:
         ap = AuthenticationPage(self.driver)
         ap.click_signup_button()
         sp = SignupPage(self.driver)
-        sp.do_the_signup("Kamel", "kamelmohsenkamel@gmail.com", "Kimo2010", "21", "M")
+        sp.do_the_signup(self.name, self.email, self.password, "22", "M")
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
             assert True
         else:
@@ -53,7 +62,8 @@ class TestAuthentication:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with same email ")
     @allure.title("Signs up with same email ")
-    @allure.description("Signs up with same email format with Kamel, kamelmohsenkamel@gmail.com, Kimo2010, 21, M")
+    @allure.description("Signs up with same email format with " + name + ","
+                        + email + "," + password+",22, M")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test2
@@ -64,7 +74,7 @@ class TestAuthentication:
         ap = AuthenticationPage(self.driver)
         ap.click_signup_button()
         sp = SignupPage(self.driver)
-        sp.do_the_signup("Kamel", "kamelmohsenkamel@gmail.com", "Kimo2010", "21", "M")
+        sp.do_the_signup(self.name, self.email, self.password, "22", "M")
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
             print(self.driver.current_activity)
             Helper.report_allure(self.driver, "Sign up test Failed")
@@ -240,6 +250,79 @@ class TestAuthentication:
         ap.click_signup_button()
         sp = SignupPage(self.driver)
         sp.do_the_signup("kamel", "kamelmohsenkamelgmail.com", "Kimo2010", "21", "M")
+        if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Sign up test Failed")
+            assert False
+        else:
+            assert True
+
+# Test #10 ->Signing up with -ve age
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Signup Tests")
+    @allure.sub_suite("Sign up with -ve age ")
+    @allure.title("Signs up with -ve age ")
+    @allure.description("Signs up with -ve age with kamel,kamelmohsenkamel@gmail.com , Kimo2010, -21, M")
+    @pytest.mark.Do
+    @pytest.mark.Signup
+    @pytest.mark.Test10
+    def test_case_10(self, setup):
+        """
+        Signs up with -ve age
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signup_button()
+        sp = SignupPage(self.driver)
+        sp.do_the_signup("kamel", "kamelmohsenkamel@gmail.com", "Kimo2010", "-21", "M")
+        if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Sign up test Failed")
+            assert False
+        else:
+            assert True
+
+
+# Test #11 ->Signing up with 0 age
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Signup Tests")
+    @allure.sub_suite("Sign up with 0 age ")
+    @allure.title("Signs up with 0 age ")
+    @allure.description("Signs up with 0 age with kamel,kamelmohsenkamel@gmail.com , Kimo2010, 0, M")
+    @pytest.mark.Do
+    @pytest.mark.Signup
+    @pytest.mark.Test11
+    def test_case_11(self, setup):
+        """
+        Signs up with 0 age
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signup_button()
+        sp = SignupPage(self.driver)
+        sp.do_the_signup("kamel", "kamelmohsenkamel@gmail.com", "Kimo2010", "0", "M")
+        if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Sign up test Failed")
+            assert False
+        else:
+            assert True
+
+# Test #12 ->Signing up with 999 age
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Signup Tests")
+    @allure.sub_suite("Sign up with 999 age ")
+    @allure.title("Signs up with 999 age ")
+    @allure.description("Signs up with 999 age with kamel,kamelmohsenkamel@gmail.com , Kimo2010, 999, M")
+    @pytest.mark.Do
+    @pytest.mark.Signup
+    @pytest.mark.Test12
+    def test_case_12(self, setup):
+        """
+        Signs up with 999 age
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signup_button()
+        sp = SignupPage(self.driver)
+        sp.do_the_signup("kamel", "kamelmohsenkamel@gmail.com", "Kimo2010", "999", "M")
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
             print(self.driver.current_activity)
             Helper.report_allure(self.driver, "Sign up test Failed")

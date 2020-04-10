@@ -3,6 +3,7 @@ from selenium.common.exceptions import NoSuchElementException
 import allure
 from allure_commons.types import AttachmentType
 
+
 class Helper:
 
     @staticmethod
@@ -76,4 +77,15 @@ class Constants:
         "app": "/Users/KIMO/AndroidStudioProjects/ProjectX/app/build/outputs/apk/debug/app-debug.apk",
         "appWaitActivity": ".authentication.AuthenticationPage",
         "appWaitPackage": "com.example.projectx"
+    }
+    # desired_cap = {
+    #     "deviceName": "samsung-sm_g955f-ce11171b62faecd00c",
+    #     "platformName": "Android",
+    #     "app": "/Users/KIMO/AndroidStudioProjects/ProjectX/app/build/outputs/apk/debug/app-debug.apk",
+    #     "appWaitActivity": ".authentication.AuthenticationPage",
+    #     "appWaitPackage": "com.example.projectx"
+    # }
+    correct_credentials = {
+        "email": "abdallah@gmail.com",
+        "password": "123456"
     }
