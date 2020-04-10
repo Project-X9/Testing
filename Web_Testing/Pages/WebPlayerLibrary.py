@@ -32,7 +32,9 @@ class WebPlayerLibrary(WebPlayerMenu):
     Methods
     -------
     click_liked_songs()
-        Clicks the Liked Songs card
+        Clicks the Liked Songs Play button in the card
+    click_liked_songs_txt()
+        Clicks the Liked Songs Text button in the card
     check_liked_songs_click()
         Checks if clicking the Liked Songs card goes to the right page
     check_card_click(card_no, report_allure)
@@ -60,13 +62,23 @@ class WebPlayerLibrary(WebPlayerMenu):
 
     def click_liked_songs(self):
         """
-        Clicks the Liked Songs card
+        Clicks the Liked Songs Play button in the card
         """
         self.hover_to_element(self.liked_songs)
         time.sleep(2)
         liked_songs_btn = self.find_element_by_xpath("/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[2]/div/div/button")
         if liked_songs_btn is not None:
             liked_songs_btn.click()
+
+    def click_liked_songs_txt(self):
+        """
+        Clicks the Liked Songs Text button in the card
+        """
+        liked_btn_txt = self.find_element_by_xpath("/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/a/span")
+        if liked_btn_txt is None:
+            return
+
+        liked_btn_txt.click()
 
     def check_liked_songs_click(self):
         """
@@ -75,8 +87,26 @@ class WebPlayerLibrary(WebPlayerMenu):
         :returns: a boolean True if clicking the Liked Songs card goes to the right page, False otherwise
         :rtype: bool
         """
-        self.click_liked_songs()
+        songs_text_before = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div/div")
+        no_of_songs_before = "0"
+        if songs_text_before is not None:
+            songs_arr_before = songs_text_before.text.split(" ")
+            no_of_songs_before = songs_arr_before[0]
+            self.click_liked_songs()
+        else:
+            self.driver.get(self.base_url + "webplayer/likedplay")
         time.sleep(4)
+        no_of_songs = 0
+        songs_text = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[2]/div[2]/div/p")
+        if songs_text is not None:
+            songs_text_arr = songs_text.text.split(" ")
+            no_of_songs = songs_text_arr[0]
+
+        if no_of_songs_before != no_of_songs:
+            self.report_allure(
+                "No of liked songs in Your Library is not the same as the number of liked songs in Liked Songs page"
+                , self.driver)
+
         return self.url_has("webplayer/likedplay", self.driver)
 
     def check_card_click(self, card_no, report_allure: bool):

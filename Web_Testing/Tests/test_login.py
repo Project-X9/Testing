@@ -24,7 +24,7 @@ from Web_Testing.helperClasses import WebHelper
 class TestLogin:
 
     driver = WebHelper().firefox_driver_init()
-    link = "http://localhost:3000/signin"
+    link = WebHelper().get_login_url()
     correct_emails = ["test1@test.com", "test2@test.com", "test3@test.com"]
     correct_passwords = ["test123", "test234", "test345"]
 

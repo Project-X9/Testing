@@ -22,7 +22,7 @@ from Web_Testing.helperClasses import ConstantsClass
 @allure.suite("Web Player Home and Menu")
 @allure.feature("Web Player Home Page and Menu")
 @allure.severity(allure.severity_level.BLOCKER)
-class TestWebPlayerHome:
+class TestWebPlayerHomeWithMenu:
     driver = WebHelper().firefox_driver_init()
     helper = WebHelper()
     helper.set_driver(driver)
@@ -58,7 +58,7 @@ class TestWebPlayerHome:
     def test_case_1(self, setup_initial):
         time.sleep(3)
         lp = LoginPage(self.driver)
-        lp.login_to_spotify("abdallah@gmail.com", "123456")
+        lp.login_to_spotify("test1@test.com", "test123")
         time.sleep(3)
         self.driver.get(self.helper.base_url + "webplayer/home")
         time.sleep(3)

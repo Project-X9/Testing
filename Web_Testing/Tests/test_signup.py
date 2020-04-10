@@ -27,10 +27,10 @@ class TestSignup:
 
     # TODO: change Chrome executable path to your needs
     driver = WebHelper().firefox_driver_init()
-    correct_emails = ["test53@test.com"]
-    correct_passwords = ["test535455"]
+    correct_emails = ["test54@test.com"]
+    correct_passwords = ["test545556"]
     emails_different_confirmation = ["test4@test.com"]
-    link = "http://localhost:3000/signup"
+    link = WebHelper().get_signup_url()
 
     @pytest.yield_fixture
     def setup(self):
@@ -280,8 +280,8 @@ class TestSignup:
     @allure.title("Refresh Page test")
     @allure.description("Testing to refresh page that elements are still available")
     @pytest.mark.Do
-    @pytest.mark.Login
-    def test_case_11(self, setup_final):
+    @pytest.mark.Signup
+    def test_case_11(self, setup):
         time.sleep(2)
         self.driver.refresh()
         sp = SignupPage(self.driver)
@@ -294,5 +294,26 @@ class TestSignup:
             assert False
         else:
             WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
+            assert True
+
+    # Test #12 -> Testing Refresh
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Invalid age test")
+    @allure.sub_suite("Invalid age test")
+    @allure.title("Invalid age test")
+    @allure.description("Testing with entering invalid age values")
+    @pytest.mark.Do
+    @pytest.mark.Signup
+    def test_case_12(self, setup_final):
+        time.sleep(2)
+        sp = SignupPage(self.driver)
+        profile = Profile("test23@test.com", "test_pass", "Mohammad Osama", DOB(32, 1, -2), Gender.MALE,
+                          "test23@test.com")
+
+        if sp.signup_to_spotify(profile):
+            WebHelper().report_allure("ERROR: Sign up proceeded with invalid age values", self.driver)
+            assert False
+        else:
+            WebHelper().report_allure("SUCCESS: Sign up stopped with invalid age values", self.driver)
             assert True
 
