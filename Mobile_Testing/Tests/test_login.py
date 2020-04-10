@@ -1,5 +1,5 @@
 from appium import webdriver
-from Mobile_Testing.helper import Helper
+from Mobile_Testing.helper import Helper,Constants
 from Mobile_Testing.Pages.authentication import AuthenticationPage
 from Mobile_Testing.Pages.login import LoginPage
 from Mobile_Testing.Pages.home import HomePage
@@ -15,6 +15,7 @@ import pytest
 class TestAuthentication:
     driver = None
 
+
     @pytest.yield_fixture
     def setup(self):
         """
@@ -29,7 +30,8 @@ class TestAuthentication:
     @allure.story("Login Tests")
     @allure.sub_suite("Login correctly")
     @allure.title("Login correctly")
-    @allure.description("Logging in with correct format with kamelmohsenkamel@gmail.com, Kimo2010")
+    @allure.description("Logging in with correct format with "+Constants.correct_credentials["email"] + ", "
+                        + Constants.correct_credentials["password"])
     @pytest.mark.Do
     @pytest.mark.Login
     @pytest.mark.Test1
@@ -40,7 +42,7 @@ class TestAuthentication:
         ap = AuthenticationPage(self.driver)
         ap.click_signin_button()
         lp = LoginPage(self.driver)
-        lp.do_the_login("kamelmohsenkamel@gmail.com", "Kimo2010")
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
             assert True
         else:

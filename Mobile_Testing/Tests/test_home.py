@@ -1,6 +1,6 @@
 from appium import webdriver
 import pytest
-from Mobile_Testing.helper import Helper
+from Mobile_Testing.helper import Helper,Constants
 from Mobile_Testing.Pages.authentication import AuthenticationPage
 from Mobile_Testing.Pages.signup import SignupPage
 from Mobile_Testing.Pages.login import LoginPage
@@ -42,7 +42,7 @@ class TestAuthentication:
         ap = AuthenticationPage(self.driver)
         ap.click_signin_button()
         lp = LoginPage(self.driver)
-        lp.do_the_login("kamelmohsenkamel@gmail.com", "Kimo2010")
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
         hp = HomePage(self.driver)
         hp.click_play_music_button()
         if Helper.element_exists_by_id(self.driver, PlayMusicPage.play_song_id):
@@ -68,7 +68,7 @@ class TestAuthentication:
         ap = AuthenticationPage(self.driver)
         ap.click_signin_button()
         lp = LoginPage(self.driver)
-        lp.do_the_login("kamelmohsenkamel@gmail.com", "Kimo2010")
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
         hp = HomePage(self.driver)
         hp.click_play_music_button()
         if Helper.element_exists_by_id(self.driver, HomePage.play_music_button_id()):
@@ -95,7 +95,7 @@ class TestAuthentication:
         ap = AuthenticationPage(self.driver)
         ap.click_signin_button()
         lp = LoginPage(self.driver)
-        lp.do_the_login("kamelmohsenkamel@gmail.com", "Kimo2010")
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
         hp = HomePage(self.driver)
         hp.click_play_music_button()
         if Helper.element_exists_by_id(self.driver, HomePage.play_music_button_id()):
