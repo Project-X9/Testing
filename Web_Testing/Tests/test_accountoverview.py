@@ -79,7 +79,8 @@ class TestAccountOverview:
         self.driver.implicitly_wait(3)
         if self.account_overview_page.account_overview_check("test9@test.com",
                                                              ConstantsClass().calculate_age("test9@test.com"),
-                                                             ConstantsClass().get_name("test9@test.com")):
+                                                             ConstantsClass().get_name("test9@test.com"),
+                                                             ConstantsClass().get_premium("test9@test.com")):
             WebHelper().report_allure("SUCCESS: All information is correct", self.driver)
             assert True
         else:
@@ -161,30 +162,12 @@ class TestAccountOverview:
     # Test #6 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
-    @allure.sub_suite("Clicking get premium link")
-    @allure.title("Clicking get premium button")
-    @allure.description("Clicking get premium button")
-    @pytest.mark.Do
-    @pytest.mark.AccountOverview
-    def test_case_6(self, setup):
-        self.account_overview_page.click_get_premium_btn()
-        self.driver.implicitly_wait(3)
-        if self.driver.current_url == WebHelper().get_premium_url():
-            WebHelper().report_allure("Get premium button functional", self.driver)
-            assert True
-        else:
-            WebHelper().report_allure("Get premium link not functional", self.driver)
-            assert False
-
-    # Test #7 ->Checking that all buttons and links work
-    @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking account overview link")
     @allure.title("Clicking account overview link")
     @allure.description("Clicking account overview link")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_7(self, setup):
+    def test_case_6(self, setup):
         self.account_overview_page.click_account_overview()
         self.driver.implicitly_wait(3)
         if self.driver.current_url == WebHelper().get_account_overview_url():
@@ -194,7 +177,7 @@ class TestAccountOverview:
             WebHelper().report_allure("Account Overview link not functional", self.driver)
             assert False
 
-    # Test #8 ->Checking that all buttons and links work
+    # Test #7 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking edit profile link")
@@ -202,7 +185,7 @@ class TestAccountOverview:
     @allure.description("Clicking edit profile link")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_8(self, setup):
+    def test_case_7(self, setup):
         self.account_overview_page.click_edit_profile()
         self.driver.implicitly_wait(3)
         if self.driver.current_url == WebHelper().get_account_edit_url():
@@ -212,7 +195,7 @@ class TestAccountOverview:
             WebHelper().report_allure("Edit Profile link not functional", self.driver)
             assert False
 
-    # Test #9 ->Checking that all buttons and links work
+    # Test #8 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking change password link")
@@ -220,7 +203,7 @@ class TestAccountOverview:
     @allure.description("Clicking change password link")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_9(self, setup):
+    def test_case_8(self, setup):
         self.account_overview_page.click_change_password()
         self.driver.implicitly_wait(3)
         if self.driver.current_url == WebHelper().get_account_changepassword_url():
@@ -230,7 +213,7 @@ class TestAccountOverview:
             WebHelper().report_allure("Change Password link not functional", self.driver)
             assert False
 
-    # Test #10 ->Checking that all buttons and links work
+    # Test #9 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking recover playlists link")
@@ -238,17 +221,17 @@ class TestAccountOverview:
     @allure.description("Clicking recover playlists link")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_10(self, setup):
+    def test_case_9(self, setup):
         self.account_overview_page.click_recover_playlists()
         self.driver.implicitly_wait(3)
-        if self.driver.current_url == "http://localhost:3000":
+        if self.driver.current_url == WebHelper().get_account_overview_url():
             WebHelper().report_allure("Recover Playlists link functional", self.driver)
             assert True
         else:
             WebHelper().report_allure("Recover Playlists link not functional", self.driver)
             assert False
 
-    # Test #11 ->Checking that all buttons and links work
+    # Test #10 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking redeem link")
@@ -256,17 +239,17 @@ class TestAccountOverview:
     @allure.description("Clicking redeem link")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_11(self, setup):
+    def test_case_10(self, setup):
         self.account_overview_page.click_redeem_link()
         self.driver.implicitly_wait(3)
-        if self.driver.current_url == "http://localhost:3000":
+        if self.driver.current_url == WebHelper().get_account_overview_url():
             WebHelper().report_allure("Redeem link functional", self.driver)
             assert True
         else:
             WebHelper().report_allure("Redeem link not functional", self.driver)
             assert False
 
-    # Test #12 ->Checking that all buttons and links work
+    # Test #11 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking join premium button")
@@ -274,17 +257,21 @@ class TestAccountOverview:
     @allure.description("Clicking join premium button")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_12(self, setup):
-        self.account_overview_page.click_join_premium_btn()
-        self.driver.implicitly_wait(3)
-        if self.driver.current_url == WebHelper().get_premium_url():
-            WebHelper().report_allure("join premium button functional", self.driver)
+    def test_case_11(self, setup):
+        if ConstantsClass().get_premium("test9@test.com") is False:
+            self.account_overview_page.click_join_premium_btn()
+            self.driver.implicitly_wait(3)
+            if self.driver.current_url == WebHelper().get_premium_url():
+                WebHelper().report_allure("join premium button functional", self.driver)
+                assert True
+            else:
+                WebHelper().report_allure("join premium button not functional", self.driver)
+                assert False
+        elif ConstantsClass().get_premium("test9@test.com") is True:
+            WebHelper().report_allure("join premium doesn't exist as account is already premium", self.driver)
             assert True
-        else:
-            WebHelper().report_allure("join premium button not functional", self.driver)
-            assert False
 
-    # Test #13 ->Checking that all buttons and links work
+    # Test #12 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking edit profile button")
@@ -292,7 +279,7 @@ class TestAccountOverview:
     @allure.description("Clicking edit profile button")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_13(self, setup):
+    def test_case_12(self, setup):
         self.account_overview_page.click_edit_profile_btn()
         self.driver.implicitly_wait(3)
         if self.driver.current_url == WebHelper().get_account_edit_url():
@@ -302,7 +289,7 @@ class TestAccountOverview:
             WebHelper().report_allure("edit profile button not functional", self.driver)
             assert False
 
-    # Test #14 ->Checking that all buttons and links work
+    # Test #13 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview Tests")
     @allure.sub_suite("Clicking logout link")
@@ -310,17 +297,17 @@ class TestAccountOverview:
     @allure.description("Clicking logout link")
     @pytest.mark.Do
     @pytest.mark.AccounOverview
-    def test_case_14(self, setup):
+    def test_case_13(self, setup):
         self.account_overview_page.click_logout()
         self.driver.implicitly_wait(3)
-        if self.driver.current_url == WebHelper().get_login_url():
+        if self.driver.current_url == WebHelper().get_signup_url():
             WebHelper().report_allure("Logout link functional", self.driver)
             assert True
         else:
             WebHelper().report_allure("Logout link not functional", self.driver)
             assert False
 
-    # Test #15 ->Checking that all buttons and links work
+    # Test #14 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Account Overview tests")
     @allure.sub_suite("Clicking sign out button")
@@ -328,10 +315,10 @@ class TestAccountOverview:
     @allure.description("Clicking sign out button")
     @pytest.mark.Do
     @pytest.mark.AccountOverview
-    def test_case_15(self, setup_final):
+    def test_case_14(self, setup_final):
         self.account_overview_page.click_signout_btn()
         self.driver.implicitly_wait(3)
-        if self.driver.current_url == "http://localhost:3000/signup":
+        if self.driver.current_url == WebHelper().get_login_url():
             WebHelper().report_allure("sign out button functional", self.driver)
             assert True
         else:

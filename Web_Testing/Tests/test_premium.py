@@ -18,6 +18,11 @@ from Web_Testing.Pages.premium import PremiumPage
 import time
 from Web_Testing.helperClasses import WebHelper, ConstantsClass
 
+from Web_Testing.Pages.LoggedOutHome import LoggedOutHome
+from Web_Testing.Pages.LoginPage import LoginPage
+
+from Web_Testing.Pages.AccountOverviewPage import AccountOverviewPage
+
 
 @allure.parent_suite("End to End testing")
 @allure.suite("Premium page test")
@@ -27,6 +32,24 @@ class TestPremium:
     # TODO: change Firefox executable path to your needs
     driver = WebHelper().chrome_driver_init()
     pp = PremiumPage(driver)
+
+    def login_first(self):
+        lp = LoginPage(self.driver)
+        lp.set_credentials("test9@test.com", ConstantsClass().get_pass("test9@test.com"))
+        lp.click_login()
+        self.driver.implicitly_wait(3)
+        account_overview_page = AccountOverviewPage(self.driver)
+        account_overview_page.click_premium_link()
+
+    @pytest.yield_fixture
+    def setup_begin(self):
+        self.driver.get(WebHelper().get_login_url())
+        self.driver.maximize_window()
+        self.login_first()
+        yield
+        self.driver.delete_all_cookies()
+        self.driver.refresh()
+        self.driver.delete_all_cookies()
 
     @pytest.yield_fixture
     def setup(self):
@@ -44,7 +67,40 @@ class TestPremium:
         yield
         self.driver.close()
 
-    # Test #1 ->Checking that all buttons and links work
+    # Test #1 ->Checking that get premium works and change account to premium
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Premium tests")
+    @allure.sub_suite("change to premium account")
+    @allure.title("change to premium account")
+    @allure.description("change to premium account")
+    @pytest.mark.Do
+    @pytest.mark.Premium
+    def test_case_1(self, setup_begin):
+        if self.pp.check_claim_premium():
+            WebHelper().report_allure("Change to premium account successfully", self.driver)
+            assert True
+        else:
+            WebHelper().report_allure("Fail to change to premium account ", self.driver)
+            assert False
+
+    # # Test #2 ->Checking that all buttons and links work
+    # @allure.severity(allure.severity_level.BLOCKER)
+    # @allure.story("Premium tests")
+    # @allure.sub_suite("Clicking get premium link")
+    # @allure.title("Clicking get premium link")
+    # @allure.description("Clicking get premium link")
+    # @pytest.mark.Do
+    # @pytest.mark.Premium
+    # def test_case_2(self, setup):
+    #     self.pp.click_get_premium_button_2()
+    #     if self.driver.current_url == WebHelper().get_premium_url():
+    #         WebHelper().report_allure("Get Premium button functional", self.driver)
+    #         assert True
+    #     else:
+    #         WebHelper().report_allure("Get Premium button not functional", self.driver)
+    #         assert False
+
+    # Test #3 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Premium tests")
     @allure.sub_suite("Spotify logo")
@@ -52,16 +108,16 @@ class TestPremium:
     @allure.description("Spotify logo")
     @pytest.mark.Do
     @pytest.mark.Premium
-    def test_case_1(self, setup):
+    def test_case_3(self, setup):
         self.pp.click_spotify_logo()
-        if self.driver.current_url == WebHelper().get_signup_url():
+        if self.driver.current_url == WebHelper().get_home_url():
             WebHelper().report_allure("Spotify logo functional", self.driver)
             assert True
         else:
             WebHelper().report_allure("Spotify logo not functional", self.driver)
             assert False
 
-    # Test #2 ->Checking that all buttons and links work
+    # Test #4 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Premium tests")
     @allure.sub_suite("Clicking account link")
@@ -69,7 +125,7 @@ class TestPremium:
     @allure.description("Clicking account link")
     @pytest.mark.Do
     @pytest.mark.Premium
-    def test_case_2(self, setup):
+    def test_case_4(self, setup):
         self.pp.click_account()
         if self.driver.current_url == WebHelper().get_account_overview_url():
             WebHelper().report_allure("Account link functional", self.driver)
@@ -79,7 +135,7 @@ class TestPremium:
             WebHelper().report_allure("Account link not functional", self.driver)
             assert False
 
-    # Test #3 ->Checking that all buttons and links work
+    # Test #5 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Premium tests")
     @allure.sub_suite("Clicking Download link")
@@ -87,7 +143,7 @@ class TestPremium:
     @allure.description("Clicking Download link")
     @pytest.mark.Do
     @pytest.mark.Premium
-    def test_case_3(self, setup):
+    def test_case_5(self, setup):
         self.pp.click_download_link()
         if self.driver.current_url == WebHelper().get_home_url():
             WebHelper().report_allure("Download link functional", self.driver)
@@ -96,7 +152,7 @@ class TestPremium:
             WebHelper().report_allure("Download link not functional", self.driver)
             assert False
 
-    # Test #4 ->Checking that all buttons and links work
+    # Test #6 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Premium tests")
     @allure.sub_suite("Clicking help link")
@@ -104,7 +160,7 @@ class TestPremium:
     @allure.description("Clicking help link")
     @pytest.mark.Do
     @pytest.mark.Premium
-    def test_case_4(self, setup):
+    def test_case_6(self, setup):
         self.pp.click_help_link()
         if self.driver.current_url == WebHelper().get_home_url():
             WebHelper().report_allure("Help link functional", self.driver)
@@ -113,24 +169,24 @@ class TestPremium:
             WebHelper().report_allure("Help link not functional", self.driver)
             assert False
 
-    # Test #5 ->Checking that all buttons and links work
+    # Test #7 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Premium tests")
-    @allure.sub_suite("Clicking home link")
-    @allure.title("Clicking home link")
-    @allure.description("Clicking home link")
+    @allure.sub_suite("Clicking premium link")
+    @allure.title("Clicking premium link")
+    @allure.description("Clicking premium link")
     @pytest.mark.Do
     @pytest.mark.Premium
-    def test_case_5(self, setup):
-        self.pp.click_home_link()
-        if self.driver.current_url == WebHelper().get_home_url():
-            WebHelper().report_allure("Home link functional", self.driver)
+    def test_case_7(self, setup):
+        self.pp.click_premium_link()
+        if self.driver.current_url == WebHelper().get_premium_url():
+            WebHelper().report_allure("Premium link functional", self.driver)
             assert True
         else:
-            WebHelper().report_allure("Home link not functional", self.driver)
+            WebHelper().report_allure("Premium link not functional", self.driver)
             assert False
 
-    # Test #6 ->Checking that all buttons and links work
+    # Test #8 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Premium tests")
     @allure.sub_suite("Clicking logout link")
@@ -138,45 +194,14 @@ class TestPremium:
     @allure.description("Clicking logout link")
     @pytest.mark.Do
     @pytest.mark.Premium
-    def test_case_6(self, setup):
+    def test_case_8(self, setup_final):
         self.pp.click_logout_button()
-        if self.driver.current_url == WebHelper().get_login_url():
+        if self.driver.current_url == WebHelper().get_signup_url():
             WebHelper().report_allure("Logout button functional", self.driver)
             assert True
         else:
             WebHelper().report_allure("Logout button not functional", self.driver)
             assert False
 
-    # Test #7 ->Checking that all buttons and links work
-    @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Premium tests")
-    @allure.sub_suite("Clicking get premium link")
-    @allure.title("Clicking get premium link")
-    @allure.description("Clicking get premium link")
-    @pytest.mark.Do
-    @pytest.mark.Premium
-    def test_case_7(self, setup):
-        self.pp.click_get_premium_button_1()
-        if self.driver.current_url == WebHelper().get_premium_url():
-            WebHelper().report_allure("Get Premium button functional", self.driver)
-            assert True
-        else:
-            WebHelper().report_allure("Get Premium button not functional", self.driver)
-            assert False
 
-    # Test #8 ->Checking that all buttons and links work
-    @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Premium tests")
-    @allure.sub_suite("Clicking get premium link")
-    @allure.title("Clicking get premium link")
-    @allure.description("Clicking get premium link")
-    @pytest.mark.Do
-    @pytest.mark.Premium
-    def test_case_8(self, setup_final):
-        self.pp.click_get_premium_button_2()
-        if self.driver.current_url == WebHelper().get_premium_url():
-            WebHelper().report_allure("Get Premium button functional", self.driver)
-            assert True
-        else:
-            WebHelper().report_allure("Get Premium button not functional", self.driver)
-            assert False
+
