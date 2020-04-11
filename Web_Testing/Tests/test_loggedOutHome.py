@@ -6,7 +6,7 @@ This script tests the home page that appears when logged out functions and repor
 
 This script requires `allure` and `pytest` be installed within the Python environment you are running this script in
 """
-
+import time
 
 import allure
 import pytest
@@ -24,6 +24,7 @@ from Web_Testing.helperClasses import ConstantsClass
 class TestLoggedOutHome:
 
     driver = WebHelper().firefox_driver_init()
+
     @pytest.yield_fixture
     def setup(self):
         self.driver.get(WebHelper().get_home_url())
@@ -37,7 +38,7 @@ class TestLoggedOutHome:
         yield
         self.driver.close()
 
-# Test #1 -> Different Confirmation email
+# Test #1 -> Signup button
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Clicking Signup")
     @allure.title("Testing Sign up Button")
@@ -45,10 +46,9 @@ class TestLoggedOutHome:
     @pytest.mark.Do
     @pytest.mark.LoggedOutHome
     def test_case_1(self, setup):
-        # logged_out_home = LoggedOutHome(self.driver)
-        # logged_out_home.tb_signup_btn.click()
-        self.driver.find_element_by_link_text("Sign up").click()
-        self.driver.implicitly_wait(3)
+        logged_out_home = LoggedOutHome(self.driver)
+        logged_out_home.click_signup()
+        time.sleep(2)
         sp = SignupPage(self.driver)
         if sp.check_signup_page():
             WebHelper().report_allure("Signup button working", self.driver)
@@ -65,7 +65,9 @@ class TestLoggedOutHome:
     @pytest.mark.Do
     @pytest.mark.LoggedOutHome
     def test_case_2(self, setup):
-        self.driver.find_element_by_link_text("Log In").click()
+        logged_out_home = LoggedOutHome(self.driver)
+        logged_out_home.click_login()
+        time.sleep(2)
         sp = LoginPage(self.driver)
         if sp.check_login_page():
             WebHelper().report_allure("Login button working", self.driver)
@@ -82,9 +84,9 @@ class TestLoggedOutHome:
     @pytest.mark.Do
     @pytest.mark.LoggedOutHome
     def test_case_3(self, setup_final):
-        self.driver.find_element_by_link_text("Premium").click()
-        self.driver.implicitly_wait(3)
-
+        logged_out_home = LoggedOutHome(self.driver)
+        logged_out_home.click_premium()
+        time.sleep(2)
         if str(self.driver.current_url).find('premium') != -1:
             WebHelper().report_allure("Premium button working", self.driver)
             assert True

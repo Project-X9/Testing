@@ -91,6 +91,7 @@ class SignupPage(WebHelper):
         :param driver : the driver to which the super class' driver is to be set
         :type driver: WebDriver
         """
+        super().__init__()
         self.driver = driver
         self.signup_with_facebook = self.find_element_by_class_name("facebookButton metro")
         self.email_txt = self.find_element_by_id("email")
@@ -240,7 +241,8 @@ class SignupPage(WebHelper):
         """
         try:
             text_dangers = self.find_elements_by_class_name('text-danger')
-            return len(text_dangers) > 0
+            text_invalid = self.find_element_by_id("invalid")
+            return ((text_dangers is not None) and (len(text_dangers) > 0)) or (text_invalid is not None)
         except:
             return False
 
