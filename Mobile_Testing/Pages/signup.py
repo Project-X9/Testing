@@ -2,21 +2,12 @@ from Mobile_Testing.helper import Helper
 
 
 class SignupPage:
-
-    name_text_field_id = "com.example.projectx:id/signUpName_et"
-    email_text_field_id = "com.example.projectx:id/signUpEmail_et"
-    password_text_field_id = "com.example.projectx:id/signUpPassword_et"
-    age_text_field_id = "com.example.projectx:id/signUpAge_et"
-    male_gender_check_box_id = "com.example.projectx:id/signUpMale_rb"
-    female_gender_check_box_id = "com.example.projectx:id/signUpFemale_rb"
-    create_user_button_id = "com.example.projectx:id/createUser_bt"
-
     """
     A class used to represent the Sign up Page
     ...
     Attributes
     ----------
-    
+
     name_text_field_id : string
         id of the name text box
     email_text_field_id : string
@@ -39,7 +30,7 @@ class SignupPage:
     fill_email()
         fills email text box
     fill_password()
-        fills password text box 
+        fills password text box
     fill_age()
         fills age check box
     choose_male()
@@ -52,6 +43,14 @@ class SignupPage:
     do_the_signup()
         does the whole signup process
     """
+    name_text_field_id = "com.example.projectx:id/signUpName_et"
+    email_text_field_id = "com.example.projectx:id/signUpEmail_et"
+    password_text_field_id = "com.example.projectx:id/signUpPassword_et"
+    age_text_field_id = "com.example.projectx:id/signUpAge_et"
+    male_gender_check_box_id = "com.example.projectx:id/signUpMale_rb"
+    female_gender_check_box_id = "com.example.projectx:id/signUpFemale_rb"
+    create_user_button_id = "com.example.projectx:id/createUser_bt"
+
     def __init__(self, driver):
         """
         Initializes the page elements

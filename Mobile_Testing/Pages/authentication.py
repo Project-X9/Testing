@@ -2,9 +2,6 @@ from Mobile_Testing.helper import Helper
 
 
 class AuthenticationPage:
-    signup_button_id = "com.example.projectx:id/signUp_bt"
-    login_with_facebook_button_id = "com.example.projectx:id/login_button"
-    signin_button_id = "com.example.projectx:id/signIn_bt"
     """
     A class used to represent the Authentication Page
     ...
@@ -25,9 +22,13 @@ class AuthenticationPage:
     click_login_with_facebook_button()
         Clicks the login with facebook button
     click_signin_button()
-        Clicks the sign in button 
-        
+        Clicks the sign in button
+
     """
+
+    signup_button_id = "com.example.projectx:id/signUp_bt"
+    login_with_facebook_button_id = "com.example.projectx:id/login_button"
+    signin_button_id = "com.example.projectx:id/signIn_bt"
 
     def __init__(self, driver):
         """

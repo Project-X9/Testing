@@ -15,7 +15,6 @@ import time
 @allure.feature("Home Page Testing")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestHome:
-    driver = None
     """
        A class used to represent the Home page test
        ...
@@ -45,6 +44,8 @@ class TestHome:
             checking the Search works
 
        """
+    driver = None
+
     @pytest.yield_fixture
     def setup(self):
         """

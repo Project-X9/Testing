@@ -13,27 +13,27 @@ import allure
 @allure.feature("Authentication Testing")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestAuthentication:
-    driver = None
     """
-       A class used to represent the Authentication test
-       ...
-       Attributes
-       ----------
-       driver: webdriver
-            A web driver element to control the android app
+         A class used to represent the Authentication test
+         ...
+         Attributes
+         ----------
+         driver: webdriver
+              A web driver element to control the android app
 
-       Methods
-       -------
+         Methods
+         -------
 
-       test_case_1()
-             Clicks on the Sign up button and checks that it works
-       test_case_2()
-            Clicks on the Login button and checks that it works
-       test_case_3()
-            Checks that Facebook sign in button is available
+         test_case_1()
+               Clicks on the Sign up button and checks that it works
+         test_case_2()
+              Clicks on the Login button and checks that it works
+         test_case_3()
+              Checks that Facebook sign in button is available
 
-       """
+         """
 
+    driver = None
 
     @pytest.yield_fixture
     def setup(self):

@@ -13,7 +13,6 @@ import pytest
 @allure.feature("Login Testing")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLogin:
-    driver = None
     """
        A class used to represent the Login page test
        ...
@@ -40,6 +39,8 @@ class TestLogin:
        test_case_7()
             Login  with no  password & email
        """
+    driver = None
+
 
     @pytest.yield_fixture
     def setup(self):

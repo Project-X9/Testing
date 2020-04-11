@@ -16,7 +16,6 @@ import time
 @allure.feature("Player Page Testing")
 @allure.severity(allure.severity_level.CRITICAL)
 class TestPlayer:
-    driver = None
     """
        A class used to represent the Login page test
        ...
@@ -49,6 +48,8 @@ class TestPlayer:
        test_case_10()
             Checks that Blacklist button is visible and enabled
        """
+    driver = None
+
 
     @pytest.yield_fixture
     def setup(self):
