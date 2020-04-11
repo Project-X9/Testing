@@ -1,0 +1,77 @@
+wrote Mobile_Testing.html
+wrote Mobile_Testing.Pages.html
+wrote Mobile_Testing.Pages.authentication.html
+wrote Mobile_Testing.Pages.home.html
+wrote Mobile_Testing.Pages.login.html
+wrote Mobile_Testing.Pages.player.html
+wrote Mobile_Testing.Pages.signup.html
+wrote Mobile_Testing.Tests.html
+wrote Mobile_Testing.Tests.test_authentication.html
+wrote Mobile_Testing.Tests.test_extra.html
+wrote Mobile_Testing.Tests.test_home.html
+wrote Mobile_Testing.Tests.test_login.html
+wrote Mobile_Testing.Tests.test_player.html
+wrote Mobile_Testing.Tests.test_signup.html
+wrote Mobile_Testing.helper.html
+wrote Web_Testing.html
+wrote Web_Testing.Pages.html
+wrote Web_Testing.Pages.AccountOverviewPage.html
+wrote Web_Testing.Pages.ChangePasswordPage.html
+wrote Web_Testing.Pages.EditProfilePage.html
+wrote Web_Testing.Pages.LikedSongs.html
+wrote Web_Testing.Pages.LoggedOutHome.html
+wrote Web_Testing.Pages.LoginPage.html
+wrote Web_Testing.Pages.SignupPage.html
+wrote Web_Testing.Pages.StatusPage.html
+wrote Web_Testing.Pages.WebPlayerHome.html
+wrote Web_Testing.Pages.WebPlayerLibrary.html
+wrote Web_Testing.Pages.WebPlayerMenu.html
+wrote Web_Testing.Pages.WebPlayerPlaylist.html
+wrote Web_Testing.Pages.artist.html
+wrote Web_Testing.Pages.premium.html
+wrote Web_Testing.Tests.html
+
+Looking for [chromedriver 80.0.3987.106 mac64] driver in cache 
+File found in cache by path [/Users/KIMO/.wdm/drivers/chromedriver/80.0.3987.106/mac64/chromedriver]
+wrote Web_Testing.Tests.test_accountoverview.html
+
+Looking for [chromedriver 80.0.3987.106 mac64] driver in cache 
+File found in cache by path [/Users/KIMO/.wdm/drivers/chromedriver/80.0.3987.106/mac64/chromedriver]
+wrote Web_Testing.Tests.test_artist.html
+Getting latest mozilla release info for v0.26.0
+Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+problem in Web_Testing.Tests.test_changePassword - PermissionError: [Errno 13] Permission denied: '/Users/KIMO/.wdm/drivers/geckodriver/v0.26.0/macos/geckodriver-v0.26.0-macos.tar.gz'
+
+Looking for [chromedriver 80.0.3987.106 mac64] driver in cache 
+File found in cache by path [/Users/KIMO/.wdm/drivers/chromedriver/80.0.3987.106/mac64/chromedriver]
+wrote Web_Testing.Tests.test_likedsongs.html
+Getting latest mozilla release info for v0.26.0
+Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+problem in Web_Testing.Tests.test_loggedOutHome - PermissionError: [Errno 13] Permission denied: '/Users/KIMO/.wdm/drivers/geckodriver/v0.26.0/macos/geckodriver-v0.26.0-macos.tar.gz'
+Getting latest mozilla release info for v0.26.0
+Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+problem in Web_Testing.Tests.test_login - PermissionError: [Errno 13] Permission denied: '/Users/KIMO/.wdm/drivers/geckodriver/v0.26.0/macos/geckodriver-v0.26.0-macos.tar.gz'
+
+Looking for [chromedriver 80.0.3987.106 mac64] driver in cache 
+File found in cache by path [/Users/KIMO/.wdm/drivers/chromedriver/80.0.3987.106/mac64/chromedriver]
+wrote Web_Testing.Tests.test_playlist.html
+
+Looking for [chromedriver 80.0.3987.106 mac64] driver in cache 
+File found in cache by path [/Users/KIMO/.wdm/drivers/chromedriver/80.0.3987.106/mac64/chromedriver]
+wrote Web_Testing.Tests.test_premium.html
+Getting latest mozilla release info for v0.26.0
+Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+problem in Web_Testing.Tests.test_signup - PermissionError: [Errno 13] Permission denied: '/Users/KIMO/.wdm/drivers/geckodriver/v0.26.0/macos/geckodriver-v0.26.0-macos.tar.gz'
+Getting latest mozilla release info for v0.26.0
+Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+problem in Web_Testing.Tests.test_webplayerHome - PermissionError: [Errno 13] Permission denied: '/Users/KIMO/.wdm/drivers/geckodriver/v0.26.0/macos/geckodriver-v0.26.0-macos.tar.gz'
+Getting latest mozilla release info for v0.26.0
+Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+problem in Web_Testing.Tests.test_yourLibrary - PermissionError: [Errno 13] Permission denied: '/Users/KIMO/.wdm/drivers/geckodriver/v0.26.0/macos/geckodriver-v0.26.0-macos.tar.gz'
+wrote Web_Testing.helperClasses.html
+Getting latest mozilla release info for v0.26.0
+Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+problem in main_file_dummy - PermissionError: [Errno 13] Permission denied: '/Users/KIMO/.wdm/drivers/geckodriver/v0.26.0/macos/geckodriver-v0.26.0-macos.tar.gz'
+No Python documentation found for 'Documentation'.
+Use help() to get the interactive help utility.
+Use help(str) for help on the str class.
