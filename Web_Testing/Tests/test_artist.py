@@ -24,6 +24,8 @@ from Web_Testing.Pages.WebPlayerPlaylist import WebPlayerPlaylist
 
 from Web_Testing.Pages.WebPlayerHome import WebPlayerHome
 
+from Web_Testing.Pages.artist import Artist
+
 
 @allure.parent_suite("End to End testing")
 @allure.suite("Playlist page test")
@@ -34,6 +36,7 @@ class TestPlaylist:
     driver = WebHelper().chrome_driver_init()
     helper = WebHelper()
     helper.set_driver(driver)
+    artist = Artist(driver)
 
     def login_first(self):
         lp = LoginPage(self.driver)
@@ -48,7 +51,7 @@ class TestPlaylist:
         self.driver.get(self.helper.get_login_url())
         self.driver.maximize_window()
         yield
-        self.driver.close()
+        self.driver.refresh()
 
     @pytest.yield_fixture
     def setup(self):
@@ -80,12 +83,39 @@ class TestPlaylist:
         time.sleep(3)
         web_player_home = WebPlayerHome(self.driver)
         web_player_home.click_your_library()
-        time.sleep(3)
-        playlist = WebPlayerPlaylist(self.driver)
-        time.sleep(2)
-        if playlist.check_playlist(0, True):
-            self.helper.report_allure("SUCCESS:Playlist card goes to the right playlist")
+        self.artist.click_artist()
+        time.sleep(5)
+        if self.artist.check_about():
+            self.helper.report_allure("SUCCESS: Artist Bio is right")
             assert True
         else:
-            self.helper.report_allure("FAILURE: Playlist card doesn't go to the right playlist")
+            self.helper.report_allure("FAILURE: Artist Bio is wrong")
             assert False
+
+# Test #2 -> Play Button
+    @allure.severity(allure.severity_level.BLOCKER)
+    @allure.story("Testing  follow Button")
+    @allure.title("artist follow Button")
+    @allure.description("Testing artist follow Button")
+    @pytest.mark.Do
+    @pytest.mark.YourLibrary
+    def test_case_2(self, setup_final):
+        time.sleep(3)
+        lp = LoginPage(self.driver)
+        lp.login_to_spotify("abdallah@gmail.com", "123456")
+        time.sleep(3)
+        self.driver.get(self.helper.base_url + "webplayer/home")
+        time.sleep(3)
+        web_player_home = WebPlayerHome(self.driver)
+        web_player_home.click_your_library()
+        self.artist.click_artist()
+        time.sleep(5)
+        if self.artist.check_follow():
+            self.helper.report_allure("SUCCESS: follow button is functional")
+            assert True
+        else:
+            self.helper.report_allure("FAILURE: follow button is functional")
+            assert False
+
+
+
