@@ -12,9 +12,34 @@ import pytest
 @allure.suite("Login Testing")
 @allure.feature("Login Testing")
 @allure.severity(allure.severity_level.BLOCKER)
-class TestAuthentication:
+class TestLogin:
     driver = None
+    """
+       A class used to represent the Login page test
+       ...
+       Attributes
+       ----------
+       driver: webdriver
+            A web driver element to control the android app
 
+       Methods
+       -------
+
+       test_case_1()
+            Login correctly
+       test_case_2()
+            Login with wrong email
+       test_case_3()
+            Login  with wrong email format
+       test_case_4()
+            Login  with no email
+       test_case_5()
+            Login  with wrong password
+       test_case_6()
+            Login  with no password
+       test_case_7()
+            Login  with no  password & email
+       """
 
     @pytest.yield_fixture
     def setup(self):
@@ -44,6 +69,7 @@ class TestAuthentication:
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
+            Helper.report_allure(self.driver, "Login test passed")
             assert True
         else:
             print(self.driver.current_activity)
@@ -72,6 +98,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Login test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Login test passed")
             assert True
 
     # Test #3 ->Logging in with wrong email format
@@ -96,6 +123,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Login test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Login test passed")
             assert True
 
     # Test #4 ->Logging in with no email
@@ -120,6 +148,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Login test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Login test passed")
             assert True
 
     # Test #5 ->Logging in with wrong password
@@ -144,6 +173,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Login test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Login test passed")
             assert True
 
     # Test #6 ->Logging in with no password
@@ -168,6 +198,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Login test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Login test passed")
             assert True
 
     # Test #7 ->Logging in with no  password & email
@@ -192,6 +223,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Login test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Login test passed")
             assert True
 
 

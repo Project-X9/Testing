@@ -14,6 +14,26 @@ import allure
 @allure.severity(allure.severity_level.BLOCKER)
 class TestAuthentication:
     driver = None
+    """
+       A class used to represent the Authentication test
+       ...
+       Attributes
+       ----------
+       driver: webdriver
+            A web driver element to control the android app
+
+       Methods
+       -------
+
+       test_case_1()
+             Clicks on the Sign up button and checks that it works
+       test_case_2()
+            Clicks on the Login button and checks that it works
+       test_case_3()
+            Checks that Facebook sign in button is available
+
+       """
+
 
     @pytest.yield_fixture
     def setup(self):
@@ -42,6 +62,7 @@ class TestAuthentication:
         ap.click_signup_button()
 
         if Helper.element_exists_by_id(self.driver, SignupPage.name_text_field_id):
+            Helper.report_allure(self.driver, "Sign up Page entered")
             assert True
         else:
             print(self.driver.current_activity)
@@ -66,6 +87,7 @@ class TestAuthentication:
         ap.click_signin_button()
 
         if Helper.element_exists_by_id(self.driver, LoginPage.email_text_field_id):
+            Helper.report_allure(self.driver, "Login Page  entered")
             assert True
         else:
             print(self.driver.current_activity)
@@ -88,8 +110,9 @@ class TestAuthentication:
         """
         ap = AuthenticationPage(self.driver)
         if Helper.element_exists_by_id(self.driver, ap.login_with_facebook_button_id):
+            Helper.report_allure(self.driver, "Facebook Page available")
             assert True
         else:
             print(self.driver.current_activity)
-            Helper.report_allure(self.driver, "Facebook Page not entered")
+            Helper.report_allure(self.driver, "Facebook Page not available")
             assert False

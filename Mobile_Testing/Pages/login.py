@@ -46,7 +46,10 @@ class LoginPage:
         :param email : the string that is filled in the text box
         :type email: string
         """
-        Helper.find_element_by_id(self.driver, self.email_text_field_id).send_keys(email)
+        element = Helper.find_element_by_id(self.driver, self.email_text_field_id)
+        if element is not None:
+            element.send_keys(email)
+
 
     def fill_password(self, password):
         """
@@ -54,13 +57,18 @@ class LoginPage:
         :param password : the string that is filled in the text box
         :type password: string
         """
-        Helper.find_element_by_id(self.driver, self.password_text_field_id).send_keys(password)
+        element = Helper.find_element_by_id(self.driver, self.password_text_field_id)
+        if element is not None:
+            element .send_keys(password)
+
 
     def click_login(self):
         """
         clicks the login button
         """
-        Helper.find_element_by_id(self.driver, self.login_button_id).click()
+        element = Helper.find_element_by_id(self.driver, self.login_button_id)
+        if element is not None:
+            element.click()
 
     def do_the_login(self, email, password):
         """

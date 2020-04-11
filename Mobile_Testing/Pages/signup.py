@@ -66,7 +66,10 @@ class SignupPage:
         :param name : the string that is filled in the text box
         :type name: string
         """
-        Helper.find_element_by_id(self.driver, self.name_text_field_id).send_keys(name)
+        element = Helper.find_element_by_id(self.driver, self.name_text_field_id)
+        if element is not None:
+            element.send_keys(name)
+
 
     def fill_email(self, email):
         """
@@ -74,7 +77,10 @@ class SignupPage:
         :param email : the string that is filled in the text box
         :type email: string
         """
-        Helper.find_element_by_id(self.driver, self.email_text_field_id).send_keys(email)
+        element = Helper.find_element_by_id(self.driver, self.email_text_field_id)
+        if element is not None:
+            element.send_keys(email)
+
 
     def fill_password(self, password):
         """
@@ -82,7 +88,10 @@ class SignupPage:
         :param password : the string that is filled in the text box
         :type password: string
         """
-        Helper.find_element_by_id(self.driver, self.password_text_field_id).send_keys(password)
+        element = Helper.find_element_by_id(self.driver, self.password_text_field_id)
+        if element is not None:
+            element.send_keys(password)
+
 
     def fill_age(self, age):
         """
@@ -90,25 +99,37 @@ class SignupPage:
         :param age : the int that is filled in the text box
         :type age: int
         """
-        Helper.find_element_by_id(self.driver, self.age_text_field_id).send_keys(age)
+        element = Helper.find_element_by_id(self.driver, self.age_text_field_id)
+        if element is not None:
+            element.send_keys(age)
+
 
     def choose_male(self):
         """
         chooses male gender
         """
-        Helper.find_element_by_id(self.driver, self.male_gender_check_box_id).click()
+        element = Helper.find_element_by_id(self.driver, self.male_gender_check_box_id)
+        if element is not None:
+            element.click()
+
 
     def choose_female(self):
         """
         chooses female gender
         """
-        Helper.find_element_by_id(self.driver, self.female_gender_check_box_id).click()
+        element = Helper.find_element_by_id(self.driver, self.female_gender_check_box_id)
+        if element is not None:
+            element.click()
+
 
     def click_create_user(self):
         """
         clicks create user button
         """
-        Helper.find_element_by_id(self.driver, self.create_user_button_id).click()
+        element = Helper.find_element_by_id(self.driver, self.create_user_button_id)
+        if element is not None:
+            element.click()
+
 
     def do_the_signup(self, name, email, password, age, gender):
         """

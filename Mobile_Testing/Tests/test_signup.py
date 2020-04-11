@@ -14,14 +14,56 @@ import pytest
 @allure.suite("Signup Testing")
 @allure.feature("Signup Testing")
 @allure.severity(allure.severity_level.BLOCKER)
-class TestAuthentication:
+class TestSignup:
     driver = None
     my_factory = Faker()
     my_factory.random.seed(int(round(time.time() * 1000)))
     name = my_factory.name()
     email = my_factory.email()
     password = my_factory.password()
+    """
+       A class used to represent the Login page test
+       ...
+       Attributes
+       ----------
+       driver : webdriver
+            A web driver element to control the android app
+       my_factory : Faker
+            An object that produces fake data
+       name : string
+            A randomly generated name
+       email : string
+            A randomly generated email
+       password : string
+            A randomly generated password
+       Methods
+       -------
 
+       test_case_1()
+            Signs up correctly
+       test_case_2()
+            Signs up with same email
+       test_case_3()
+            Signs up with no email
+       test_case_4()
+            Signs up with no name
+       test_case_5()
+            Signs up with no password
+       test_case_6()
+            Signs up with no age
+       test_case_7()
+            Signs up with female gender
+       test_case_8()
+            Signs up with wrong name format
+       test_case_9()
+            Signs up with wrong email format
+       test_case_10()
+            Signs up with -ve age
+       test_case_11()
+            Signs up with 0 age
+       test_case_12()
+            Signs up with 999 age
+       """
 
     @pytest.yield_fixture
     def setup(self):
@@ -51,6 +93,7 @@ class TestAuthentication:
         sp = SignupPage(self.driver)
         sp.do_the_signup(self.name, self.email, self.password, "22", "M")
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
         else:
             print(self.driver.current_activity)
@@ -80,6 +123,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
     # Test #3 ->Signing up with no email
@@ -104,6 +148,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 
@@ -129,6 +174,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 
@@ -154,6 +200,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 
@@ -179,6 +226,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 
@@ -200,6 +248,7 @@ class TestAuthentication:
         sp = SignupPage(self.driver)
         sp.do_the_signup("Kamel", "kamelmohsenkamel@gmail.com", "Kimo2010", "21", "F")
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
         else:
             print(self.driver.current_activity)
@@ -229,6 +278,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 
@@ -255,6 +305,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 # Test #10 ->Signing up with -ve age
@@ -279,6 +330,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 
@@ -304,6 +356,7 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
 # Test #12 ->Signing up with 999 age
@@ -328,4 +381,5 @@ class TestAuthentication:
             Helper.report_allure(self.driver, "Sign up test Failed")
             assert False
         else:
+            Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
