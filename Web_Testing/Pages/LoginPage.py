@@ -131,10 +131,11 @@ class LoginPage(WebHelper):
         :rtype: bool
         """
         self.incorrect_user_text = self.find_element_by_id("invalid")
-        if self.incorrect_user_text is None:
+        text_dangers = self.find_elements_by_class_name('text-danger')
+        try:
+            return ((text_dangers is not None) and (len(text_dangers) > 0)) or (self.incorrect_user_text is not None)
+        except:
             return False
-        else:
-            return True
 
     def check_login_page(self):
         """

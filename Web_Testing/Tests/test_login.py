@@ -19,7 +19,7 @@ from Web_Testing.helperClasses import WebHelper
 
 @allure.parent_suite("End to End testing")
 @allure.suite("Login Tests")
-@allure.feature("Log in Tests")
+@allure.feature("Login Tests")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLogin:
 
@@ -245,8 +245,10 @@ class TestLogin:
         self.driver.refresh()
         lp = LoginPage(self.driver)
 
-        if (lp.email_txt is None) or (lp.pass_txt is None) or (lp.login_btn is None):
-            WebHelper().report_allure("ERROR: Elements are not available after refresh", self.driver)
+        if (lp.email_txt is None) or (lp.pass_txt is None) or (lp.login_btn is None) or (lp.invalid_user_text_appeared()):
+            WebHelper().report_allure(
+                "ERROR: Elements are not available after refresh OR Invalid text warnings appeared after refresh"
+                , self.driver)
             assert False
         else:
             WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
