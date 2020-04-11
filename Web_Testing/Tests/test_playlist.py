@@ -34,7 +34,6 @@ class TestPlaylist:
     driver = WebHelper().chrome_driver_init()
     helper = WebHelper()
     helper.set_driver(driver)
-    playlist = WebPlayerPlaylist(driver)
 
     def login_first(self):
         lp = LoginPage(self.driver)
@@ -49,7 +48,7 @@ class TestPlaylist:
         self.driver.get(self.helper.get_login_url())
         self.driver.maximize_window()
         yield
-        self.driver.refresh()
+        self.driver.close()
 
     @pytest.yield_fixture
     def setup(self):
@@ -81,30 +80,12 @@ class TestPlaylist:
         time.sleep(3)
         web_player_home = WebPlayerHome(self.driver)
         web_player_home.click_your_library()
+        time.sleep(3)
+        playlist = WebPlayerPlaylist(self.driver)
         time.sleep(2)
-        self.playlist.click_playlist_play_btn()
-        time.sleep(5)
-        if self.helper.url_has("webplayer/nowplay"):
-            self.helper.report_allure("SUCCESS: Play button is functional")
-            assert True
-        else:
-            self.helper.report_allure("FAILURE: Play button is not functional")
-            assert False
-
-# Test #2 -> Check Playlist card go to the right playlist
-    @allure.severity(allure.severity_level.BLOCKER)
-    @allure.story("Testing playlists cards")
-    @allure.title("Playlists cards")
-    @allure.description("Testing  Playlists cards")
-    @pytest.mark.Do
-    @pytest.mark.YourLibrary
-    def test_case_2(self, setup_final):
-        if self.playlist.check_playlist(0, True):
+        if playlist.check_playlist(0, True):
             self.helper.report_allure("SUCCESS:Playlist card goes to the right playlist")
             assert True
         else:
             self.helper.report_allure("FAILURE: Playlist card doesn't go to the right playlist")
             assert False
-
-
-

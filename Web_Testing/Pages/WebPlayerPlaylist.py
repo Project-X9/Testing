@@ -72,6 +72,7 @@ class WebPlayerPlaylist(WebPlayerMenu):
         :type driver: WebDriver
         """
         super().__init__(driver)
+        self.library_cards = self.find_elements_by_class_name("CardsLibrary")
 
 
     def click_profile(self):
@@ -118,13 +119,20 @@ class WebPlayerPlaylist(WebPlayerMenu):
         """Clicks page right button"""
         self.click_button_safe(self.find_element_by_xpath(self.page_right_btn))
 
-    def click_playlist_play_btn(self):
+    def click_playlist_play_btn(self, card_no: int = 0):
         """
         Clicks the playlist Play button in the card
+        :param card_no: the card number of the playlist
+        :type card_no: int
         """
-        play_btn = self.find_element_by_class_name("//*[@id='root']/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/button[1]/a/div/div[3]/div/div/button/svg")
-        if play_btn is not None:
-            play_btn.click()
+        card = None
+        try:
+            card = self.library_cards[card_no]
+        except:
+            return
+        if card is None:
+            card.click()
+
 
     def check_playlist(self, card_no, report_allure: bool):
         """
@@ -141,18 +149,32 @@ class WebPlayerPlaylist(WebPlayerMenu):
         """
         card = None
         try:
-            card = self.find_elements_by_class_name(self.playlist_cards)[card_no]
+            card = self.library_cards[card_no]
         except:
             if report_allure:
                 self.report_allure("ERROR: This card number is not available", self.driver)
             return False
-        playlist_name_card = self.find_elements_by_class_name(self.playlist_name_card)[card_no]
+        splitted_card_text = card.text.split(" ")
+        print(splitted_card_text)
+        card_text = splitted_card_text[0] + " " + splitted_card_text[1]
         card.click()
         time.sleep(4)
-        no_of_songs_txt = self.find_element_by_xpath(self.no_of_songs_xpath).text.split(" ")[0]
-        self.no_of_songs = len(self.find_elements_by_class_name(self.songs_container))
-        playlist_name = self.find_elements_by_class_name(self.playlist_name_class_name)
-        if playlist_name.text != playlist_name_card and no_of_songs_txt != str(self.no_of_songs):
+        no_of_songs_txt_arr = self.find_element_by_xpath(self.no_of_songs_xpath).text.split(" ")
+        no_of_songs_txt = no_of_songs_txt_arr[0]
+        songs_container_arr = self.find_elements_by_class_name(self.songs_container)
+        songs_container_text_arr = list()
+        for item in songs_container_arr:
+            songs_container_text_arr.append(item.text)
+
+        songs_container_text_arr = list(dict.fromkeys(songs_container_text_arr))
+        self.no_of_songs = len(songs_container_text_arr)
+        print(songs_container_arr[0].text)
+        # print(songs_container_arr[1].text)
+        print(self.no_of_songs)
+        print(no_of_songs_txt)
+        print()
+        print(songs_container_text_arr)
+        if no_of_songs_txt != str(self.no_of_songs):
             return False
         else:
             return True
