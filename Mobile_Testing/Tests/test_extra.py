@@ -15,7 +15,6 @@ import time
 @allure.feature("Extra  Testing")
 @allure.severity(allure.severity_level.MINOR)
 class TestPlayer:
-    driver = None
     """
        A class used to represent the Authentication test
        ...
@@ -30,6 +29,8 @@ class TestPlayer:
        test_case_1()
             checking the artist button
        """
+    driver = None
+
 
 
     @pytest.yield_fixture
