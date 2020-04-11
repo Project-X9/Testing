@@ -748,8 +748,12 @@ class Profile:
     gender : Gender
         the user's gender
 
+    Methods
+    -------
+
+
     """
-    def __init__(self, email, password, name, dob, gender, c_email=''):
+    def __init__(self, email, password, name, dob, gender, premium=False, c_email=''):
         """
         Initializes the user's profile with the provided parameters
 
@@ -770,6 +774,9 @@ class Profile:
         :param gender: the user's gender
         :type gender: Gender
 
+        :param premium: the account's premium
+        :type premium: bool
+
         :param c_email: the user's confirmation email (default is '')
         :type c_email: str
         """
@@ -781,6 +788,17 @@ class Profile:
         self.name = name
         self.dob = dob
         self.gender = gender
+        self.premium = premium
+
+    def set_premium(self,new_premium):
+        """
+        Set premium of the profile
+
+        :param:new_premium: new premium status to be set
+        :type: bool
+
+        """
+        self.premium = new_premium
 
 
 class ConstantsClass:
@@ -833,47 +851,52 @@ class ConstantsClass:
                                            , "test4@test.com" :
                                                Profile("test4@test.com"
                                                        , "test456"
-                                                       , "Testing TeamX", DOB(21, 2, 1950), Gender.MALE, "email_different@test.com")
+                                                       , "Testing TeamX", DOB(21, 2, 1950), Gender.MALE, c_email="email_different@test.com")
                                            , "test50@test.com" :
                                                Profile("test50@test.com"
                                                        , "test505152"
-                                                       , "Testing Team 50", DOB(21, 2, 1950), Gender.MALE, "test50@test.com")
+                                                       , "Testing Team 50", DOB(21, 2, 1950), Gender.MALE, c_email="test50@test.com")
                                            , "test51@test.com" :
                                                Profile("test51@test.com"
                                                        , "test505152"
-                                                       , "Testing Team 51", DOB(21, 2, 1950), Gender.MALE, "test51@test.com")
+                                                       , "Testing Team 51", DOB(21, 2, 1950), Gender.MALE, c_email="test51@test.com")
                                            , "test53@test.com" :
                                                Profile("test53@test.com"
                                                        , "test535455"
-                                                       , "Testing Team 53", DOB(21, 2, 1970), Gender.MALE, "test53@test.com")
+                                                       , "Testing Team 53", DOB(21, 2, 1970), Gender.MALE, c_email="test53@test.com")
                                            , "test54@test.com" :
                                                Profile("test54@test.com"
                                                        , "test545556"
-                                                       , "Testing Team 54", DOB(21, 2, 1970), Gender.MALE, "test54@test.com")
+                                                       , "Testing Team 54", DOB(21, 2, 1970), Gender.MALE, c_email="test54@test.com")
                                            , "test55@test.com" :
                                                Profile("test55@test.com"
                                                        , "test555657"
-                                                       , "Testing Team 55", DOB(21, 2, 1970), Gender.MALE, "test55@test.com")
+                                                       , "Testing Team 55", DOB(21, 2, 1970), Gender.MALE, c_email="test55@test.com")
                                            , "test56@test.com" :
                                                Profile("test56@test.com"
                                                        , "test565758"
-                                                       , "Testing Team 56", DOB(21, 2, 1970), Gender.MALE, "test56@test.com")
+                                                       , "Testing Team 56", DOB(21, 2, 1970), Gender.MALE, c_email="test56@test.com")
                                            , "test57@test.com" :
                                                Profile("test57@test.com"
                                                        , "test575859"
-                                                       , "Testing Team 57", DOB(21, 2, 1970), Gender.MALE, "test57@test.com")
+                                                       , "Testing Team 57", DOB(21, 2, 1970), Gender.MALE, c_email="test57@test.com")
                                            , "test58@test.com" :
                                                Profile("test58@test.com"
                                                        , "test585960"
-                                                       , "Testing Team 58", DOB(21, 2, 1970), Gender.FEMALE, "test58@test.com")
+                                                       , "Testing Team 58", DOB(21, 2, 1970), Gender.FEMALE, c_email="test58@test.com")
                                            , "test59@test.com" :
                                                Profile("test59@test.com"
                                                        , "test596061"
-                                                       , "Testing Team 59", DOB(21, 2, 1979), Gender.FEMALE, "test59@test.com")
+                                                       , "Testing Team 59", DOB(21, 2, 1979), Gender.FEMALE, c_email="test59@test.com")
                                            ,"test9@test.com" :
                                                Profile("test9@test.com"
                                                        , "test789"
-                                                       , "Testing Team 9", DOB(21, 2, 1980), Gender.MALE, "test9@test.com")
+                                                       , "Testing Team 9", DOB(21, 2, 1980), Gender.MALE, c_email="test9@test.com"),
+                                           "abdallah@gmail.com":
+                                               Profile("abdallah@gmail.com"
+                                                       , "123456"
+                                                       , "Ahmed", DOB(21, 2, 1980), Gender.MALE,True,
+                                                       c_email="abdallah@gmail.com")
                                            }
 
     def get_test_emails(self):
@@ -935,6 +958,18 @@ class ConstantsClass:
         :rtype: str
         """
         return self.test_accounts_to_profiles.get(email).name
+
+    def get_premium(self, email):
+        """
+        gets the premium for the provided email
+
+        :param email: the user's email
+        :type email: str
+
+        :returns: the premium of the user with the provided email
+        :rtype: bool
+        """
+        return self.test_accounts_to_profiles.get(email).premium
 
     def get_profile(self, email):
         """
