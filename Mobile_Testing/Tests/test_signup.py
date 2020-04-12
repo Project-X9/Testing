@@ -61,9 +61,9 @@ class TestSignup:
     driver = None
     my_factory = Faker()
     my_factory.random.seed(int(round(time.time() * 1000)))
-    name = ""
-    email = ""
-    password = ""
+    name = my_factory.name()
+    email = my_factory.email()
+    password = my_factory.password()
 
 
     @pytest.yield_fixture
