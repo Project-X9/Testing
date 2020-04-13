@@ -65,7 +65,6 @@ class TestSignup:
     email = my_factory.email()
     password = my_factory.password()
 
-
     @pytest.yield_fixture
     def setup(self):
         """
@@ -83,8 +82,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up correctly")
     @allure.title("Sign up correctly")
-    @allure.description("Signing up with correct format with " + name + ","
-                        + email + "," + password + ",22,M")
+    @allure.description("Signing up with correct format ")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test1
@@ -109,8 +107,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with existing email ")
     @allure.title("Signs up with existing email ")
-    @allure.description("Signs up with same email format with " + name + ","
-                        + Constants.correct_credentials["email"] + "," + Constants.correct_credentials["password"]+",22, M")
+    @allure.description("Signs up with existing email")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test2
@@ -121,7 +118,8 @@ class TestSignup:
         ap = AuthenticationPage(self.driver)
         ap.click_signup_button()
         sp = SignupPage(self.driver)
-        sp.do_the_signup(self.name, Constants.correct_credentials["email"], Constants.correct_credentials["password"], "22", "M")
+        sp.do_the_signup(self.name, Constants.correct_credentials["email"], Constants.correct_credentials["password"],
+                         "22", "M")
         if Helper.element_exists_by_id(self.driver, HomePage.logout_button_id):
             print(self.driver.current_activity)
             Helper.report_allure(self.driver, "Sign up test Failed")
@@ -135,8 +133,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with no email ")
     @allure.title("Signs up with no email ")
-    @allure.description("Signs up with no email format with " + name + ","
-                        + " " + "," + password+",22, M")
+    @allure.description("Signs up with no email ")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test3
@@ -161,8 +158,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with no name ")
     @allure.title("Signs up with no name ")
-    @allure.description("Signs up with no name format with " + " " + ","
-                        + email + "," + password+",22, M")
+    @allure.description("Signs up with no name ")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test4
@@ -187,8 +183,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with no password ")
     @allure.title("Signs up with no password ")
-    @allure.description("Signs up with no password format with " + name + ","
-                        + email + "," + " "+",22, M")
+    @allure.description("Signs up with no password ")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test5
@@ -213,8 +208,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with no age ")
     @allure.title("Signs up with no age ")
-    @allure.description("Signs up with no age format with " + name + ","
-                        + email + "," + password+"," ", M")
+    @allure.description("Signs up with no age")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test6
@@ -239,8 +233,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with female gender ")
     @allure.title("Signs up with female gender ")
-    @allure.description("Signs up with female gender format with " + name + ","
-                        + email + "," + password+",21, F")
+    @allure.description("Signs up with female")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test7
@@ -265,8 +258,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with wrong name format")
     @allure.title("Signs up with wrong name format")
-    @allure.description("Signs up with wrong name format with " + "@!@!#!@" + ","
-                        + email + "," + password+",21, M")
+    @allure.description("Signs up with wrong name format")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test8
@@ -291,8 +283,7 @@ class TestSignup:
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with wrong email format")
     @allure.title("Signs up with wrong email format")
-    @allure.description("Signs up with wrong email format with " + name + ","
-                        + name + "," + password+",21, M")
+    @allure.description("Signs up with wrong email format")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test9
@@ -312,13 +303,12 @@ class TestSignup:
             Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
-# Test #10 ->Signing up with -ve age
+    # Test #10 ->Signing up with -ve age
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with -ve age ")
     @allure.title("Signs up with -ve age ")
-    @allure.description("Signs up with -ve age with " + name + ","
-                        + email + "," + password+",-21, M")
+    @allure.description("Signs up with -ve age")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test10
@@ -338,14 +328,12 @@ class TestSignup:
             Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
-
-# Test #11 ->Signing up with 0 age
+    # Test #11 ->Signing up with 0 age
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with 0 age ")
     @allure.title("Signs up with 0 age ")
-    @allure.description("Signs up with 0 age with " + name + ","
-                        + email + "," + password+",0, M")
+    @allure.description("Signs up with 0 age ")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test11
@@ -365,13 +353,12 @@ class TestSignup:
             Helper.report_allure(self.driver, "Sign up test Passed")
             assert True
 
-# Test #12 ->Signing up with 999 age
+    # Test #12 ->Signing up with 999 age
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Signup Tests")
     @allure.sub_suite("Sign up with 999 age ")
     @allure.title("Signs up with 999 age ")
-    @allure.description("Signs up with 999 age with " + name + ","
-                        + email + "," + password+",999, M")
+    @allure.description("Signs up with 999 age")
     @pytest.mark.Do
     @pytest.mark.Signup
     @pytest.mark.Test12

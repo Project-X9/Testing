@@ -1,5 +1,5 @@
 from appium import webdriver
-from Mobile_Testing.helper import Helper,Constants
+from Mobile_Testing.helper import Helper, Constants
 from Mobile_Testing.Pages.authentication import AuthenticationPage
 from Mobile_Testing.Pages.login import LoginPage
 from Mobile_Testing.Pages.home import HomePage
@@ -41,7 +41,6 @@ class TestLogin:
        """
     driver = None
 
-
     @pytest.yield_fixture
     def setup(self):
         """
@@ -56,7 +55,7 @@ class TestLogin:
     @allure.story("Login Tests")
     @allure.sub_suite("Login correctly")
     @allure.title("Login correctly")
-    @allure.description("Logging in with correct format with "+Constants.correct_credentials["email"] + ", "
+    @allure.description("Logging in with correct format with " + Constants.correct_credentials["email"] + ", "
                         + Constants.correct_credentials["password"])
     @pytest.mark.Do
     @pytest.mark.Login
@@ -226,5 +225,3 @@ class TestLogin:
         else:
             Helper.report_allure(self.driver, "Login test passed")
             assert True
-
-

@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
@@ -177,8 +176,8 @@ class LoginPage(WebHelper):
         # timeout for login
         timeout = 4
         try:
-            self.clear_credentials() # clear email and password fields
-            self.set_credentials(email, password) # set email and password fields
+            self.clear_credentials()  # clear email and password fields
+            self.set_credentials(email, password)  # set email and password fields
             self.click_login()
 
             time.sleep(timeout)
@@ -218,4 +217,3 @@ class LoginPage(WebHelper):
         # any other error that cause test to fail
         except:
             return False
-

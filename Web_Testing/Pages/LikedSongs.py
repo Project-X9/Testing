@@ -5,7 +5,6 @@ from collections import defaultdict
 
 
 class LikedSongs(WebPlayerMenu):
-
     """
     A class representing the Web Player's Liked songs
     ...
@@ -56,10 +55,9 @@ class LikedSongs(WebPlayerMenu):
     upgrade_btn = "UPGRADE"
     no_of_songs_xpath = "//*[@id='root']/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[2]/div[2]/div/p"
     songs_container = "TrackListContainer"
-    no_of_songs=0
+    no_of_songs = 0
     page_left_btn = "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[1]/button/a"
     page_right_btn = "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[2]/button/a"
-
 
     def __init__(self, driver):
         """
@@ -69,7 +67,6 @@ class LikedSongs(WebPlayerMenu):
         :type driver: WebDriver
         """
         super().__init__(driver)
-
 
     def click_profile(self):
         """Clicks Profile button"""
@@ -85,7 +82,7 @@ class LikedSongs(WebPlayerMenu):
         self.click_profile()
         self.click_button_safe(self.find_element_by_xpath(self.logout_btn))
 
-    def check_upgrade(self,premium):
+    def check_upgrade(self, premium):
         """
         check the upgrade button existence with the type of the account
 
@@ -95,7 +92,8 @@ class LikedSongs(WebPlayerMenu):
         :return: true if join premium button don't exist when premium is true and exist when premium is false
         :type: bool
         """
-        if (premium is True and self.find_element_by_link_text(self.upgrade_btn) is None) or (premium is False and self.find_element_by_link_text(self.upgrade_btn) is not None):
+        if (premium is True and self.find_element_by_link_text(self.upgrade_btn) is None) or (
+                premium is False and self.find_element_by_link_text(self.upgrade_btn) is not None):
             return True
         else:
             return False
@@ -131,11 +129,9 @@ class LikedSongs(WebPlayerMenu):
         no_of_songs_txt = self.find_element_by_xpath(self.no_of_songs_xpath).text.split(" ")[0]
         print(no_of_songs_txt)
         print("\n")
-        self.no_of_songs = len(self.find_elements_by_class_name(self.songs_container))-3
+        self.no_of_songs = len(self.find_elements_by_class_name(self.songs_container)) - 3
         print(str(self.no_of_songs))
         if no_of_songs_txt != str(self.no_of_songs):
             return False
         else:
             return True
-
-

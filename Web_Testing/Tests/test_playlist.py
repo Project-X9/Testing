@@ -1,4 +1,3 @@
-
 """
 Premium page Testing
 
@@ -64,7 +63,7 @@ class TestPlaylist:
         yield
         self.driver.close()
 
- # Test #1 -> Play Button
+    # Test #1 -> Play Button
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing  Play Button")
     @allure.title("Playlist Play Button")

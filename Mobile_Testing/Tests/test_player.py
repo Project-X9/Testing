@@ -1,6 +1,6 @@
 from appium import webdriver
 import pytest
-from Mobile_Testing.helper import Helper,Constants
+from Mobile_Testing.helper import Helper, Constants
 from Mobile_Testing.Pages.authentication import AuthenticationPage
 from Mobile_Testing.Pages.signup import SignupPage
 from Mobile_Testing.Pages.login import LoginPage
@@ -50,7 +50,6 @@ class TestPlayer:
        """
     driver = None
 
-
     @pytest.yield_fixture
     def setup(self):
         """
@@ -61,6 +60,7 @@ class TestPlayer:
         self.driver.quit()
 
         # Test #1 ->checking the play button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Play button checking")
@@ -93,6 +93,7 @@ class TestPlayer:
             assert False
 
         # Test #2 ->checking the previous button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Previous button checking")
@@ -125,6 +126,7 @@ class TestPlayer:
             assert False
 
         # Test #3 ->checking the Next button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Next button checking")
@@ -157,6 +159,7 @@ class TestPlayer:
             assert False
 
         # Test #4 ->checking the Love button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Love button checking")
@@ -189,6 +192,7 @@ class TestPlayer:
             assert False
 
         # Test #5 ->checking the Download button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Download button checking")
@@ -221,6 +225,7 @@ class TestPlayer:
             assert False
 
         # Test #6 ->checking the repeat button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Repeat button checking")
@@ -253,6 +258,7 @@ class TestPlayer:
             assert False
 
         # Test #7 ->checking the Share button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Share button checking")
@@ -285,6 +291,7 @@ class TestPlayer:
             assert False
 
         # Test #8 ->checking the minimize button is working
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Minimize button clicking")
@@ -318,6 +325,7 @@ class TestPlayer:
             assert False
 
         # Test #9 ->checking the minimize button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Minimize button checking")
@@ -350,6 +358,7 @@ class TestPlayer:
             assert False
 
         # Test #10 ->checking the blacklist button is visible
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Player Page Tests")
     @allure.sub_suite("Blacklist button checking")
@@ -380,4 +389,3 @@ class TestPlayer:
             print(self.driver.current_activity)
             Helper.report_allure(self.driver, "Player page test failed")
             assert False
-

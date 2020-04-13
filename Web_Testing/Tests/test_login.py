@@ -1,4 +1,3 @@
-
 """
 Login Testing
 
@@ -6,7 +5,6 @@ This script tests the login functions and report the results to allure
 
 This script requires `allure` and `pytest` be installed within the Python environment you are running this script in
 """
-
 
 import allure
 import pytest
@@ -17,12 +15,12 @@ from Web_Testing.Pages.LoginPage import LoginPage
 import time
 from Web_Testing.helperClasses import WebHelper
 
+
 @allure.parent_suite("End to End testing")
 @allure.suite("Login Tests")
 @allure.feature("Login Tests")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLogin:
-
     driver = WebHelper().firefox_driver_init()
     link = WebHelper().get_login_url()
     correct_emails = ["test1@test.com", "test2@test.com", "test3@test.com"]
@@ -111,7 +109,8 @@ class TestLogin:
     @allure.story("Failing login")
     @allure.sub_suite("Login with wrong password")
     @allure.title("Login with wrong password")
-    @allure.description("Signing in with the following credentials email : kamelmohsenkamel@gmail.com & password: wrong password")
+    @allure.description(
+        "Signing in with the following credentials email : kamelmohsenkamel@gmail.com & password: wrong password")
     @pytest.mark.Do
     @pytest.mark.Login
     def test_case_4(self, setup):
@@ -245,7 +244,8 @@ class TestLogin:
         self.driver.refresh()
         lp = LoginPage(self.driver)
 
-        if (lp.email_txt is None) or (lp.pass_txt is None) or (lp.login_btn is None) or (lp.invalid_user_text_appeared()):
+        if (lp.email_txt is None) or (lp.pass_txt is None) or (lp.login_btn is None) or (
+                lp.invalid_user_text_appeared()):
             WebHelper().report_allure(
                 "ERROR: Elements are not available after refresh OR Invalid text warnings appeared after refresh"
                 , self.driver)
@@ -253,5 +253,3 @@ class TestLogin:
         else:
             WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
             assert True
-
-

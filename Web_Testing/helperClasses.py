@@ -226,7 +226,7 @@ class WebHelper:
         :returns: the class' driver
         :rtype: WebDriver
         """
-        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), service_log_path='./Logs/geckodriver.log')
         return self.driver
 
     def get_driver(self):

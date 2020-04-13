@@ -1,4 +1,3 @@
-
 """
 Premium page Testing
 
@@ -45,14 +44,14 @@ class TestLikedSongs:
         yield
         self.driver.close()
 
- # Test #1 -> Check Liked Songs
+    # Test #1 -> Check Liked Songs
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing  Play Button")
     @allure.title("Playlist Play Button")
     @allure.description("Testing Playlist Play Button")
     @pytest.mark.Do
     @pytest.mark.YourLibrary
-    def test_case_1(self,setup):
+    def test_case_1(self, setup):
         time.sleep(3)
         lp = LoginPage(self.driver)
         lp.login_to_spotify("abdallah@gmail.com", "123456")
@@ -67,6 +66,3 @@ class TestLikedSongs:
         else:
             self.helper.report_allure("FAILURE: Liked Songs are not correct")
             assert False
-
-
-

@@ -31,8 +31,6 @@ class LoginPage:
     password_text_field_id = "com.example.projectx:id/password_et"
     login_button_id = "com.example.projectx:id/login_bt"
 
-
-
     def __init__(self, driver):
         """
         Initializes the page elements
@@ -51,7 +49,6 @@ class LoginPage:
         if element is not None:
             element.send_keys(email)
 
-
     def fill_password(self, password):
         """
         fills the password text box
@@ -60,8 +57,7 @@ class LoginPage:
         """
         element = Helper.find_element_by_id(self.driver, self.password_text_field_id)
         if element is not None:
-            element .send_keys(password)
-
+            element.send_keys(password)
 
     def click_login(self):
         """

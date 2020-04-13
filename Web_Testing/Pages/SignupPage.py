@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
@@ -11,7 +10,6 @@ import time
 
 
 class SignupPage(WebHelper):
-
     """
     A class used to represent the Login Page
 
@@ -321,8 +319,9 @@ class SignupPage(WebHelper):
                     print("Could not find Account overview elements")
                 # Account overview email is not the same as the provided login email but logged in successfully
                 elif account_overview_email != profile.email:
-                    print("INTERNAL ERROR: Account overview email is not matching the signup/login email: Login email = "
-                          + profile.email + ", Overview email = " + account_overview_email)
+                    print(
+                        "INTERNAL ERROR: Account overview email is not matching the signup/login email: Login email = "
+                        + profile.email + ", Overview email = " + account_overview_email)
                 else:
                     print("SUCCESS: Account overview email is the same as the provided login email")
 

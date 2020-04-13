@@ -1,4 +1,3 @@
-
 """
 Premium page Testing
 
@@ -67,7 +66,7 @@ class TestPlaylist:
         yield
         self.driver.close()
 
- # Test #1 -> Play Button
+    # Test #1 -> Play Button
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing  Play Button")
     @allure.title("Playlist Play Button")
@@ -92,7 +91,7 @@ class TestPlaylist:
             self.helper.report_allure("FAILURE: Artist Bio is wrong")
             assert False
 
-# Test #2 -> Play Button
+    # Test #2 -> Play Button
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing  follow Button")
     @allure.title("artist follow Button")
@@ -116,6 +115,3 @@ class TestPlaylist:
         else:
             self.helper.report_allure("FAILURE: follow button is functional")
             assert False
-
-
-

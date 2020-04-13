@@ -1,4 +1,3 @@
-
 """
 Premium page Testing
 
@@ -202,6 +201,3 @@ class TestPremium:
         else:
             WebHelper().report_allure("Logout button not functional", self.driver)
             assert False
-
-
-

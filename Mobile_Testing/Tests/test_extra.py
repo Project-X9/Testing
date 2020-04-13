@@ -10,6 +10,7 @@ from allure_commons.types import AttachmentType
 import allure
 import time
 
+
 @allure.parent_suite("End to End testing - Android")
 @allure.suite("Extra  Testing")
 @allure.feature("Extra  Testing")
@@ -31,8 +32,6 @@ class TestPlayer:
        """
     driver = None
 
-
-
     @pytest.yield_fixture
     def setup(self):
         """
@@ -43,6 +42,7 @@ class TestPlayer:
         self.driver.quit()
 
         # Test #1 ->checking the artist button
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Extra Tests")
     @allure.sub_suite("checking the artist button")
@@ -92,6 +92,3 @@ class TestPlayer:
             Helper.report_allure(self.driver, "Extra test3 failed")
             assert False
         artist_bio.click()
-
-
-

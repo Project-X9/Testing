@@ -69,7 +69,6 @@ class SignupPage:
         if element is not None:
             element.send_keys(name)
 
-
     def fill_email(self, email):
         """
         fills the email text box
@@ -79,7 +78,6 @@ class SignupPage:
         element = Helper.find_element_by_id(self.driver, self.email_text_field_id)
         if element is not None:
             element.send_keys(email)
-
 
     def fill_password(self, password):
         """
@@ -91,7 +89,6 @@ class SignupPage:
         if element is not None:
             element.send_keys(password)
 
-
     def fill_age(self, age):
         """
         fills the age text box
@@ -102,7 +99,6 @@ class SignupPage:
         if element is not None:
             element.send_keys(age)
 
-
     def choose_male(self):
         """
         chooses male gender
@@ -110,7 +106,6 @@ class SignupPage:
         element = Helper.find_element_by_id(self.driver, self.male_gender_check_box_id)
         if element is not None:
             element.click()
-
 
     def choose_female(self):
         """
@@ -120,7 +115,6 @@ class SignupPage:
         if element is not None:
             element.click()
 
-
     def click_create_user(self):
         """
         clicks create user button
@@ -128,7 +122,6 @@ class SignupPage:
         element = Helper.find_element_by_id(self.driver, self.create_user_button_id)
         if element is not None:
             element.click()
-
 
     def do_the_signup(self, name, email, password, age, gender):
         """

@@ -204,6 +204,6 @@ class Constants:
     }
     correct_credentials = {
         "email": "abdallah@gmail.com",
-        "password": "123456"
+        "password": "1234567"
     }
     first_song_playlist = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.RelativeLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.RelativeLayout"

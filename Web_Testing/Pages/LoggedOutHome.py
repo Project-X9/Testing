@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
@@ -42,6 +41,7 @@ class LoggedOutHome(WebHelper):
     click_premium()
         Clicks on the premium button
     """
+
     def __init__(self, driver):
         """
         Initializes the page elements
@@ -80,4 +80,3 @@ class LoggedOutHome(WebHelper):
         """
         prem_btn = self.find_element_by_xpath("/html/body/div/div/div/div/nav/div/div/ul/li[1]/a")
         self.click_button_safe(prem_btn)
-

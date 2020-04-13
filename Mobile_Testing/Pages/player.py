@@ -2,8 +2,6 @@ from Mobile_Testing.helper import Helper
 
 
 class PlayMusicPage:
-
-
     """
     A class used to represent the Play Song Page
     ...
@@ -54,4 +52,3 @@ class PlayMusicPage:
         :type driver: WebDriver
         """
         self.driver = driver
-

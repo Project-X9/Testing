@@ -110,7 +110,7 @@ class PremiumPage(WebHelper):
         else:
             return False
 
-    def click_claim(self,alert):
+    def click_claim(self, alert):
         """Clicks Claim button"""
         if self.check_claim_premium():
             alert.click_button_safe(alert.find_element_by_xpath(self.claim_btn))
@@ -172,5 +172,3 @@ class PremiumPage(WebHelper):
                 return False
         except:
             exit('Testing failed to make claim premium')
-
-

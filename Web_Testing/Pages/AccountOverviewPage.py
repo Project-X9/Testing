@@ -279,7 +279,7 @@ class AccountOverviewPage(WebHelper):
         else:
             return False
 
-    def premium_check(self , premium):
+    def premium_check(self, premium):
         """
         check if premium status exist with premium account
 
@@ -289,11 +289,11 @@ class AccountOverviewPage(WebHelper):
         :return: true if join premium button don't exist when premium is true and exist when premium is false
         :type: bool
         """
-        if (premium is True and self.find_element_by_link_text(self.join_premium_btn) is None) or (premium is False and self.find_element_by_link_text(self.join_premium_btn) is not None):
+        if (premium is True and self.find_element_by_link_text(self.join_premium_btn) is None) or (
+                premium is False and self.find_element_by_link_text(self.join_premium_btn) is not None):
             return True
         else:
             return False
-
 
     def is_correct_age(self, age):
         """
@@ -319,7 +319,7 @@ class AccountOverviewPage(WebHelper):
         """
         return self.get_account_overview_email() is not None
 
-    def account_overview_check(self, email, age, username,premium):
+    def account_overview_check(self, email, age, username, premium):
         """
         Checks if information on Account Overview page is correct
 
@@ -345,7 +345,8 @@ class AccountOverviewPage(WebHelper):
             # if open account overview page successfully
             if self.is_page_initialized():
                 # if all information is correct
-                if self.is_correct_email(email) and self.is_correct_age(age) and self.is_correct_username(username) and self.premium_check(premium):
+                if self.is_correct_email(email) and self.is_correct_age(age) and self.is_correct_username(
+                        username) and self.premium_check(premium):
                     return True
                 # if all or some information is wrong
                 else:
@@ -354,7 +355,7 @@ class AccountOverviewPage(WebHelper):
                         print("wrong email")
                     # if age is not the same as given age
                     if not self.is_correct_age(age):
-                        print("wrong age "+age+" account "+self.age)
+                        print("wrong age " + age + " account " + self.age)
                     # if username is not the same as given username
                     if not self.is_correct_username(username):
                         print("wrong username")

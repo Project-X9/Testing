@@ -1,6 +1,6 @@
 from appium import webdriver
 import pytest
-from Mobile_Testing.helper import Helper,Constants
+from Mobile_Testing.helper import Helper, Constants
 from Mobile_Testing.Pages.authentication import AuthenticationPage
 from Mobile_Testing.Pages.signup import SignupPage
 from Mobile_Testing.Pages.login import LoginPage
@@ -9,6 +9,7 @@ from Mobile_Testing.Pages.player import PlayMusicPage
 from allure_commons.types import AttachmentType
 import allure
 import time
+
 
 @allure.parent_suite("End to End testing - Android")
 @allure.suite("Home Page Testing")
@@ -56,6 +57,7 @@ class TestHome:
         self.driver.quit()
 
         # Test #1 ->checking that Logout music works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("Logout clicking")
@@ -83,6 +85,7 @@ class TestHome:
             assert False
 
         # Test #2 ->checking that new  releases works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("New releases clicking")
@@ -111,6 +114,7 @@ class TestHome:
             assert True
 
         # Test #3 ->checking that liked tracks works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("Liked tracks clicking")
@@ -139,6 +143,7 @@ class TestHome:
             assert True
 
         # Test #4 ->checking that popular  works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("Popular tracks clicking")
@@ -167,6 +172,7 @@ class TestHome:
             assert True
 
         # Test #5 ->checking that recommended works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("Recommended tracks clicking")
@@ -195,6 +201,7 @@ class TestHome:
             assert True
 
         # Test #6 ->checking that about works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("About  clicking")
@@ -224,6 +231,7 @@ class TestHome:
             assert True
 
         # Test #7 ->checking that Home  works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("Home  clicking")
@@ -252,6 +260,7 @@ class TestHome:
             assert False
 
         # Test #8 ->checking that search works
+
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Home Page Tests")
     @allure.sub_suite("Search  clicking")

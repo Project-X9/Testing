@@ -5,7 +5,6 @@ from collections import defaultdict
 
 
 class WebPlayerPlaylist(WebPlayerMenu):
-
     """
     A class representing the Web Player's playlist
     ...
@@ -58,11 +57,10 @@ class WebPlayerPlaylist(WebPlayerMenu):
     no_of_songs_xpath = "//*[@id='root']/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[2]/div[2]/div/p"
     playlist_name_class_name = "TrackListHeader mo info Name"
     songs_container = "TrackListContainer"
-    no_of_songs=0
+    no_of_songs = 0
     playlist_name_card = "cardTitle row"
     page_left_btn = "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[1]/button/a"
     page_right_btn = "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[2]/button/a"
-
 
     def __init__(self, driver):
         """
@@ -73,7 +71,6 @@ class WebPlayerPlaylist(WebPlayerMenu):
         """
         super().__init__(driver)
         self.library_cards = self.find_elements_by_class_name("CardsLibrary")
-
 
     def click_profile(self):
         """Clicks Profile button"""
@@ -89,7 +86,7 @@ class WebPlayerPlaylist(WebPlayerMenu):
         self.click_profile()
         self.click_button_safe(self.find_element_by_xpath(self.logout_btn))
 
-    def check_upgrade(self,premium):
+    def check_upgrade(self, premium):
         """
         check the upgrade button existence with the type of the account
 
@@ -99,7 +96,8 @@ class WebPlayerPlaylist(WebPlayerMenu):
         :return: true if join premium button don't exist when premium is true and exist when premium is false
         :type: bool
         """
-        if (premium is True and self.find_element_by_link_text(self.upgrade_btn) is None) or (premium is False and self.find_element_by_link_text(self.upgrade_btn) is not None):
+        if (premium is True and self.find_element_by_link_text(self.upgrade_btn) is None) or (
+                premium is False and self.find_element_by_link_text(self.upgrade_btn) is not None):
             return True
         else:
             return False
@@ -132,7 +130,6 @@ class WebPlayerPlaylist(WebPlayerMenu):
             return
         if card is None:
             card.click()
-
 
     def check_playlist(self, card_no, report_allure: bool):
         """

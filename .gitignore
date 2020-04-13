@@ -130,6 +130,9 @@ debug.log
 main_file_dummy.py
 dummy_python_funds.py
 
+.log
+logs/
+logs/*.log
 Reports/*.json
 Reports/*.png
 Reports/*.txt

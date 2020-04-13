@@ -5,7 +5,6 @@ from collections import defaultdict
 
 
 class WebPlayerLibrary(WebPlayerMenu):
-
     """
     A class representing the Web Player's Your Library Page
     ...
@@ -51,14 +50,20 @@ class WebPlayerLibrary(WebPlayerMenu):
         """
         super().__init__(driver)
         self.create_new_playlist_button = self.find_element_by_xpath("//button[text()='Create new playlist']")
-        self.profile_btn = self.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/ul/li/li/button/a")
-        self.logout_btn = self.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/ul/li/li/div/button[2]/button")
-        self.account_btn = self.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/ul/li/li/div/button[1]/a")
+        self.profile_btn = self.find_element_by_xpath(
+            "/html/body/div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/ul/li/li/button/a")
+        self.logout_btn = self.find_element_by_xpath(
+            "/html/body/div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/ul/li/li/div/button[2]/button")
+        self.account_btn = self.find_element_by_xpath(
+            "/html/body/div[1]/div/div/div/div/div/div[1]/div[2]/div[2]/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/ul/li/li/div/button[1]/a")
         self.liked_songs = self.find_element_by_class_name("LikedSongs")
         self.library_cards = self.find_elements_by_class_name("CardsLibrary")
-        self.page_left_btn = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[1]/button/a")
-        self.page_right_btn = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[2]/button/a")
-# TrackListHeader Body
+        self.page_left_btn = self.find_element_by_xpath(
+            "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[1]/button/a")
+        self.page_right_btn = self.find_element_by_xpath(
+            "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[2]/button/a")
+
+    # TrackListHeader Body
 
     def click_liked_songs(self):
         """
@@ -66,7 +71,8 @@ class WebPlayerLibrary(WebPlayerMenu):
         """
         self.hover_to_element(self.liked_songs)
         time.sleep(2)
-        liked_songs_btn = self.find_element_by_xpath("/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[2]/div/div/button")
+        liked_songs_btn = self.find_element_by_xpath(
+            "/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[2]/div/div/button")
         if liked_songs_btn is not None:
             liked_songs_btn.click()
 
@@ -74,7 +80,8 @@ class WebPlayerLibrary(WebPlayerMenu):
         """
         Clicks the Liked Songs Text button in the card
         """
-        liked_btn_txt = self.find_element_by_xpath("/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/a/span")
+        liked_btn_txt = self.find_element_by_xpath(
+            "/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[1]/div/a/span")
         if liked_btn_txt is None:
             return
 
@@ -87,7 +94,8 @@ class WebPlayerLibrary(WebPlayerMenu):
         :returns: a boolean True if clicking the Liked Songs card goes to the right page, False otherwise
         :rtype: bool
         """
-        songs_text_before = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div/div")
+        songs_text_before = self.find_element_by_xpath(
+            "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/div/div")
         no_of_songs_before = "0"
         if songs_text_before is not None:
             songs_arr_before = songs_text_before.text.split(" ")
@@ -97,7 +105,8 @@ class WebPlayerLibrary(WebPlayerMenu):
             self.driver.get(self.base_url + "webplayer/likedplay")
         time.sleep(4)
         no_of_songs = 0
-        songs_text = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[2]/div[2]/div/p")
+        songs_text = self.find_element_by_xpath(
+            "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[2]/div[2]/div/p")
         if songs_text is not None:
             songs_text_arr = songs_text.text.split(" ")
             no_of_songs = songs_text_arr[0]
@@ -133,16 +142,14 @@ class WebPlayerLibrary(WebPlayerMenu):
         card_text = splitted_card_text[0] + " " + splitted_card_text[1]
         card.click()
         time.sleep(4)
-        playlist_info_name = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[1]/div/div[2]/div/div[1]/span")
+        playlist_info_name = self.find_element_by_xpath(
+            "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[1]/div/div[2]/div/div[1]/span")
 
         if playlist_info_name is None:
             return False
 
         if playlist_info_name.text != card_text and report_allure:
-            self.report_allure("ERROR: Playlist name is not the same as the card name. Card name = " + card_text + ", Playlist name = " + playlist_info_name.text)
+            self.report_allure(
+                "ERROR: Playlist name is not the same as the card name. Card name = " + card_text + ", Playlist name = " + playlist_info_name.text)
 
         return self.url_has("webplayer/nowplay")
-
-
-
-
