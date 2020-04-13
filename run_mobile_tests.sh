@@ -32,7 +32,7 @@ cp -a $path/Reports/Mobile_Reports/Authentication_Reports/allurefiles/. $path/Re
 
 #Makes Extra_Reports directory
 rm -rf ./Reports/Mobile_Reports/Extra_Reports/
-mkdir ./Reports/Mobile_Reports/extra_Reports
+mkdir ./Reports/Mobile_Reports/Extra_Reports
 #Makes Extra_Reports/allurefiles directory
 mkdir ./Reports/Mobile_Reports/Extra_Reports/allurefiles
 #Runs tests for this function
@@ -60,8 +60,8 @@ mkdir ./Reports/Mobile_Reports/Player_Reports/allurefiles
 #Runs tests for this function
 python3 -m pytest --alluredir="./Reports/Mobile_Reports/Player_Reports/allurefiles" ./Mobile_Testing/Tests/test_player.py -m $sel
 #Copies allure files to all more general palce
-cp -a $path/Reports/Mobile_Reports/Player_Reports/allurefiles. $path/Reports/All_Reports/allurefiles
-cp -a $path/Reports/Mobile_Reports/Player_Reports/allurefiles. $path/Reports/Mobile_Reports/allurefiles
+cp -a $path/Reports/Mobile_Reports/Player_Reports/allurefiles/. $path/Reports/All_Reports/allurefiles
+cp -a $path/Reports/Mobile_Reports/Player_Reports/allurefiles/. $path/Reports/Mobile_Reports/allurefiles
 
 #Makes Signup_Reports directory
 rm -rf ./Reports/Mobile_Reports/Signup_Reports/
@@ -71,5 +71,5 @@ mkdir ./Reports/Mobile_Reports/Signup_Reports/allurefiles
 #Runs tests for this function
 python3 -m pytest --alluredir="./Reports/Mobile_Reports/Signup_Reports/allurefiles" ./Mobile_Testing/Tests/test_signup.py -m $sel
 #Copies allure files to all more general palce
-cp -a $path/Reports/Mobile_Reports/Signup_Reports/allurefiles. $path/Reports/All_Reports/allurefiles
-cp -a $path/Reports/Mobile_Reports/Signup_Reports/allurefiles. $path/Reports/Mobile_Reports/allurefiles
+cp -a $path/Reports/Mobile_Reports/Signup_Reports/allurefiles/. $path/Reports/All_Reports/allurefiles
+cp -a $path/Reports/Mobile_Reports/Signup_Reports/allurefiles/. $path/Reports/Mobile_Reports/allurefiles
