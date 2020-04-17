@@ -32,7 +32,7 @@ from Web_Testing.Pages.LikedSongs import LikedSongs
 @allure.severity(allure.severity_level.CRITICAL)
 class TestLikedSongs:
     # TODO: change Firefox executable path to your needs
-    driver = WebHelper().chrome_driver_init()
+    driver = WebHelper().firefox_driver_init()
     helper = WebHelper()
     helper.set_driver(driver)
     liked_songs = LikedSongs(driver)

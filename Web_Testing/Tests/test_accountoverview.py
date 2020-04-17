@@ -25,7 +25,7 @@ from Web_Testing.helperClasses import WebHelper, ConstantsClass
 @allure.severity(allure.severity_level.CRITICAL)
 class TestAccountOverview:
     # TODO: change Firefox executable path to your needs
-    driver = WebHelper().chrome_driver_init()
+    driver = WebHelper().firefox_driver_init()
     account_overview_page = AccountOverviewPage(driver)
 
     def login_first(self):

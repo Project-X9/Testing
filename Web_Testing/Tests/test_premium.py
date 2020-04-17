@@ -29,7 +29,7 @@ from Web_Testing.Pages.AccountOverviewPage import AccountOverviewPage
 @allure.severity(allure.severity_level.CRITICAL)
 class TestPremium:
     # TODO: change Firefox executable path to your needs
-    driver = WebHelper().chrome_driver_init()
+    driver = WebHelper().firefox_driver_init()
     pp = PremiumPage(driver)
 
     def login_first(self):
