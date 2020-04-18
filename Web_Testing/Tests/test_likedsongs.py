@@ -54,7 +54,7 @@ class TestLikedSongs:
     def test_case_1(self, setup):
         time.sleep(3)
         lp = LoginPage(self.driver)
-        lp.login_to_spotify("abdallah@gmail.com", "123456")
+        lp.login_to_spotify("abdallah@gmail.com", "1234567")
         time.sleep(3)
         self.driver.get(self.helper.base_url + "webplayer/home")
         time.sleep(3)

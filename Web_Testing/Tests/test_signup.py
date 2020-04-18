@@ -25,8 +25,8 @@ import time
 class TestSignup:
     # TODO: change Chrome executable path to your needs
     driver = WebHelper().firefox_driver_init()
-    correct_emails = ["test54@test.com"]
-    correct_passwords = ["test545556"]
+    correct_emails = ["test55@test.com"]
+    correct_passwords = ["test555657"]
     emails_different_confirmation = ["test4@test.com"]
     link = WebHelper().get_signup_url()
 
@@ -309,8 +309,7 @@ class TestSignup:
     def test_case_12(self, setup_final):
         time.sleep(2)
         sp = SignupPage(self.driver)
-        profile = Profile("test23@test.com", "test_pass", "Mohammad Osama", DOB(32, 1, -2), Gender.MALE,
-                          "test23@test.com")
+        profile = Profile("test23@test.com", "test_pass", "Mohammad Osama", DOB(32, 1, -2), Gender.MALE, "test23@test.com")
 
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with invalid age values", self.driver)

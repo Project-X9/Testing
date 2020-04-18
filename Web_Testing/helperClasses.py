@@ -745,7 +745,7 @@ class Profile:
 
 
     """
-    def __init__(self, email, password, name, dob, gender, premium=False, c_email=''):
+    def __init__(self, email, password, name, dob, gender, c_email='', premium=False):
         """
         Initializes the user's profile with the provided parameters
 
@@ -879,15 +879,27 @@ class ConstantsClass:
                                            , "test59@test.com" :
                                                Profile("test59@test.com"
                                                        , "test596061"
-                                                       , "Testing Team 59", DOB(21, 2, 1979), Gender.FEMALE, c_email="test59@test.com")
+                                                       , "Testing Team 59", DOB(21, 4, 1979), Gender.FEMALE, c_email="test59@test.com")
+                                           , "test60@test.com" :
+                                               Profile("test60@test.com"
+                                                       , "test606162"
+                                                       , "Testing Team 60", DOB(21, 12, 1986), Gender.FEMALE, c_email="test60@test.com")
+                                           , "test61@test.com" :
+                                               Profile("test61@test.com"
+                                                       , "test616263"
+                                                       , "Testing Team 61", DOB(21, 1, 1999), Gender.FEMALE, c_email="test61@test.com")
+                                           , "test62@test.com" :
+                                               Profile("test62@test.com"
+                                                       , "test626364"
+                                                       , "Testing Team 62", DOB(21, 2, 2000), Gender.FEMALE, c_email="test62@test.com")
                                            ,"test9@test.com" :
                                                Profile("test9@test.com"
                                                        , "test789"
                                                        , "Testing Team 9", DOB(21, 2, 1980), Gender.MALE, c_email="test9@test.com"),
                                            "abdallah@gmail.com":
                                                Profile("abdallah@gmail.com"
-                                                       , "123456"
-                                                       , "Ahmed", DOB(21, 2, 1980), Gender.MALE,True,
+                                                       , "1234567"
+                                                       , "Ahmed", DOB(21, 2, 1980), Gender.MALE, premium=True,
                                                        c_email="abdallah@gmail.com")
                                            }
 
