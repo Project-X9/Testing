@@ -190,15 +190,6 @@ class WebHelper:
         """
         return self.base_url + "account/changepassword"
 
-    def get_signup_url(self):
-        """
-        gets the sign up url of the website
-
-        :returns: the sign up url of the website
-        :rtype: str
-        """
-        return self.base_url + "signup"
-
     def set_driver(self, driver):
         """
         sets the class' driver with the input driver
@@ -216,6 +207,7 @@ class WebHelper:
         :returns: the class' driver
         :rtype: WebDriver
         """
+
         self.driver = webdriver.Chrome(ChromeDriverManager().install())
         return self.driver
 
@@ -226,8 +218,8 @@ class WebHelper:
         :returns: the class' driver
         :rtype: WebDriver
         """
-        '''self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), service_log_path='./Logs/geckodriver.log')'''
-        self.driver = webdriver.Chrome(ChromeDriverManager().install())
+
+        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         return self.driver
 
     def get_driver(self):
