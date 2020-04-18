@@ -1,4 +1,3 @@
-
 """
 Home Page Testing
 
@@ -55,7 +54,7 @@ class TestChangePassword:
         yield
         self.driver.close()
 
-# Test #1 -> Change password with empty password
+    # Test #1 -> Change password with empty password
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing change password with empty password")
     @allure.title("Change Password with empty password")
@@ -100,8 +99,7 @@ class TestChangePassword:
 
         assert (not did_login_new)
 
-
-# Test #2 -> Change Password with empty confirmation password
+    # Test #2 -> Change Password with empty confirmation password
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Change Password with empty confirmation password")
     @allure.title("Change Password with empty confirmation password")
@@ -114,7 +112,8 @@ class TestChangePassword:
         text_dangers_appeared = not did_change_password
 
         if not text_dangers_appeared:
-            self.helper.report_allure("ERROR: Text warnings did not appear with empty confirmation password", self.driver)
+            self.helper.report_allure("ERROR: Text warnings did not appear with empty confirmation password",
+                                      self.driver)
         else:
             self.helper.report_allure("SUCCESS: Text warnings appeared with empty confirmation password", self.driver)
 
@@ -152,9 +151,11 @@ class TestChangePassword:
         text_dangers_appeared = not did_change_password
 
         if not text_dangers_appeared:
-            self.helper.report_allure("ERROR: Text warnings did not appear with different confirmation password", self.driver)
+            self.helper.report_allure("ERROR: Text warnings did not appear with different confirmation password",
+                                      self.driver)
         else:
-            self.helper.report_allure("SUCCESS: Text warnings appeared with different confirmation password", self.driver)
+            self.helper.report_allure("SUCCESS: Text warnings appeared with different confirmation password",
+                                      self.driver)
 
         self.driver.get(self.helper.get_account_overview_url())
         time.sleep(2)
@@ -178,7 +179,7 @@ class TestChangePassword:
 
         assert (not did_login_new)
 
-# Test #4 -> Change Password with correct credentials
+    # Test #4 -> Change Password with correct credentials
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Change Password with correct credentials")
     @allure.title("Change Password with correct credentials")

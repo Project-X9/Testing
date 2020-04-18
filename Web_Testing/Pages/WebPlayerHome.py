@@ -2,8 +2,8 @@ from Web_Testing.Pages.WebPlayerMenu import WebPlayerMenu
 from Web_Testing.helperClasses import WebHelper
 import time
 
-class WebPlayerHome(WebPlayerMenu):
 
+class WebPlayerHome(WebPlayerMenu):
     """
     A class used to represent the Web Player Home
     ...
@@ -82,7 +82,6 @@ class WebPlayerHome(WebPlayerMenu):
         self.all_cards = self.find_elements_by_class_name("CardsHome")
         self.all_headers = self.find_elements_by_class_name("HeaderAboveGrid")
         self.header_names_to_cards = self.map_headers_to_cards(self.all_headers, self.all_cards)
-
 
     def is_in_your_library(self) -> bool:
         """
@@ -204,13 +203,15 @@ class WebPlayerHome(WebPlayerMenu):
         card_text = splitted_card_text[0] + " " + splitted_card_text[1]
         card.click()
         time.sleep(4)
-        playlist_info_name = self.find_element_by_xpath("/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[1]/div/div[2]/div/div[1]/span")
+        playlist_info_name = self.find_element_by_xpath(
+            "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/section/div/section/div/div/div[1]/div/header/div[1]/div/div[2]/div/div[1]/span")
 
         if playlist_info_name is None:
             return False
 
         if playlist_info_name.text != card_text and report_allure:
-            self.report_allure("ERROR: Playlist name is not the same as the card name. Card name = " + card_text + ", Playlist name = " + playlist_info_name.text)
+            self.report_allure(
+                "ERROR: Playlist name is not the same as the card name. Card name = " + card_text + ", Playlist name = " + playlist_info_name.text)
 
         return self.url_has("webplayer/nowplay")
 
@@ -231,15 +232,12 @@ class WebPlayerHome(WebPlayerMenu):
         """
         Clicks the login button
         """
-        (self.find_element_by_xpath("/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div[1]/div/div/nav/ul[2]/li[2]/button")).click()
+        (self.find_element_by_xpath(
+            "/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div[1]/div/div/nav/ul[2]/li[2]/button")).click()
 
     def click_signup(self):
         """
         Clicks the signup button
         """
-        (self.find_element_by_xpath("/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div[1]/div/div/nav/ul[2]/li[1]/button")).click()
-
-
-
-
-
+        (self.find_element_by_xpath(
+            "/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div[1]/div/div/nav/ul[2]/li[1]/button")).click()

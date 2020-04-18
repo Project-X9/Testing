@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
@@ -131,10 +130,11 @@ class LoginPage(WebHelper):
         :rtype: bool
         """
         self.incorrect_user_text = self.find_element_by_id("invalid")
-        if self.incorrect_user_text is None:
+        text_dangers = self.find_elements_by_class_name('text-danger')
+        try:
+            return ((text_dangers is not None) and (len(text_dangers) > 0)) or (self.incorrect_user_text is not None)
+        except:
             return False
-        else:
-            return True
 
     def check_login_page(self):
         """
@@ -176,8 +176,8 @@ class LoginPage(WebHelper):
         # timeout for login
         timeout = 4
         try:
-            self.clear_credentials() # clear email and password fields
-            self.set_credentials(email, password) # set email and password fields
+            self.clear_credentials()  # clear email and password fields
+            self.set_credentials(email, password)  # set email and password fields
             self.click_login()
 
             time.sleep(timeout)
@@ -217,4 +217,3 @@ class LoginPage(WebHelper):
         # any other error that cause test to fail
         except:
             return False
-

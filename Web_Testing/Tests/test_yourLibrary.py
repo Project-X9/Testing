@@ -75,7 +75,7 @@ class TestWebPlayerLibrary:
             self.helper.report_allure("FAILURE: Your Library Liked songs cards are not functional")
             assert False
 
-# Test #2 -> Playlists Cards
+    # Test #2 -> Playlists Cards
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing Your Library playlists cards")
     @allure.title("Playlists cards")
@@ -116,7 +116,7 @@ class TestWebPlayerLibrary:
             self.helper.report_allure("FAILURE: The Liked Songs Card button in your Library page is not functional")
             assert False
 
-# Test #4 -> Your Library Button with empty playlist
+    # Test #4 -> Your Library Button with empty playlist
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Testing Your Library Liked Songs Play Button with empty playlist")
     @allure.title("Liked Songs Play Button with empty playlist")
@@ -130,7 +130,7 @@ class TestWebPlayerLibrary:
         web_player_home.click_login()
         time.sleep(3)
         lp = LoginPage(self.driver)
-        lp.login_to_spotify("abdallah@gmail.com", "123456")
+        lp.login_to_spotify("abdallah@gmail.com", "1234567")
         time.sleep(3)
         self.driver.get(self.helper.base_url + "webplayer/home")
         time.sleep(3)
@@ -142,5 +142,3 @@ class TestWebPlayerLibrary:
             assert True
         else:
             assert False
-
-

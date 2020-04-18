@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
@@ -39,7 +38,10 @@ class LoggedOutHome(WebHelper):
         Clicks on the signup button
     click_login()
         Clicks on the login button
+    click_premium()
+        Clicks on the premium button
     """
+
     def __init__(self, driver):
         """
         Initializes the page elements
@@ -47,6 +49,7 @@ class LoggedOutHome(WebHelper):
         :param driver : the driver to which the super class' driver is to be set
         :type driver: WebDriver
         """
+        super().__init__()
         # tb refers to Toolbar, tb_.. refers to Toolbar elements
         self.set_driver(driver)
         self.tb_login_btn = self.find_element_by_xpath("/html/body/div[1]/div/div/div/nav/div/div/ul/li[6]/a")
@@ -71,3 +74,9 @@ class LoggedOutHome(WebHelper):
         """
         self.click_button_safe(self.tb_signup_btn)
 
+    def click_premium(self):
+        """
+        Clicks on the premium button
+        """
+        prem_btn = self.find_element_by_xpath("/html/body/div/div/div/div/nav/div/div/ul/li[1]/a")
+        self.click_button_safe(prem_btn)

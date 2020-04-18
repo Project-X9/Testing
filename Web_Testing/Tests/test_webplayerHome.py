@@ -218,5 +218,3 @@ class TestWebPlayerHomeWithMenu:
         else:
             self.helper.report_allure("FAILURE: Login button is not functional")
             assert False
-
-
