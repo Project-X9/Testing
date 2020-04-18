@@ -6,7 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class WebPlayerMenu(WebHelper):
-
     """
     A class used to represent the Web Player Menu
     ...
@@ -86,7 +85,8 @@ class WebPlayerMenu(WebHelper):
         Clicks Logout button in profile list
         """
         self.find_element_by_xpath(self.profile_menu_xpath).click()
-        logout_btn_element = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.logout_btn_xpath)))
+        logout_btn_element = WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((By.XPATH, self.logout_btn_xpath)))
         logout_btn_element.click()
 
     def click_your_library(self):
@@ -127,5 +127,3 @@ class WebPlayerMenu(WebHelper):
         Clicks Home button in web player menu
         """
         self.find_element_by_xpath(self.home_xpath).click()
-
-

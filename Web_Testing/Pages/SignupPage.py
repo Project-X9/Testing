@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.keys import Keys
@@ -11,7 +10,6 @@ import time
 
 
 class SignupPage(WebHelper):
-
     """
     A class used to represent the Login Page
 
@@ -91,6 +89,7 @@ class SignupPage(WebHelper):
         :param driver : the driver to which the super class' driver is to be set
         :type driver: WebDriver
         """
+        super().__init__()
         self.driver = driver
         self.signup_with_facebook = self.find_element_by_class_name("facebookButton metro")
         self.email_txt = self.find_element_by_id("email")
@@ -240,7 +239,8 @@ class SignupPage(WebHelper):
         """
         try:
             text_dangers = self.find_elements_by_class_name('text-danger')
-            return len(text_dangers) > 0
+            text_invalid = self.find_element_by_id("invalid")
+            return ((text_dangers is not None) and (len(text_dangers) > 0)) or (text_invalid is not None)
         except:
             return False
 
@@ -319,8 +319,9 @@ class SignupPage(WebHelper):
                     print("Could not find Account overview elements")
                 # Account overview email is not the same as the provided login email but logged in successfully
                 elif account_overview_email != profile.email:
-                    print("INTERNAL ERROR: Account overview email is not matching the signup/login email: Login email = "
-                          + profile.email + ", Overview email = " + account_overview_email)
+                    print(
+                        "INTERNAL ERROR: Account overview email is not matching the signup/login email: Login email = "
+                        + profile.email + ", Overview email = " + account_overview_email)
                 else:
                     print("SUCCESS: Account overview email is the same as the provided login email")
 

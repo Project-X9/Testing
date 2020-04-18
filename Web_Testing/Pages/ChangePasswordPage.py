@@ -52,6 +52,3 @@ class ChangePasswordPage(WebHelper):
         dangers_visible = self.is_dangers_visible()
 
         return not dangers_visible
-
-
-

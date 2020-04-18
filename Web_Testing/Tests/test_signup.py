@@ -1,4 +1,3 @@
-
 """
 Signup Testing
 
@@ -24,7 +23,6 @@ import time
 @allure.feature("Signup Tests")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestSignup:
-
     # TODO: change Chrome executable path to your needs
     driver = WebHelper().firefox_driver_init()
     correct_emails = ["test54@test.com"]
@@ -48,7 +46,7 @@ class TestSignup:
         yield
         self.driver.close()
 
-# Test #1 -> Different Confirmation email
+    # Test #1 -> Different Confirmation email
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Failing Signup")
     @allure.sub_suite("Sign up with different confirmation email")
@@ -66,7 +64,8 @@ class TestSignup:
 
         constants = ConstantsClass()
         emails = constants.get_test_emails()
-        profile = Profile(emails[0], "test_pass", "Mohammad Osama", DOB(31, 1, 2002), Gender.MALE, "another_email@hotmail.com")
+        profile = Profile(emails[0], "test_pass", "Mohammad Osama", DOB(31, 1, 2002), Gender.MALE,
+                          "another_email@hotmail.com")
 
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with different confirmation email", self.driver)
@@ -75,7 +74,7 @@ class TestSignup:
             WebHelper().report_allure("SUCCESS: Sign up unsuccessful with different confirmation email", self.driver)
             assert True
 
-# Test #2 -> Empty Email
+    # Test #2 -> Empty Email
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Failing Signup")
     @allure.sub_suite("Signup with empty email")
@@ -97,7 +96,7 @@ class TestSignup:
             WebHelper().report_allure("SUCCESS: Sign up stopped with empty email", self.driver)
             assert True
 
-# Test #3 -> Already Registered Email
+    # Test #3 -> Already Registered Email
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Failing signup")
     @allure.sub_suite("Signup with already registered email")
@@ -125,7 +124,8 @@ class TestSignup:
     @allure.story("Succes Signup")
     @allure.sub_suite("Sign up with correct credentials and values")
     @allure.title("Sign up with correct credentials and values")
-    @allure.description("Signing up with the following credentials and values -> Email: test1@test.com, Pass: test123")
+    @allure.description(
+        "Signing up with the following credentials and values -> Email: test54@test.com, Pass: test545556")
     @pytest.mark.Do
     @pytest.mark.Signup
     def test_case_4(self, setup):
@@ -141,7 +141,7 @@ class TestSignup:
             WebHelper().report_allure("ERROR: Sign up did not proceed with correct credentials and values", self.driver)
             assert False
 
-# Test #5 -> Empty Password
+    # Test #5 -> Empty Password
     @allure.severity(allure.severity_level.BLOCKER)
     @allure.story("Failing Signup")
     @allure.sub_suite("Signup with empty password")
@@ -287,10 +287,12 @@ class TestSignup:
         sp = SignupPage(self.driver)
 
         if (sp.email_txt is None) or (sp.password_txt is None) or (sp.confirm_email_txt is None) \
-                or (sp.display_name_txt is None) or (sp.dob_day_txt is None) or (sp.dob_month_txt is None)\
-                or (sp.dob_year_txt is None) or (sp.gender_male is None) or (sp.gender_female is None)\
-                or (sp.signup is None):
-            WebHelper().report_allure("ERROR: Elements are not available after refresh", self.driver)
+                or (sp.display_name_txt is None) or (sp.dob_day_txt is None) or (sp.dob_month_txt is None) \
+                or (sp.dob_year_txt is None) or (sp.gender_male is None) or (sp.gender_female is None) \
+                or (sp.signup is None) or (sp.is_text_dangers_visible()):
+            WebHelper().report_allure(
+                "ERROR: Some elements are not available after refresh OR Invalid text warnings appeared after refresh"
+                , self.driver)
             assert False
         else:
             WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
@@ -316,4 +318,3 @@ class TestSignup:
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with invalid age values", self.driver)
             assert True
-

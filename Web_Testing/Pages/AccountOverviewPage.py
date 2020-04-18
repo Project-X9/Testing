@@ -28,8 +28,6 @@ class AccountOverviewPage(WebHelper):
                  A string containing the link text of Help link
             premium_link_txt : string
                 A string containing the link text of Premium link
-            get_premium_btn : string
-                A string containing the link text of Get Premium button
             account_overview_link : string
                 A string containing the xpath of Account Overview button
             edit_profile_link : string
@@ -77,8 +75,6 @@ class AccountOverviewPage(WebHelper):
                 Clicks Help button
             click_premium_link()
                 Clicks Premium button
-            click_get_premium_btn()
-                Clicks Get Premium button
             click_account_overview()
                 Clicks Account Overview button
             click_edit_profile()
@@ -105,6 +101,8 @@ class AccountOverviewPage(WebHelper):
                 Checks if username is same as username given
             is_correct_email(email)
                 Checks if email is same as email given
+            premium_check(premium)
+                check if premium status exist with premium account
             is_correct_age(age)
                 Checks if age is same as age given
             is_page_initialized()
@@ -121,7 +119,6 @@ class AccountOverviewPage(WebHelper):
     download_link_txt = "Download"
     help_link_txt = "Help"
     premium_link_txt = "Premium"
-    get_premium_btn = "GET PREMIUM"
     account_overview_link = "//*[@id='root']/div/div/div/div[2]/div[2]/div/div[1]/div/a[2]"
     edit_profile_link = "//*[@id='root']/div/div/div/div[2]/div[2]/div/div[1]/div/a[3]"
     change_password_link = "//*[@id='root']/div/div/div/div[2]/div[2]/div/div[1]/div/a[4]"
@@ -192,10 +189,6 @@ class AccountOverviewPage(WebHelper):
     def click_premium_link(self):
         """Clicks Premium button"""
         self.click_button_safe(self.find_element_by_link_text(self.premium_link_txt))
-
-    def click_get_premium_btn(self):
-        """Clicks Get Premium button"""
-        self.click_button_safe(self.find_element_by_link_text(self.get_premium_btn))
 
     def click_account_overview(self):
         """Clicks Account Overview button"""
@@ -286,6 +279,22 @@ class AccountOverviewPage(WebHelper):
         else:
             return False
 
+    def premium_check(self, premium):
+        """
+        check if premium status exist with premium account
+
+        :param premium: premium account or not
+        :type: bool
+
+        :return: true if join premium button don't exist when premium is true and exist when premium is false
+        :type: bool
+        """
+        if (premium is True and self.find_element_by_link_text(self.join_premium_btn) is None) or (
+                premium is False and self.find_element_by_link_text(self.join_premium_btn) is not None):
+            return True
+        else:
+            return False
+
     def is_correct_age(self, age):
         """
         Checks if age is same as age given
@@ -310,7 +319,7 @@ class AccountOverviewPage(WebHelper):
         """
         return self.get_account_overview_email() is not None
 
-    def account_overview_check(self, email, age, username):
+    def account_overview_check(self, email, age, username, premium):
         """
         Checks if information on Account Overview page is correct
 
@@ -323,6 +332,9 @@ class AccountOverviewPage(WebHelper):
         :param username : The username of the login user
         :type username: str
 
+        :param premium : premium account or not
+        :type premium: bool
+
         :returns: a boolean True if the information in account overview page is correct
         :rtype: bool
 
@@ -333,7 +345,8 @@ class AccountOverviewPage(WebHelper):
             # if open account overview page successfully
             if self.is_page_initialized():
                 # if all information is correct
-                if self.is_correct_email(email) and self.is_correct_age(age) and self.is_correct_username(username):
+                if self.is_correct_email(email) and self.is_correct_age(age) and self.is_correct_username(
+                        username) and self.premium_check(premium):
                     return True
                 # if all or some information is wrong
                 else:
@@ -342,10 +355,12 @@ class AccountOverviewPage(WebHelper):
                         print("wrong email")
                     # if age is not the same as given age
                     if not self.is_correct_age(age):
-                        print("wrong age "+age+" account "+self.age)
+                        print("wrong age " + age + " account " + self.age)
                     # if username is not the same as given username
                     if not self.is_correct_username(username):
                         print("wrong username")
+                    if not self.premium_check(premium):
+                        print("premium isn't right")
                     return False
             # if can't open account overview page
             else:

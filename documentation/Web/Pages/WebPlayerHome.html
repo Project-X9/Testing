@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module WebPlayerHome</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>WebPlayerHome</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/KIMO/Desktop/Testing/Web_Testing/Pages/WebPlayerHome.py">/Users/KIMO/Desktop/Testing/Web_Testing/Pages/WebPlayerHome.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>(<a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="WebPlayerHome.html#WebPlayerHome">WebPlayerHome</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="WebPlayerHome">class <strong>WebPlayerHome</strong></a>(<a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#WebPlayerHome">WebPlayerHome</a>(driver)<br>
+&nbsp;<br>
+A&nbsp;class&nbsp;used&nbsp;to&nbsp;represent&nbsp;the&nbsp;Web&nbsp;Player&nbsp;Home<br>
+...<br>
+&nbsp;<br>
+Attributes<br>
+----------<br>
+upgrade_link&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;upgrade&nbsp;button<br>
+spotify_logo&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;spotify&nbsp;logo<br>
+signup_btn&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;signup&nbsp;button<br>
+login_btn&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;login&nbsp;button<br>
+signup_popup_btn&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;signup&nbsp;button&nbsp;that&nbsp;appears&nbsp;in&nbsp;the&nbsp;popup&nbsp;window<br>
+login_popup_btn&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;login&nbsp;button&nbsp;that&nbsp;appears&nbsp;in&nbsp;the&nbsp;popup&nbsp;window<br>
+close_popup_btn&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;close&nbsp;button&nbsp;that&nbsp;appears&nbsp;in&nbsp;the&nbsp;popup&nbsp;window<br>
+popup_window&nbsp;:&nbsp;WebDriverElement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Web&nbsp;driver&nbsp;element&nbsp;representing&nbsp;the&nbsp;popup&nbsp;window<br>
+all_cards&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;cards&nbsp;available&nbsp;in&nbsp;the&nbsp;home&nbsp;page<br>
+all_headers&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;headers/categories&nbsp;available&nbsp;in&nbsp;the&nbsp;home&nbsp;page<br>
+header_names_to_cards&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;dict&nbsp;that&nbsp;maps&nbsp;the&nbsp;header&nbsp;names/categories&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;cards&nbsp;in&nbsp;this&nbsp;category<br>
+&nbsp;<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#WebPlayerHome-is_in_your_library">is_in_your_library</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;if&nbsp;currently&nbsp;in&nbsp;Your&nbsp;Library&nbsp;Page<br>
+<a href="#WebPlayerHome-is_in_liked_songs">is_in_liked_songs</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;if&nbsp;currently&nbsp;in&nbsp;Liked&nbsp;Songs&nbsp;Page<br>
+<a href="#WebPlayerHome-initialize_popup_window">initialize_popup_window</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Initializes&nbsp;the&nbsp;elements&nbsp;of&nbsp;the&nbsp;popup&nbsp;window<br>
+<a href="#WebPlayerHome-is_popup_window_visible">is_popup_window_visible</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;if&nbsp;the&nbsp;popup&nbsp;menu&nbsp;is&nbsp;visible<br>
+<a href="#WebPlayerHome-map_headers_to_cards">map_headers_to_cards</a>(all_headers,&nbsp;all_cards)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Return&nbsp;a&nbsp;dict&nbsp;that&nbsp;maps&nbsp;the&nbsp;header&nbsp;names/categories&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;cards&nbsp;in&nbsp;this&nbsp;category<br>
+<a href="#WebPlayerHome-get_cards_for_header">get_cards_for_header</a>(all_cards,&nbsp;y_pos_header)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;corresponding&nbsp;to&nbsp;a&nbsp;header's&nbsp;y&nbsp;position<br>
+<a href="#WebPlayerHome-get_cards_of">get_cards_of</a>(category)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;for&nbsp;a&nbsp;given&nbsp;category&nbsp;name<br>
+<a href="#WebPlayerHome-check_card_click">check_card_click</a>(category_name,&nbsp;card_no,&nbsp;report_allure)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;if&nbsp;clicking&nbsp;a&nbsp;card&nbsp;goes&nbsp;to&nbsp;the&nbsp;correct&nbsp;page<br>
+<a href="#WebPlayerHome-check_sign_out">check_sign_out</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;sign&nbsp;out&nbsp;and&nbsp;popup&nbsp;window&nbsp;that&nbsp;appears&nbsp;after&nbsp;the&nbsp;sign&nbsp;out<br>
+<a href="#WebPlayerHome-click_login">click_login</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Clicks&nbsp;the&nbsp;login&nbsp;button<br>
+<a href="#WebPlayerHome-click_signup">click_signup</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Clicks&nbsp;the&nbsp;signup&nbsp;button<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="WebPlayerHome.html#WebPlayerHome">WebPlayerHome</a></dd>
+<dd><a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a></dd>
+<dd><a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="WebPlayerHome-__init__"><strong>__init__</strong></a>(self, driver)</dt><dd><tt>Initializes&nbsp;the&nbsp;page&nbsp;elements<br>
+&nbsp;<br>
+:param&nbsp;driver&nbsp;:&nbsp;the&nbsp;driver&nbsp;to&nbsp;which&nbsp;the&nbsp;super&nbsp;class'&nbsp;driver&nbsp;is&nbsp;to&nbsp;be&nbsp;set<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-check_card_click"><strong>check_card_click</strong></a>(self, category_name, card_no, report_allure: bool)</dt><dd><tt>Checks&nbsp;if&nbsp;clicking&nbsp;a&nbsp;card&nbsp;goes&nbsp;to&nbsp;the&nbsp;correct&nbsp;page<br>
+&nbsp;<br>
+:param&nbsp;category_name:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;category&nbsp;to&nbsp;click&nbsp;a&nbsp;card&nbsp;from<br>
+:type&nbsp;category_name:&nbsp;str<br>
+&nbsp;<br>
+:param&nbsp;card_no:&nbsp;the&nbsp;card&nbsp;number&nbsp;in&nbsp;the&nbsp;given&nbsp;category<br>
+:type&nbsp;card_no:&nbsp;int<br>
+&nbsp;<br>
+:param&nbsp;report_allure:&nbsp;a&nbsp;boolean&nbsp;that&nbsp;represents&nbsp;whether&nbsp;or&nbsp;not&nbsp;to&nbsp;report&nbsp;the&nbsp;result&nbsp;to&nbsp;allure<br>
+:type&nbsp;report_allure:&nbsp;bool<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;True&nbsp;if&nbsp;went&nbsp;to&nbsp;the&nbsp;correct&nbsp;page,&nbsp;False&nbsp;otherwise<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-check_sign_out"><strong>check_sign_out</strong></a>(self) -&gt; bool</dt><dd><tt>Checks&nbsp;sign&nbsp;out&nbsp;and&nbsp;popup&nbsp;window&nbsp;that&nbsp;appears&nbsp;after&nbsp;the&nbsp;sign&nbsp;out<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;True&nbsp;if&nbsp;signout&nbsp;is&nbsp;successful&nbsp;and&nbsp;popup&nbsp;appeared,&nbsp;False&nbsp;otherwise<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_login"><strong>click_login</strong></a>(self)</dt><dd><tt>Clicks&nbsp;the&nbsp;login&nbsp;button</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_signup"><strong>click_signup</strong></a>(self)</dt><dd><tt>Clicks&nbsp;the&nbsp;signup&nbsp;button</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_cards_for_header"><strong>get_cards_for_header</strong></a>(self, all_cards, y_pos_header)</dt><dd><tt>Gets&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;corresponding&nbsp;to&nbsp;a&nbsp;header's&nbsp;y&nbsp;position<br>
+&nbsp;<br>
+:param&nbsp;all_cards:&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;cards&nbsp;in&nbsp;the&nbsp;page<br>
+:type&nbsp;all_cards:&nbsp;list<br>
+&nbsp;<br>
+:param&nbsp;y_pos_header:&nbsp;the&nbsp;y&nbsp;position&nbsp;of&nbsp;the&nbsp;given&nbsp;header&nbsp;to&nbsp;get&nbsp;the&nbsp;cards&nbsp;of<br>
+:type&nbsp;y_pos_header:&nbsp;int<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;for&nbsp;the&nbsp;given&nbsp;header's&nbsp;y&nbsp;position</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_cards_of"><strong>get_cards_of</strong></a>(self, category)</dt><dd><tt>Gets&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;corresponding&nbsp;to&nbsp;a&nbsp;category&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;category:&nbsp;the&nbsp;category&nbsp;name&nbsp;to&nbsp;get&nbsp;the&nbsp;cards&nbsp;of<br>
+:type&nbsp;category:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;of&nbsp;cards&nbsp;for&nbsp;the&nbsp;given&nbsp;header's&nbsp;name/category</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-initialize_popup_window"><strong>initialize_popup_window</strong></a>(self)</dt><dd><tt>Initializes&nbsp;the&nbsp;elements&nbsp;of&nbsp;the&nbsp;popup&nbsp;window</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-is_in_liked_songs"><strong>is_in_liked_songs</strong></a>(self) -&gt; bool</dt><dd><tt>Checks&nbsp;if&nbsp;currently&nbsp;in&nbsp;Liked&nbsp;Songs&nbsp;Page<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;True&nbsp;if&nbsp;currently&nbsp;in&nbsp;Liked&nbsp;Songs&nbsp;page,&nbsp;False&nbsp;otherwise<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-is_in_your_library"><strong>is_in_your_library</strong></a>(self) -&gt; bool</dt><dd><tt>Checks&nbsp;if&nbsp;currently&nbsp;in&nbsp;Your&nbsp;Library&nbsp;Page<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;True&nbsp;if&nbsp;currently&nbsp;in&nbsp;Your&nbsp;Library&nbsp;page,&nbsp;False&nbsp;otherwise<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-is_popup_window_visible"><strong>is_popup_window_visible</strong></a>(self)</dt><dd><tt>Checks&nbsp;if&nbsp;the&nbsp;popup&nbsp;menu&nbsp;is&nbsp;visible<br>
+:return:&nbsp;a&nbsp;boolean&nbsp;True&nbsp;if&nbsp;the&nbsp;popup&nbsp;menu&nbsp;is&nbsp;visible,&nbsp;False&nbsp;otherwise<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-map_headers_to_cards"><strong>map_headers_to_cards</strong></a>(self, all_headers, all_cards)</dt><dd><tt>Gets&nbsp;a&nbsp;dict&nbsp;that&nbsp;maps&nbsp;the&nbsp;header&nbsp;names/categories&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;cards&nbsp;in&nbsp;this&nbsp;category<br>
+:param&nbsp;all_headers:&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;header&nbsp;elements&nbsp;in&nbsp;the&nbsp;page<br>
+:type&nbsp;all_headers:&nbsp;list<br>
+&nbsp;<br>
+:param&nbsp;all_cards:&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;cards&nbsp;in&nbsp;the&nbsp;page<br>
+:type&nbsp;all_cards:&nbsp;list<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;dict&nbsp;that&nbsp;maps&nbsp;the&nbsp;header&nbsp;names/categories&nbsp;to&nbsp;the&nbsp;list&nbsp;of&nbsp;cards&nbsp;in&nbsp;this&nbsp;category<br>
+:rtype:&nbsp;dict</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>:<br>
+<dl><dt><a name="WebPlayerHome-click_account"><strong>click_account</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Account&nbsp;button&nbsp;in&nbsp;profile&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_create_playlist"><strong>click_create_playlist</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Create&nbsp;playlist&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_home"><strong>click_home</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Home&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_liked_songs"><strong>click_liked_songs</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Liked&nbsp;Songs&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_logout"><strong>click_logout</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Logout&nbsp;button&nbsp;in&nbsp;profile&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_search"><strong>click_search</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Search&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_your_library"><strong>click_your_library</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Your&nbsp;Library&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>:<br>
+<dl><dt><strong>account_btn_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[2]...div[1]/div/div/nav/ul[2]/li/li/div[2]/button[1]/a'</dl>
+
+<dl><dt><strong>create_playlist_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/div/a[1]'</dl>
+
+<dl><dt><strong>home_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/a[2]'</dl>
+
+<dl><dt><strong>liked_songs_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/div/a[2]'</dl>
+
+<dl><dt><strong>logout_btn_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[2]...]/div/div/nav/ul[2]/li/li/div[2]/button[3]/button'</dl>
+
+<dl><dt><strong>profile_menu_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[2]...iv/div[1]/div/div/nav/ul[2]/li/li/div[1]/button/a'</dl>
+
+<dl><dt><strong>search_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/a[3]'</dl>
+
+<dl><dt><strong>your_library_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/button'</dl>
+
+<hr>
+Methods inherited from <a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>:<br>
+<dl><dt><a name="WebPlayerHome-chrome_driver_init"><strong>chrome_driver_init</strong></a>(self)</dt><dd><tt>initializes&nbsp;the&nbsp;chrome&nbsp;driver<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;class'&nbsp;driver<br>
+:rtype:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-clear_txt"><strong>clear_txt</strong></a>(self, txt_element)</dt><dd><tt>clears&nbsp;the&nbsp;given&nbsp;text&nbsp;field<br>
+&nbsp;<br>
+:param&nbsp;txt_element:&nbsp;The&nbsp;text&nbsp;field&nbsp;from&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;cleared<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-clear_txt_safe"><strong>clear_txt_safe</strong></a>(self, txt_element)</dt><dd><tt>safely&nbsp;clears&nbsp;the&nbsp;given&nbsp;text&nbsp;field&nbsp;without&nbsp;causing&nbsp;a&nbsp;crash<br>
+&nbsp;<br>
+:param&nbsp;txt_element:&nbsp;the&nbsp;element&nbsp;from&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;cleared<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_button"><strong>click_button</strong></a>(self, btn)</dt><dd><tt>clicks&nbsp;on&nbsp;the&nbsp;given&nbsp;button<br>
+&nbsp;<br>
+:param&nbsp;btn:&nbsp;The&nbsp;button&nbsp;to&nbsp;be&nbsp;clicked<br>
+:type&nbsp;btn:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-click_button_safe"><strong>click_button_safe</strong></a>(self, btn)</dt><dd><tt>safely&nbsp;clicks&nbsp;on&nbsp;the&nbsp;given&nbsp;button&nbsp;without&nbsp;causing&nbsp;a&nbsp;crash<br>
+&nbsp;<br>
+:param&nbsp;btn:&nbsp;The&nbsp;button&nbsp;to&nbsp;be&nbsp;clicked<br>
+:type&nbsp;btn:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-element_exists_by_class"><strong>element_exists_by_class</strong></a>(self, class_name)</dt><dd><tt>Checks&nbsp;if&nbsp;an&nbsp;element&nbsp;exists&nbsp;with&nbsp;the&nbsp;input&nbsp;class&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;class_name:&nbsp;element&nbsp;class&nbsp;name<br>
+:type&nbsp;class_name:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;element&nbsp;exists&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-element_exists_by_id"><strong>element_exists_by_id</strong></a>(self, vid)</dt><dd><tt>Checks&nbsp;if&nbsp;an&nbsp;element&nbsp;exists&nbsp;with&nbsp;the&nbsp;input&nbsp;id<br>
+&nbsp;<br>
+:param&nbsp;vid:&nbsp;element&nbsp;id<br>
+:type&nbsp;vid:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;element&nbsp;exists&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-element_exists_by_xpath"><strong>element_exists_by_xpath</strong></a>(self, xpath)</dt><dd><tt>Checks&nbsp;if&nbsp;an&nbsp;element&nbsp;exists&nbsp;with&nbsp;the&nbsp;input&nbsp;xpath<br>
+&nbsp;<br>
+:param&nbsp;xpath:&nbsp;element&nbsp;xpath<br>
+:type&nbsp;xpath:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;element&nbsp;exists&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-fill"><strong>fill</strong></a>(self, txt_element, text)</dt><dd><tt>the&nbsp;element&nbsp;to&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;filled<br>
+&nbsp;<br>
+:param&nbsp;txt_element:<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;The&nbsp;text&nbsp;used&nbsp;to&nbsp;fill&nbsp;the&nbsp;text&nbsp;field<br>
+:type&nbsp;text:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-fill_safe"><strong>fill_safe</strong></a>(self, txt_element, text)</dt><dd><tt>safely&nbsp;fills&nbsp;the&nbsp;provided&nbsp;text&nbsp;field&nbsp;with&nbsp;the&nbsp;given&nbsp;text&nbsp;without&nbsp;causing&nbsp;a&nbsp;crash<br>
+&nbsp;<br>
+:param&nbsp;txt_element:&nbsp;the&nbsp;element&nbsp;to&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;filled<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;the&nbsp;text&nbsp;used&nbsp;to&nbsp;fill&nbsp;the&nbsp;text&nbsp;field<br>
+:type&nbsp;text:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_element_by_class_name"><strong>find_element_by_class_name</strong></a>(self, class_name)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;class_name:&nbsp;element&nbsp;class&nbsp;name<br>
+:type&nbsp;class_name:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_element_by_id"><strong>find_element_by_id</strong></a>(self, vid)</dt><dd><tt>"<br>
+finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+&nbsp;<br>
+:param&nbsp;vid:&nbsp;element&nbsp;id<br>
+:type&nbsp;vid:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_element_by_link_text"><strong>find_element_by_link_text</strong></a>(self, link_txt)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+&nbsp;<br>
+:param&nbsp;link_txt:&nbsp;element&nbsp;link&nbsp;text<br>
+:type&nbsp;link_txt:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_element_by_name"><strong>find_element_by_name</strong></a>(self, vname)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;vname:&nbsp;element&nbsp;name<br>
+:type&nbsp;vname:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_element_by_xpath"><strong>find_element_by_xpath</strong></a>(self, xpath)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+&nbsp;<br>
+:param&nbsp;xpath:&nbsp;element&nbsp;xpath<br>
+:type&nbsp;xpath:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_elements_by_class_name"><strong>find_elements_by_class_name</strong></a>(self, class_name, driver=None)</dt><dd><tt>"<br>
+finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed&nbsp;in,&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;used<br>
+&nbsp;<br>
+:param&nbsp;class_name:&nbsp;elements&nbsp;class&nbsp;name<br>
+:type&nbsp;class_name:&nbsp;str<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;from&nbsp;which&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;element&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_elements_by_id"><strong>find_elements_by_id</strong></a>(self, vid)</dt><dd><tt>"<br>
+finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+&nbsp;<br>
+:param&nbsp;vid:&nbsp;elements&nbsp;id<br>
+:type&nbsp;vid:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_elements_by_link_text"><strong>find_elements_by_link_text</strong></a>(self, link_txt)</dt><dd><tt>finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+&nbsp;<br>
+:param&nbsp;link_txt:&nbsp;elements&nbsp;link&nbsp;text<br>
+:type&nbsp;link_txt:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_elements_by_name"><strong>find_elements_by_name</strong></a>(self, vname)</dt><dd><tt>finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;vname:&nbsp;elements&nbsp;name<br>
+:type&nbsp;vname:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-find_elements_by_xpath"><strong>find_elements_by_xpath</strong></a>(self, xpath)</dt><dd><tt>finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+&nbsp;<br>
+:param&nbsp;xpath:&nbsp;elements&nbsp;xpath<br>
+:type&nbsp;xpath:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-firefox_driver_init"><strong>firefox_driver_init</strong></a>(self)</dt><dd><tt>initializes&nbsp;the&nbsp;firefox&nbsp;driver<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;class'&nbsp;driver<br>
+:rtype:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_account_changepassword_url"><strong>get_account_changepassword_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;change&nbsp;password&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;change&nbsp;password&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_account_edit_url"><strong>get_account_edit_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;edit&nbsp;account&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;edit&nbsp;account&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_account_overview_url"><strong>get_account_overview_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;account&nbsp;overview&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;account&nbsp;overview&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_driver"><strong>get_driver</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;class'&nbsp;driver<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;class'&nbsp;driver<br>
+:rtype:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_home_url"><strong>get_home_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;home&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;home&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_login_url"><strong>get_login_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;login&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;login&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_month_dict"><strong>get_month_dict</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;month&nbsp;name&nbsp;to&nbsp;month&nbsp;number&nbsp;dictionary<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;the&nbsp;month&nbsp;names&nbsp;to&nbsp;month&nbsp;numbers<br>
+:rtype:&nbsp;dict</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_month_name_from"><strong>get_month_name_from</strong></a>(self, in_val)</dt><dd><tt>:param&nbsp;in_val:&nbsp;month&nbsp;number<br>
+:type&nbsp;in_val:&nbsp;int<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;month&nbsp;name<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_month_val_from"><strong>get_month_val_from</strong></a>(self, name)</dt><dd><tt>gets&nbsp;the&nbsp;month&nbsp;number&nbsp;from&nbsp;the&nbsp;input&nbsp;month&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;month<br>
+:type&nbsp;name:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;month&nbsp;number<br>
+:rtype:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_premium_url"><strong>get_premium_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;premium&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;premium&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-get_signup_url"><strong>get_signup_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;sign&nbsp;up&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;sign&nbsp;up&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-hover_to_element"><strong>hover_to_element</strong></a>(self, element, driver=None)</dt><dd><tt>Hovers&nbsp;the&nbsp;mouse&nbsp;over&nbsp;an&nbsp;element<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed,&nbsp;the&nbsp;driver&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;the&nbsp;class'&nbsp;driver<br>
+&nbsp;<br>
+:param&nbsp;element:&nbsp;the&nbsp;web&nbsp;element&nbsp;that&nbsp;the&nbsp;mouse&nbsp;will&nbsp;hover&nbsp;over<br>
+:type&nbsp;element:&nbsp;WebDriver&nbsp;element<br>
+:param&nbsp;driver:&nbsp;the&nbsp;web&nbsp;driver&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-report_allure"><strong>report_allure</strong></a>(self, msg, driver=None)</dt><dd><tt>"<br>
+attaches&nbsp;a&nbsp;screenshot&nbsp;to&nbsp;allure's&nbsp;report<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed&nbsp;in,&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;used<br>
+&nbsp;<br>
+:param&nbsp;msg:&nbsp;the&nbsp;message&nbsp;used&nbsp;to&nbsp;be&nbsp;attached&nbsp;with&nbsp;the&nbsp;screenshot<br>
+:type&nbsp;msg:&nbsp;str<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;used&nbsp;to&nbsp;take&nbsp;a&nbsp;screenshot&nbsp;from&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-screenshot"><strong>screenshot</strong></a>(self, driver)</dt><dd><tt>takes&nbsp;a&nbsp;screenshot&nbsp;of&nbsp;the&nbsp;website&nbsp;using&nbsp;the&nbsp;given&nbsp;driver<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;used&nbsp;to&nbsp;take&nbsp;the&nbsp;screenshot&nbsp;from<br>
+:type&nbsp;driver:&nbsp;WebDriver<br>
+&nbsp;<br>
+:returns:&nbsp;image&nbsp;screenshot<br>
+:rtype:&nbsp;png&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-select_element_by_index"><strong>select_element_by_index</strong></a>(self, element, index)</dt><dd><tt>selects&nbsp;an&nbsp;option&nbsp;from&nbsp;the&nbsp;provided&nbsp;element&nbsp;using&nbsp;a&nbsp;given&nbsp;index<br>
+&nbsp;<br>
+:param&nbsp;element:&nbsp;the&nbsp;element&nbsp;from&nbsp;which&nbsp;the&nbsp;item&nbsp;is&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;index:&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;item&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;index:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-select_element_by_text"><strong>select_element_by_text</strong></a>(self, element, text)</dt><dd><tt>selects&nbsp;an&nbsp;option&nbsp;from&nbsp;the&nbsp;provided&nbsp;element&nbsp;using&nbsp;a&nbsp;given&nbsp;text<br>
+&nbsp;<br>
+:param&nbsp;element:&nbsp;the&nbsp;element&nbsp;from&nbsp;which&nbsp;the&nbsp;item&nbsp;is&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;the&nbsp;text&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;text:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-set_driver"><strong>set_driver</strong></a>(self, driver)</dt><dd><tt>sets&nbsp;the&nbsp;class'&nbsp;driver&nbsp;with&nbsp;the&nbsp;input&nbsp;driver<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;to&nbsp;which&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;to&nbsp;be&nbsp;set<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="WebPlayerHome-url_has"><strong>url_has</strong></a>(self, text, driver=None)</dt><dd><tt>checks&nbsp;if&nbsp;the&nbsp;current&nbsp;driver&nbsp;url&nbsp;contains&nbsp;the&nbsp;input&nbsp;text<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed&nbsp;in,&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;used<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;the&nbsp;text&nbsp;to&nbsp;be&nbsp;compared&nbsp;with&nbsp;the&nbsp;driver's&nbsp;current&nbsp;url<br>
+:type&nbsp;text:&nbsp;str<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;from&nbsp;which&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;url&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;current&nbsp;driver's&nbsp;url&nbsp;contains&nbsp;the&nbsp;input&nbsp;text&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>:<br>
+<dl><dt><strong>base_url</strong> = 'http://ec2-3-21-218-250.us-east-2.compute.amazonaws.com/'</dl>
+
+<dl><dt><strong>month_dict</strong> = {'April': 4, 'August': 8, 'December': 12, 'February': 2, 'January': 1, 'July': 7, 'June': 6, 'March': 3, 'May': 5, 'November': 11, ...}</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
