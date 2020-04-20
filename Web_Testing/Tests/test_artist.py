@@ -32,9 +32,8 @@ from Web_Testing.Pages.artist import Artist
 @allure.severity(allure.severity_level.CRITICAL)
 class TestPlaylist:
     # TODO: change Firefox executable path to your needs
-    driver = WebHelper().firefox_driver_init()
     helper = WebHelper()
-    helper.set_driver(driver)
+    driver = helper.firefox_driver_init()
     artist = Artist(driver)
 
     def login_first(self):
@@ -65,7 +64,7 @@ class TestPlaylist:
         self.driver.maximize_window()
         yield
         self.driver.close()
-        self.driver.stop_display()
+        self.helper.stop_display()
 
     # Test #1 -> Play Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -90,7 +89,7 @@ class TestPlaylist:
             assert True
         else:
             self.helper.report_allure("FAILURE: Artist Bio is wrong")
-            assert False
+            exit(-1)
 
     # Test #2 -> Play Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -115,4 +114,4 @@ class TestPlaylist:
             assert True
         else:
             self.helper.report_allure("FAILURE: follow button is functional")
-            assert False
+            exit(-1)

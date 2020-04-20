@@ -21,7 +21,9 @@ from Web_Testing.helperClasses import ConstantsClass
 @allure.feature("Home Page")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLoggedOutHome:
-    driver = WebHelper().firefox_driver_init()
+
+    helper = WebHelper()
+    driver = helper.firefox_driver_init()
 
     @pytest.yield_fixture
     def setup(self):
@@ -35,7 +37,7 @@ class TestLoggedOutHome:
         self.driver.maximize_window()
         yield
         self.driver.close()
-        self.driver.stop_display()
+        self.helper.stop_display()
 
     # Test #1 -> Signup button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -54,7 +56,7 @@ class TestLoggedOutHome:
             assert True
         else:
             WebHelper().report_allure("Signup button failed", self.driver)
-            assert False
+            exit(-1)
 
     # Test #2 -> Testing Login Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -73,7 +75,7 @@ class TestLoggedOutHome:
             assert True
         else:
             WebHelper().report_allure("Login button failed", self.driver)
-            assert False
+            exit(-1)
 
     # Test #3 -> Testing Premium Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -91,4 +93,4 @@ class TestLoggedOutHome:
             assert True
         else:
             WebHelper().report_allure("Premium button failed", self.driver)
-            assert False
+            exit(-1)

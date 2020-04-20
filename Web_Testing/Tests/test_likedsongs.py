@@ -32,9 +32,8 @@ from Web_Testing.Pages.LikedSongs import LikedSongs
 @allure.severity(allure.severity_level.CRITICAL)
 class TestLikedSongs:
     # TODO: change Firefox executable path to your needs
-    driver = WebHelper().firefox_driver_init()
     helper = WebHelper()
-    helper.set_driver(driver)
+    driver = helper.firefox_driver_init()
     liked_songs = LikedSongs(driver)
 
     @pytest.yield_fixture
@@ -43,7 +42,7 @@ class TestLikedSongs:
         self.driver.maximize_window()
         yield
         self.driver.close()
-        self.driver.stop_display()
+        self.helper.stop_display()
 
     # Test #1 -> Check Liked Songs
     @allure.severity(allure.severity_level.BLOCKER)
@@ -66,4 +65,4 @@ class TestLikedSongs:
             assert True
         else:
             self.helper.report_allure("FAILURE: Liked Songs are not correct")
-            assert False
+            exit(-1)

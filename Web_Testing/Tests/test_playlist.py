@@ -30,9 +30,8 @@ from Web_Testing.Pages.WebPlayerHome import WebPlayerHome
 @allure.severity(allure.severity_level.CRITICAL)
 class TestPlaylist:
     # TODO: change Firefox executable path to your needs
-    driver = WebHelper().firefox_driver_init()
     helper = WebHelper()
-    helper.set_driver(driver)
+    driver = helper.firefox_driver_init()
 
     def login_first(self):
         lp = LoginPage(self.driver)
@@ -48,7 +47,7 @@ class TestPlaylist:
         self.driver.maximize_window()
         yield
         self.driver.close()
-        self.driver.stop_display()
+        self.helper.stop_display()
 
     @pytest.yield_fixture
     def setup(self):
@@ -63,7 +62,7 @@ class TestPlaylist:
         self.driver.maximize_window()
         yield
         self.driver.close()
-        self.driver.stop_display()
+        self.helper.stop_display()
 
     # Test #1 -> Play Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -89,4 +88,4 @@ class TestPlaylist:
             assert True
         else:
             self.helper.report_allure("FAILURE: Playlist card doesn't go to the right playlist")
-            assert False
+            exit(-1)

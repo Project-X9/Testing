@@ -28,7 +28,6 @@ from Web_Testing.helperClasses import ConstantsClass
 class TestChangePassword:
     helper = WebHelper()
     driver = helper.firefox_driver_init()
-    helper.set_driver(driver)
 
     email = "test14@test.com"
     new_password = "12345678"
@@ -53,7 +52,7 @@ class TestChangePassword:
     def setup_final(self):
         yield
         self.driver.close()
-        self.driver.stop_display()
+        self.helper.stop_display()
 
     # Test #1 -> Change password with empty password
     @allure.severity(allure.severity_level.BLOCKER)
@@ -97,8 +96,10 @@ class TestChangePassword:
         account_overview_page.click_change_password()
 
         time.sleep(2)
-
-        assert (not did_login_new)
+        if did_login_new:
+            exit(-1)
+        else:
+            assert True
 
     # Test #2 -> Change Password with empty confirmation password
     @allure.severity(allure.severity_level.BLOCKER)
@@ -137,7 +138,10 @@ class TestChangePassword:
 
         time.sleep(2)
 
-        assert (not did_login_new)
+        if did_login_new:
+            exit(-1)
+        else:
+            assert True
 
     # Test #3 -> Change Password with different confirmation password
     @allure.severity(allure.severity_level.BLOCKER)
@@ -178,7 +182,10 @@ class TestChangePassword:
         account_overview_page = AccountOverviewPage(self.driver)
         account_overview_page.click_change_password()
 
-        assert (not did_login_new)
+        if did_login_new:
+            exit(-1)
+        else:
+            assert True
 
     # Test #4 -> Change Password with correct credentials
     @allure.severity(allure.severity_level.BLOCKER)
@@ -209,4 +216,7 @@ class TestChangePassword:
         if did_login_new:
             self.helper.report_allure("SUCCESS: Logged in with new password")
 
-        assert did_login_new
+        if did_login_new:
+            assert True
+        else:
+            exit(-1)

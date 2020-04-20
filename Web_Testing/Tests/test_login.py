@@ -21,7 +21,9 @@ from Web_Testing.helperClasses import WebHelper
 @allure.feature("Login Tests")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLogin:
-    driver = WebHelper().firefox_driver_init()
+
+    helper = WebHelper()
+    driver = helper.firefox_driver_init()
     link = WebHelper().get_login_url()
     correct_emails = ["test1@test.com", "test2@test.com", "test3@test.com"]
     correct_passwords = ["test123", "test234", "test345"]
@@ -40,7 +42,7 @@ class TestLogin:
         self.driver.maximize_window()
         yield
         self.driver.close()
-        self.driver.stop_display()
+        self.helper.stop_display()
 
     # Test #1 ->Correct credentials
     @allure.severity(allure.severity_level.BLOCKER)
@@ -61,7 +63,7 @@ class TestLogin:
             assert True
         else:
             WebHelper().report_allure("ERROR: Login failed with correct credentials", self.driver)
-            assert False
+            exit(-1)
 
     # Test #2 ->Correct credentials
     @allure.severity(allure.severity_level.BLOCKER)
@@ -82,7 +84,7 @@ class TestLogin:
             assert True
         else:
             WebHelper().report_allure("ERROR: Login failed with correct credentials", self.driver)
-            assert False
+            exit(-1)
 
     # Test #3 ->Correct credentials
     @allure.severity(allure.severity_level.BLOCKER)
@@ -103,7 +105,7 @@ class TestLogin:
             assert True
         else:
             WebHelper().report_allure("ERROR: Login failed with correct credentials", self.driver)
-            assert False
+            exit(-1)
 
     # Test #4 ->Wrong Password
     @allure.severity(allure.severity_level.BLOCKER)
@@ -122,7 +124,7 @@ class TestLogin:
         if lp.login_to_spotify("kamelmohsenkamel@gmail.com", "wrong_password"):
             ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with incorrect credentials", self.driver)
-            assert False
+            exit(-1)
         else:
             WebHelper().report_allure("SUCCESS: Login failed with incorrect credentials", self.driver)
             assert True
@@ -143,7 +145,7 @@ class TestLogin:
         if lp.login_to_spotify("kamelmohsenkamel", "Kimo2010"):
             ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with incorrect credentials", self.driver)
-            assert False
+            exit(-1)
         else:
             WebHelper().report_allure("SUCCESS: Login failed with incorrect credentials", self.driver)
             assert True
@@ -164,7 +166,7 @@ class TestLogin:
         if lp.login_to_spotify("test_wrong@email.com", "UnknownPassowrd"):
             ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with incorrect credentials", self.driver)
-            assert False
+            exit(-1)
         else:
             WebHelper().report_allure("SUCCESS: Login failed with incorrect credentials", self.driver)
             assert True
@@ -185,7 +187,7 @@ class TestLogin:
         if lp.login_to_spotify("", "Kimo2010"):
             ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with empty email", self.driver)
-            assert False
+            exit(-1)
         else:
             WebHelper().report_allure("SUCCESS: Login failed with empty email", self.driver)
             assert True
@@ -206,7 +208,7 @@ class TestLogin:
         if lp.login_to_spotify("mohdos_1999@hotmail.com", ""):
             ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with empty password", self.driver)
-            assert False
+            exit(-1)
         else:
             WebHelper().report_allure("SUCCESS: Login failed with empty password", self.driver)
             assert True
@@ -227,7 +229,7 @@ class TestLogin:
         if lp.login_to_spotify("", ""):
             ap.click_logout()
             WebHelper().report_allure("ERROR: Login succeeded with empty email and password", self.driver)
-            assert False
+            exit(-1)
         else:
             WebHelper().report_allure("SUCCESS: Login failed with empty email and password", self.driver)
             assert True
@@ -250,7 +252,7 @@ class TestLogin:
             WebHelper().report_allure(
                 "ERROR: Elements are not available after refresh OR Invalid text warnings appeared after refresh"
                 , self.driver)
-            assert False
+            exit(-1)
         else:
             WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
             assert True
