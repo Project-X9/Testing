@@ -26,6 +26,7 @@ from Web_Testing.helperClasses import ConstantsClass
 @allure.severity(allure.severity_level.BLOCKER)
 class TestWebPlayerLibrary:
 
+    exit_code = 0
     helper = WebHelper()
     driver = helper.firefox_driver_init()
 
@@ -50,6 +51,8 @@ class TestWebPlayerLibrary:
         yield
         self.driver.close()
         self.helper.stop_display()
+        if self.exit_code == -1:
+            exit(-1)
 
     # Test #1 -> Your Library Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -74,7 +77,8 @@ class TestWebPlayerLibrary:
             assert True
         else:
             self.helper.report_allure("FAILURE: Your Library Liked songs cards are not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #2 -> Playlists Cards
     @allure.severity(allure.severity_level.BLOCKER)
@@ -94,7 +98,8 @@ class TestWebPlayerLibrary:
             assert True
         else:
             self.helper.report_allure("FAILURE: Your Library page playlist cards are not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #3 -> Liked Songs Text Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -115,7 +120,8 @@ class TestWebPlayerLibrary:
             assert True
         else:
             self.helper.report_allure("FAILURE: The Liked Songs Card button in your Library page is not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #4 -> Your Library Button with empty playlist
     @allure.severity(allure.severity_level.BLOCKER)
@@ -142,4 +148,5 @@ class TestWebPlayerLibrary:
         if web_player_library.check_liked_songs_click():
             assert True
         else:
-            exit(-1)
+            self.exit_code = -1
+            assert False

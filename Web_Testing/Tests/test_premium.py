@@ -28,6 +28,7 @@ from Web_Testing.Pages.AccountOverviewPage import AccountOverviewPage
 @allure.feature("Premium page test")
 @allure.severity(allure.severity_level.CRITICAL)
 class TestPremium:
+    exit_code = 0
     # TODO: change Firefox executable path to your needs
     helper = WebHelper()
     driver = helper.firefox_driver_init()
@@ -67,6 +68,8 @@ class TestPremium:
         yield
         self.driver.close()
         self.helper.stop_display()
+        if self.exit_code == -1:
+            exit(-1)
 
     # Test #1 ->Checking that get premium works and change account to premium
     @allure.severity(allure.severity_level.CRITICAL)
@@ -82,7 +85,8 @@ class TestPremium:
             assert True
         else:
             WebHelper().report_allure("Fail to change to premium account ", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # # Test #2 ->Checking that all buttons and links work
     # @allure.severity(allure.severity_level.BLOCKER)
@@ -99,7 +103,8 @@ class TestPremium:
     #         assert True
     #     else:
     #         WebHelper().report_allure("Get Premium button not functional", self.driver)
-    #         exit(-1)
+    #         self.exit_code = -1
+            assert False
 
     # Test #3 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
@@ -116,7 +121,8 @@ class TestPremium:
             assert True
         else:
             WebHelper().report_allure("Spotify logo not functional", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #4 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
@@ -134,7 +140,8 @@ class TestPremium:
             assert True
         else:
             WebHelper().report_allure("Account link not functional", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #5 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
@@ -151,7 +158,8 @@ class TestPremium:
             assert True
         else:
             WebHelper().report_allure("Download link not functional", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #6 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
@@ -168,7 +176,8 @@ class TestPremium:
             assert True
         else:
             WebHelper().report_allure("Help link not functional", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #7 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
@@ -185,7 +194,8 @@ class TestPremium:
             assert True
         else:
             WebHelper().report_allure("Premium link not functional", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #8 ->Checking that all buttons and links work
     @allure.severity(allure.severity_level.BLOCKER)
@@ -202,4 +212,5 @@ class TestPremium:
             assert True
         else:
             WebHelper().report_allure("Logout button not functional", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False

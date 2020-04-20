@@ -23,6 +23,7 @@ import time
 @allure.feature("Signup Tests")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestSignup:
+    exit_code = 0
     # TODO: change Chrome executable path to your needs
     helper = WebHelper()
     driver = helper.firefox_driver_init()
@@ -48,6 +49,8 @@ class TestSignup:
         yield
         self.driver.close()
         self.helper.stop_display()
+        if self.exit_code == -1:
+            exit(-1)
 
     # Test #1 -> Different Confirmation email
     @allure.severity(allure.severity_level.BLOCKER)
@@ -63,7 +66,8 @@ class TestSignup:
         self.driver.implicitly_wait(3)
         if not sp.check_signup_page():
             WebHelper().report_allure(self.driver, "TIMEOUT: Sign up page not loading")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
         constants = ConstantsClass()
         emails = constants.get_test_emails()
@@ -72,7 +76,8 @@ class TestSignup:
 
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with different confirmation email", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up unsuccessful with different confirmation email", self.driver)
             assert True
@@ -94,7 +99,8 @@ class TestSignup:
         time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with empty email", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with empty email", self.driver)
             assert True
@@ -117,7 +123,8 @@ class TestSignup:
 
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with registered email", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with already registered email", self.driver)
             assert True
@@ -142,7 +149,8 @@ class TestSignup:
             assert True
         else:
             WebHelper().report_allure("ERROR: Sign up did not proceed with correct credentials and values", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #5 -> Empty Password
     @allure.severity(allure.severity_level.BLOCKER)
@@ -161,7 +169,8 @@ class TestSignup:
         time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with empty password", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with empty password", self.driver)
             assert True
@@ -183,7 +192,8 @@ class TestSignup:
         time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected gender", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with unselected gender", self.driver)
             assert True
@@ -205,7 +215,8 @@ class TestSignup:
         time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected day", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with unselected day", self.driver)
             assert True
@@ -227,7 +238,8 @@ class TestSignup:
         time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected month", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with unselected month", self.driver)
             assert True
@@ -248,7 +260,8 @@ class TestSignup:
         time.sleep(3)
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with unselected year", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with unselected year", self.driver)
             assert True
@@ -271,7 +284,8 @@ class TestSignup:
 
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with empty confirmation email", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with empty confirmation email", self.driver)
             assert True
@@ -296,7 +310,8 @@ class TestSignup:
             WebHelper().report_allure(
                 "ERROR: Some elements are not available after refresh OR Invalid text warnings appeared after refresh"
                 , self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Elements are available after refresh", self.driver)
             assert True
@@ -316,7 +331,8 @@ class TestSignup:
 
         if sp.signup_to_spotify(profile):
             WebHelper().report_allure("ERROR: Sign up proceeded with invalid age values", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             WebHelper().report_allure("SUCCESS: Sign up stopped with invalid age values", self.driver)
             assert True

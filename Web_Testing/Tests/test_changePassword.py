@@ -26,6 +26,7 @@ from Web_Testing.helperClasses import ConstantsClass
 @allure.feature("Change Password")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestChangePassword:
+    exit_code = 0
     helper = WebHelper()
     driver = helper.firefox_driver_init()
 
@@ -53,6 +54,8 @@ class TestChangePassword:
         yield
         self.driver.close()
         self.helper.stop_display()
+        if self.exit_code == -1:
+            exit(-1)
 
     # Test #1 -> Change password with empty password
     @allure.severity(allure.severity_level.BLOCKER)
@@ -97,7 +100,8 @@ class TestChangePassword:
 
         time.sleep(2)
         if did_login_new:
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             assert True
 
@@ -139,7 +143,8 @@ class TestChangePassword:
         time.sleep(2)
 
         if did_login_new:
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             assert True
 
@@ -183,7 +188,8 @@ class TestChangePassword:
         account_overview_page.click_change_password()
 
         if did_login_new:
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             assert True
 
@@ -219,4 +225,5 @@ class TestChangePassword:
         if did_login_new:
             assert True
         else:
-            exit(-1)
+            self.exit_code = -1
+            assert False

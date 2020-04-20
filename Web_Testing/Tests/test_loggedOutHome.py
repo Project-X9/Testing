@@ -21,7 +21,7 @@ from Web_Testing.helperClasses import ConstantsClass
 @allure.feature("Home Page")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestLoggedOutHome:
-
+    exit_code = 0
     helper = WebHelper()
     driver = helper.firefox_driver_init()
 
@@ -38,6 +38,8 @@ class TestLoggedOutHome:
         yield
         self.driver.close()
         self.helper.stop_display()
+        if self.exit_code == -1:
+            exit(-1)
 
     # Test #1 -> Signup button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -56,7 +58,8 @@ class TestLoggedOutHome:
             assert True
         else:
             WebHelper().report_allure("Signup button failed", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #2 -> Testing Login Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -75,7 +78,8 @@ class TestLoggedOutHome:
             assert True
         else:
             WebHelper().report_allure("Login button failed", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #3 -> Testing Premium Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -93,4 +97,5 @@ class TestLoggedOutHome:
             assert True
         else:
             WebHelper().report_allure("Premium button failed", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False

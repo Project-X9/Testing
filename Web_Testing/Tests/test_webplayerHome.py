@@ -23,7 +23,7 @@ from Web_Testing.helperClasses import ConstantsClass
 @allure.feature("Web Player Home Page and Menu")
 @allure.severity(allure.severity_level.BLOCKER)
 class TestWebPlayerHomeWithMenu:
-
+    exit_code = 0
     helper = WebHelper()
     driver = helper.firefox_driver_init()
 
@@ -48,6 +48,8 @@ class TestWebPlayerHomeWithMenu:
         yield
         self.driver.close()
         self.helper.stop_display()
+        if self.exit_code == -1:
+            exit(-1)
 
     # Test #1 -> Your Library Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -71,7 +73,8 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Your Library button is not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #2 -> Liked Songs Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -90,7 +93,8 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Liked Songs button is not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #3 -> Playlists Cards
     @allure.severity(allure.severity_level.BLOCKER)
@@ -108,7 +112,8 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Playlist cards are not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #4 -> Artists Cards
     @allure.severity(allure.severity_level.BLOCKER)
@@ -126,7 +131,8 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Artists cards are not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #5 -> Albums Cards
     @allure.severity(allure.severity_level.BLOCKER)
@@ -144,7 +150,8 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Albums cards are not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test 6 -> Refresh Test
     @allure.severity(allure.severity_level.BLOCKER)
@@ -160,7 +167,8 @@ class TestWebPlayerHomeWithMenu:
         if (web_player_home.home_link is None) or (web_player_home.your_library_button is None) \
                 or (web_player_home.liked_songs_link is None) or (web_player_home.profile_btn is None):
             self.helper.report_allure("FAILURE: Refresh caused some elements to disappear", self.driver)
-            exit(-1)
+            self.exit_code = -1
+            assert False
         else:
             self.helper.report_allure("SUCCESS: Elements are still visible after refresh", self.driver)
             assert True
@@ -180,7 +188,8 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Sign out button is not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #8 -> Test signup Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -199,7 +208,8 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Sign up button is not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
 
     # Test #9 -> Test login Button
     @allure.severity(allure.severity_level.BLOCKER)
@@ -218,4 +228,5 @@ class TestWebPlayerHomeWithMenu:
             assert True
         else:
             self.helper.report_allure("FAILURE: Login button is not functional")
-            exit(-1)
+            self.exit_code = -1
+            assert False
