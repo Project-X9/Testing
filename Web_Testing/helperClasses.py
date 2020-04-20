@@ -7,6 +7,7 @@ from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
@@ -114,7 +115,7 @@ class WebHelper:
 
     """
 
-    base_url = "http://ec2-3-21-218-250.us-east-2.compute.amazonaws.com/"
+    base_url = "http://localhost/"
     month_dict = {"January": 1, "February": 2, "March": 3
         , "April": 4, "May": 5, "June": 6
         , "July": 7, "August": 8, "September": 9
@@ -217,8 +218,9 @@ class WebHelper:
         :returns: the class' driver
         :rtype: WebDriver
         """
-
-        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
+        options = Options()
+        options.headless = True
+        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
         return self.driver
 
     def get_driver(self):
