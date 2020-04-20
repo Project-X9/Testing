@@ -223,7 +223,7 @@ class WebHelper:
         :returns: the class' driver
         :rtype: WebDriver
         """
-        self.display = Display(visible=0, size=(800, 600))
+        self.display = Display(visible=0, size=(1280, 720))
         self.display.start()
         # options = Options()
         # options.headless = True
