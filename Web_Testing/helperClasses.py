@@ -3,6 +3,7 @@ import datetime
 
 import allure
 from allure_commons.types import AttachmentType
+from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver import ActionChains
@@ -29,6 +30,8 @@ class WebHelper:
         a dictionary that maps the month name to month number
     driver : WebDriver
         holds the web driver of the class
+    display: Display
+        Virtual display
 
     Methods
     -------
@@ -54,6 +57,8 @@ class WebHelper:
         initializes the chrome driver
     firefox_driver_init()
         initializes the firefox driver
+    stop_display()
+        Stops the virtual display
     get_driver()
         gets the class' driver
     url_has(text, driver=None)
@@ -218,10 +223,20 @@ class WebHelper:
         :returns: the class' driver
         :rtype: WebDriver
         """
-        options = Options()
-        options.headless = True
-        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
+        self.display = Display(visible=0, size=(800, 600))
+        self.display.start()
+        # options = Options()
+        # options.headless = True
+        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         return self.driver
+
+    def stop_display(self):
+        """
+        Stops the virtual display
+        """
+        if self.display is None:
+            return
+        self.display.stop()
 
     def get_driver(self):
         """

@@ -43,6 +43,7 @@ class TestLikedSongs:
         self.driver.maximize_window()
         yield
         self.driver.close()
+        self.driver.stop_display()
 
     # Test #1 -> Check Liked Songs
     @allure.severity(allure.severity_level.BLOCKER)

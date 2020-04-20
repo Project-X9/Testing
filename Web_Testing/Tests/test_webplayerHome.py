@@ -47,6 +47,7 @@ class TestWebPlayerHomeWithMenu:
         self.driver.maximize_window()
         yield
         self.driver.close()
+        self.driver.stop_display()
 
     # Test #1 -> Your Library Button
     @allure.severity(allure.severity_level.BLOCKER)

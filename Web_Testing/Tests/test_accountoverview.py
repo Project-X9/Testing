@@ -64,6 +64,7 @@ class TestAccountOverview:
         logged_out_page.click_login()
         yield
         self.driver.close()
+        self.driver.stop_display()
 
     # Test #1 ->Check all information in account overview page
     @allure.severity(allure.severity_level.CRITICAL)

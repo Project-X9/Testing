@@ -40,6 +40,7 @@ class TestLogin:
         self.driver.maximize_window()
         yield
         self.driver.close()
+        self.driver.stop_display()
 
     # Test #1 ->Correct credentials
     @allure.severity(allure.severity_level.BLOCKER)

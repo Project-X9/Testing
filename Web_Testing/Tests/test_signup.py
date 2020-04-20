@@ -45,6 +45,7 @@ class TestSignup:
         self.driver.maximize_window()
         yield
         self.driver.close()
+        self.driver.stop_display()
 
     # Test #1 -> Different Confirmation email
     @allure.severity(allure.severity_level.BLOCKER)

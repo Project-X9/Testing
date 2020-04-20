@@ -65,6 +65,7 @@ class TestPremium:
         self.driver.maximize_window()
         yield
         self.driver.close()
+        self.driver.stop_display()
 
     # Test #1 ->Checking that get premium works and change account to premium
     @allure.severity(allure.severity_level.CRITICAL)

@@ -53,6 +53,7 @@ class TestChangePassword:
     def setup_final(self):
         yield
         self.driver.close()
+        self.driver.stop_display()
 
     # Test #1 -> Change password with empty password
     @allure.severity(allure.severity_level.BLOCKER)
