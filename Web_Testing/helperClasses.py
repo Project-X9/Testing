@@ -114,8 +114,8 @@ class WebHelper:
 
     """
 
-    base_url = "http://ec2-3-21-218-250.us-east-2.compute.amazonaws.com/"
-    # base_url = "https://www.spotify.com/eg-en/"
+    # base_url = "http://ec2-3-21-218-250.us-east-2.compute.amazonaws.com/"
+    base_url = "https://www.spotify.com/eg-en/"
     month_dict = {"January": 1, "February": 2, "March": 3
         , "April": 4, "May": 5, "June": 6
         , "July": 7, "August": 8, "September": 9
@@ -584,7 +584,10 @@ class WebHelper:
         """
         if btn is None:
             return
-        btn.click()
+        try:
+            btn.click()
+        except:
+            return
 
     def hover_to_element(self, element, driver=None):
         """
@@ -615,7 +618,10 @@ class WebHelper:
         """
         if txt_element is None:
             return
-        txt_element.send_keys(text)
+        try:
+            txt_element.send_keys(text)
+        except:
+            return
 
     def clear_txt_safe(self, txt_element):
         """
@@ -627,7 +633,11 @@ class WebHelper:
         """
         if txt_element is None:
             return
-        txt_element.clear()
+
+        try:
+            txt_element.clear()
+        except:
+            return
 
     def screenshot(self, driver):
         """
@@ -1006,3 +1016,73 @@ class Gender(enum.Enum):
     MALE = "Male"
     UNSELECTED = "Un selected"
     FEMALE = "Female"
+
+
+class CustomTime:
+    """
+    A class used for representing the time as minutes and seconds
+
+    Attributes
+    ----------
+    minutes : int
+        time minutes
+    seconds : int
+        time seconds
+
+    Methods
+    -------
+    is_greater_than(minutes, seconds)
+        Checks if the class' self time is greater than the provided time
+    is_equal_to(minutes, seconds)
+        Checks if the class' self time is equal to the provided time
+    """
+    def __init__(self, minutes, seconds):
+        """
+        Initializes the minutes and seconds
+
+        :param minutes: time minutes
+        :type minutes: int
+
+        :param seconds: time seconds
+        :type minutes: int
+        """
+        self.minutes = minutes
+        self.seconds = seconds
+
+    def is_greater_than(self, minutes, seconds):
+        """
+        Checks if the class' self time is greater than the provided time
+
+        :param minutes: time minutes
+        :type minutes: int
+
+        :param seconds: time seconds
+        :type seconds: int
+
+        :returns: True if the class self time is greater than the provided time, False otherwise
+        :rtype: bool
+        """
+        if self.minutes > minutes:
+            return True
+        elif self.minutes < minutes:
+            return False
+        else:
+            if self.seconds > seconds:
+                return True
+            else:
+                return False
+
+    def is_equal_to(self, minutes, seconds):
+        """
+        Checks if the class' self time is equal to the provided time
+
+        :param minutes: time minutes
+        :type minutes: int
+
+        :param seconds: time seconds
+        :type seconds: int
+
+        :returns: True if the class self time is equal to the provided time, False otherwise
+        :rtype: bool
+        """
+        return self.minutes == minutes and self.seconds == seconds
