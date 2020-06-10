@@ -3,48 +3,61 @@ import time
 from Web_Testing.Pages.WebPlayerMenu import WebPlayerMenu
 from collections import defaultdict
 
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+
 
 class Artist(WebPlayerMenu):
     """
-    A class representing the Web Player's playlist
-    ...
+       A class representing the Web Player's artist
+       ...
 
-    Attributes
-    ----------
-    profile_btn : string
-          A string containing the xpath of profile button
-    logout_btn : string
-          A string containing the xpath of log out button
-    account_btn : string
-          A string containing the link text of account button
-    follow_btn : string
-          A string containing follow button
-    artist_name : string
-          A string containing the class name of artist name in the artist page
-    artist_name_about : string
-          A string containing the class name of artist name in the about page
-    about : string
-          A string containing the xpath of about button
-    playlist_name_card : string
-         A sting containing the name of the play list from the playlist card
-    page_left_btn : WebDriverElement
-         a Web driver element representing the Page left button
-    page_right_btn : WebDriverElement
-         a Web driver element representing the Page right button
+       Attributes
+       ----------
+       search_btn_xpath : string
+             A string containing the xpath of search button in home menu
+       search_textbox_xpath : string
+            A string containing the xpath of the search textbox in search page
+       search_artist_xpath : string
+            A sting containing the xpath of the artist appear after search in search page
+       context_menu_xpath : string
+             A string containing the xpath of context menu of the chosen artist
+       follow_btn_xpath : string
+             A string containing the xpath of follow button in the context menu of the chosen artist
+       artist_xpath : string
+             A sting containing the xpath of the artist appear after search in search page
+       your_library_btn_xpath : string
+             A string containing the xpath of your library button in home menu
+       artist_btn_xpath : string
+            A sting containing the xpath of artist button in your library page
+       artist_cards_xpath : string
+             A string containing the xpath of the list that contain all artists
+       first_artist_xpath : string
+            A sting containing the xpath of the first artist in artists
+       artist_name : string
+         A string containing the name of the artist to be added to the artists
 
-    """
+       Methods
+       -------
+       overview()
+           get number of artist before any action
+       follow_artist()
+           follow new artist
+       unfollow_artist()
+           unfollow artist
+       """
 
-    profile_btn = "//*[@id='root']/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div/div/nav/ul[2]/li[2]/li/div[1]/button"
-    logout_btn = "//*[@id='root']/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div/div/nav/ul[2]/li[2]/li/div[2]/button[3]/button"
-    account_btn = "Account"
-    follow_btn = "//*[@id='followButton']"
-    about = "/html/body/div[1]/div/div/div/div[1]/div/div/div[2]/div/div/div/div[3]/button[3]"
-    page_left_btn = "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[1]/button/a"
-    page_right_btn = "/html/body/div/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[1]/div/nav/div/div/div/ul/li[2]/button/a"
-    artist_name = "Header1"
-    artist_name_about = "//*[@id='bio-body']"
-    artist_link = "Artists"
-    artist_image = "//*[@id='root']/div/div/div/div[1]/div/div/div[2]/div/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/button/a/div/div[1]/div/div/div/div/img"
+    search_btn_xpath = "//*[@id='main']/div/div[2]/div[2]/nav/ul/li[2]/a"
+    search_textbox_xpath = "//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/div/input"
+    search_artist_xpath = "//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[4]"
+    context_menu_xpath = "//*[@id='main']/div/nav[6]"
+    follow_btn_xpath = "//*[@id='main']/div/nav[6]/div[2]"
+    artist_xpath = "// *[ @ id = 'main'] / div / div[3] / div / div[2] / div"
+    your_library_btn_xpath = "//*[@id='main']/div/div[2]/div[2]/nav/ul/li[3]/div/a"
+    artist_btn_xpath = "//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/nav/ul/li[3]/a"
+    artist_cards_xpath = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div"
+    first_artist_xpath = "// *[ @ id = 'main'] / div / div[2] / div[4] / div[1] / div / div[2] / section[1] / div[1] / div[1]"
+    artist_name = "Maher Zain"
 
     def __init__(self, driver):
         """
@@ -55,74 +68,57 @@ class Artist(WebPlayerMenu):
         """
         super().__init__(driver)
 
-    def click_artist(self):
-        """Clicks artist button"""
-        self.click_button_safe(self.find_element_by_link_text(self.artist_link))
-
-    def click_profile(self):
-        """Clicks Profile button"""
-        self.click_button_safe(self.find_element_by_xpath(self.profile_btn))
-
-    def click_account(self):
-        """Clicks Account button in profile list"""
-        self.click_profile()
-        self.click_button_safe(self.find_element_by_link_text(self.account_btn))
-
-    def click_logout_button(self):
-        """Clicks Logout button in profile list"""
-        self.click_profile()
-        self.click_button_safe(self.find_element_by_xpath(self.logout_btn))
-
-    def click_related_artist(self):
-        self.click_button_safe(self.find_element_by_xpath(self.related_artist))
-
-    def check_follow(self):
-        """
-        check clicking follow button
-
-        :return: true if follow button change to unfollow
-        :type: bool
-        """
-
-        self.click_button_safe(self.find_element_by_xpath(self.artist_image))
-        time.sleep(6)
-        self.click_follow()
+    def overview(self):
+        """get number of artist before any action"""
+        self.driver.find_element_by_xpath(self.your_library_btn_xpath).click()
         time.sleep(3)
-        print(self.find_element_by_xpath(self.follow_btn).text)
-        if self.find_element_by_xpath(self.follow_btn).text == "UNFOLLOW":
+        self.driver.find_element_by_xpath(self.artist_btn_xpath).click()
+        time.sleep(3)
+        self.no_of_artist_before_add = len(self.driver.find_elements(By.XPATH, self.artist_cards_xpath))
+
+    def follow_artist(self):
+        """
+                follow new artist
+
+                :return: boolean true if no. of artists before follow is smaller than no. of artists after follow
+                :rtype: bool
+        """
+        self.driver.find_element_by_xpath(self.search_btn_xpath).click()
+        self.driver.find_element_by_xpath(self.search_textbox_xpath).send_keys(self.artist_name)
+        time.sleep(15)
+        ActionChains(self.driver).move_to_element(
+            self.driver.find_element_by_xpath(self.search_artist_xpath)).context_click().perform()
+        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
+        time.sleep(5)
+        ActionChains(self.driver).move_to_element(
+            self.driver.find_element_by_xpath(self.follow_btn_xpath)).click().perform()
+        time.sleep(3)
+        self.driver.find_element_by_xpath(self.your_library_btn_xpath).click()
+        time.sleep(3)
+        self.driver.find_element_by_xpath(self.artist_btn_xpath).click()
+        time.sleep(3)
+        no_of_artist_after_add = len(self.driver.find_elements(By.XPATH, self.artist_cards_xpath))
+        if self.no_of_artist_before_add < no_of_artist_after_add:
             return True
         else:
             return False
 
-    def click_follow(self):
-        """Clicks follow button"""
-        self.click_button_safe(self.find_element_by_xpath(self.follow_btn))
+    def unfollow_artist(self):
+        """
+                unfollow artist
 
-    def click_webplayer(self):
-        self.click_button_safe(self.find_element_by_link_text("Web Player"))
-
-    def click_page_left(self):
-        """Clicks page left button"""
-        self.click_button_safe(self.find_element_by_xpath(self.page_left_btn))
-
-    def click_page_right(self):
-        """Clicks page right button"""
-        self.click_button_safe(self.find_element_by_xpath(self.page_right_btn))
-
-    def click_about(self):
-        self.click_button_safe(self.find_element_by_xpath(self.about))
-
-    def check_about(self):
-        self.click_button_safe(self.find_element_by_xpath(self.artist_image))
-        time.sleep(6)
-        self.click_about()
-        time.sleep(6)
-        about_split = self.find_element_by_xpath(self.artist_name_about).text.split(" ")
-        name = about_split[0] + " " + about_split[1]
-        print(name)
-        print("\n")
-        print(self.find_element_by_class_name(self.artist_name).text)
-        if self.find_element_by_class_name(self.artist_name).text == name:
+                :return: boolean true if no. of artists before unfollow is greater than no. of artists after unfollow
+                :rtype: bool
+        """
+        ActionChains(self.driver).move_to_element(
+            self.driver.find_element_by_xpath(self.first_artist_xpath)).context_click().perform()
+        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
+        time.sleep(5)
+        ActionChains(self.driver).move_to_element(
+            self.driver.find_element_by_xpath(self.follow_btn_xpath)).click().perform()
+        time.sleep(5)
+        no_of_artist_after_add = len(self.driver.find_elements(By.XPATH, self.artist_cards_xpath))
+        if self.no_of_artist_before_add > no_of_artist_after_add:
             return True
         else:
             return False
