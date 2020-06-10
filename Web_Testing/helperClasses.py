@@ -1,5 +1,6 @@
 import enum
 import datetime
+import time
 
 import allure
 from allure_commons.types import AttachmentType
@@ -1086,3 +1087,32 @@ class CustomTime:
         :rtype: bool
         """
         return self.minutes == minutes and self.seconds == seconds
+
+class login:
+    email_textbox_xpath = "//*[@id='login-username']"
+    password_textbox_xpath = "// *[ @ id = 'login-password']"
+    login_btn_id = "login-button"
+    web_player_btn_xpath = "/html/body/div/div[2]/div/div/div[4]/div/a"
+    webplayer_link = " https: // www.spotify.com / eg - en / redirect / webplayerlink /"
+    email = "test_projectX@hotmail.com"
+    password = "TestingTeamMKE"
+
+    def __init__(self, driver):
+        """
+               Initializes the page elements
+
+               :param driver : the driver to which the super class' driver is to be set
+               :type driver: WebDriver
+               """
+        self.driver = driver
+
+    def login_to_spotify(self):
+        try:
+            self.driver.find_element_by_xpath(self.email_textbox_xpath).send_keys(self.email)
+            self.driver.find_element_by_xpath(self.password_textbox_xpath).send_keys(self.password)
+            self.driver.find_element_by_id(self.login_btn_id).click()
+            time.sleep(5)
+            self.driver.find_element_by_xpath(self.web_player_btn_xpath).click()
+            print("login successfully")
+        except NoSuchElementException:
+            print("Exception")
