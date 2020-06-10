@@ -1,0 +1,451 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1591805814985,1929,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,265860,371,1,1,http://localhost:3000/api/v1/users/login,1927,0,28
+1591805816917,1410,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,273717,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1409,0,0
+1591805818328,84,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,5,0,1
+1591805818328,5,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,5,0,1
+1591805818369,16,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,16,0,2
+1591805818369,6,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805818369,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,11,0,2
+1591805818369,23,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,14,0,2
+1591805814910,3423,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6079242,2673,1,1,null,3341,79,29
+1591805818413,2176,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,266055,371,1,1,http://localhost:3000/api/v1/users/login,2176,0,0
+1591805820590,1386,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,273912,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1385,0,0
+1591805821976,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,5,0,0
+1591805821976,5,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,5,0,0
+1591805821984,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805821984,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805821984,41,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,13,0,0
+1591805821984,22,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805818413,3611,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6079632,2673,1,1,null,3566,2,0
+1591805822026,2109,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,266250,371,1,1,http://localhost:3000/api/v1/users/login,2109,0,0
+1591805824136,1353,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,274107,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1353,0,0
+1591805825490,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805825490,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805825495,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805825495,12,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,12,0,0
+1591805825495,40,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805825495,23,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,20,0,0
+1591805822025,3507,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6080022,2673,1,1,null,3465,3,0
+1591805825536,2104,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,266445,371,1,1,http://localhost:3000/api/v1/users/login,2103,0,0
+1591805827640,1339,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,274302,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1338,0,0
+1591805828979,46,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805828979,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805828986,16,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,16,0,0
+1591805828986,16,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,16,0,0
+1591805828986,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805828986,21,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805825535,3489,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6080412,2673,1,1,null,3445,2,0
+1591805829026,2036,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,266640,371,1,1,http://localhost:3000/api/v1/users/login,2036,0,0
+1591805831063,1419,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,274497,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1418,0,0
+1591805832482,48,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805832482,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805832488,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805832488,4,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,4,0,0
+1591805832488,42,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,16,0,0
+1591805832488,15,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,6,0,0
+1591805829026,3503,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6080802,2673,1,1,null,3458,2,0
+1591805832531,2013,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,266835,371,1,1,http://localhost:3000/api/v1/users/login,2013,0,0
+1591805834545,1409,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,274692,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1408,0,0
+1591805835955,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805835955,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805835961,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805835961,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805835961,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,15,0,0
+1591805835961,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,8,0,0
+1591805832531,3471,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6081192,2673,1,1,null,3425,2,0
+1591805836005,1935,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,267030,371,1,1,http://localhost:3000/api/v1/users/login,1935,0,0
+1591805837941,1349,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,274887,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1349,0,0
+1591805839291,50,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805839291,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805839297,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805839297,6,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805839297,44,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805839297,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,11,0,0
+1591805836005,3334,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6081582,2673,1,1,null,3288,3,0
+1591805839342,1700,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,267225,371,1,1,http://localhost:3000/api/v1/users/login,1700,0,0
+1591805841042,1428,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,275082,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1428,0,0
+1591805842471,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805842471,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805842476,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805842476,12,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,12,0,0
+1591805842476,40,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,10,0,0
+1591805842476,23,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,20,0,0
+1591805839342,3173,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6081972,2673,1,1,null,3132,2,0
+1591805842517,1697,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,267420,371,1,1,http://localhost:3000/api/v1/users/login,1697,0,0
+1591805844215,1431,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,275277,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1430,0,0
+1591805845645,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805845645,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805845651,16,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,16,0,0
+1591805845651,16,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,16,0,0
+1591805845651,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,9,0,0
+1591805845651,23,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,17,0,0
+1591805842517,3173,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6082362,2673,1,1,null,3131,2,0
+1591805845691,1678,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,267615,371,1,1,http://localhost:3000/api/v1/users/login,1678,0,0
+1591805847369,1441,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,275472,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1441,0,0
+1591805848811,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805848811,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805848816,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805848816,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805848816,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805848816,22,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,20,0,0
+1591805845691,3163,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6082752,2673,1,1,null,3122,2,0
+1591805848856,2050,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,267810,371,1,1,http://localhost:3000/api/v1/users/login,2050,0,0
+1591805850909,1408,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,275667,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1407,0,0
+1591805852318,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805852318,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805852323,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805852323,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,0
+1591805852323,44,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805852323,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,8,0,0
+1591805848856,3507,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6083142,2673,1,1,null,3461,3,0
+1591805852367,2081,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,268005,371,1,1,http://localhost:3000/api/v1/users/login,2080,0,0
+1591805854448,1413,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,275862,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1412,0,0
+1591805855861,47,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,5,0,0
+1591805855861,5,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,5,0,0
+1591805855867,16,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,16,0,0
+1591805855868,15,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,15,0,0
+1591805855867,41,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,16,0,0
+1591805855867,24,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,21,0,0
+1591805852367,3541,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6083532,2673,1,1,null,3497,0,0
+1591805855909,2046,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,268200,371,1,1,http://localhost:3000/api/v1/users/login,2046,0,0
+1591805857956,1420,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,276057,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1420,0,0
+1591805859377,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805859377,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805859382,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805859382,4,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,4,0,0
+1591805859382,40,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,15,0,0
+1591805859382,23,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,20,0,0
+1591805855908,3511,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6083922,2673,1,1,null,3470,4,0
+1591805859423,1939,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,268395,371,1,1,http://localhost:3000/api/v1/users/login,1939,0,0
+1591805861363,1418,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,276252,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1417,0,0
+1591805862781,48,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805862781,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805862787,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805862787,10,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,10,0,0
+1591805862787,42,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,15,0,0
+1591805862787,24,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,14,0,0
+1591805859423,3405,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6084312,2673,1,1,null,3360,2,0
+1591805862830,1927,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,268590,371,1,1,http://localhost:3000/api/v1/users/login,1926,0,0
+1591805864757,1345,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,276447,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1345,0,0
+1591805866101,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805866101,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805866107,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805866107,4,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,4,0,0
+1591805866107,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805866106,15,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,14,0,0
+1591805862830,3317,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6084702,2673,1,1,null,3275,1,0
+1591805866147,1863,http://localhost:3000/api/v1/users/login,400,Bad Request,Thread Group 1-1,text,false,,458,371,1,1,http://localhost:3000/api/v1/users/login,1863,0,0
+1591805868011,1339,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,276642,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1338,0,0
+1591805869350,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805869350,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805869355,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805869356,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805869355,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805869355,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805866147,3246,Home,,"Number of samples in transaction : 3, number of failing samples : 1",Thread Group 1-1,,false,,5816765,2673,1,1,null,3205,1,0
+1591805869394,2103,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,268980,371,1,1,http://localhost:3000/api/v1/users/login,2103,0,0
+1591805871499,1359,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,276837,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1358,0,0
+1591805872858,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805872858,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805872863,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805872863,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,0
+1591805872863,40,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,20,0,0
+1591805872863,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805869394,3507,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6085482,2673,1,1,null,3465,1,0
+1591805872903,2128,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,269175,371,1,1,http://localhost:3000/api/v1/users/login,2128,0,0
+1591805875031,1341,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,277032,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1341,0,1
+1591805876373,46,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805876373,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805876378,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805876378,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,0
+1591805876378,41,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805876378,15,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805872903,3515,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6085872,2673,1,1,null,3472,1,1
+1591805876419,2140,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,269370,371,1,1,http://localhost:3000/api/v1/users/login,2140,0,0
+1591805878559,1337,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,277227,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1336,0,0
+1591805879896,43,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,1
+1591805879896,5,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,1
+1591805879902,17,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,17,0,1
+1591805879902,18,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,18,0,2
+1591805879902,37,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,10,0,0
+1591805879902,21,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,1
+1591805876419,3520,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6086262,2673,1,1,null,3480,1,1
+1591805879940,1477,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,269565,371,1,1,http://localhost:3000/api/v1/users/login,1477,0,0
+1591805881419,1341,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,277422,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1340,0,0
+1591805882760,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805882760,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805882765,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805882765,11,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,11,0,0
+1591805882765,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805882765,24,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,22,0,0
+1591805879940,2862,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6086652,2673,1,1,null,2821,2,0
+1591805882805,1468,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,269760,371,1,1,http://localhost:3000/api/v1/users/login,1467,0,0
+1591805884273,1331,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,277617,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1331,0,0
+1591805885604,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805885604,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805885609,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805885609,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805885609,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805885609,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,9,0,0
+1591805882804,2843,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6087042,2673,1,1,null,2802,1,0
+1591805885648,1489,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,269955,371,1,1,http://localhost:3000/api/v1/users/login,1489,0,0
+1591805887137,1331,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,277812,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1331,0,0
+1591805888468,43,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805888468,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805888473,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805888473,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,0
+1591805888473,38,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,13,0,0
+1591805888473,13,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,8,0,0
+1591805885648,2863,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6087432,2673,1,1,null,2824,1,0
+1591805888512,1687,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,270150,371,1,1,http://localhost:3000/api/v1/users/login,1687,0,0
+1591805890200,1356,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,278007,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1356,0,0
+1591805891557,41,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805891557,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805891562,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805891562,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805891562,36,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805891562,21,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,18,0,0
+1591805888512,3084,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6087822,2673,1,1,null,3046,2,0
+1591805891599,1679,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,270345,371,1,1,http://localhost:3000/api/v1/users/login,1679,0,0
+1591805893279,1348,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,278202,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1348,0,0
+1591805894628,46,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805894628,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805894633,16,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,16,0,0
+1591805894633,4,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,4,0,0
+1591805894633,41,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,20,0,0
+1591805894633,13,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,8,0,0
+1591805891598,3073,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6088212,2673,1,1,null,3031,3,0
+1591805894675,1681,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,270540,371,1,1,http://localhost:3000/api/v1/users/login,1681,0,0
+1591805896356,1345,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,278397,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1345,0,0
+1591805897701,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805897701,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805897706,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805897706,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,0
+1591805897706,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805897706,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805894674,3070,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6088602,2673,1,1,null,3030,2,0
+1591805897746,1989,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,270735,371,1,1,http://localhost:3000/api/v1/users/login,1989,0,0
+1591805899735,1331,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,278592,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1331,0,0
+1591805901067,43,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805901067,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805901072,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805901072,4,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,4,0,0
+1591805901072,38,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,15,0,0
+1591805901072,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805897745,3363,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6088992,2673,1,1,null,3323,3,0
+1591805901111,1998,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,270930,371,1,1,http://localhost:3000/api/v1/users/login,1998,0,0
+1591805903110,1415,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,278787,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1415,0,0
+1591805904525,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805904525,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805904530,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805904531,13,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,13,0,0
+1591805904531,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,8,0,0
+1591805904530,21,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805901111,3458,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6089382,2673,1,1,null,3417,1,0
+1591805904571,1980,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,271125,371,1,1,http://localhost:3000/api/v1/users/login,1980,0,0
+1591805906552,1415,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,278982,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1415,0,0
+1591805907968,47,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805907968,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805907973,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805907973,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805907973,42,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,18,0,0
+1591805907973,13,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,8,0,0
+1591805904571,3442,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6089772,2673,1,1,null,3398,1,0
+1591805908016,1639,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,271320,371,1,1,http://localhost:3000/api/v1/users/login,1638,0,0
+1591805909655,1340,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,279177,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1339,0,0
+1591805910995,46,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805910995,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805911001,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805911001,13,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,12,0,0
+1591805911000,41,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,16,0,0
+1591805911001,25,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,21,0,0
+1591805908015,3025,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6090162,2673,1,1,null,2981,3,0
+1591805911042,1669,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,271515,371,1,1,http://localhost:3000/api/v1/users/login,1668,0,0
+1591805912711,1338,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,279372,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1338,0,0
+1591805914050,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805914050,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805914055,13,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,13,0,0
+1591805914055,4,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,4,0,0
+1591805914055,40,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,16,0,0
+1591805914055,21,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,18,0,0
+1591805911042,3052,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6090552,2673,1,1,null,3010,1,0
+1591805914096,1693,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,271710,371,1,1,http://localhost:3000/api/v1/users/login,1693,0,0
+1591805915790,1337,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,279567,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1336,0,0
+1591805917127,48,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805917127,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805917132,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805917132,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805917132,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805917132,15,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805914096,3078,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6090942,2673,1,1,null,3033,0,0
+1591805917176,1660,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,271905,371,1,1,http://localhost:3000/api/v1/users/login,1660,0,0
+1591805918836,2844,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,279762,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2844,0,0
+1591805921680,51,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805921680,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805921685,18,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,18,0,0
+1591805921685,6,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805921685,46,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,20,0,0
+1591805921684,15,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805917176,4555,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6091332,2673,1,1,null,4507,2,0
+1591805921732,5144,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,272100,371,1,1,http://localhost:3000/api/v1/users/login,5144,0,0
+1591805926878,2992,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,279957,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2992,0,0
+1591805929871,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,5,0,1
+1591805929871,5,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,5,0,1
+1591805929877,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,1
+1591805929877,6,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805929877,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,11,0,2
+1591805929877,22,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,14,0,2
+1591805921732,8185,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6091722,2673,1,1,null,8141,3,1
+1591805929921,1484,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,272295,371,1,1,http://localhost:3000/api/v1/users/login,1483,0,0
+1591805931404,2599,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,280152,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2599,0,0
+1591805934004,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805934004,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805934009,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805934009,15,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,15,0,0
+1591805934009,44,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,18,0,0
+1591805934009,22,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,14,0,0
+1591805929921,4132,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6092112,2673,1,1,null,4086,1,0
+1591805934053,1502,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,272490,371,1,1,http://localhost:3000/api/v1/users/login,1501,0,0
+1591805935556,2109,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,280347,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2109,0,1
+1591805937666,48,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805937666,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805937671,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805937671,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,0
+1591805937671,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,13,0,0
+1591805937671,16,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805934053,3659,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6092502,2673,1,1,null,3613,2,1
+1591805937715,2034,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,272685,371,1,1,http://localhost:3000/api/v1/users/login,2033,0,0
+1591805939749,1348,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,280542,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1347,0,0
+1591805941097,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805941097,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805941102,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805941102,8,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,8,0,0
+1591805941103,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,15,0,0
+1591805941102,15,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,9,0,0
+1591805937715,3431,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6092892,2673,1,1,null,3384,1,0
+1591805941146,2145,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,272880,371,1,1,http://localhost:3000/api/v1/users/login,2144,0,0
+1591805943291,1351,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,280737,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1351,0,0
+1591805944643,47,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805944643,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805944648,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805944648,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805944648,42,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,16,0,0
+1591805944647,23,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,16,0,0
+1591805941146,3543,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6093282,2673,1,1,null,3498,1,0
+1591805944691,2124,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,273075,371,1,1,http://localhost:3000/api/v1/users/login,2123,0,0
+1591805946815,1392,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,280932,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1391,0,0
+1591805948207,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805948207,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805948213,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805948213,14,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,14,0,0
+1591805948213,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,18,0,0
+1591805948212,17,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805944691,3565,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6093672,2673,1,1,null,3518,0,0
+1591805948257,2021,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,273270,371,1,1,http://localhost:3000/api/v1/users/login,2020,0,0
+1591805950278,2614,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,281127,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2614,0,0
+1591805952893,52,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805952893,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805952898,19,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,19,0,0
+1591805952898,18,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,18,0,0
+1591805952898,47,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,22,0,0
+1591805952898,19,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,15,0,0
+1591805948256,4687,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6094062,2673,1,1,null,4638,2,0
+1591805952946,2023,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,273465,371,1,1,http://localhost:3000/api/v1/users/login,2022,0,0
+1591805954970,2291,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,281322,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2290,0,0
+1591805957262,54,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805957262,3,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805957266,15,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,15,0,0
+1591805957267,6,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805957267,49,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,0
+1591805957267,19,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805952945,4368,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6094452,2673,1,1,null,4315,3,0
+1591805957317,1663,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,273660,371,1,1,http://localhost:3000/api/v1/users/login,1663,0,0
+1591805958980,1819,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,281517,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1818,0,0
+1591805960799,48,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805960799,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805960804,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805960804,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805960804,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,21,0,0
+1591805960803,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,9,0,0
+1591805957317,3530,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6094842,2673,1,1,null,3484,1,0
+1591805960848,2244,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,273855,371,1,1,http://localhost:3000/api/v1/users/login,2244,0,0
+1591805963092,1721,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,281712,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1721,0,0
+1591805964814,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805964814,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805964819,13,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,13,0,0
+1591805964819,4,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,4,0,0
+1591805964819,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,17,0,0
+1591805964819,22,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,20,0,0
+1591805960848,4009,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6095232,2673,1,1,null,3969,1,0
+1591805964859,2063,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,274050,371,1,1,http://localhost:3000/api/v1/users/login,2063,0,0
+1591805966922,1625,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,281907,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1625,0,0
+1591805968547,49,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805968547,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805968553,13,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,13,0,0
+1591805968552,5,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,5,0,0
+1591805968553,43,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,20,0,0
+1591805968553,15,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805964858,3737,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6095622,2673,1,1,null,3692,1,0
+1591805968597,2222,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,274245,371,1,1,http://localhost:3000/api/v1/users/login,2222,0,0
+1591805970819,1615,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,282102,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1614,0,0
+1591805972434,43,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805972434,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805972439,16,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,16,0,0
+1591805972439,16,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,16,0,0
+1591805972439,38,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,16,0,0
+1591805972439,26,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,23,0,0
+1591805968597,3880,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6096012,2673,1,1,null,3840,2,0
+1591805972478,2162,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,274440,371,1,1,http://localhost:3000/api/v1/users/login,2161,0,0
+1591805974640,1608,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,282297,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1607,0,0
+1591805976249,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805976249,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805976254,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805976254,11,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,11,0,0
+1591805976254,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,17,0,0
+1591805976254,22,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,21,0,0
+1591805972478,3814,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6096402,2673,1,1,null,3772,0,0
+1591805976293,2144,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,274635,371,1,1,http://localhost:3000/api/v1/users/login,2144,0,0
+1591805978437,1611,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,282492,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1611,0,0
+1591805980048,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,3,0,0
+1591805980048,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,3,0,0
+1591805980053,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805980053,6,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805980053,39,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805980052,14,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,13,0,0
+1591805976293,3799,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6096792,2673,1,1,null,3758,2,0
+1591805980093,1463,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,274830,371,1,1,http://localhost:3000/api/v1/users/login,1463,0,0
+1591805981557,1632,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,282687,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1632,0,0
+1591805983189,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805983189,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805983194,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805983194,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,0
+1591805983194,40,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805983194,13,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805980093,3140,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6097182,2673,1,1,null,3099,1,0
+1591805983235,1471,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,275025,371,1,1,http://localhost:3000/api/v1/users/login,1470,0,0
+1591805984706,1519,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,282882,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1519,0,0
+1591805986226,45,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805986226,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805986231,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,0
+1591805986231,6,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,6,0,0
+1591805986231,40,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,19,0,0
+1591805986231,13,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805983235,3035,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6097572,2673,1,1,null,2993,1,0
+1591805986272,1481,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,275220,371,1,1,http://localhost:3000/api/v1/users/login,1481,0,0
+1591805987754,1418,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,283077,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1417,0,0
+1591805989172,47,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,0
+1591805989172,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,0
+1591805989177,16,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,16,0,0
+1591805989177,8,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,8,0,0
+1591805989177,42,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,21,0,0
+1591805989177,13,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,12,0,0
+1591805986271,2946,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6097962,2673,1,1,null,2902,2,0
+1591805989219,2049,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,275415,371,1,1,http://localhost:3000/api/v1/users/login,2049,0,0
+1591805991269,1351,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,283272,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1351,0,0
+1591805992621,44,http://localhost:3001/home,200,OK,Thread Group 1-1,text,true,,5539665,1857,1,1,http://localhost:3001/home,4,0,1
+1591805992621,4,http://localhost:3001/home-0,200,OK,Thread Group 1-1,text,true,,2049,360,1,1,http://localhost:3001/home,4,0,1
+1591805992627,14,http://localhost:3001/home-1,200,OK,Thread Group 1-1,bin,true,,3455,367,1,1,http://localhost:3001/favicon.ico,14,0,1
+1591805992627,7,http://localhost:3001/home-2,200,OK,Thread Group 1-1,text,true,,32193,375,1,1,http://localhost:3001/static/js/bundle.js,7,0,1
+1591805992627,38,http://localhost:3001/home-3,200,OK,Thread Group 1-1,text,true,,4274297,376,1,1,http://localhost:3001/static/js/0.chunk.js,12,0,1
+1591805992626,13,http://localhost:3001/home-4,200,OK,Thread Group 1-1,text,true,,1227671,379,1,1,http://localhost:3001/static/js/main.chunk.js,6,0,0
+1591805989219,3444,Home,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,6098352,2673,1,1,null,3404,1,1

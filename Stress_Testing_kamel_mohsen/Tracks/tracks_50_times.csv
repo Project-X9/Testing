@@ -1,0 +1,201 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1591804949944,2361,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,255525,371,1,1,http://localhost:3000/api/v1/users/login,2359,0,24
+1591804952308,1713,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,263382,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1713,0,0
+1591804954023,104,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,104,0,0
+1591804949879,4178,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,521474,1063,1,1,null,4176,71,24
+1591804954129,2041,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,255720,371,1,1,http://localhost:3000/api/v1/users/login,2041,0,0
+1591804956169,1540,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,263577,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1540,0,0
+1591804957710,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591804954128,3687,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,521864,1063,1,1,null,3687,2,0
+1591804957817,1756,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,255915,371,1,1,http://localhost:3000/api/v1/users/login,1756,0,0
+1591804959574,3837,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,263772,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,3837,0,0
+1591804963413,109,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,109,0,0
+1591804957816,5702,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,522254,1063,1,1,null,5702,4,0
+1591804963523,2191,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,256110,371,1,1,http://localhost:3000/api/v1/users/login,2191,0,0
+1591804965714,1899,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,263967,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1899,0,0
+1591804967614,104,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,104,0,0
+1591804963523,4194,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,522644,1063,1,1,null,4194,3,0
+1591804967719,3715,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,256305,371,1,1,http://localhost:3000/api/v1/users/login,3715,0,0
+1591804971434,2089,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,264162,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2089,0,0
+1591804973524,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591804967719,5909,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,523034,1063,1,1,null,5909,1,0
+1591804973630,1461,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,256500,371,1,1,http://localhost:3000/api/v1/users/login,1460,0,0
+1591804975091,1908,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,264357,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1908,0,0
+1591804977000,111,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,111,0,0
+1591804973630,3480,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,523424,1063,1,1,null,3479,1,0
+1591804977112,2226,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,256695,371,1,1,http://localhost:3000/api/v1/users/login,2225,0,0
+1591804979338,1417,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,264552,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1416,0,0
+1591804980761,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591804977111,3749,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,523814,1063,1,1,null,3747,7,0
+1591804980868,2314,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,256890,371,1,1,http://localhost:3000/api/v1/users/login,2314,0,0
+1591804983183,1806,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,264747,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1806,0,0
+1591804984989,107,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,107,0,0
+1591804980868,4227,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,524204,1063,1,1,null,4227,1,0
+1591804985097,1460,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,257085,371,1,1,http://localhost:3000/api/v1/users/login,1460,0,0
+1591804986557,1712,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,264942,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1711,0,0
+1591804988269,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591804985096,3278,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,524594,1063,1,1,null,3277,1,0
+1591804988376,1827,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,257280,371,1,1,http://localhost:3000/api/v1/users/login,1827,0,0
+1591804990203,1424,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,265137,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1424,0,0
+1591804991628,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591804988375,3357,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,524984,1063,1,1,null,3357,3,0
+1591804991735,2259,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,257475,371,1,1,http://localhost:3000/api/v1/users/login,2259,0,0
+1591804993995,1614,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,265332,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1613,0,0
+1591804995610,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591804991735,3979,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,525374,1063,1,1,null,3978,1,0
+1591804995717,1447,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,257670,371,1,1,http://localhost:3000/api/v1/users/login,1447,0,0
+1591804997165,2941,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,265527,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2941,0,0
+1591805000106,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591804995717,4494,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,525764,1063,1,1,null,4494,2,0
+1591805000212,3016,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,257865,371,1,1,http://localhost:3000/api/v1/users/login,3015,0,0
+1591805003228,1417,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,265722,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1417,0,0
+1591805004646,107,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,107,0,0
+1591805000212,4540,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,526154,1063,1,1,null,4539,1,0
+1591805004754,2178,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,258060,371,1,1,http://localhost:3000/api/v1/users/login,2178,0,0
+1591805006934,1535,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,265917,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1535,0,0
+1591805008469,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805004753,3818,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,526544,1063,1,1,null,3818,2,0
+1591805008574,2118,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,258255,371,1,1,http://localhost:3000/api/v1/users/login,2118,0,0
+1591805010696,1526,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,266112,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1526,0,1
+1591805012223,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805008574,3750,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,526934,1063,1,1,null,3750,6,1
+1591805012330,2508,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,258450,371,1,1,http://localhost:3000/api/v1/users/login,2508,0,0
+1591805014839,1464,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,266307,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1464,0,0
+1591805016303,107,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,107,0,0
+1591805012330,4079,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,527324,1063,1,1,null,4079,1,0
+1591805016410,2195,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,258645,371,1,1,http://localhost:3000/api/v1/users/login,2195,0,0
+1591805018606,1900,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,266502,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1900,0,0
+1591805020508,104,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,104,0,0
+1591805016410,4199,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,527714,1063,1,1,null,4199,3,0
+1591805020613,2202,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,258840,371,1,1,http://localhost:3000/api/v1/users/login,2202,0,0
+1591805022815,1523,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,266697,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1523,0,0
+1591805024339,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805020613,3830,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,528104,1063,1,1,null,3830,2,0
+1591805024445,2425,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,259035,371,1,1,http://localhost:3000/api/v1/users/login,2425,0,0
+1591805026870,2717,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,266892,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2717,0,0
+1591805029587,111,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,111,0,0
+1591805024445,5253,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,528494,1063,1,1,null,5253,0,0
+1591805029698,2924,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,259230,371,1,1,http://localhost:3000/api/v1/users/login,2924,0,0
+1591805032622,2015,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,267087,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2014,0,0
+1591805034637,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805029698,5044,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,528884,1063,1,1,null,5043,1,0
+1591805034742,2269,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,259425,371,1,1,http://localhost:3000/api/v1/users/login,2269,0,0
+1591805037013,1424,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,267282,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1424,0,0
+1591805038438,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805034742,3799,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,529274,1063,1,1,null,3799,2,0
+1591805038544,1243,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,259620,371,1,1,http://localhost:3000/api/v1/users/login,1243,0,0
+1591805039787,1905,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,267477,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1905,0,0
+1591805041693,112,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,112,0,0
+1591805038544,3260,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,529664,1063,1,1,null,3260,2,0
+1591805041806,2323,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,259815,371,1,1,http://localhost:3000/api/v1/users/login,2322,0,0
+1591805044129,1710,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,267672,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1709,0,0
+1591805045839,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805041805,4138,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,530054,1063,1,1,null,4136,1,0
+1591805045944,2177,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,260010,371,1,1,http://localhost:3000/api/v1/users/login,2177,0,0
+1591805048121,1893,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,267867,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1893,0,0
+1591805050016,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805045944,4176,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,530444,1063,1,1,null,4176,1,0
+1591805050122,1478,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,260205,371,1,1,http://localhost:3000/api/v1/users/login,1477,0,0
+1591805051600,1714,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,268062,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1713,0,0
+1591805053314,109,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,109,0,0
+1591805050122,3301,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,530834,1063,1,1,null,3299,1,0
+1591805053424,1926,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,260400,371,1,1,http://localhost:3000/api/v1/users/login,1926,0,0
+1591805055351,1618,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,268257,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1617,0,0
+1591805056969,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805053424,3650,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,531224,1063,1,1,null,3649,1,0
+1591805057075,2143,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,260595,371,1,1,http://localhost:3000/api/v1/users/login,2142,0,0
+1591805059218,1700,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,268452,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1699,0,0
+1591805060917,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805057075,3949,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,531614,1063,1,1,null,3947,1,0
+1591805061024,1470,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,260790,371,1,1,http://localhost:3000/api/v1/users/login,1470,0,0
+1591805062494,1526,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,268647,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1525,0,0
+1591805064020,110,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,110,0,0
+1591805061024,3106,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,532004,1063,1,1,null,3105,1,0
+1591805064131,1819,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,260985,371,1,1,http://localhost:3000/api/v1/users/login,1818,0,0
+1591805065950,1629,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,268842,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1629,0,0
+1591805067580,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805064131,3553,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,532394,1063,1,1,null,3552,1,0
+1591805067686,2077,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,261180,371,1,1,http://localhost:3000/api/v1/users/login,2077,0,0
+1591805069764,1594,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,269037,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1593,0,0
+1591805071364,109,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,109,0,1
+1591805067685,3780,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,532784,1063,1,1,null,3779,7,1
+1591805071473,1489,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,261375,371,1,1,http://localhost:3000/api/v1/users/login,1489,0,0
+1591805072962,1507,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,269232,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1506,0,0
+1591805074469,110,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,110,0,0
+1591805071473,3106,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,533174,1063,1,1,null,3105,1,0
+1591805074580,1826,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,261570,371,1,1,http://localhost:3000/api/v1/users/login,1826,0,0
+1591805076406,1606,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,269427,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1605,0,0
+1591805078012,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805074580,3538,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,533564,1063,1,1,null,3537,2,0
+1591805078119,2166,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,261765,371,1,1,http://localhost:3000/api/v1/users/login,2166,0,0
+1591805080287,1518,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,269622,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1518,0,0
+1591805081806,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805078119,3789,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,533954,1063,1,1,null,3789,3,0
+1591805081912,2171,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,261960,371,1,1,http://localhost:3000/api/v1/users/login,2170,0,0
+1591805084083,1507,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,269817,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1506,0,0
+1591805085590,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805081912,3784,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,534344,1063,1,1,null,3782,0,0
+1591805085696,1485,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,262155,371,1,1,http://localhost:3000/api/v1/users/login,1484,0,0
+1591805087181,1500,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,270012,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1499,0,0
+1591805088681,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805085696,3091,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,534734,1063,1,1,null,3089,0,0
+1591805088788,2013,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,262350,371,1,1,http://localhost:3000/api/v1/users/login,2013,0,0
+1591805090800,1425,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,270207,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1425,0,0
+1591805092226,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805088788,3544,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,535124,1063,1,1,null,3544,1,0
+1591805092333,2051,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,262545,371,1,1,http://localhost:3000/api/v1/users/login,2050,0,0
+1591805094384,1505,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,270402,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1505,0,0
+1591805095891,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805092332,3662,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,535514,1063,1,1,null,3661,3,0
+1591805095998,1467,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,262740,371,1,1,http://localhost:3000/api/v1/users/login,1466,0,0
+1591805097465,1422,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,270597,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1422,0,0
+1591805098888,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805095998,2995,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,535904,1063,1,1,null,2994,1,0
+1591805098995,2167,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,262935,371,1,1,http://localhost:3000/api/v1/users/login,2167,0,0
+1591805101169,1435,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,270792,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1435,0,0
+1591805102605,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805098994,3708,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,536294,1063,1,1,null,3708,9,0
+1591805102711,2053,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,263130,371,1,1,http://localhost:3000/api/v1/users/login,2052,0,0
+1591805104764,1492,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,270987,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1492,0,0
+1591805106256,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805102711,3650,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,536684,1063,1,1,null,3649,2,0
+1591805106362,1492,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,263325,371,1,1,http://localhost:3000/api/v1/users/login,1491,0,0
+1591805107854,978,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,271182,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,977,0,0
+1591805108832,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805106362,2576,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,537074,1063,1,1,null,2574,0,0
+1591805108939,2165,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,263520,371,1,1,http://localhost:3000/api/v1/users/login,2165,0,0
+1591805111106,1419,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,271377,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1419,0,0
+1591805112526,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805108938,3689,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,537464,1063,1,1,null,3689,3,0
+1591805112632,2041,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,263715,371,1,1,http://localhost:3000/api/v1/users/login,2041,0,0
+1591805114673,1420,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,271572,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1419,0,0
+1591805116092,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805112632,3567,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,537854,1063,1,1,null,3566,1,0
+1591805116199,1472,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,263910,371,1,1,http://localhost:3000/api/v1/users/login,1472,0,0
+1591805117672,1455,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,271767,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1455,0,0
+1591805119128,105,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,105,0,0
+1591805116199,3032,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,538244,1063,1,1,null,3032,2,0
+1591805119234,2176,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,264105,371,1,1,http://localhost:3000/api/v1/users/login,2175,0,0
+1591805121410,1424,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,271962,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1424,0,0
+1591805122835,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805119233,3706,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,538634,1063,1,1,null,3705,2,0
+1591805122941,2070,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,264300,371,1,1,http://localhost:3000/api/v1/users/login,2069,0,0
+1591805125011,1409,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,272157,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1408,0,0
+1591805126420,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805122941,3585,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,539024,1063,1,1,null,3583,0,0
+1591805126527,1479,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,264495,371,1,1,http://localhost:3000/api/v1/users/login,1478,0,0
+1591805128006,1436,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,272352,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1436,0,0
+1591805129443,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805126527,3021,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,539414,1063,1,1,null,3020,2,0
+1591805129550,2115,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,264690,371,1,1,http://localhost:3000/api/v1/users/login,2114,0,0
+1591805131670,1420,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,272547,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1419,0,1
+1591805133090,108,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,108,0,0
+1591805129550,3643,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,539804,1063,1,1,null,3641,5,1
+1591805133198,2043,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,264885,371,1,1,http://localhost:3000/api/v1/users/login,2043,0,0
+1591805135242,1416,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,272742,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1415,0,0
+1591805136658,107,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,107,0,0
+1591805133198,3566,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,540194,1063,1,1,null,3565,1,0
+1591805136770,1474,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,265080,371,1,1,http://localhost:3000/api/v1/users/login,1474,0,0
+1591805138244,1427,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,272937,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1427,0,0
+1591805139671,106,http://localhost:3000/api/v1/track,200,OK,Thread Group 1-1,text,true,,2567,247,1,1,http://localhost:3000/api/v1/track,106,0,0
+1591805136765,3007,Tracks,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,540584,1063,1,1,null,3007,5,0
