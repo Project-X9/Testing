@@ -55,6 +55,14 @@ class TestPlaylist:
                 Checks  rename exists
          test_case_14()
                 Checks  delete track exists
+         test_case_15()
+                Checking create playlist with empty name
+         test_case_16()
+                Checking create playlist with spaces name
+         test_case_17()
+                Checking create playlist with '@!##!@' name
+         test_case_17()
+                Checking deleting playlist
 
          """
 
@@ -86,12 +94,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
         pl = PlayList(self.driver)
-        #time.sleep(10)
-        if pl.create_button():
+        if pl.check_create_button():
             Helper.report_allure(self.driver, "create button exist")
             assert True
         else:
@@ -116,12 +122,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.save_button():
+        if pl.check_save_button():
             Helper.report_allure(self.driver, "save button exist")
             assert True
         else:
@@ -146,12 +150,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.cancel_button():
+        if pl.check_cancel_button():
             Helper.report_allure(self.driver, "cancel button exist")
             assert True
         else:
@@ -176,10 +178,8 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
         if pl.create_new_playlist("Test Play List by Kamel"):
             Helper.report_allure(self.driver, "Creation done")
@@ -206,12 +206,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.first_element():
+        if pl.check_first_element():
             Helper.report_allure(self.driver, "first play list exists")
             assert True
         else:
@@ -236,10 +234,8 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
         if pl.check_edit_button():
             Helper.report_allure(self.driver, "edit exists")
@@ -266,10 +262,8 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
         if pl.check_like_button():
             Helper.report_allure(self.driver, "like exists")
@@ -296,10 +290,8 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
         if pl.check_share_button():
             Helper.report_allure(self.driver, "share exists")
@@ -326,10 +318,8 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
         if pl.check_add_song():
             Helper.report_allure(self.driver, "add song exists")
@@ -356,12 +346,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.edit_playlist():
+        if pl.check_edit_playlist():
             Helper.report_allure(self.driver, "edit playlist exists")
             assert True
         else:
@@ -386,12 +374,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.first_song_in_edit():
+        if pl.check_first_song_in_edit():
             Helper.report_allure(self.driver, "first song in edit exists")
             assert True
         else:
@@ -416,12 +402,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.cancel_rename():
+        if pl.check_cancel_rename():
             Helper.report_allure(self.driver, "cancel rename exists")
             assert True
         else:
@@ -446,12 +430,10 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.rename():
+        if pl.check_rename():
             Helper.report_allure(self.driver, " rename exists")
             assert True
         else:
@@ -476,15 +458,144 @@ class TestPlaylist:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        #time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_library_button()
-        #time.sleep(10)
         pl = PlayList(self.driver)
-        if pl.delete_track():
+        if pl.check_delete_track():
             Helper.report_allure(self.driver, " delete track exists")
             assert True
         else:
             print(self.driver.current_activity)
             Helper.report_allure(self.driver, " delete track does not exist")
+            assert False
+
+
+
+        # Test #15 ->Checks  the create playlist
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Playlist Tests")
+    @allure.sub_suite("Checking create playlist with empty name")
+    @allure.title("Checking create playlist with empty name")
+    @allure.description("Checking create playlist with empty name")
+    @pytest.mark.Do
+    @pytest.mark.Playlist
+    @pytest.mark.Test15
+    def test_case_15(self, setup):
+        """
+        Checking create playlist with empty name
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signin_button()
+        lp = LoginPage(self.driver)
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
+        hp = HomePage(self.driver)
+        hp.click_library_button()
+        pl = PlayList(self.driver)
+        if not pl.create_new_playlist(""):
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Creation done")
+            assert False
+        if pl.check_create_button():
+            Helper.report_allure(self.driver, "Creation failed")
+            assert True
+        else:
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Creation done")
+            assert False
+
+        # Test #16 ->Checks  the create playlist with spaces name
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Playlist Tests")
+    @allure.sub_suite("Checking create playlist with spaces name")
+    @allure.title("Checking create playlist with spaces name")
+    @allure.description("Checking create playlist with spaces name")
+    @pytest.mark.Do
+    @pytest.mark.Playlist
+    @pytest.mark.Test16
+    def test_case_16(self, setup):
+        """
+        Checking create playlist with spaces name
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signin_button()
+        lp = LoginPage(self.driver)
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
+        hp = HomePage(self.driver)
+        hp.click_library_button()
+        pl = PlayList(self.driver)
+        if not pl.create_new_playlist("      "):
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Creation done")
+            assert False
+        if pl.check_create_button():
+            Helper.report_allure(self.driver, "Creation failed")
+            assert True
+        else:
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Creation done")
+            assert False
+
+
+        # Test #17 ->Checks  the create playlist with special characters
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Playlist Tests")
+    @allure.sub_suite("Checking create playlist with '@!##!@' name")
+    @allure.title("Checking create playlist with '@!##!@' name")
+    @allure.description("Checking create playlist with '@!##!@' name")
+    @pytest.mark.Do
+    @pytest.mark.Playlist
+    @pytest.mark.Test17
+    def test_case_17(self, setup):
+        """
+        Checking create playlist with '@!##!@' name
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signin_button()
+        lp = LoginPage(self.driver)
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
+        hp = HomePage(self.driver)
+        hp.click_library_button()
+        pl = PlayList(self.driver)
+        if not pl.create_new_playlist("@!##!@"):
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Creation done")
+            assert False
+        if pl.check_create_button():
+            Helper.report_allure(self.driver, "Creation failed")
+            assert True
+        else:
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "Creation done")
+            assert False
+
+        # Test #18 ->deleting playlist
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Playlist Tests")
+    @allure.sub_suite("Checking deleting playlist")
+    @allure.title("Checking deleting playlist")
+    @allure.description("Checking deleting playlist")
+    @pytest.mark.Do
+    @pytest.mark.Playlist
+    @pytest.mark.Test18
+    def test_case_18(self, setup):
+        """
+        Checking deleting playlist
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signin_button()
+        lp = LoginPage(self.driver)
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
+        hp = HomePage(self.driver)
+        hp.click_library_button()
+        pl = PlayList(self.driver)
+        if not pl.delete_track():
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "deletion failed")
+            assert False
+        if pl.check_add_song():
+            Helper.report_allure(self.driver, "deletion success")
+            assert True
+        else:
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "deletion failed")
             assert False

@@ -43,7 +43,10 @@ class TestPremium:
          test_case_8()
               Checking premium individual box exists
          test_case_9()
-              Checking premium family box exists
+              canceling premium
+         test_case_10()
+              getting premium
+
          """
 
     driver = None
@@ -75,12 +78,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.ad_break_box():
+        if pp.check_ad_break_box():
             Helper.report_allure(self.driver, "break box exists")
             assert True
         else:
@@ -106,12 +107,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.play_in_shuffle_box():
+        if pp.check_play_in_shuffle_box():
             Helper.report_allure(self.driver, "play in shuffle box exists")
             assert True
         else:
@@ -137,12 +136,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.unlimited_skips_box():
+        if pp.check_unlimited_skips_box():
             Helper.report_allure(self.driver, "unlimited skips box exists")
             assert True
         else:
@@ -168,12 +165,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.offline_listening_box():
+        if pp.check_offline_listening_box():
             Helper.report_allure(self.driver, "offline listening box exists")
             assert True
         else:
@@ -199,12 +194,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.high_audio_quality_box():
+        if pp.check_high_audio_quality_box():
             Helper.report_allure(self.driver, "high audio quality box exists")
             assert True
         else:
@@ -230,12 +223,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.get_premium_button():
+        if pp.check_get_premium_button():
             Helper.report_allure(self.driver, "get premium button exists")
             assert True
         else:
@@ -244,7 +235,6 @@ class TestPremium:
             assert False
 
         # Test #7 ->Checks the free box
-
     @allure.severity(allure.severity_level.CRITICAL)
     @allure.story("Premium Tests")
     @allure.sub_suite("Checking free box")
@@ -261,12 +251,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.free_box():
+        if pp.check_free_box():
             Helper.report_allure(self.driver, "free box exists")
             assert True
         else:
@@ -292,12 +280,10 @@ class TestPremium:
         ap.click_signin_button()
         lp = LoginPage(self.driver)
         lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
-        time.sleep(10)
         hp = HomePage(self.driver)
         hp.click_premium_button()
         pp = PremiumPage(self.driver)
-        time.sleep(10)
-        if pp.premium_individual_box():
+        if pp.check_premium_individual_box():
             Helper.report_allure(self.driver, "premium individual box exists")
             assert True
         else:
@@ -305,4 +291,68 @@ class TestPremium:
             Helper.report_allure(self.driver, "premium individual box does not exists")
             assert False
 
+        # Test #9 ->cancel premium
 
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Premium Tests")
+    @allure.sub_suite("Checking canceling premium")
+    @allure.title("Checking canceling premium")
+    @allure.description("Checking canceling premium")
+    @pytest.mark.Do
+    @pytest.mark.Premium
+    @pytest.mark.Test9
+    def test_case_9(self, setup):
+        """
+        canceling premium
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signin_button()
+        lp = LoginPage(self.driver)
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
+        hp = HomePage(self.driver)
+        hp.click_premium_button()
+        pp = PremiumPage(self.driver)
+        if not pp.cancel_get_premium():
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "premium did not cancel")
+            assert False
+        if pp.check_free_box():
+            Helper.report_allure(self.driver, "premium canceled")
+            assert True
+        else:
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "premium did not cancel")
+            assert False
+
+        # Test #10 ->get premium
+
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Premium Tests")
+    @allure.sub_suite("Checking getting premium")
+    @allure.title("Checking getting premium")
+    @allure.description("Checking getting premium")
+    @pytest.mark.Do
+    @pytest.mark.Premium
+    @pytest.mark.Test10
+    def test_case_10(self, setup):
+        """
+        getting premium
+        """
+        ap = AuthenticationPage(self.driver)
+        ap.click_signin_button()
+        lp = LoginPage(self.driver)
+        lp.do_the_login(Constants.correct_credentials["email"], Constants.correct_credentials["password"])
+        hp = HomePage(self.driver)
+        hp.click_premium_button()
+        pp = PremiumPage(self.driver)
+        if not pp.cancel_get_premium():
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "premium did not activate")
+            assert False
+        if pp.check_free_box():
+            Helper.report_allure(self.driver, "premium activated")
+            assert True
+        else:
+            print(self.driver.current_activity)
+            Helper.report_allure(self.driver, "premium did not activate")
+            assert False

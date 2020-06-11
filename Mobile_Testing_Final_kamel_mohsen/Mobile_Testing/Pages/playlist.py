@@ -43,17 +43,16 @@ class PlayList:
     Methods
     -------
 
-    create_button()
+    check_create_button()
         Checks that the create button exists
-    first_element()
+    check_first_element()
         Checks that the first element exists
-    cancel_button()
+    check_cancel_button()
         Checks that the cancel button exists
-    save_button()
+    check_save_button()
         Checks that the save button exists
     create_new_playlist()
         Goes thought the whole process of creating a new playlist
-
     check_edit_button()
         Checks that the edit button exists and is click-able
     check_like_button()
@@ -62,16 +61,18 @@ class PlayList:
         Checks that the share button exists and is click-able
     check_add_song()
         checks add song button in edit playlist
-    edit_playlist()
+    check_edit_playlist()
        checks the edit playlist button
-    first_song_in_edit()
+    check_first_song_in_edit()
         checks the first song in edit playlist
-    cancel_rename()
+    check_cancel_rename()
         checks the cancel button in playlist rename
-    rename()
+    check_rename()
         checks the rename button in the rename playlist
-    delete_track()
+    check_delete_track()
         checks the delete track button
+    delete_track()
+        deletes first track
 
     """
     create_playlist_textbox_id = "com.example.projectx:id/playlistName_tiet"
@@ -97,7 +98,7 @@ class PlayList:
         """
         self.driver = driver
 
-    def create_button(self):
+    def check_create_button(self):
         """
         checks that the create button exists
         """
@@ -107,7 +108,7 @@ class PlayList:
         else:
             return False
 
-    def first_element(self):
+    def check_first_element(self):
         """
         checks that the first playlist exists
         """
@@ -117,7 +118,7 @@ class PlayList:
         else:
             return False
 
-    def cancel_button(self):
+    def check_cancel_button(self):
         """
         checks that the cancel button exists
         """
@@ -131,7 +132,7 @@ class PlayList:
         else:
             return False
 
-    def save_button(self):
+    def check_save_button(self):
         """
         checks that the save button exists
         """
@@ -227,7 +228,7 @@ class PlayList:
         else:
             return True
 
-    def edit_playlist(self):
+    def check_edit_playlist(self):
         """
         checks the edit playlist button
         """
@@ -245,7 +246,7 @@ class PlayList:
         else:
             return True
 
-    def first_song_in_edit(self):
+    def check_first_song_in_edit(self):
         """
         checks the first song in edit playlist
         """
@@ -263,7 +264,7 @@ class PlayList:
         else:
             return True
 
-    def cancel_rename(self):
+    def check_cancel_rename(self):
         """
         checks the first song in edit playlist
         """
@@ -285,7 +286,7 @@ class PlayList:
         else:
             return True
 
-    def rename(self):
+    def check_rename(self):
         """
         checks the rename button in the rename playlist
         """
@@ -307,7 +308,7 @@ class PlayList:
         else:
             return True
 
-    def delete_track(self):
+    def check_delete_track(self):
         """
         checks the delete track button
         """
@@ -334,3 +335,29 @@ class PlayList:
             return True
 
 
+    def delete_track(self):
+        """
+        deletes track
+        """
+        element = Helper.find_element_by_xpath(self.driver, self.first_element_xpath)
+        if element is None:
+            return False
+        element.click()
+        element = Helper.find_element_by_id(self.driver, self.edit_button_id)
+        if element is None:
+            return False
+        element.click()
+        time.sleep(2)
+        element = Helper.find_element_by_xpath(self.driver, self.first_song_in_edit_xpath)
+        if element is None:
+            return False
+        time.sleep(2)
+        actions = TouchAction(self.driver)
+        actions.long_press(element)
+        actions.perform()
+        element = Helper.find_element_by_id(self.driver, self.delete_track_id)
+        if element is None:
+            return False
+        else:
+            element.click()
+            return True
