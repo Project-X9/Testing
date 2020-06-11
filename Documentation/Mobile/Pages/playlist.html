@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module playlist</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>playlist</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/KIMO/Desktop/Final_Assesment/E2E_testing_kamel_mohsen/Mobile_Testing/Pages/playlist.py">/Users/KIMO/Desktop/Final_Assesment/E2E_testing_kamel_mohsen/Mobile_Testing/Pages/playlist.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="playlist.html#PlayList">PlayList</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PlayList">class <strong>PlayList</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#PlayList">PlayList</a>(driver)<br>
+&nbsp;<br>
+A&nbsp;class&nbsp;used&nbsp;to&nbsp;represent&nbsp;the&nbsp;Play&nbsp;List&nbsp;Page<br>
+...<br>
+Attributes<br>
+----------<br>
+&nbsp;<br>
+create_playlist_textbox_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;xpath&nbsp;of&nbsp;the&nbsp;text&nbsp;box&nbsp;for&nbsp;new&nbsp;playlist<br>
+create_album_button_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;xpath&nbsp;of&nbsp;the&nbsp;create&nbsp;album&nbsp;button<br>
+first_element_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;xpath&nbsp;of&nbsp;the&nbsp;first&nbsp;play&nbsp;list&nbsp;in&nbsp;the&nbsp;play&nbsp;lists<br>
+save_new_playlist_button_id:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;create/save&nbsp;button&nbsp;of&nbsp;the&nbsp;create&nbsp;new&nbsp;playlist&nbsp;popup<br>
+cancel_creation_button_id:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;cancel&nbsp;button&nbsp;of&nbsp;the&nbsp;create&nbsp;new&nbsp;playlist&nbsp;popup<br>
+edit_button_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;edit&nbsp;button<br>
+like_button_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;like&nbsp;button<br>
+share_button_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;share&nbsp;button<br>
+add_song_button_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;add&nbsp;song&nbsp;button&nbsp;in&nbsp;edit&nbsp;playlist<br>
+edit_playlist_button_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;edit&nbsp;palylist&nbsp;button<br>
+first_song_in_edit_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;xpath&nbsp;of&nbsp;the&nbsp;first&nbsp;song&nbsp;in&nbsp;the&nbsp;edit&nbsp;view<br>
+rename_box_id&nbsp;&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;rename&nbsp;box&nbsp;in&nbsp;edit&nbsp;playlist<br>
+cancel_rename_id&nbsp;&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cancel&nbsp;button&nbsp;id&nbsp;in&nbsp;the&nbsp;rename&nbsp;playlist<br>
+rename_id&nbsp;&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rename&nbsp;button&nbsp;id&nbsp;in&nbsp;the&nbsp;playlist&nbsp;rename<br>
+delete_track_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;track&nbsp;button&nbsp;id<br>
+Methods<br>
+-------<br>
+&nbsp;<br>
+<a href="#PlayList-check_create_button">check_create_button</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;that&nbsp;the&nbsp;create&nbsp;button&nbsp;exists<br>
+<a href="#PlayList-check_first_element">check_first_element</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;that&nbsp;the&nbsp;first&nbsp;element&nbsp;exists<br>
+<a href="#PlayList-check_cancel_button">check_cancel_button</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;that&nbsp;the&nbsp;cancel&nbsp;button&nbsp;exists<br>
+<a href="#PlayList-check_save_button">check_save_button</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;that&nbsp;the&nbsp;save&nbsp;button&nbsp;exists<br>
+<a href="#PlayList-create_new_playlist">create_new_playlist</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Goes&nbsp;thought&nbsp;the&nbsp;whole&nbsp;process&nbsp;of&nbsp;creating&nbsp;a&nbsp;new&nbsp;playlist<br>
+<a href="#PlayList-check_edit_button">check_edit_button</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;that&nbsp;the&nbsp;edit&nbsp;button&nbsp;exists&nbsp;and&nbsp;is&nbsp;click-able<br>
+<a href="#PlayList-check_like_button">check_like_button</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;that&nbsp;the&nbsp;like&nbsp;button&nbsp;exists&nbsp;and&nbsp;is&nbsp;click-able<br>
+<a href="#PlayList-check_share_button">check_share_button</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Checks&nbsp;that&nbsp;the&nbsp;share&nbsp;button&nbsp;exists&nbsp;and&nbsp;is&nbsp;click-able<br>
+<a href="#PlayList-check_add_song">check_add_song</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;checks&nbsp;add&nbsp;song&nbsp;button&nbsp;in&nbsp;edit&nbsp;playlist<br>
+<a href="#PlayList-check_edit_playlist">check_edit_playlist</a>()<br>
+&nbsp;&nbsp;&nbsp;checks&nbsp;the&nbsp;edit&nbsp;playlist&nbsp;button<br>
+<a href="#PlayList-check_first_song_in_edit">check_first_song_in_edit</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;checks&nbsp;the&nbsp;first&nbsp;song&nbsp;in&nbsp;edit&nbsp;playlist<br>
+<a href="#PlayList-check_cancel_rename">check_cancel_rename</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;checks&nbsp;the&nbsp;cancel&nbsp;button&nbsp;in&nbsp;playlist&nbsp;rename<br>
+<a href="#PlayList-check_rename">check_rename</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;checks&nbsp;the&nbsp;rename&nbsp;button&nbsp;in&nbsp;the&nbsp;rename&nbsp;playlist<br>
+<a href="#PlayList-check_delete_track">check_delete_track</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;checks&nbsp;the&nbsp;delete&nbsp;track&nbsp;button<br>
+<a href="#PlayList-delete_track">delete_track</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;deletes&nbsp;first&nbsp;track<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="PlayList-__init__"><strong>__init__</strong></a>(self, driver)</dt><dd><tt>Initializes&nbsp;the&nbsp;page&nbsp;elements<br>
+:param&nbsp;driver&nbsp;:&nbsp;the&nbsp;driver&nbsp;to&nbsp;which&nbsp;the&nbsp;super&nbsp;class'&nbsp;driver&nbsp;is&nbsp;to&nbsp;be&nbsp;set<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_add_song"><strong>check_add_song</strong></a>(self)</dt><dd><tt>checks&nbsp;add&nbsp;song&nbsp;button&nbsp;in&nbsp;edit&nbsp;playlist</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_cancel_button"><strong>check_cancel_button</strong></a>(self)</dt><dd><tt>checks&nbsp;that&nbsp;the&nbsp;cancel&nbsp;button&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_cancel_rename"><strong>check_cancel_rename</strong></a>(self)</dt><dd><tt>checks&nbsp;the&nbsp;first&nbsp;song&nbsp;in&nbsp;edit&nbsp;playlist</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_create_button"><strong>check_create_button</strong></a>(self)</dt><dd><tt>checks&nbsp;that&nbsp;the&nbsp;create&nbsp;button&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_delete_track"><strong>check_delete_track</strong></a>(self)</dt><dd><tt>checks&nbsp;the&nbsp;delete&nbsp;track&nbsp;button</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_edit_button"><strong>check_edit_button</strong></a>(self)</dt><dd><tt>Checks&nbsp;that&nbsp;the&nbsp;edit&nbsp;button&nbsp;exists&nbsp;and&nbsp;is&nbsp;click-able</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_edit_playlist"><strong>check_edit_playlist</strong></a>(self)</dt><dd><tt>checks&nbsp;the&nbsp;edit&nbsp;playlist&nbsp;button</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_first_element"><strong>check_first_element</strong></a>(self)</dt><dd><tt>checks&nbsp;that&nbsp;the&nbsp;first&nbsp;playlist&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_first_song_in_edit"><strong>check_first_song_in_edit</strong></a>(self)</dt><dd><tt>checks&nbsp;the&nbsp;first&nbsp;song&nbsp;in&nbsp;edit&nbsp;playlist</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_like_button"><strong>check_like_button</strong></a>(self)</dt><dd><tt>Checks&nbsp;that&nbsp;the&nbsp;like&nbsp;button&nbsp;exists&nbsp;and&nbsp;is&nbsp;click-able</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_rename"><strong>check_rename</strong></a>(self)</dt><dd><tt>checks&nbsp;the&nbsp;rename&nbsp;button&nbsp;in&nbsp;the&nbsp;rename&nbsp;playlist</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_save_button"><strong>check_save_button</strong></a>(self)</dt><dd><tt>checks&nbsp;that&nbsp;the&nbsp;save&nbsp;button&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="PlayList-check_share_button"><strong>check_share_button</strong></a>(self)</dt><dd><tt>Checks&nbsp;that&nbsp;the&nbsp;share&nbsp;button&nbsp;exists&nbsp;and&nbsp;is&nbsp;click-able</tt></dd></dl>
+
+<dl><dt><a name="PlayList-create_new_playlist"><strong>create_new_playlist</strong></a>(self, playlist_name)</dt><dd><tt>goes&nbsp;through&nbsp;the&nbsp;whole&nbsp;process&nbsp;of&nbsp;playlist&nbsp;creation<br>
+:param&nbsp;playlist_name&nbsp;:&nbsp;the&nbsp;string&nbsp;that&nbsp;is&nbsp;filled&nbsp;in&nbsp;the&nbsp;text&nbsp;box&nbsp;for&nbsp;the&nbsp;new&nbsp;play&nbsp;list<br>
+:type&nbsp;playlist_name:&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="PlayList-delete_track"><strong>delete_track</strong></a>(self)</dt><dd><tt>deletes&nbsp;track</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>add_song_button_id</strong> = 'com.example.projectx:id/button'</dl>
+
+<dl><dt><strong>cancel_creation_button_id</strong> = 'com.example.projectx:id/cancel_tv'</dl>
+
+<dl><dt><strong>cancel_rename_id</strong> = 'com.example.projectx:id/cancel_tv'</dl>
+
+<dl><dt><strong>create_album_button_xpath</strong> = '/hierarchy/android.widget.FrameLayout/android.wi...oid.widget.RelativeLayout/android.widget.TextView'</dl>
+
+<dl><dt><strong>create_playlist_textbox_id</strong> = 'com.example.projectx:id/playlistName_tiet'</dl>
+
+<dl><dt><strong>delete_track_id</strong> = 'android:id/text1'</dl>
+
+<dl><dt><strong>edit_button_id</strong> = 'com.example.projectx:id/editPlaylist_button_bt'</dl>
+
+<dl><dt><strong>edit_playlist_button_id</strong> = 'com.example.projectx:id/editPlaylist_ibt'</dl>
+
+<dl><dt><strong>first_element_xpath</strong> = '/hierarchy/android.widget.FrameLayout/android.wi....widget.RelativeLayout/android.widget.TextView[1]'</dl>
+
+<dl><dt><strong>first_song_in_edit_xpath</strong> = '/hierarchy/android.widget.FrameLayout/android.wi....widget.FrameLayout/android.widget.RelativeLayout'</dl>
+
+<dl><dt><strong>like_button_id</strong> = 'com.example.projectx:id/likeButton2_ib'</dl>
+
+<dl><dt><strong>rename_box_id</strong> = 'com.example.projectx:id/playlistName_tiet'</dl>
+
+<dl><dt><strong>rename_id</strong> = 'com.example.projectx:id/createRename_tv'</dl>
+
+<dl><dt><strong>save_new_playlist_button_id</strong> = 'com.example.projectx:id/createRename_tv'</dl>
+
+<dl><dt><strong>share_button_id</strong> = 'com.example.projectx:id/sharePlaylist_ibt'</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
