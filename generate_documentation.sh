@@ -19,21 +19,21 @@ mkdir -p Documentation/Web/Pages
 
 
 
-python -m pydoc -w ./Mobile_Testing/*.py
+python3 -m pydoc -w ./Mobile_Testing/*.py
 mv *.html Documentation/Mobile/Helper
 
-python -m pydoc -w ./Mobile_Testing/Tests/*.py
+python3 -m pydoc -w ./Mobile_Testing/Tests/*.py
 mv *.html Documentation/Mobile/Tests
 
-python -m pydoc -w ./Mobile_Testing/Pages/*.py
+python3 -m pydoc -w ./Mobile_Testing/Pages/*.py
 mv *.html Documentation/Mobile/Pages
 
 
-python -m pydoc -w ./Web_Testing/*.py
+python3 -m pydoc -w ./Web_Testing/*.py
 mv *.html Documentation/Web/Helper
 
-python -m pydoc -w ./Web_Testing/Tests/*.py
+python3 -m pydoc -w ./Web_Testing/Tests/*.py
 mv *.html Documentation/Web/Tests
 
-python -m pydoc -w ./Web_Testing/Pages/*.py
+python3 -m pydoc -w ./Web_Testing/Pages/*.py
 mv *.html Documentation/Web/Pages

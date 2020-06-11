@@ -19,7 +19,7 @@ from Web_Testing.helperClasses import WebHelper, DOB
 class TestPlayFooter:
 
     helper = WebHelper()
-    helper.chrome_driver_init()
+    helper.firefox_driver_init()
 
     helper.driver.maximize_window()
     helper.driver.get(

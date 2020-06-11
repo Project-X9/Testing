@@ -54,6 +54,8 @@ class WebPlayerPlaylist(WebPlayerMenu):
     -------
     get_no_of_playlist()
         get number of playlist before any action
+    name_overview()
+        get name before any action
     create_playlist()
         create new playlist
     cancel_creation()
@@ -62,8 +64,6 @@ class WebPlayerPlaylist(WebPlayerMenu):
         delete playlist
     cancel_deletion()
         cancel deletion of playlist
-    name_overview()
-        get name before any action
     rename_playlist()
         rename existing playlist
 
@@ -147,22 +147,26 @@ class WebPlayerPlaylist(WebPlayerMenu):
                 :return: boolean true if no. of playlist before deletion is greater than no. of playlist after deletion
                 :rtype: bool
         """
-        self.driver.find_element_by_xpath(self.first_playlist_xpath).click()
-        time.sleep(10)
-        ActionChains(self.driver).click_and_hold(self.driver.find_element_by_xpath(self.three_dots_xpath)).perform()
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
-        time.sleep(5)
-        ActionChains(self.driver).move_to_element(
-            self.driver.find_element_by_xpath(self.delete_btn_xpath)).click().click().perform()
-        time.sleep(10)
-        self.driver.find_element_by_xpath(self.modal_delete_btn).click()
-        self.driver.find_element_by_xpath(self.your_library_btn_xpath).click()
-        time.sleep(3)
-        no_of_playlists_after_add = (len(self.driver.find_elements(By.XPATH, self.playlists_cards_xpath))) - 1
-        if self.no_of_playlists_before_add > no_of_playlists_after_add:
-            return True
+        if self.no_of_playlists_before_add != 0:
+            self.driver.find_element_by_xpath(self.first_playlist_xpath).click()
+            time.sleep(10)
+            ActionChains(self.driver).click_and_hold(self.driver.find_element_by_xpath(self.three_dots_xpath)).perform()
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
+            time.sleep(5)
+            ActionChains(self.driver).move_to_element(
+                self.driver.find_element_by_xpath(self.delete_btn_xpath)).click().click().perform()
+            time.sleep(10)
+            self.driver.find_element_by_xpath(self.modal_delete_btn).click()
+            self.driver.find_element_by_xpath(self.your_library_btn_xpath).click()
+            time.sleep(3)
+            no_of_playlists_after_add = (len(self.driver.find_elements(By.XPATH, self.playlists_cards_xpath))) - 1
+            if self.no_of_playlists_before_add > no_of_playlists_after_add:
+                return True
+            else:
+                return False
         else:
-            return False
+            print("there is no playlist to delete")
+            return  False
 
     def cancel_deletion(self):
         """
@@ -171,27 +175,35 @@ class WebPlayerPlaylist(WebPlayerMenu):
                 :return: boolean true if no. of playlist before cancel deletion is equal no. of playlist after cancel deletion
                 :rtype: bool
         """
-        self.driver.find_element_by_xpath(self.first_playlist_xpath).click()
-        time.sleep(5)
-        ActionChains(self.driver).click_and_hold(self.driver.find_element_by_xpath(self.three_dots_xpath)).perform()
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
-        time.sleep(5)
-        ActionChains(self.driver).move_to_element(
-            self.driver.find_element_by_xpath(self.delete_btn_xpath)).click().click().perform()
-        time.sleep(10)
-        self.driver.find_element_by_xpath(self.cancel_deletion_btn_xpath).click()
-        self.driver.find_element_by_xpath(self.your_library_btn_xpath).click()
-        time.sleep(3)
-        no_of_playlists_after_add = (len(self.driver.find_elements(By.XPATH, self.playlists_cards_xpath))) - 1
-        if self.no_of_playlists_before_add == no_of_playlists_after_add:
-            return True
+        if self.no_of_playlists_before_add != 0:
+            self.driver.find_element_by_xpath(self.first_playlist_xpath).click()
+            time.sleep(5)
+            ActionChains(self.driver).click_and_hold(self.driver.find_element_by_xpath(self.three_dots_xpath)).perform()
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
+            time.sleep(5)
+            ActionChains(self.driver).move_to_element(
+                self.driver.find_element_by_xpath(self.delete_btn_xpath)).click().click().perform()
+            time.sleep(10)
+            self.driver.find_element_by_xpath(self.cancel_deletion_btn_xpath).click()
+            self.driver.find_element_by_xpath(self.your_library_btn_xpath).click()
+            time.sleep(3)
+            no_of_playlists_after_add = (len(self.driver.find_elements(By.XPATH, self.playlists_cards_xpath))) - 1
+            if self.no_of_playlists_before_add == no_of_playlists_after_add:
+                return True
+            else:
+                return False
         else:
+            print("there is no playlist to delete")
             return False
 
     def name_overview(self):
         """get name before any action"""
-        self.driver.find_element_by_xpath(self.first_playlist_xpath).click()
-        self.playlist_name_before = self.driver.find_element_by_xpath(self.playlist_name_xpath).text
+        self.get_no_of_playlist()
+        if self.no_of_playlists_before_add != 0:
+            self.driver.find_element_by_xpath(self.first_playlist_xpath).click()
+            self.playlist_name_before = self.driver.find_element_by_xpath(self.playlist_name_xpath).text
+        else:
+            print("there is no playlist to rename")
 
     def rename_playlist(self):
         """
@@ -201,17 +213,20 @@ class WebPlayerPlaylist(WebPlayerMenu):
                 1 if playlist's name before rename is equal playlist's name after rename, 2 if playlist's name after rename is not equal desired name and not equal playlist's name before rename
                 :rtype: int
         """
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.first_playlist_xpath)).context_click().context_click().perform()
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.home_context_menu_xpath))
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.rename_btn_xpath)).click().perform()
-        self.driver.find_element_by_class_name(self.rename_textbox_class_name).send_keys(self.playlist_name)
-        self.driver.find_element_by_class_name(self.rename_textbox_class_name).send_keys(Keys.ENTER)
-        playlist_name_after = self.driver.find_element_by_xpath(self.playlist_name_xpath).text
-        if self.playlist_name_before != playlist_name_after and playlist_name_after == self.playlist_name:
-            return 0
+        if self.no_of_playlists_before_add != 0:
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.first_playlist_xpath)).context_click().context_click().perform()
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.home_context_menu_xpath))
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.rename_btn_xpath)).click().perform()
+            self.driver.find_element_by_class_name(self.rename_textbox_class_name).send_keys(self.playlist_name)
+            self.driver.find_element_by_class_name(self.rename_textbox_class_name).send_keys(Keys.ENTER)
+            playlist_name_after = self.driver.find_element_by_xpath(self.playlist_name_xpath).text
+            if self.playlist_name_before != playlist_name_after and playlist_name_after == self.playlist_name:
+                return 0
+            else:
+                if self.playlist_name_before == playlist_name_after:
+                    return 1
+                elif playlist_name_after != self.playlist_name and self.playlist_name_before != playlist_name_after:
+                    return 2
         else:
-            if self.playlist_name_before == playlist_name_after:
-                return 1
-            elif playlist_name_after != self.playlist_name and self.playlist_name_before != playlist_name_after:
-                return 2
-
+            print("there is no playlist to rename")
+            return 1
