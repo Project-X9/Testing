@@ -117,7 +117,7 @@ class TestPlaylists:
     @allure.description("cancel deletion of playlist")
     @pytest.mark.Do
     @pytest.mark.cancelDeletePlaylist
-    def test_case_4(self, setup_final):
+    def test_case_4(self, setup):
         self.driver.implicitly_wait(5)
         self.pp.get_no_of_playlist()
         self.helper.report_allure("overview for playlists before cancel deletion", self.driver)
@@ -128,22 +128,26 @@ class TestPlaylists:
             self.helper.report_allure("Fail to cancel deletion of playlist", self.driver)
             assert False
 
-    # # Test #5 ->Checking that restore playlist is function
-    # @allure.severity(allure.severity_level.CRITICAL)
-    # @allure.story("Webplayer playlist tests")
-    # @allure.sub_suite("restore playlist")
-    # @allure.title("restore playlist")
-    # @allure.description("restore playlist")
-    # @pytest.mark.Do
-    # @pytest.mark.restoreplaylist
-    # def test_case_5(self, setup_final):
-    #     self.driver.implicitly_wait(5)
-    #     self.pp.get_no_of_playlist()
-    #     self.helper.report_allure("Overview for playlists before restore playlist", self.driver)
-    #     if self.pp.restore_playlist():
-    #         self.helper.report_allure("Restore playlist successfully", self.driver)
-    #         assert True
-    #     else:
-    #         self.helper.report_allure("Fail to restore playlist", self.driver)
-    #         assert False
+    # Test #5 ->Checking that rename playlist is function
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.story("Webplayer playlist tests")
+    @allure.sub_suite("Rename playlist")
+    @allure.title("Rename playlist")
+    @allure.description("Rename playlist")
+    @pytest.mark.Do
+    @pytest.mark.renameplaylist
+    def test_case_5(self, setup_final):
+        self.driver.implicitly_wait(5)
+        self.pp.name_overview()
+        self.helper.report_allure("Overview for playlist's name before rename playlist", self.driver)
+        ret = self.pp.rename_playlist()
+        if ret == 0:
+            self.helper.report_allure("Rename playlist successfully", self.driver)
+            assert True
+        else:
+            if ret == 1:
+                self.helper.report_allure("Fail to rename playlist ", self.driver)
+            elif ret == 2:
+                self.helper.report_allure("Rename playlist successfully but with wrong name", self.driver)
+            assert False
 
