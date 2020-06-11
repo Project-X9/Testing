@@ -1,0 +1,457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module artist</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>artist</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/mohammad/Desktop/University/LastPhaseAgain/Testing/Web_Testing/Pages/artist.py">/home/mohammad/Desktop/University/LastPhaseAgain/Testing/Web_Testing/Pages/artist.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>(<a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="artist.html#Artist">Artist</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Artist">class <strong>Artist</strong></a>(<a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Artist">Artist</a>(driver)<br>
+&nbsp;<br>
+A&nbsp;class&nbsp;representing&nbsp;the&nbsp;Web&nbsp;Player's&nbsp;artist<br>
+...<br>
+&nbsp;<br>
+Attributes<br>
+----------<br>
+search_btn_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;search&nbsp;button&nbsp;in&nbsp;home&nbsp;menu<br>
+search_textbox_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;the&nbsp;search&nbsp;textbox&nbsp;in&nbsp;search&nbsp;page<br>
+search_artist_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;sting&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;the&nbsp;artist&nbsp;appear&nbsp;after&nbsp;search&nbsp;in&nbsp;search&nbsp;page<br>
+context_menu_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;context&nbsp;menu&nbsp;of&nbsp;the&nbsp;chosen&nbsp;artist<br>
+follow_btn_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;follow&nbsp;button&nbsp;in&nbsp;the&nbsp;context&nbsp;menu&nbsp;of&nbsp;the&nbsp;chosen&nbsp;artist<br>
+your_library_btn_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;your&nbsp;library&nbsp;button&nbsp;in&nbsp;home&nbsp;menu<br>
+artist_btn_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;sting&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;artist&nbsp;button&nbsp;in&nbsp;your&nbsp;library&nbsp;page<br>
+artist_cards_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;the&nbsp;list&nbsp;that&nbsp;contain&nbsp;all&nbsp;artists<br>
+first_artist_xpath&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;sting&nbsp;containing&nbsp;the&nbsp;xpath&nbsp;of&nbsp;the&nbsp;first&nbsp;artist&nbsp;in&nbsp;artists<br>
+artist_name&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;artist&nbsp;to&nbsp;be&nbsp;added&nbsp;to&nbsp;the&nbsp;artists<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#Artist-overview">overview</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;number&nbsp;of&nbsp;artist&nbsp;before&nbsp;any&nbsp;action<br>
+<a href="#Artist-follow_artist">follow_artist</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;follow&nbsp;new&nbsp;artist<br>
+<a href="#Artist-unfollow_artist">unfollow_artist</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;unfollow&nbsp;artist<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="artist.html#Artist">Artist</a></dd>
+<dd><a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a></dd>
+<dd><a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Artist-__init__"><strong>__init__</strong></a>(self, driver)</dt><dd><tt>Initializes&nbsp;the&nbsp;page&nbsp;elements<br>
+&nbsp;<br>
+:param&nbsp;driver&nbsp;:&nbsp;the&nbsp;driver&nbsp;to&nbsp;which&nbsp;the&nbsp;super&nbsp;class'&nbsp;driver&nbsp;is&nbsp;to&nbsp;be&nbsp;set<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="Artist-follow_artist"><strong>follow_artist</strong></a>(self)</dt><dd><tt>follow&nbsp;new&nbsp;artist<br>
+&nbsp;<br>
+:return:&nbsp;boolean&nbsp;true&nbsp;if&nbsp;no.&nbsp;of&nbsp;artists&nbsp;before&nbsp;follow&nbsp;is&nbsp;smaller&nbsp;than&nbsp;no.&nbsp;of&nbsp;artists&nbsp;after&nbsp;follow<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="Artist-overview"><strong>overview</strong></a>(self)</dt><dd><tt>get&nbsp;number&nbsp;of&nbsp;artist&nbsp;before&nbsp;any&nbsp;action</tt></dd></dl>
+
+<dl><dt><a name="Artist-unfollow_artist"><strong>unfollow_artist</strong></a>(self)</dt><dd><tt>unfollow&nbsp;artist<br>
+&nbsp;<br>
+:return:&nbsp;boolean&nbsp;true&nbsp;if&nbsp;no.&nbsp;of&nbsp;artists&nbsp;before&nbsp;unfollow&nbsp;is&nbsp;greater&nbsp;than&nbsp;no.&nbsp;of&nbsp;artists&nbsp;after&nbsp;unfollow<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>artist_btn_xpath</strong> = "//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/nav/ul/li[3]/a"</dl>
+
+<dl><dt><strong>artist_cards_xpath</strong> = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div"</dl>
+
+<dl><dt><strong>artist_name</strong> = 'Maher Zain'</dl>
+
+<dl><dt><strong>context_menu_xpath</strong> = "//*[@id='main']/div/nav[6]"</dl>
+
+<dl><dt><strong>first_artist_xpath</strong> = "// *[ @ id = 'main'] / div / div[2] / div[4] / div[1] / div / div[2] / section[1] / div[1] / div[1]"</dl>
+
+<dl><dt><strong>follow_btn_xpath</strong> = "//*[@id='main']/div/nav[6]/div[2]"</dl>
+
+<dl><dt><strong>search_artist_xpath</strong> = "//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[4]"</dl>
+
+<dl><dt><strong>search_btn_xpath</strong> = "//*[@id='main']/div/div[2]/div[2]/nav/ul/li[2]/a"</dl>
+
+<dl><dt><strong>search_textbox_xpath</strong> = "//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/div/input"</dl>
+
+<dl><dt><strong>your_library_btn_xpath</strong> = "//*[@id='main']/div/div[2]/div[2]/nav/ul/li[3]/div/a"</dl>
+
+<hr>
+Methods inherited from <a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>:<br>
+<dl><dt><a name="Artist-click_account"><strong>click_account</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Account&nbsp;button&nbsp;in&nbsp;profile&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_create_playlist"><strong>click_create_playlist</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Create&nbsp;playlist&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_home"><strong>click_home</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Home&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_liked_songs"><strong>click_liked_songs</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Liked&nbsp;Songs&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_logout"><strong>click_logout</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Logout&nbsp;button&nbsp;in&nbsp;profile&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_search"><strong>click_search</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Search&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_your_library"><strong>click_your_library</strong></a>(self)</dt><dd><tt>Clicks&nbsp;Your&nbsp;Library&nbsp;button&nbsp;in&nbsp;web&nbsp;player&nbsp;menu</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="Web_Testing.Pages.WebPlayerMenu.html#WebPlayerMenu">Web_Testing.Pages.WebPlayerMenu.WebPlayerMenu</a>:<br>
+<dl><dt><strong>account_btn_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[2]...div[1]/div/div/nav/ul[2]/li/li/div[2]/button[1]/a'</dl>
+
+<dl><dt><strong>create_playlist_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/div/a[1]'</dl>
+
+<dl><dt><strong>home_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/a[2]'</dl>
+
+<dl><dt><strong>liked_songs_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/div/a[2]'</dl>
+
+<dl><dt><strong>logout_btn_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[2]...]/div/div/nav/ul[2]/li/li/div[2]/button[3]/button'</dl>
+
+<dl><dt><strong>profile_menu_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[2]...iv/div[1]/div/div/nav/ul[2]/li/li/div[1]/button/a'</dl>
+
+<dl><dt><strong>search_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/a[3]'</dl>
+
+<dl><dt><strong>your_library_xpath</strong> = '/html/body/div/div/div/div/div[1]/div/div/div[1]/div/button'</dl>
+
+<hr>
+Methods inherited from <a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>:<br>
+<dl><dt><a name="Artist-chrome_driver_init"><strong>chrome_driver_init</strong></a>(self)</dt><dd><tt>initializes&nbsp;the&nbsp;chrome&nbsp;driver<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;class'&nbsp;driver<br>
+:rtype:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="Artist-clear_txt"><strong>clear_txt</strong></a>(self, txt_element)</dt><dd><tt>clears&nbsp;the&nbsp;given&nbsp;text&nbsp;field<br>
+&nbsp;<br>
+:param&nbsp;txt_element:&nbsp;The&nbsp;text&nbsp;field&nbsp;from&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;cleared<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-clear_txt_safe"><strong>clear_txt_safe</strong></a>(self, txt_element)</dt><dd><tt>safely&nbsp;clears&nbsp;the&nbsp;given&nbsp;text&nbsp;field&nbsp;without&nbsp;causing&nbsp;a&nbsp;crash<br>
+&nbsp;<br>
+:param&nbsp;txt_element:&nbsp;the&nbsp;element&nbsp;from&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;cleared<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_button"><strong>click_button</strong></a>(self, btn)</dt><dd><tt>clicks&nbsp;on&nbsp;the&nbsp;given&nbsp;button<br>
+&nbsp;<br>
+:param&nbsp;btn:&nbsp;The&nbsp;button&nbsp;to&nbsp;be&nbsp;clicked<br>
+:type&nbsp;btn:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-click_button_safe"><strong>click_button_safe</strong></a>(self, btn)</dt><dd><tt>safely&nbsp;clicks&nbsp;on&nbsp;the&nbsp;given&nbsp;button&nbsp;without&nbsp;causing&nbsp;a&nbsp;crash<br>
+&nbsp;<br>
+:param&nbsp;btn:&nbsp;The&nbsp;button&nbsp;to&nbsp;be&nbsp;clicked<br>
+:type&nbsp;btn:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-element_exists_by_class"><strong>element_exists_by_class</strong></a>(self, class_name)</dt><dd><tt>Checks&nbsp;if&nbsp;an&nbsp;element&nbsp;exists&nbsp;with&nbsp;the&nbsp;input&nbsp;class&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;class_name:&nbsp;element&nbsp;class&nbsp;name<br>
+:type&nbsp;class_name:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;element&nbsp;exists&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="Artist-element_exists_by_id"><strong>element_exists_by_id</strong></a>(self, vid)</dt><dd><tt>Checks&nbsp;if&nbsp;an&nbsp;element&nbsp;exists&nbsp;with&nbsp;the&nbsp;input&nbsp;id<br>
+&nbsp;<br>
+:param&nbsp;vid:&nbsp;element&nbsp;id<br>
+:type&nbsp;vid:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;element&nbsp;exists&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="Artist-element_exists_by_xpath"><strong>element_exists_by_xpath</strong></a>(self, xpath)</dt><dd><tt>Checks&nbsp;if&nbsp;an&nbsp;element&nbsp;exists&nbsp;with&nbsp;the&nbsp;input&nbsp;xpath<br>
+&nbsp;<br>
+:param&nbsp;xpath:&nbsp;element&nbsp;xpath<br>
+:type&nbsp;xpath:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;element&nbsp;exists&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="Artist-fill"><strong>fill</strong></a>(self, txt_element, text)</dt><dd><tt>the&nbsp;element&nbsp;to&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;filled<br>
+&nbsp;<br>
+:param&nbsp;txt_element:<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;The&nbsp;text&nbsp;used&nbsp;to&nbsp;fill&nbsp;the&nbsp;text&nbsp;field<br>
+:type&nbsp;text:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-fill_safe"><strong>fill_safe</strong></a>(self, txt_element, text)</dt><dd><tt>safely&nbsp;fills&nbsp;the&nbsp;provided&nbsp;text&nbsp;field&nbsp;with&nbsp;the&nbsp;given&nbsp;text&nbsp;without&nbsp;causing&nbsp;a&nbsp;crash<br>
+&nbsp;<br>
+:param&nbsp;txt_element:&nbsp;the&nbsp;element&nbsp;to&nbsp;which&nbsp;the&nbsp;text&nbsp;is&nbsp;to&nbsp;be&nbsp;filled<br>
+:type&nbsp;txt_element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;the&nbsp;text&nbsp;used&nbsp;to&nbsp;fill&nbsp;the&nbsp;text&nbsp;field<br>
+:type&nbsp;text:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_element_by_class_name"><strong>find_element_by_class_name</strong></a>(self, class_name)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;class_name:&nbsp;element&nbsp;class&nbsp;name<br>
+:type&nbsp;class_name:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_element_by_id"><strong>find_element_by_id</strong></a>(self, vid)</dt><dd><tt>"<br>
+finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+&nbsp;<br>
+:param&nbsp;vid:&nbsp;element&nbsp;id<br>
+:type&nbsp;vid:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_element_by_link_text"><strong>find_element_by_link_text</strong></a>(self, link_txt)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+&nbsp;<br>
+:param&nbsp;link_txt:&nbsp;element&nbsp;link&nbsp;text<br>
+:type&nbsp;link_txt:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_element_by_name"><strong>find_element_by_name</strong></a>(self, vname)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;vname:&nbsp;element&nbsp;name<br>
+:type&nbsp;vname:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_element_by_xpath"><strong>find_element_by_xpath</strong></a>(self, xpath)</dt><dd><tt>finds&nbsp;the&nbsp;element&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+&nbsp;<br>
+:param&nbsp;xpath:&nbsp;element&nbsp;xpath<br>
+:type&nbsp;xpath:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;WebDriver&nbsp;element&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+:rtype:&nbsp;WebDriver&nbsp;element</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_elements_by_class_name"><strong>find_elements_by_class_name</strong></a>(self, class_name, driver=None)</dt><dd><tt>"<br>
+finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed&nbsp;in,&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;used<br>
+&nbsp;<br>
+:param&nbsp;class_name:&nbsp;elements&nbsp;class&nbsp;name<br>
+:type&nbsp;class_name:&nbsp;str<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;from&nbsp;which&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;element&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;class&nbsp;name<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_elements_by_id"><strong>find_elements_by_id</strong></a>(self, vid)</dt><dd><tt>"<br>
+finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+&nbsp;<br>
+:param&nbsp;vid:&nbsp;elements&nbsp;id<br>
+:type&nbsp;vid:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;id<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_elements_by_link_text"><strong>find_elements_by_link_text</strong></a>(self, link_txt)</dt><dd><tt>finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+&nbsp;<br>
+:param&nbsp;link_txt:&nbsp;elements&nbsp;link&nbsp;text<br>
+:type&nbsp;link_txt:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;link&nbsp;text<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_elements_by_name"><strong>find_elements_by_name</strong></a>(self, vname)</dt><dd><tt>finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;vname:&nbsp;elements&nbsp;name<br>
+:type&nbsp;vname:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Artist-find_elements_by_xpath"><strong>find_elements_by_xpath</strong></a>(self, xpath)</dt><dd><tt>finds&nbsp;the&nbsp;elements&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+&nbsp;<br>
+:param&nbsp;xpath:&nbsp;elements&nbsp;xpath<br>
+:type&nbsp;xpath:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;list&nbsp;containing&nbsp;the&nbsp;WebDriver&nbsp;elements&nbsp;associated&nbsp;with&nbsp;the&nbsp;given&nbsp;xpath<br>
+:rtype:&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="Artist-firefox_driver_init"><strong>firefox_driver_init</strong></a>(self)</dt><dd><tt>initializes&nbsp;the&nbsp;firefox&nbsp;driver<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;class'&nbsp;driver<br>
+:rtype:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_account_changepassword_url"><strong>get_account_changepassword_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;change&nbsp;password&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;change&nbsp;password&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_account_edit_url"><strong>get_account_edit_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;edit&nbsp;account&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;edit&nbsp;account&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_account_overview_url"><strong>get_account_overview_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;account&nbsp;overview&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;account&nbsp;overview&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_driver"><strong>get_driver</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;class'&nbsp;driver<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;class'&nbsp;driver<br>
+:rtype:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_home_url"><strong>get_home_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;home&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;home&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_login_url"><strong>get_login_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;login&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;login&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_month_dict"><strong>get_month_dict</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;month&nbsp;name&nbsp;to&nbsp;month&nbsp;number&nbsp;dictionary<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;dictionary&nbsp;mapping&nbsp;the&nbsp;month&nbsp;names&nbsp;to&nbsp;month&nbsp;numbers<br>
+:rtype:&nbsp;dict</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_month_name_from"><strong>get_month_name_from</strong></a>(self, in_val)</dt><dd><tt>:param&nbsp;in_val:&nbsp;month&nbsp;number<br>
+:type&nbsp;in_val:&nbsp;int<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;month&nbsp;name<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_month_val_from"><strong>get_month_val_from</strong></a>(self, name)</dt><dd><tt>gets&nbsp;the&nbsp;month&nbsp;number&nbsp;from&nbsp;the&nbsp;input&nbsp;month&nbsp;name<br>
+&nbsp;<br>
+:param&nbsp;name:&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;month<br>
+:type&nbsp;name:&nbsp;str<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;month&nbsp;number<br>
+:rtype:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_premium_url"><strong>get_premium_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;premium&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;premium&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-get_signup_url"><strong>get_signup_url</strong></a>(self)</dt><dd><tt>gets&nbsp;the&nbsp;signup&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+&nbsp;<br>
+:returns:&nbsp;the&nbsp;signup&nbsp;url&nbsp;of&nbsp;the&nbsp;website<br>
+:rtype:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-hover_to_element"><strong>hover_to_element</strong></a>(self, element, driver=None)</dt><dd><tt>Hovers&nbsp;the&nbsp;mouse&nbsp;over&nbsp;an&nbsp;element<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed,&nbsp;the&nbsp;driver&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;the&nbsp;class'&nbsp;driver<br>
+&nbsp;<br>
+:param&nbsp;element:&nbsp;the&nbsp;web&nbsp;element&nbsp;that&nbsp;the&nbsp;mouse&nbsp;will&nbsp;hover&nbsp;over<br>
+:type&nbsp;element:&nbsp;WebDriver&nbsp;element<br>
+:param&nbsp;driver:&nbsp;the&nbsp;web&nbsp;driver&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="Artist-report_allure"><strong>report_allure</strong></a>(self, msg, driver=None)</dt><dd><tt>"<br>
+attaches&nbsp;a&nbsp;screenshot&nbsp;to&nbsp;allure's&nbsp;report<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed&nbsp;in,&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;used<br>
+&nbsp;<br>
+:param&nbsp;msg:&nbsp;the&nbsp;message&nbsp;used&nbsp;to&nbsp;be&nbsp;attached&nbsp;with&nbsp;the&nbsp;screenshot<br>
+:type&nbsp;msg:&nbsp;str<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;used&nbsp;to&nbsp;take&nbsp;a&nbsp;screenshot&nbsp;from&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="Artist-screenshot"><strong>screenshot</strong></a>(self, driver)</dt><dd><tt>takes&nbsp;a&nbsp;screenshot&nbsp;of&nbsp;the&nbsp;website&nbsp;using&nbsp;the&nbsp;given&nbsp;driver<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;used&nbsp;to&nbsp;take&nbsp;the&nbsp;screenshot&nbsp;from<br>
+:type&nbsp;driver:&nbsp;WebDriver<br>
+&nbsp;<br>
+:returns:&nbsp;image&nbsp;screenshot<br>
+:rtype:&nbsp;png&nbsp;image</tt></dd></dl>
+
+<dl><dt><a name="Artist-select_element_by_index"><strong>select_element_by_index</strong></a>(self, element, index)</dt><dd><tt>selects&nbsp;an&nbsp;option&nbsp;from&nbsp;the&nbsp;provided&nbsp;element&nbsp;using&nbsp;a&nbsp;given&nbsp;index<br>
+&nbsp;<br>
+:param&nbsp;element:&nbsp;the&nbsp;element&nbsp;from&nbsp;which&nbsp;the&nbsp;item&nbsp;is&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;index:&nbsp;the&nbsp;index&nbsp;of&nbsp;the&nbsp;item&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;index:&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="Artist-select_element_by_text"><strong>select_element_by_text</strong></a>(self, element, text)</dt><dd><tt>selects&nbsp;an&nbsp;option&nbsp;from&nbsp;the&nbsp;provided&nbsp;element&nbsp;using&nbsp;a&nbsp;given&nbsp;text<br>
+&nbsp;<br>
+:param&nbsp;element:&nbsp;the&nbsp;element&nbsp;from&nbsp;which&nbsp;the&nbsp;item&nbsp;is&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;element:&nbsp;WebDriver&nbsp;element<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;the&nbsp;text&nbsp;to&nbsp;be&nbsp;selected<br>
+:type&nbsp;text:&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="Artist-set_driver"><strong>set_driver</strong></a>(self, driver)</dt><dd><tt>sets&nbsp;the&nbsp;class'&nbsp;driver&nbsp;with&nbsp;the&nbsp;input&nbsp;driver<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;to&nbsp;which&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;to&nbsp;be&nbsp;set<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="Artist-url_has"><strong>url_has</strong></a>(self, text, driver=None)</dt><dd><tt>checks&nbsp;if&nbsp;the&nbsp;current&nbsp;driver&nbsp;url&nbsp;contains&nbsp;the&nbsp;input&nbsp;text<br>
+&nbsp;<br>
+If&nbsp;the&nbsp;argument&nbsp;`driver`&nbsp;is&nbsp;not&nbsp;passed&nbsp;in,&nbsp;the&nbsp;class'&nbsp;driver&nbsp;is&nbsp;used<br>
+&nbsp;<br>
+:param&nbsp;text:&nbsp;the&nbsp;text&nbsp;to&nbsp;be&nbsp;compared&nbsp;with&nbsp;the&nbsp;driver's&nbsp;current&nbsp;url<br>
+:type&nbsp;text:&nbsp;str<br>
+&nbsp;<br>
+:param&nbsp;driver:&nbsp;the&nbsp;driver&nbsp;from&nbsp;which&nbsp;to&nbsp;retrieve&nbsp;the&nbsp;url&nbsp;(default&nbsp;is&nbsp;None)<br>
+:type&nbsp;driver:&nbsp;WebDriver<br>
+&nbsp;<br>
+:returns:&nbsp;a&nbsp;boolean&nbsp;to&nbsp;check&nbsp;if&nbsp;the&nbsp;current&nbsp;driver's&nbsp;url&nbsp;contains&nbsp;the&nbsp;input&nbsp;text&nbsp;or&nbsp;not<br>
+:rtype:&nbsp;bool</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="Web_Testing.helperClasses.html#WebHelper">Web_Testing.helperClasses.WebHelper</a>:<br>
+<dl><dt><strong>base_url</strong> = 'https://www.spotify.com/eg-en/'</dl>
+
+<dl><dt><strong>month_dict</strong> = {'April': 4, 'August': 8, 'December': 12, 'February': 2, 'January': 1, 'July': 7, 'June': 6, 'March': 3, 'May': 5, 'November': 11, ...}</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
