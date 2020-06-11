@@ -108,13 +108,16 @@ class PlaylistSongs(WebPlayerMenu):
                 :return: boolean true if no. of songs before remove is greater than no. of songs after remove
                 :rtype: bool
         """
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.first_playlist_song_xpath)).context_click().context_click().perform()
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
-        time.sleep(5)
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.remove_from_playlist_btn_xpath)).click().perform()
-        time.sleep(5)
-        no_of_playlist_songs_after_add = len(self.driver.find_elements(By.XPATH, self.playlist_songs_list_xpath))
-        if self.no_of_playlist_songs_before_add > no_of_playlist_songs_after_add:
-            return True
+        if self.no_of_playlist_songs_before_add != 0:
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.first_playlist_song_xpath)).context_click().context_click().perform()
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
+            time.sleep(5)
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.remove_from_playlist_btn_xpath)).click().perform()
+            time.sleep(5)
+            no_of_playlist_songs_after_add = len(self.driver.find_elements(By.XPATH, self.playlist_songs_list_xpath))
+            if self.no_of_playlist_songs_before_add > no_of_playlist_songs_after_add:
+                return True
+            else:
+                return False
         else:
-            return False
+            print("there is no song to remove")

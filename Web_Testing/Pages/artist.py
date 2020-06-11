@@ -24,8 +24,6 @@ class Artist(WebPlayerMenu):
              A string containing the xpath of context menu of the chosen artist
        follow_btn_xpath : string
              A string containing the xpath of follow button in the context menu of the chosen artist
-       artist_xpath : string
-             A sting containing the xpath of the artist appear after search in search page
        your_library_btn_xpath : string
              A string containing the xpath of your library button in home menu
        artist_btn_xpath : string
@@ -52,7 +50,6 @@ class Artist(WebPlayerMenu):
     search_artist_xpath = "//*[@id='searchPage']/div/div/section[1]/div/div[2]/div/div/div/div[4]"
     context_menu_xpath = "//*[@id='main']/div/nav[6]"
     follow_btn_xpath = "//*[@id='main']/div/nav[6]/div[2]"
-    artist_xpath = "// *[ @ id = 'main'] / div / div[3] / div / div[2] / div"
     your_library_btn_xpath = "//*[@id='main']/div/div[2]/div[2]/nav/ul/li[3]/div/a"
     artist_btn_xpath = "//*[@id='main']/div/div[2]/div[1]/header/div[3]/div/nav/ul/li[3]/a"
     artist_cards_xpath = "//*[@id='main']/div/div[2]/div[4]/div[1]/div/div[2]/section[1]/div[1]/div"
@@ -110,15 +107,18 @@ class Artist(WebPlayerMenu):
                 :return: boolean true if no. of artists before unfollow is greater than no. of artists after unfollow
                 :rtype: bool
         """
-        ActionChains(self.driver).move_to_element(
-            self.driver.find_element_by_xpath(self.first_artist_xpath)).context_click().perform()
-        ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
-        time.sleep(5)
-        ActionChains(self.driver).move_to_element(
-            self.driver.find_element_by_xpath(self.follow_btn_xpath)).click().perform()
-        time.sleep(5)
-        no_of_artist_after_add = len(self.driver.find_elements(By.XPATH, self.artist_cards_xpath))
-        if self.no_of_artist_before_add > no_of_artist_after_add:
-            return True
+        if self.no_of_artist_before_add !=0:
+            ActionChains(self.driver).move_to_element(
+                self.driver.find_element_by_xpath(self.first_artist_xpath)).context_click().perform()
+            ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(self.context_menu_xpath))
+            time.sleep(5)
+            ActionChains(self.driver).move_to_element(
+                self.driver.find_element_by_xpath(self.follow_btn_xpath)).click().perform()
+            time.sleep(5)
+            no_of_artist_after_add = len(self.driver.find_elements(By.XPATH, self.artist_cards_xpath))
+            if self.no_of_artist_before_add > no_of_artist_after_add:
+                return True
+            else:
+                return False
         else:
-            return False
+            print("there is no artist to unfollow")
