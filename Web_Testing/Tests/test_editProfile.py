@@ -22,7 +22,7 @@ class TestEditProfile:
 
     edit_profile_link = "https://www.spotify.com/eg-en/account/profile/"
     helper = WebHelper()
-    helper.chrome_driver_init()
+    helper.firefox_driver_init()
 
     helper.driver.maximize_window()
     helper.driver.get(
