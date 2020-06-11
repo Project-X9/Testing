@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>login</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/KIMO/Desktop/Final_Assesment/E2E_testing_kamel_mohsen/Mobile_Testing/Pages/login.py">/Users/KIMO/Desktop/Final_Assesment/E2E_testing_kamel_mohsen/Mobile_Testing/Pages/login.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="login.html#LoginPage">LoginPage</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LoginPage">class <strong>LoginPage</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#LoginPage">LoginPage</a>(driver)<br>
+&nbsp;<br>
+A&nbsp;class&nbsp;used&nbsp;to&nbsp;represent&nbsp;the&nbsp;Login&nbsp;Page<br>
+...<br>
+Attributes<br>
+----------<br>
+email_text_field_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;email&nbsp;text&nbsp;field<br>
+password_text_field_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;password&nbsp;text&nbsp;field<br>
+login_button_id&nbsp;:&nbsp;string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;id&nbsp;of&nbsp;the&nbsp;login&nbsp;button<br>
+&nbsp;<br>
+&nbsp;<br>
+Methods<br>
+-------<br>
+<a href="#LoginPage-fill_email">fill_email</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Fills&nbsp;the&nbsp;email&nbsp;field&nbsp;with&nbsp;the&nbsp;gievn&nbsp;string<br>
+&nbsp;<br>
+<a href="#LoginPage-fill_password">fill_password</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fills&nbsp;the&nbsp;password&nbsp;field&nbsp;with&nbsp;the&nbsp;give&nbsp;string<br>
+<a href="#LoginPage-click_login">click_login</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;clicks&nbsp;the&nbsp;login&nbsp;password<br>
+<a href="#LoginPage-do_the_login">do_the_login</a>()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;given&nbsp;an&nbsp;email&nbsp;and&nbsp;password&nbsp;this&nbsp;function&nbsp;makes&nbsp;a&nbsp;sign&nbsp;in<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LoginPage-__init__"><strong>__init__</strong></a>(self, driver)</dt><dd><tt>Initializes&nbsp;the&nbsp;page&nbsp;elements<br>
+:param&nbsp;driver&nbsp;:&nbsp;the&nbsp;driver&nbsp;to&nbsp;which&nbsp;the&nbsp;super&nbsp;class'&nbsp;driver&nbsp;is&nbsp;to&nbsp;be&nbsp;set<br>
+:type&nbsp;driver:&nbsp;WebDriver</tt></dd></dl>
+
+<dl><dt><a name="LoginPage-click_login"><strong>click_login</strong></a>(self)</dt><dd><tt>clicks&nbsp;the&nbsp;login&nbsp;button</tt></dd></dl>
+
+<dl><dt><a name="LoginPage-do_the_login"><strong>do_the_login</strong></a>(self, email, password)</dt><dd><tt>makes&nbsp;a&nbsp;login&nbsp;process<br>
+:param&nbsp;email&nbsp;:&nbsp;the&nbsp;string&nbsp;that&nbsp;is&nbsp;filled&nbsp;in&nbsp;the&nbsp;text&nbsp;box<br>
+:type&nbsp;email:&nbsp;string<br>
+:param&nbsp;password&nbsp;:&nbsp;the&nbsp;string&nbsp;that&nbsp;is&nbsp;filled&nbsp;in&nbsp;the&nbsp;text&nbsp;box<br>
+:type&nbsp;password:&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="LoginPage-fill_email"><strong>fill_email</strong></a>(self, email)</dt><dd><tt>fills&nbsp;the&nbsp;email&nbsp;text&nbsp;box<br>
+:param&nbsp;email&nbsp;:&nbsp;the&nbsp;string&nbsp;that&nbsp;is&nbsp;filled&nbsp;in&nbsp;the&nbsp;text&nbsp;box<br>
+:type&nbsp;email:&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="LoginPage-fill_password"><strong>fill_password</strong></a>(self, password)</dt><dd><tt>fills&nbsp;the&nbsp;password&nbsp;text&nbsp;box<br>
+:param&nbsp;password&nbsp;:&nbsp;the&nbsp;string&nbsp;that&nbsp;is&nbsp;filled&nbsp;in&nbsp;the&nbsp;text&nbsp;box<br>
+:type&nbsp;password:&nbsp;string</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>email_text_field_id</strong> = 'com.example.projectx:id/email_et'</dl>
+
+<dl><dt><strong>login_button_id</strong> = 'com.example.projectx:id/login_bt'</dl>
+
+<dl><dt><strong>password_text_field_id</strong> = 'com.example.projectx:id/password_et'</dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
