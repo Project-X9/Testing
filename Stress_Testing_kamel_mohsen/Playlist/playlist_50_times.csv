@@ -1,0 +1,201 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1591803529447,2295,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,235413,371,1,1,http://localhost:3000/api/v1/users/login,2293,0,22
+1591803531745,1384,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,242967,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1384,0,0
+1591803533131,318,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,318,0,0
+1591803529389,3997,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,482064,1091,1,1,null,3995,62,22
+1591803533450,2087,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,235608,371,1,1,http://localhost:3000/api/v1/users/login,2087,0,0
+1591803535538,1418,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,243162,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1418,0,0
+1591803536957,313,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,313,0,0
+1591803533450,3818,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,482454,1091,1,1,null,3818,3,0
+1591803537271,2054,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,235803,371,1,1,http://localhost:3000/api/v1/users/login,2053,0,0
+1591803539325,1325,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,243357,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1325,0,0
+1591803540652,313,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,313,0,0
+1591803537271,3692,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,482844,1091,1,1,null,3691,4,0
+1591803540966,2082,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,235998,371,1,1,http://localhost:3000/api/v1/users/login,2082,0,0
+1591803543049,1422,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,243552,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1421,0,0
+1591803544471,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803540966,3815,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,483234,1091,1,1,null,3814,1,0
+1591803544783,2121,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,236193,371,1,1,http://localhost:3000/api/v1/users/login,2121,0,0
+1591803546905,1495,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,243747,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1494,0,0
+1591803548400,313,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,313,0,0
+1591803544782,3929,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,483624,1091,1,1,null,3928,3,0
+1591803548714,1361,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,236388,371,1,1,http://localhost:3000/api/v1/users/login,1360,0,0
+1591803550076,1442,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,243942,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1441,0,0
+1591803551518,331,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,331,0,0
+1591803548714,3134,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,484014,1091,1,1,null,3132,0,0
+1591803551849,2075,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,236583,371,1,1,http://localhost:3000/api/v1/users/login,2074,0,0
+1591803553924,1428,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,244137,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1428,0,0
+1591803555352,316,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,316,0,0
+1591803551849,3819,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,484404,1091,1,1,null,3818,2,0
+1591803555669,2215,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,236778,371,1,1,http://localhost:3000/api/v1/users/login,2215,0,0
+1591803557885,2980,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,244332,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2979,0,0
+1591803560866,321,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,321,0,0
+1591803555669,5516,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,484794,1091,1,1,null,5515,1,0
+1591803561187,1452,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,236973,371,1,1,http://localhost:3000/api/v1/users/login,1452,0,0
+1591803562639,2097,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,244527,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2096,0,0
+1591803564736,314,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,314,0,0
+1591803561187,3863,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,485184,1091,1,1,null,3862,1,0
+1591803565050,2846,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,237168,371,1,1,http://localhost:3000/api/v1/users/login,2846,0,0
+1591803567897,1835,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,244722,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1835,0,0
+1591803569732,321,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,321,0,0
+1591803565050,5002,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,485574,1091,1,1,null,5002,6,0
+1591803570059,1698,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,237363,371,1,1,http://localhost:3000/api/v1/users/login,1697,0,0
+1591803571757,2080,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,244917,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2080,0,0
+1591803573838,314,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,314,0,0
+1591803570059,4092,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,485964,1091,1,1,null,4091,1,0
+1591803574153,1432,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,237558,371,1,1,http://localhost:3000/api/v1/users/login,1432,0,0
+1591803575587,1618,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,245112,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1618,0,0
+1591803577206,323,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,323,0,0
+1591803574153,3373,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,486354,1091,1,1,null,3373,2,0
+1591803577529,2383,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,237753,371,1,1,http://localhost:3000/api/v1/users/login,2383,0,0
+1591803579912,1512,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,245307,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1511,0,0
+1591803581424,317,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,317,0,0
+1591803577529,4212,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,486744,1091,1,1,null,4211,0,0
+1591803581741,1656,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,237948,371,1,1,http://localhost:3000/api/v1/users/login,1656,0,0
+1591803583398,1806,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,245502,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1806,0,0
+1591803585203,317,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,317,0,0
+1591803581741,3779,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,487134,1091,1,1,null,3779,2,0
+1591803585521,1428,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,238143,371,1,1,http://localhost:3000/api/v1/users/login,1427,0,0
+1591803586949,1516,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,245697,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1516,0,0
+1591803588466,313,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,313,0,0
+1591803585521,3257,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,487524,1091,1,1,null,3256,1,0
+1591803588779,1910,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,238338,371,1,1,http://localhost:3000/api/v1/users/login,1910,0,0
+1591803590690,1499,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,245892,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1499,0,2
+1591803592189,317,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,317,0,0
+1591803588779,3726,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,487914,1091,1,1,null,3726,0,2
+1591803592507,1687,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,238533,371,1,1,http://localhost:3000/api/v1/users/login,1687,0,0
+1591803594194,1684,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,246087,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1684,0,0
+1591803595878,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803592506,3682,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,488304,1091,1,1,null,3682,3,0
+1591803596190,1421,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,238728,371,1,1,http://localhost:3000/api/v1/users/login,1421,0,0
+1591803597612,1503,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,246282,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1503,0,0
+1591803599116,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803596190,3235,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,488694,1091,1,1,null,3235,3,0
+1591803599429,2103,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,238923,371,1,1,http://localhost:3000/api/v1/users/login,2103,0,0
+1591803601537,1415,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,246477,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1414,0,0
+1591803602952,317,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,317,0,0
+1591803599429,3835,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,489084,1091,1,1,null,3834,5,0
+1591803603270,1664,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,239118,371,1,1,http://localhost:3000/api/v1/users/login,1664,0,0
+1591803604934,1499,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,246672,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1499,0,0
+1591803606434,319,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,319,0,0
+1591803603269,3482,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,489474,1091,1,1,null,3482,4,0
+1591803606754,1422,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,239313,371,1,1,http://localhost:3000/api/v1/users/login,1421,0,0
+1591803608176,1431,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,246867,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1431,0,0
+1591803609607,315,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,315,0,0
+1591803606754,3168,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,489864,1091,1,1,null,3167,0,0
+1591803609922,2115,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,239508,371,1,1,http://localhost:3000/api/v1/users/login,2115,0,0
+1591803612038,1401,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,247062,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1401,0,0
+1591803613440,317,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,317,0,0
+1591803609922,3833,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,490254,1091,1,1,null,3833,2,0
+1591803613757,1662,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,239703,371,1,1,http://localhost:3000/api/v1/users/login,1661,0,0
+1591803615419,1500,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,247257,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1500,0,0
+1591803616920,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803613757,3473,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,490644,1091,1,1,null,3472,1,0
+1591803617231,1434,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,239898,371,1,1,http://localhost:3000/api/v1/users/login,1434,0,0
+1591803618666,1406,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,247452,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1405,0,0
+1591803620073,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803617231,3151,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,491034,1091,1,1,null,3150,2,0
+1591803620385,2139,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,240093,371,1,1,http://localhost:3000/api/v1/users/login,2139,0,0
+1591803622524,3763,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,247647,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,3763,0,0
+1591803626287,322,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,322,0,0
+1591803620385,6224,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,491424,1091,1,1,null,6224,1,0
+1591803626609,1663,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,240288,371,1,1,http://localhost:3000/api/v1/users/login,1663,0,0
+1591803628272,1515,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,247842,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1515,0,0
+1591803629788,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803626609,3489,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,491814,1091,1,1,null,3489,6,0
+1591803630104,2140,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,240483,371,1,1,http://localhost:3000/api/v1/users/login,2140,0,0
+1591803632245,1617,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,248037,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1617,0,0
+1591803633863,313,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,313,0,0
+1591803630104,4070,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,492204,1091,1,1,null,4070,2,0
+1591803634177,2118,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,240678,371,1,1,http://localhost:3000/api/v1/users/login,2118,0,0
+1591803636296,2483,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,248232,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,2483,0,0
+1591803638780,323,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,323,0,0
+1591803634176,4924,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,492594,1091,1,1,null,4924,2,0
+1591803639104,2649,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,240873,371,1,1,http://localhost:3000/api/v1/users/login,2648,0,0
+1591803641753,1656,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,248427,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1656,0,0
+1591803643410,316,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,316,0,0
+1591803639103,4621,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,492984,1091,1,1,null,4620,3,0
+1591803643727,2182,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,241068,371,1,1,http://localhost:3000/api/v1/users/login,2181,0,0
+1591803645909,1520,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,248622,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1519,0,0
+1591803647429,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803643727,4013,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,493374,1091,1,1,null,4011,1,0
+1591803647741,1435,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,241263,371,1,1,http://localhost:3000/api/v1/users/login,1434,0,0
+1591803649176,1414,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,248817,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1414,0,0
+1591803650590,313,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,313,0,0
+1591803647741,3162,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,493764,1091,1,1,null,3161,1,0
+1591803650903,2369,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,241458,371,1,1,http://localhost:3000/api/v1/users/login,2369,0,1
+1591803653273,1519,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,249012,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1518,0,0
+1591803654793,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803650903,4199,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,494154,1091,1,1,null,4198,1,1
+1591803655105,2144,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,241653,371,1,1,http://localhost:3000/api/v1/users/login,2143,0,0
+1591803657249,1587,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,249207,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1587,0,0
+1591803658837,316,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,316,0,0
+1591803655105,4047,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,494544,1091,1,1,null,4046,1,0
+1591803659154,1456,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,241848,371,1,1,http://localhost:3000/api/v1/users/login,1456,0,0
+1591803660615,1412,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,249402,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1412,0,0
+1591803662028,321,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,321,0,0
+1591803659154,3189,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,494934,1091,1,1,null,3189,6,0
+1591803662350,2247,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,242043,371,1,1,http://localhost:3000/api/v1/users/login,2247,0,0
+1591803664598,1424,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,249597,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1423,0,0
+1591803666022,317,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,317,0,0
+1591803662349,3988,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,495324,1091,1,1,null,3987,3,0
+1591803666340,2145,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,242238,371,1,1,http://localhost:3000/api/v1/users/login,2145,0,0
+1591803668486,1596,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,249792,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1595,0,0
+1591803670081,321,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,321,0,0
+1591803666340,4062,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,495714,1091,1,1,null,4061,1,0
+1591803670403,1459,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,242433,371,1,1,http://localhost:3000/api/v1/users/login,1459,0,0
+1591803671863,1414,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,249987,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1413,0,0
+1591803673277,316,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,316,0,0
+1591803670402,3189,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,496104,1091,1,1,null,3188,2,0
+1591803673594,2143,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,242628,371,1,1,http://localhost:3000/api/v1/users/login,2143,0,0
+1591803675738,1424,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,250182,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1424,0,0
+1591803677163,313,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,313,0,0
+1591803673593,3880,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,496494,1091,1,1,null,3880,2,0
+1591803677476,1589,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,242823,371,1,1,http://localhost:3000/api/v1/users/login,1589,0,0
+1591803679065,1500,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,250377,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1499,0,0
+1591803680564,317,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,317,0,0
+1591803677476,3406,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,496884,1091,1,1,null,3405,1,0
+1591803680882,1431,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,243018,371,1,1,http://localhost:3000/api/v1/users/login,1431,0,0
+1591803682313,1433,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,250572,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1433,0,0
+1591803683747,314,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,314,0,0
+1591803680882,3178,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,497274,1091,1,1,null,3178,1,0
+1591803684061,2141,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,243213,371,1,1,http://localhost:3000/api/v1/users/login,2141,0,0
+1591803686204,1417,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,250767,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1417,0,0
+1591803687622,311,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,311,0,0
+1591803684061,3869,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,497664,1091,1,1,null,3869,3,0
+1591803687934,1246,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,243408,371,1,1,http://localhost:3000/api/v1/users/login,1246,0,0
+1591803689180,1315,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,250962,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1315,0,0
+1591803690499,336,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,336,0,0
+1591803687934,2897,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,498054,1091,1,1,null,2897,5,0
+1591803690835,1668,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,243603,371,1,1,http://localhost:3000/api/v1/users/login,1667,0,0
+1591803692503,1405,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,251157,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1405,0,0
+1591803693909,316,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,316,0,0
+1591803690835,3389,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,498444,1091,1,1,null,3388,1,0
+1591803694225,1965,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,243798,371,1,1,http://localhost:3000/api/v1/users/login,1965,0,0
+1591803696192,1417,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,251352,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1417,0,0
+1591803697610,316,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,316,0,0
+1591803694225,3698,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,498834,1091,1,1,null,3698,2,0
+1591803697927,1322,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,243993,371,1,1,http://localhost:3000/api/v1/users/login,1322,0,0
+1591803699249,1405,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,251547,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1404,0,0
+1591803700653,318,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,318,0,0
+1591803697926,3045,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,499224,1091,1,1,null,3044,1,0
+1591803700971,2230,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,244188,371,1,1,http://localhost:3000/api/v1/users/login,2229,0,0
+1591803703201,1323,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,251742,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1323,0,0
+1591803704526,320,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,320,0,0
+1591803700971,3873,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,499614,1091,1,1,null,3872,1,0
+1591803704846,1690,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,244383,371,1,1,http://localhost:3000/api/v1/users/login,1689,0,0
+1591803706536,1322,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,251937,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1321,0,0
+1591803707858,314,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,314,0,0
+1591803704846,3326,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,500004,1091,1,1,null,3324,0,0
+1591803708172,1266,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,244578,371,1,1,http://localhost:3000/api/v1/users/login,1265,0,0
+1591803709438,1417,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,252132,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1417,0,0
+1591803710855,322,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,322,0,0
+1591803708172,3005,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,500394,1091,1,1,null,3004,1,0
+1591803711177,2102,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,244773,371,1,1,http://localhost:3000/api/v1/users/login,2101,0,1
+1591803713279,1333,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,252327,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1333,0,0
+1591803714614,314,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,314,0,0
+1591803711177,3749,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,500784,1091,1,1,null,3748,2,1
+1591803714929,1765,http://localhost:3000/api/v1/users/login,200,OK,Thread Group 1-1,text,true,,244968,371,1,1,http://localhost:3000/api/v1/users/login,1765,0,0
+1591803716694,1328,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,200,OK,Thread Group 1-1,text,true,,252522,445,1,1,http://localhost:3000/api/v1/users/5e8643edd411aa54c0357fbd,1328,0,0
+1591803718023,312,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,200,OK,Thread Group 1-1,text,true,,3684,275,1,1,http://localhost:3000/api/v1/playlist/5e8cf0bc7d231c3bec30c4e1,312,0,0
+1591803714929,3405,Playlist,200,"Number of samples in transaction : 3, number of failing samples : 0",Thread Group 1-1,,true,,501174,1091,1,1,null,3405,1,0

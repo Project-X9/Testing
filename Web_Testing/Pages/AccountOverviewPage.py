@@ -8,109 +8,109 @@ from Web_Testing.helperClasses import DOB
 
 class AccountOverviewPage(WebHelper):
     """
-            A class used to represent Account Overview Page
+    A class used to represent Account Overview Page
 
-            ...
+    ...
 
-            Attributes
-            ----------
-            spotify_logo : string
-                A string containing the xpath of spotify's logo
-            profile_btn : string
-                A string containing the xpath of Profile button
-            account_btn : string
-                A string containing the link text of Account link in profile option list
-            logout_btn : string
-                A string containing the xpath of Logout button
-            download_link_txt : string
-                 A string containing the link text of Download link
-            help_link_txt : string
-                 A string containing the link text of Help link
-            premium_link_txt : string
-                A string containing the link text of Premium link
-            account_overview_link : string
-                A string containing the xpath of Account Overview button
-            edit_profile_link : string
-                A string containing the xpath of Edit Profile button
-            change_password_link : string
-                A string containing the xpath of Change Passwword button
-            recover_playlists_link : string
-                A string containing the xpath of Recover Playlist button
-            redeem_link : string
-                A string containing the xpath of Redeem button
-            join_premium_btn : string
-                A string containing the link text of Join Premium button
-            edit_profile_btn : string
-                A string containing the link text of Edit Profile button
-            sign_out_btn : string
-                A string containing the link text of Sign Out button
-            username_txt_xpath : string
-                A string containing the xpath of Username text
-            email_txt_xpath : string
-                A string containing the xpath of Email text
-            age_txt_xpath : string
-                A string containing the xpath of Age text
-            username : string
-                A string containing username of the user
-            email : sting
-                A string containing email of the user
-            age : string
-                A string containing age of the user
+    Attributes
+    ----------
+    spotify_logo : string
+        A string containing the xpath of spotify's logo
+    profile_btn : string
+        A string containing the xpath of Profile button
+    account_btn : string
+        A string containing the link text of Account link in profile option list
+    logout_btn : string
+        A string containing the xpath of Logout button
+    download_link_txt : string
+         A string containing the link text of Download link
+    help_link_txt : string
+         A string containing the link text of Help link
+    premium_link_txt : string
+        A string containing the link text of Premium link
+    account_overview_link : string
+        A string containing the xpath of Account Overview button
+    edit_profile_link : string
+        A string containing the xpath of Edit Profile button
+    change_password_link : string
+        A string containing the xpath of Change Passwword button
+    recover_playlists_link : string
+        A string containing the xpath of Recover Playlist button
+    redeem_link : string
+        A string containing the xpath of Redeem button
+    join_premium_btn : string
+        A string containing the link text of Join Premium button
+    edit_profile_btn : string
+        A string containing the link text of Edit Profile button
+    sign_out_btn : string
+        A string containing the link text of Sign Out button
+    username_txt_xpath : string
+        A string containing the xpath of Username text
+    email_txt_xpath : string
+        A string containing the xpath of Email text
+    age_txt_xpath : string
+        A string containing the xpath of Age text
+    username : string
+        A string containing username of the user
+    email : sting
+        A string containing email of the user
+    age : string
+        A string containing age of the user
 
-            Methods
-            -------
-            initialize_account_overview_elements()
-                Initialize username, email and age with the information in the account overview page
-            click_spotify_logo()
-                Clicks logo of spotify
-            click_profile()
-                Clicks Profile button
-            click_account()
-                Clicks Account button in profile list
-            click_logout()
-                Clicks Logout button in profile list
-            click_download_link()
-                Clicks Download button
-            click_help_link()
-                Clicks Help button
-            click_premium_link()
-                Clicks Premium button
-            click_account_overview()
-                Clicks Account Overview button
-            click_edit_profile()
-                Clicks Edit Profile link
-            click_change_password()
-                Clicks Change Password button
-            click_recover_playlists()
-                Clicks recover Playlists button
-            click_redeem_link()
-                Clicks Redeem button
-            click_edit_profile_btn()
-                Clicks Edit Profile button
-            click_join_premium_btn()
-                Clicks Join Premium button
-            click_signout_btn()
-                Clicks Sign Out button
-            get_account_overview_username()
-                get username
-            get_account_overview_email()
-                get email
-            get_account_overview_age()
-                get age
-            is_correct_username(username)
-                Checks if username is same as username given
-            is_correct_email(email)
-                Checks if email is same as email given
-            premium_check(premium)
-                check if premium status exist with premium account
-            is_correct_age(age)
-                Checks if age is same as age given
-            is_page_initialized()
-                Checks if currently on Account Overview page
-            is_in_account_overview()
-                Checks if currently on Account Overview page
-            account_overview_check(email, age, username)
-                Checks if information on Account Overview page is correct
+    Methods
+    -------
+    initialize_account_overview_elements()
+        Initialize username, email and age with the information in the account overview page
+    click_spotify_logo()
+        Clicks logo of spotify
+    click_profile()
+        Clicks Profile button
+    click_account()
+        Clicks Account button in profile list
+    click_logout()
+        Clicks Logout button in profile list
+    click_download_link()
+        Clicks Download button
+    click_help_link()
+        Clicks Help button
+    click_premium_link()
+        Clicks Premium button
+    click_account_overview()
+        Clicks Account Overview button
+    click_edit_profile()
+        Clicks Edit Profile link
+    click_change_password()
+        Clicks Change Password button
+    click_recover_playlists()
+        Clicks recover Playlists button
+    click_redeem_link()
+        Clicks Redeem button
+    click_edit_profile_btn()
+        Clicks Edit Profile button
+    click_join_premium_btn()
+        Clicks Join Premium button
+    click_signout_btn()
+        Clicks Sign Out button
+    get_account_overview_username()
+        get username
+    get_account_overview_email()
+        get email
+    get_account_overview_age()
+        get age
+    is_correct_username(username)
+        Checks if username is same as username given
+    is_correct_email(email)
+        Checks if email is same as email given
+    premium_check(premium)
+        check if premium status exist with premium account
+    is_correct_age(age)
+        Checks if age is same as age given
+    is_page_initialized()
+        Checks if currently on Account Overview page
+    is_in_account_overview()
+        Checks if currently on Account Overview page
+    account_overview_check(email, age, username)
+        Checks if information on Account Overview page is correct
     """
     spotify_logo = "//*[@id='root']/div/div/div/div[1]/div/nav/a/img"
     profile_btn = "//*[@id='root']/div/div/div/div[1]/div/nav/div/ul/li[8]/li/a"

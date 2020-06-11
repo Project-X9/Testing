@@ -1,5 +1,6 @@
 import enum
 import datetime
+import time
 
 import allure
 from allure_commons.types import AttachmentType
@@ -114,7 +115,8 @@ class WebHelper:
 
     """
 
-    base_url = "http://ec2-3-21-218-250.us-east-2.compute.amazonaws.com/"
+    # base_url = "http://ec2-3-21-218-250.us-east-2.compute.amazonaws.com/"
+    base_url = "https://www.spotify.com/eg-en/"
     month_dict = {"January": 1, "February": 2, "March": 3
         , "April": 4, "May": 5, "June": 6
         , "July": 7, "August": 8, "September": 9
@@ -583,7 +585,10 @@ class WebHelper:
         """
         if btn is None:
             return
-        btn.click()
+        try:
+            btn.click()
+        except:
+            return
 
     def hover_to_element(self, element, driver=None):
         """
@@ -614,7 +619,10 @@ class WebHelper:
         """
         if txt_element is None:
             return
-        txt_element.send_keys(text)
+        try:
+            txt_element.send_keys(text)
+        except:
+            return
 
     def clear_txt_safe(self, txt_element):
         """
@@ -626,7 +634,11 @@ class WebHelper:
         """
         if txt_element is None:
             return
-        txt_element.clear()
+
+        try:
+            txt_element.clear()
+        except:
+            return
 
     def screenshot(self, driver):
         """
@@ -1005,3 +1017,102 @@ class Gender(enum.Enum):
     MALE = "Male"
     UNSELECTED = "Un selected"
     FEMALE = "Female"
+
+
+class CustomTime:
+    """
+    A class used for representing the time as minutes and seconds
+
+    Attributes
+    ----------
+    minutes : int
+        time minutes
+    seconds : int
+        time seconds
+
+    Methods
+    -------
+    is_greater_than(minutes, seconds)
+        Checks if the class' self time is greater than the provided time
+    is_equal_to(minutes, seconds)
+        Checks if the class' self time is equal to the provided time
+    """
+    def __init__(self, minutes, seconds):
+        """
+        Initializes the minutes and seconds
+
+        :param minutes: time minutes
+        :type minutes: int
+
+        :param seconds: time seconds
+        :type minutes: int
+        """
+        self.minutes = minutes
+        self.seconds = seconds
+
+    def is_greater_than(self, minutes, seconds):
+        """
+        Checks if the class' self time is greater than the provided time
+
+        :param minutes: time minutes
+        :type minutes: int
+
+        :param seconds: time seconds
+        :type seconds: int
+
+        :returns: True if the class self time is greater than the provided time, False otherwise
+        :rtype: bool
+        """
+        if self.minutes > minutes:
+            return True
+        elif self.minutes < minutes:
+            return False
+        else:
+            if self.seconds > seconds:
+                return True
+            else:
+                return False
+
+    def is_equal_to(self, minutes, seconds):
+        """
+        Checks if the class' self time is equal to the provided time
+
+        :param minutes: time minutes
+        :type minutes: int
+
+        :param seconds: time seconds
+        :type seconds: int
+
+        :returns: True if the class self time is equal to the provided time, False otherwise
+        :rtype: bool
+        """
+        return self.minutes == minutes and self.seconds == seconds
+
+class login:
+    email_textbox_xpath = "//*[@id='login-username']"
+    password_textbox_xpath = "// *[ @ id = 'login-password']"
+    login_btn_id = "login-button"
+    web_player_btn_xpath = "/html/body/div/div[2]/div/div/div[4]/div/a"
+    webplayer_link = " https: // www.spotify.com / eg - en / redirect / webplayerlink /"
+    email = "test_projectX@hotmail.com"
+    password = "TestingTeamMKE"
+
+    def __init__(self, driver):
+        """
+               Initializes the page elements
+
+               :param driver : the driver to which the super class' driver is to be set
+               :type driver: WebDriver
+               """
+        self.driver = driver
+
+    def login_to_spotify(self):
+        try:
+            self.driver.find_element_by_xpath(self.email_textbox_xpath).send_keys(self.email)
+            self.driver.find_element_by_xpath(self.password_textbox_xpath).send_keys(self.password)
+            self.driver.find_element_by_id(self.login_btn_id).click()
+            time.sleep(5)
+            self.driver.find_element_by_xpath(self.web_player_btn_xpath).click()
+            print("login successfully")
+        except NoSuchElementException:
+            print("Exception")

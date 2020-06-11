@@ -1,0 +1,50 @@
+{
+  "https://api.emailjs.com/api/v1.0/email/send" : {
+    "transaction" : "https://api.emailjs.com/api/v1.0/email/send",
+    "sampleCount" : 50,
+    "errorCount" : 22,
+    "errorPct" : 44.0,
+    "meanResTime" : 544.86,
+    "medianResTime" : 657.0,
+    "minResTime" : 243.0,
+    "maxResTime" : 2338.0,
+    "pct1ResTime" : 774.6,
+    "pct2ResTime" : 867.8499999999997,
+    "pct3ResTime" : 2338.0,
+    "throughput" : 1.833247781770184,
+    "receivedKBytesPerSec" : 0.5589257397154799,
+    "sentKBytesPerSec" : 0.8754474270367383
+  },
+  "Signup" : {
+    "transaction" : "Signup",
+    "sampleCount" : 50,
+    "errorCount" : 22,
+    "errorPct" : 44.0,
+    "meanResTime" : 544.86,
+    "medianResTime" : 657.0,
+    "minResTime" : 243.0,
+    "maxResTime" : 2338.0,
+    "pct1ResTime" : 774.6,
+    "pct2ResTime" : 867.8499999999997,
+    "pct3ResTime" : 2338.0,
+    "throughput" : 1.829357529635592,
+    "receivedKBytesPerSec" : 0.5577396687033513,
+    "sentKBytesPerSec" : 0.8735896796794965
+  },
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 50,
+    "errorCount" : 22,
+    "errorPct" : 44.0,
+    "meanResTime" : 544.86,
+    "medianResTime" : 657.0,
+    "minResTime" : 243.0,
+    "maxResTime" : 2338.0,
+    "pct1ResTime" : 774.6,
+    "pct2ResTime" : 867.8499999999997,
+    "pct3ResTime" : 2338.0,
+    "throughput" : 1.833247781770184,
+    "receivedKBytesPerSec" : 0.5589257397154799,
+    "sentKBytesPerSec" : 0.8754474270367383
+  }
+}
